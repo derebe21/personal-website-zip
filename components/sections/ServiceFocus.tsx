@@ -1,0 +1,52 @@
+'use client';
+
+import { Server, Shield, Zap } from 'lucide-react';
+
+export function ServiceFocus() {
+    return (
+        <section className="relative py-12 lg:py-20 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+            {/* Decorative background elements */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
+                        <div className="p-4 bg-blue-500/10 rounded-2xl group-hover:bg-blue-500/20 transition-colors">
+                            <Server className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <div className="text-center">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Infrastructure</h3>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Robust IT systems & enterprise-grade networks
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
+                        <div className="p-4 bg-blue-500/10 rounded-2xl group-hover:bg-blue-500/20 transition-colors">
+                            <Shield className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <div className="text-center">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Security</h3>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Comprehensive protection & advanced surveillance
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
+                        <div className="p-4 bg-blue-500/10 rounded-2xl group-hover:bg-blue-500/20 transition-colors">
+                            <Zap className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <div className="text-center">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Engineering</h3>
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Professional electrical installations & site design
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

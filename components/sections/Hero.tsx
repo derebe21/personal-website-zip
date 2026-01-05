@@ -79,47 +79,6 @@ export function Hero() {
             </Button>
           </div>
         </div>
-
-        {/* Lower Services Section in Hero */}
-        <div className="w-full pb-12 lg:pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1">
-              <div className="p-3 bg-blue-500/20 rounded-xl group-hover:bg-blue-500/30 transition-colors">
-                <Server className="w-8 h-8 text-blue-400" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-bold text-white mb-2">Infrastructure</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  Robust IT systems & enterprise-grade networks
-                </p>
-              </div>
-            </div>
-
-            <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1">
-              <div className="p-3 bg-blue-500/20 rounded-xl group-hover:bg-blue-500/30 transition-colors">
-                <Shield className="w-8 h-8 text-blue-400" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-bold text-white mb-2">Security</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  Comprehensive protection & advanced surveillance
-                </p>
-              </div>
-            </div>
-
-            <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1">
-              <div className="p-3 bg-blue-500/20 rounded-xl group-hover:bg-blue-500/30 transition-colors">
-                <Zap className="w-8 h-8 text-blue-400" />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-bold text-white mb-2">Engineering</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  Professional electrical installations & site design
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

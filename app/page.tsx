@@ -1,6 +1,7 @@
 'use client';
 
 import { Hero } from '@/components/sections/Hero';
+import { ServiceFocus } from '@/components/sections/ServiceFocus';
 import { About } from '@/components/sections/About';
 import { Services } from '@/components/sections/Services';
 import { WhyChoose } from '@/components/sections/WhyChoose';
@@ -14,6 +15,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
+      <ServiceFocus />
       <About />
       <Services />
       <WhyChoose />
