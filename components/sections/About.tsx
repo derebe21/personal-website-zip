@@ -36,9 +36,9 @@ export function About() {
         <img
           src="/about-bg.png"
           alt="About Background"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/60 to-slate-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-slate-900/40 to-slate-950/80" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
