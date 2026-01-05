@@ -22,8 +22,18 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-950 text-slate-300 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <footer className="relative bg-slate-950 text-slate-300 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/about-bg.png"
+          alt="Footer Background"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-[2px]" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-2 space-y-6">
             <Link href="/" className="flex items-center space-x-3 group">
