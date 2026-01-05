@@ -45,13 +45,15 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16 md:h-20">
           <button
             onClick={() => scrollToSection('home')}
-            className="flex items-center space-x-2 group"
+            className="flex items-center space-x-3 group"
           >
-            <img
-              src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767610675/photo_2025-11-14_14-49-43_etidoo.jpg"
-              alt="Dynamic Solutions Group Logo"
-              className="w-10 h-10 object-cover rounded-lg group-hover:scale-105 transition-transform border-2 border-white/30"
-            />
+            <div className="bg-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+              <img
+                src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767610675/photo_2025-11-14_14-49-43_etidoo.jpg"
+                alt="Dynamic Solutions Group Logo"
+                className="w-12 h-12 object-cover rounded-md"
+              />
+            </div>
             <span className="font-bold text-lg md:text-xl text-white">
               Dynamic Solutions Group
             </span>
