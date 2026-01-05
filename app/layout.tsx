@@ -6,8 +6,8 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dynamic Solutions Group - Reliable Tech & Engineering Solutions',
-  description: 'Full-service engineering and technology partner specializing in IT infrastructure, cyber-security, CCTV systems, web development, and electrical engineering.',
+  title: 'ITSEC TECHNOLOGY - Core Technology Domains',
+  description: 'Delivering end-to-end technology solutions across cybersecurity, infrastructure, software, and engineering domains.',
 };
 
 export default function RootLayout({

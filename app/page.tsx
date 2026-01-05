@@ -4,7 +4,7 @@ import { Hero } from '@/components/sections/Hero';
 import { ServiceFocus } from '@/components/sections/ServiceFocus';
 import { About } from '@/components/sections/About';
 import { Services } from '@/components/sections/Services';
-import { WhyChoose } from '@/components/sections/WhyChoose';
+import { Products } from '@/components/sections/Products';
 import { Process } from '@/components/sections/Process';
 import { Contact } from '@/components/sections/Contact';
 import { Navigation } from '@/components/Navigation';
@@ -18,7 +18,7 @@ export default function Home() {
       <ServiceFocus />
       <About />
       <Services />
-      <WhyChoose />
+      <Products />
       <Process />
       <Contact />
       <Footer />

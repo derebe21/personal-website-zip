@@ -3,10 +3,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,22 +19,16 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
-  };
-
   const navLinks = [
-    { label: 'Home', id: 'home' },
-    { label: 'About', id: 'about' },
-    { label: 'Services', id: 'services' },
-    { label: 'Why Us', id: 'why-choose' },
-    { label: 'Process', id: 'process' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Products', href: '/products' },
+    { label: 'Process', href: '/process' },
+    { label: 'Contact', href: '/contact' },
   ];
+
+  const isActive = (href: string) => pathname === href;
 
   return (
     <nav
@@ -42,8 +39,8 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          <button
-            onClick={() => scrollToSection('home')}
+          <Link
+            href="/"
             className="flex items-center space-x-3 group"
           >
             <img
@@ -54,24 +51,28 @@ export function Navigation() {
             <span className="font-bold text-lg md:text-xl text-gray-800">
               ITSEC TECHNOLOGY
             </span>
-          </button>
+          </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors ${isActive(link.href)
+                    ? 'text-blue-600'
+                    : 'text-gray-600 hover:text-gray-900'
+                  }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 text-white hover:bg-blue-700"
-            >
-              Get Started
-            </Button>
+            <Link href="/contact">
+              <Button
+                className="bg-blue-600 text-white hover:bg-blue-700"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           <button
@@ -91,20 +92,25 @@ export function Navigation() {
         <div className="lg:hidden bg-gray-50 border-b shadow-lg">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link.href)
+                    ? 'text-blue-600 bg-blue-50'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="w-full bg-blue-600 text-white hover:bg-blue-700"
-            >
-              Get Started
-            </Button>
+            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button
+                className="w-full bg-blue-600 text-white hover:bg-blue-700"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       )}
