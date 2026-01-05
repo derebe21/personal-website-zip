@@ -28,7 +28,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <Link href="/" className="flex items-center space-x-3 group">
               <img
-                src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.jpg"
+                src="https://res.cloudinary.com/dlc8bgysp/image/upload/e_make_transparent/v1767612094/logo_fn47rb.png"
                 alt="ITSEC TECHNOLOGY Logo"
                 className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
               />
