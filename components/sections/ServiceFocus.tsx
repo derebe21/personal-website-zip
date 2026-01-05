@@ -4,7 +4,7 @@ import { Server, Shield, Zap } from 'lucide-react';
 
 export function ServiceFocus() {
     return (
-        <section className="relative py-12 lg:py-20 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+        <section id="servicesFocus" className="relative py-12 lg:py-20 bg-slate-50 dark:bg-slate-950 overflow-hidden">
             {/* Decorative background elements */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
