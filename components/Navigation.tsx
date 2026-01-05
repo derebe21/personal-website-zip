@@ -37,8 +37,8 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-blue-600 backdrop-blur-sm border-b shadow-lg'
-          : 'bg-blue-600/90 backdrop-blur-sm'
+          ? 'bg-white backdrop-blur-sm border-b shadow-lg'
+          : 'bg-white/90 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,14 +47,12 @@ export function Navigation() {
             onClick={() => scrollToSection('home')}
             className="flex items-center space-x-3 group"
           >
-            <div className="bg-white p-2 rounded-lg group-hover:scale-105 transition-transform">
-              <img
-                src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.jpg"
-                alt="Dynamic Solutions Group Logo"
-                className="w-12 h-12 object-cover rounded-md"
-              />
-            </div>
-            <span className="font-bold text-lg md:text-xl text-white">
+            <img
+              src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.jpg"
+              alt="Dynamic Solutions Group Logo"
+              className="w-12 h-12 object-cover rounded-md group-hover:scale-105 transition-transform"
+            />
+            <span className="font-bold text-lg md:text-xl text-gray-800">
               Dynamic Solutions Group
             </span>
           </button>
@@ -64,14 +62,14 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-white/90 hover:text-white transition-colors"
+                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
               >
                 {link.label}
               </button>
             ))}
             <Button
               onClick={() => scrollToSection('contact')}
-              className="bg-white text-blue-600 hover:bg-blue-50"
+              className="bg-blue-600 text-white hover:bg-blue-700"
             >
               Get Started
             </Button>
@@ -79,7 +77,7 @@ export function Navigation() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-white"
+            className="lg:hidden p-2 text-gray-800"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -91,20 +89,20 @@ export function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-blue-700 border-b shadow-lg">
+        <div className="lg:hidden bg-gray-50 border-b shadow-lg">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-blue-600 rounded-md transition-colors"
+                className="block w-full text-left px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
               >
                 {link.label}
               </button>
             ))}
             <Button
               onClick={() => scrollToSection('contact')}
-              className="w-full bg-white text-blue-600 hover:bg-blue-50"
+              className="w-full bg-blue-600 text-white hover:bg-blue-700"
             >
               Get Started
             </Button>
