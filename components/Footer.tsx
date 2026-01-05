@@ -1,21 +1,18 @@
 'use client';
 
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import Link from 'next/link';
+import { servicesData } from '@/lib/services-data';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    Services: [
-      'IT Infrastructure',
-      'CCTV Systems',
-      'Web Development',
-      'Cyber-Security',
-      'Electrical Engineering',
-    ],
-    Company: ['About Us', 'Our Process', 'Contact', 'Careers'],
-    Resources: ['Case Studies', 'Blog', 'Support', 'Privacy Policy'],
-  };
+  const companyLinks = [
+    { label: 'About Us', href: '/about' },
+    { label: 'Our Process', href: '/process' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Products', href: '/products' },
+  ];
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
@@ -25,32 +22,32 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-900 text-slate-300">
+    <footer className="bg-slate-950 text-slate-300 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-2">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+          <div className="lg:col-span-2 space-y-6">
+            <Link href="/" className="flex items-center space-x-3 group">
               <img
-                src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767610675/photo_2025-11-14_14-49-43_etidoo.jpg"
-                alt="Dynamic Solutions Group Logo"
-                className="w-10 h-10 object-cover rounded-lg"
+                src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.jpg"
+                alt="ITSEC TECHNOLOGY Logo"
+                className="w-12 h-12 object-cover rounded-md group-hover:scale-105 transition-transform"
               />
-              <span className="font-bold text-lg text-white">
-                Dynamic Solutions Group
+              <span className="font-bold text-xl text-white">
+                ITSEC TECHNOLOGY
               </span>
-            </div>
-            <p className="text-sm leading-relaxed max-w-md">
-              Your trusted partner for integrated technology and engineering
-              solutions. We deliver excellence across IT infrastructure,
-              security, and electrical systems.
+            </Link>
+            <p className="text-sm leading-relaxed max-w-md text-slate-400">
+              Delivering end-to-end technology solutions across cybersecurity,
+              infrastructure, and engineering domains to meet the complex needs
+              of modern enterprises.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 pt-2">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+                  className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -58,37 +55,63 @@ export function Footer() {
             </div>
           </div>
 
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="font-semibold text-white mb-4">{category}</h3>
-              <ul className="space-y-3">
-                {links.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-sm hover:text-primary transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Services</h3>
+            <ul className="space-y-3">
+              {servicesData.slice(0, 5).map((service, index) => (
+                <li key={index}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="text-sm hover:text-primary transition-colors hover:translate-x-1 inline-block transform"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Company</h3>
+            <ul className="space-y-3">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-sm hover:text-primary transition-colors hover:translate-x-1 inline-block transform"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Location</h3>
+            <p className="text-sm leading-relaxed text-slate-400">
+              123 Business Park, Tech District<br />
+              Addis Ababa, Ethiopia
+            </p>
+            <p className="text-sm text-slate-400">
+              info@itsectechnology.com<br />
+              +251 900 000 000
+            </p>
+          </div>
         </div>
 
-        <div className="border-t border-slate-800 pt-8">
+        <div className="border-t border-white/5 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm">
-              © {currentYear} Dynamic Solutions Group. All rights reserved.
+            <p className="text-sm text-slate-500">
+              © {currentYear} ITSEC TECHNOLOGY. All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="hover:text-primary transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="hover:text-primary transition-colors">
-                Privacy Policy
-              </a>
+            <div className="flex space-x-8 text-sm text-slate-500">
+              <Link href="#" className="hover:text-white transition-colors">
+                Terms
+              </Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Privacy
+              </Link>
             </div>
           </div>
         </div>
