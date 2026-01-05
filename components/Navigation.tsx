@@ -49,7 +49,7 @@ export function Navigation() {
           >
             <div className="bg-white p-2 rounded-lg group-hover:scale-105 transition-transform">
               <img
-                src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767610675/photo_2025-11-14_14-49-43_etidoo.jpg"
+                src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.jpg"
                 alt="Dynamic Solutions Group Logo"
                 className="w-12 h-12 object-cover rounded-md"
               />
