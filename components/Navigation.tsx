@@ -35,11 +35,10 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-white backdrop-blur-sm border-b shadow-lg'
           : 'bg-white/90 backdrop-blur-sm'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
@@ -49,11 +48,11 @@ export function Navigation() {
           >
             <img
               src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.jpg"
-              alt="Dynamic Solutions Group Logo"
+              alt="ITSEC TECHNOLOGY Logo"
               className="w-12 h-12 object-cover rounded-md group-hover:scale-105 transition-transform"
             />
             <span className="font-bold text-lg md:text-xl text-gray-800">
-              Dynamic Solutions Group
+              ITSEC TECHNOLOGY
             </span>
           </button>
 
