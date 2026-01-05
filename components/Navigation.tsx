@@ -37,8 +37,8 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-sm border-b shadow-sm'
-          : 'bg-transparent'
+          ? 'bg-blue-600 backdrop-blur-sm border-b shadow-lg'
+          : 'bg-blue-600/90 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,9 +50,9 @@ export function Navigation() {
             <img
               src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767610675/photo_2025-11-14_14-49-43_etidoo.jpg"
               alt="Dynamic Solutions Group Logo"
-              className="w-10 h-10 object-cover rounded-lg group-hover:scale-105 transition-transform"
+              className="w-10 h-10 object-cover rounded-lg group-hover:scale-105 transition-transform border-2 border-white/30"
             />
-            <span className="font-bold text-lg md:text-xl">
+            <span className="font-bold text-lg md:text-xl text-white">
               Dynamic Solutions Group
             </span>
           </button>
@@ -62,19 +62,22 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium text-white/90 hover:text-white transition-colors"
               >
                 {link.label}
               </button>
             ))}
-            <Button onClick={() => scrollToSection('contact')}>
+            <Button
+              onClick={() => scrollToSection('contact')}
+              className="bg-white text-blue-600 hover:bg-blue-50"
+            >
               Get Started
             </Button>
           </div>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 text-white"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -86,20 +89,20 @@ export function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-background border-b shadow-lg">
+        <div className="lg:hidden bg-blue-700 border-b shadow-lg">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-2 text-sm font-medium hover:bg-accent rounded-md transition-colors"
+                className="block w-full text-left px-4 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-blue-600 rounded-md transition-colors"
               >
                 {link.label}
               </button>
             ))}
             <Button
               onClick={() => scrollToSection('contact')}
-              className="w-full"
+              className="w-full bg-white text-blue-600 hover:bg-blue-50"
             >
               Get Started
             </Button>
