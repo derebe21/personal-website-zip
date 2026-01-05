@@ -33,8 +33,8 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-white backdrop-blur-sm border-b shadow-lg'
-          : 'bg-white/90 backdrop-blur-sm'
+        ? 'bg-white backdrop-blur-sm border-b shadow-lg'
+        : 'bg-white/90 backdrop-blur-sm'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +46,7 @@ export function Navigation() {
             <img
               src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.jpg"
               alt="ITSEC TECHNOLOGY Logo"
-              className="w-12 h-12 object-cover rounded-md group-hover:scale-105 transition-transform"
+              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
             />
             <span className="font-bold text-lg md:text-xl text-gray-800">
               ITSEC TECHNOLOGY
@@ -59,8 +59,8 @@ export function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${isActive(link.href)
-                    ? 'text-blue-600'
-                    : 'text-gray-600 hover:text-gray-900'
+                  ? 'text-blue-600'
+                  : 'text-gray-600 hover:text-gray-900'
                   }`}
               >
                 {link.label}
@@ -97,8 +97,8 @@ export function Navigation() {
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link.href)
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  ? 'text-blue-600 bg-blue-50'
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                   }`}
               >
                 {link.label}

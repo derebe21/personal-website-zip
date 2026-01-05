@@ -30,7 +30,7 @@ export function Footer() {
               <img
                 src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.jpg"
                 alt="ITSEC TECHNOLOGY Logo"
-                className="w-12 h-12 object-cover rounded-md group-hover:scale-105 transition-transform"
+                className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
               />
               <span className="font-bold text-xl text-white">
                 ITSEC TECHNOLOGY
