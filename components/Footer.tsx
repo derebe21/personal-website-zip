@@ -23,14 +23,14 @@ export function Footer() {
 
   return (
     <footer className="relative bg-slate-950 text-slate-300 overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image with optimized visibility */}
       <div className="absolute inset-0 z-0">
         <img
           src="/about-bg.png"
           alt="Footer Background"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-50"
         />
-        <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-slate-950/70" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
