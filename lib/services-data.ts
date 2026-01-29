@@ -17,7 +17,7 @@ export const servicesData = [
         title: 'Cybersecurity Solutions',
         description: 'Protecting digital assets through advanced security architecture, risk management, and threat mitigation.',
         longDescription: 'In an era of increasing digital threats, our Cybersecurity Solutions provide a comprehensive defense strategy for your enterprise. We focus on building resilient architectures that not only block attacks but also ensure rapid recovery and minimal impact.',
-        features: ['Security architecture', 'Risk management', 'Threat mitigation', 'Compliance auditing', 'Incidence response'],
+        features: ['Security architecture', 'Risk management', 'Threat mitigation', 'Compliance auditing'],
         benefits: ['Enhanced data protection', 'Regulatory compliance', 'Business continuity', 'Customer trust'],
     },
     {

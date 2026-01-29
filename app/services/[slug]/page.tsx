@@ -92,9 +92,21 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
                         {/* Right Column: CTA & Sidebar */}
                         <div className="space-y-8">
-                            <Card className="bg-primary text-primary-foreground p-8 rounded-3xl overflow-hidden relative group">
-                                {/* Decorative background element */}
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500" />
+                            <Card className={`p-8 rounded-3xl overflow-hidden relative group border-none shadow-2xl ${service.slug === 'cybersecurity-solutions' ? 'text-white' : 'bg-primary text-primary-foreground'}`}>
+                                {service.slug === 'cybersecurity-solutions' ? (
+                                    <>
+                                        <div className="absolute inset-0 z-0">
+                                            <img
+                                                src="/images/cyber-bg.jpg"
+                                                alt="Cybersecurity Background"
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/70 to-blue-900/50" />
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500" />
+                                )}
 
                                 <div className="relative z-10 space-y-6">
                                     <h3 className="text-2xl font-bold">Ready to secure your business?</h3>
@@ -102,7 +114,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         Our experts are ready to help you implement {service.title} tailored to your organization's needs.
                                     </p>
                                     <Link href="/contact" className="block">
-                                        <Button size="lg" variant="secondary" className="w-full h-14 text-lg font-bold">
+                                        <Button size="lg" variant="secondary" className="w-full h-14 text-lg font-bold hover:bg-white hover:text-primary transition-all duration-300 shadow-lg">
                                             Get a Free Quote
                                             <ArrowRight className="ml-2 w-5 h-5" />
                                         </Button>
