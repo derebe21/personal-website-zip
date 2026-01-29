@@ -40,15 +40,18 @@ export function About() {
               Your Trusted Partner in Technology & Engineering
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We are a full-service engineering and technology partner dedicated
-              to delivering integrated solutions across IT infrastructure,
-              cyber-security, CCTV systems, web development and electrical
-              engineering.
+              ITSEC Technology is a full-service engineering and technology partner
+              providing integrated, standards-based solutions across IT
+              infrastructure, cybersecurity, CCTV and surveillance systems, web
+              application development, and electrical engineering.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With years of professional experience and a commitment to quality,
-              we help organisations improve operational efficiency, protect
-              their assets, and scale for growth.
+              Guided by internationally recognized best practices and quality
+              management principles, we deliver reliable, secure, and scalable
+              solutions that support business continuity, operational efficiency,
+              and risk mitigation. Our experienced professionals work closely with
+              clients to ensure compliance, performance, and continual improvement
+              in line with global standards.
             </p>
           </div>
 
