@@ -105,7 +105,7 @@ export function Footer() {
             </p>
             <p className="text-sm text-slate-400">
               info@itsectechnology.com<br />
-              +251 900 000 000
+              +251 911 407 439 / 095 519 0019
             </p>
           </div>
         </div>

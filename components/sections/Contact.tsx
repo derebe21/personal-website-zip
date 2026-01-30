@@ -35,9 +35,8 @@ export function Contact() {
   const contactInfo = [
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+251 911 407 439 / 095 519 0019',
+      href: 'tel:+251911407439',
     },
     {
       icon: Mail,
@@ -116,7 +115,7 @@ export function Contact() {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+251 911 407 439"
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
