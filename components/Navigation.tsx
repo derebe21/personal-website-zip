@@ -25,6 +25,7 @@ export function Navigation() {
     { label: 'Services', href: '/services' },
     { label: 'Process', href: '/process' },
     { label: 'Products', href: '/products' },
+    { label: 'Contact Us', href: '/contact' },
   ];
 
   const isActive = (href: string) => pathname === href;
