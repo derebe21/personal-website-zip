@@ -55,9 +55,19 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 md:py-32 bg-white dark:bg-slate-950"
+      className="relative py-20 md:py-32 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/contact-bg-new.png"
+          alt="Contact Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/90" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             Contact Us
