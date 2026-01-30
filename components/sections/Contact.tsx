@@ -64,22 +64,11 @@ export function Contact() {
           alt="Contact Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-slate-950/60" />
+        <div className="absolute inset-0 bg-slate-950/40" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-            Contact Us
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-            Let's Start Your Project
-          </h2>
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            Need a quote or want to discuss your project? Get in touch with our
-            team today
-          </p>
-        </div>
+        <div className="h-16"></div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
@@ -197,18 +186,7 @@ export function Contact() {
               </Card>
             ))}
 
-            <Card className="bg-primary text-primary-foreground">
-              <CardContent className="p-6 space-y-4">
-                <h3 className="text-xl font-semibold">
-                  Ready to Get Started?
-                </h3>
-                <p className="opacity-90 leading-relaxed">
-                  Our team is ready to help you transform your technology and
-                  engineering infrastructure. Contact us today for a free
-                  consultation.
-                </p>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </div>
