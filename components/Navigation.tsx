@@ -25,7 +25,6 @@ export function Navigation() {
     { label: 'Services', href: '/services' },
     { label: 'Process', href: '/process' },
     { label: 'Products', href: '/products' },
-    { label: 'Contact', href: '/contact' },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -66,13 +65,7 @@ export function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact">
-              <Button
-                className="bg-blue-600 text-white hover:bg-blue-700"
-              >
-                Get Started
-              </Button>
-            </Link>
+
           </div>
 
           <button
@@ -104,13 +97,7 @@ export function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button
-                className="w-full bg-blue-600 text-white hover:bg-blue-700"
-              >
-                Get Started
-              </Button>
-            </Link>
+
           </div>
         </div>
       )}
