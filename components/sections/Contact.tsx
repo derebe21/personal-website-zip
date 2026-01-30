@@ -64,7 +64,7 @@ export function Contact() {
           alt="Contact Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/90" />
+        <div className="absolute inset-0 bg-slate-950/60" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,10 +72,10 @@ export function Contact() {
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             Contact Us
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
             Let's Start Your Project
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
             Need a quote or want to discuss your project? Get in touch with our
             team today
           </p>
