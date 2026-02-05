@@ -1,9 +1,57 @@
 'use client';
 
-import { ArrowRight, Shield, Server, Zap } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      image: '/images/datacenter-bg.png',
+      title: (
+        <div className="flex flex-col items-center gap-6">
+          <img
+            src="/images/secnet-logo-shield.png"
+            alt="ITSEC Shield Logo"
+            className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] animate-fade-in"
+          />
+          <div>
+            ITSEC
+            <br />
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
+              TECHNOLOGY
+            </span>
+          </div>
+        </div>
+      ),
+      description:
+        'Empowering modern businesses with robust infrastructure, elite security, and professional electrical engineering.',
+    },
+    {
+      image: '/images/cyber-bg.jpg',
+      title: (
+        <>
+          CYBER
+          <br />
+          <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
+            SECURITY
+          </span>
+        </>
+      ),
+      description:
+        'The practice of protecting systems, networks, and programs from digital attacks. Defending your digital assets with advanced security solutions.',
+    },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -16,15 +64,21 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Parallax-like effect (simplified) */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612833/photo_2025-11-22_14-24-47_p3ao0a.jpg"
-          alt="Hero Background"
-          className="w-full h-full object-cover scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950/80" />
-      </div>
+      {/* Background Images with Fade Effect */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'
+            }`}
+        >
+          <img
+            src={slide.image}
+            alt="Hero Background"
+            className="w-full h-full object-cover scale-105 animate-subtle-zoom"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950/80" />
+        </div>
+      ))}
 
       {/* Decorative Elements */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-50 contrast-150" />
@@ -37,20 +91,28 @@ export function Hero() {
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col min-h-screen pt-20">
         <div className="flex-1 flex flex-col items-center justify-center text-center space-y-12 py-12">
-          <div className="space-y-6">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.15em] text-white leading-none uppercase animate-fade-in drop-shadow-2xl">
-              ITSEC
-              <br />
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-                TECHNOLOGY
-              </span>
-            </h1>
-          </div>
 
-          <p className="text-xl sm:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-light tracking-wide border-y border-white/10 py-4 backdrop-blur-sm">
-            Empowering modern businesses with robust infrastructure, elite security,
-            and professional electrical engineering.
-          </p>
+          {/* Content Transition Container */}
+          <div className="relative w-full">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`transition-all duration-1000 absolute inset-0 flex flex-col items-center justify-center ${currentSlide === index ? 'opacity-100 transform translate-y-0 relative' : 'opacity-0 transform translate-y-8 absolute pointer-events-none'
+                  }`}
+                style={{ position: currentSlide === index ? 'relative' : 'absolute', width: '100%' }}
+              >
+                <div className="space-y-6">
+                  <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.15em] text-white leading-none uppercase drop-shadow-2xl">
+                    {slide.title}
+                  </h1>
+                </div>
+
+                <p className="mt-12 text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light tracking-wide border-y border-white/10 py-4 backdrop-blur-sm">
+                  {slide.description}
+                </p>
+              </div>
+            ))}
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 w-full max-w-lg mx-auto">
             <Button
