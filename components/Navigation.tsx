@@ -33,8 +33,8 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white backdrop-blur-sm border-b shadow-lg'
-        : 'bg-white/90 backdrop-blur-sm'
+        ? 'bg-blue-600 backdrop-blur-sm border-b border-blue-500 shadow-lg'
+        : 'bg-blue-600/95 backdrop-blur-sm'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,9 +46,9 @@ export function Navigation() {
             <img
               src="https://res.cloudinary.com/dlc8bgysp/image/upload/e_make_transparent/v1767612094/logo_fn47rb.png"
               alt="ITSEC TECHNOLOGY Logo"
-              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
+              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform brightness-0 invert"
             />
-            <span className="font-bold text-lg md:text-xl text-gray-800">
+            <span className="font-bold text-lg md:text-xl text-white">
               ITSEC TECHNOLOGY
             </span>
           </Link>
@@ -59,8 +59,8 @@ export function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${isActive(link.href)
-                  ? 'text-blue-600'
-                  : 'text-gray-600 hover:text-gray-900'
+                  ? 'text-white font-bold'
+                  : 'text-blue-100 hover:text-white'
                   }`}
               >
                 {link.label}
@@ -71,7 +71,7 @@ export function Navigation() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-800"
+            className="lg:hidden p-2 text-white"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
