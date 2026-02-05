@@ -43,6 +43,20 @@ export function Hero() {
       description:
         'The practice of protecting systems, networks, and programs from digital attacks. Defending your digital assets with advanced security solutions.',
     },
+    {
+      image: '/images/header-bg.jpg',
+      title: (
+        <>
+          IT
+          <br />
+          <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
+            INFRASTRUCTURE
+          </span>
+        </>
+      ),
+      description:
+        'Designing and deploying resilient technology foundations. From structural cabling to advanced data center solutions, we build the backbone of your digital operations.',
+    },
   ];
 
   useEffect(() => {
