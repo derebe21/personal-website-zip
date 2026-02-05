@@ -28,9 +28,7 @@ export function About() {
                 About Us
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-              Your Trusted Partner in Technology & Engineering
-            </h2>
+
             <p className="text-lg text-muted-foreground leading-relaxed">
               ITSEC Technology PLC is an African-based and Ethiopian technology
               company dedicated to delivering secure, scalable, and future-ready
