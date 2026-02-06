@@ -21,7 +21,7 @@ export function Services() {
             Delivering end-to-end technology solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Meeting the complex needs of modern enterprises across nine specialized domains.
+            Meeting the complex needs of modern enterprises across our specialized domains.
           </p>
         </div>
 

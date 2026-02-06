@@ -92,8 +92,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
                         {/* Right Column: CTA & Sidebar */}
                         <div className="space-y-8">
-                            <Card className={`p-8 rounded-3xl overflow-hidden relative group border-none shadow-2xl ${service.slug === 'cybersecurity-solutions' ? 'text-white' : 'bg-primary text-primary-foreground'}`}>
-                                {service.slug === 'cybersecurity-solutions' ? (
+                            <Card className={`p-8 rounded-3xl overflow-hidden relative group border-none shadow-2xl ${service.slug === 'cyber-risk-protection' ? 'text-white' : 'bg-primary text-primary-foreground'}`}>
+                                {service.slug === 'cyber-risk-protection' ? (
                                     <>
                                         <div className="absolute inset-0 z-0">
                                             <img
