@@ -18,10 +18,10 @@ export function Hero() {
             className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] animate-fade-in"
           />
           <div>
-            ITSEC
+            Data Center
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-              TECHNOLOGY
+              Facility
             </span>
           </div>
         </div>
