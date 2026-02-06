@@ -23,7 +23,7 @@ export function Hero() {
         'Empowering modern businesses with robust infrastructure, elite security, and professional electrical engineering.',
     },
     {
-      image: '/images/cyber-bg.jpg',
+      image: '/images/cyber-shield-bg.jpg',
       title: (
         <>
           CYBER
@@ -40,10 +40,10 @@ export function Hero() {
       image: '/images/header-bg.jpg',
       title: (
         <>
-          IT
+          Digital
           <br />
           <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-            INFRASTRUCTURE
+            Infrastructure
           </span>
         </>
       ),
