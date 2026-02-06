@@ -61,27 +61,30 @@ const config: Config = {
           '5': 'hsl(var(--chart-5))',
         },
       },
-      keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+      'accordion-down': 'accordion-down 0.2s ease-out',
+      'accordion-up': 'accordion-up 0.2s ease-out',
+      'subtle-zoom': 'subtle-zoom 20s infinite alternate',
+    },
+    keyframes: {
+      'accordion-down': {
+        from: {
+          height: '0',
         },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+        to: {
+          height: 'var(--radix-accordion-content-height)',
         },
       },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+      'accordion-up': {
+        from: {
+          height: 'var(--radix-accordion-content-height)',
+        },
+        to: {
+          height: '0',
+        },
+      },
+      'subtle-zoom': {
+        '0%': { transform: 'scale(1)' },
+        '100%': { transform: 'scale(1.1)' },
       },
     },
   },
