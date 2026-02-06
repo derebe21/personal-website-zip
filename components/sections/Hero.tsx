@@ -28,7 +28,7 @@ export function Hero() {
         <>
           Cyber &
           <br />
-          <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
             Risk Protection
           </span>
         </>
