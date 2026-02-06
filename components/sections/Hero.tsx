@@ -26,10 +26,10 @@ export function Hero() {
       image: '/images/cyber-shield-bg.jpg',
       title: (
         <>
-          CYBER
+          Cyber &
           <br />
           <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-            SECURITY
+            Risk Protection
           </span>
         </>
       ),
