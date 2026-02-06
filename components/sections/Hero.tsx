@@ -34,7 +34,7 @@ export function Hero() {
         </>
       ),
       description:
-        'The practice of protecting systems, networks, and programs from digital attacks. Defending your digital assets with advanced security solutions.',
+        'Ready to secure your business? Our experts are ready to help you implement Cyber & Risk Protection tailored to your organization\'s needs.',
     },
     {
       image: '/images/header-bg.jpg',
@@ -83,7 +83,10 @@ export function Hero() {
             alt="Hero Background"
             className="w-full h-full object-cover scale-105 animate-subtle-zoom"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950/80" />
+          {/* Apply overlay to all slides EXCEPT the Cyber & Risk Protection slide (index 1) */}
+          {index !== 1 && (
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950/80" />
+          )}
         </div>
       ))}
 
