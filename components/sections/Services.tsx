@@ -32,7 +32,7 @@ export function Services() {
                 className="h-full group hover:shadow-xl transition-all duration-300 hover:border-primary border-slate-200 dark:border-slate-800 cursor-pointer"
               >
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all">
+                  <div className="w-14 h-14 rounded-lg bg-white flex items-center justify-center mb-4 group-hover:scale-110 transition-all border border-slate-100 shadow-sm">
                     {service.logoImage ? (
                       <img
                         src={service.logoImage}

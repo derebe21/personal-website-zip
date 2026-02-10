@@ -122,11 +122,14 @@ export function Hero() {
               >
                 <div className="space-y-6">
                   {slide.logo && (
-                    <img
-                      src={slide.logo}
-                      alt="Digital Infrastructure Logo"
-                      className="w-64 h-auto mx-auto mb-8 drop-shadow-2xl"
-                    />
+                    <div className="relative mb-8 group/logo">
+                      <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl group-hover/logo:bg-white/30 transition-colors" />
+                      <img
+                        src={slide.logo}
+                        alt={`${slide.title} Logo`}
+                        className="w-48 md:w-64 h-auto mx-auto drop-shadow-2xl relative z-10 mix-blend-multiply brightness-110 contrast-110"
+                      />
+                    </div>
                   )}
                   <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.15em] text-white leading-none uppercase drop-shadow-2xl">
                     {slide.title}
