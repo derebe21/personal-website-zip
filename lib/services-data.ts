@@ -22,7 +22,7 @@ export const servicesData = [
     {
         slug: 'cyber-risk-protection',
         icon: Shield,
-        logoImage: '/images/cyber-risk-logo-new.png',
+        logoImage: '/images/cyber-lock-3d.png',
         title: 'Cyber & Risk Protection',
         description: 'Protecting digital assets through advanced security architecture, risk management, and threat mitigation.',
         longDescription: 'In an era of increasing digital threats, our Cyber & Risk Protection services provide a comprehensive defense strategy for your enterprise. We focus on building resilient architectures that not only block attacks but also ensure rapid recovery.',
