@@ -13,6 +13,7 @@ export const servicesData = [
         slug: 'digital-infrastructure',
         icon: Server,
         logoImage: '/images/digital-infrastructure-logo-new.png',
+        bannerImage: '/images/digital-infrastructure-bg.jpg',
         bgColor: '#2E3A59',
         title: 'Digital Infrastructure',
         description: 'Designing and deploying scalable, secure, and high-performance network and IT environments.',
@@ -24,6 +25,7 @@ export const servicesData = [
         slug: 'cyber-risk-protection',
         icon: Shield,
         logoImage: '/images/cyber-lock-3d.png',
+        bannerImage: '/images/cyber-shield-bg.jpg',
         bgColor: '#22C55E',
         title: 'Cyber & Risk Protection',
         description: 'Protecting digital assets through advanced security architecture, risk management, and threat mitigation.',
@@ -34,6 +36,7 @@ export const servicesData = [
     {
         slug: 'enterprise-platforms-applications',
         icon: Code,
+        bannerImage: '/images/Enterprice.png',
         bgColor: '#3B82F6',
         title: 'Enterprise Platforms & Applications',
         description: 'Building reliable, secure, and customized enterprise applications that support business growth.',
@@ -44,6 +47,7 @@ export const servicesData = [
     {
         slug: 'smart-connected-systems',
         icon: Cpu,
+        bannerImage: '/images/datacenter-bg.png',
         bgColor: '#FACC15',
         title: 'Smart & Connected Systems',
         description: 'Delivering IoT-driven and intelligent systems for automation, monitoring, and efficiency.',
@@ -54,6 +58,7 @@ export const servicesData = [
     {
         slug: 'cloud-hybrid-enablement',
         icon: Cloud,
+        bannerImage: '/images/header-bg.jpg',
         bgColor: '#38BDF8',
         title: 'Cloud & Hybrid Enablement',
         description: 'Implementing secure public, private, and hybrid cloud solutions for modern enterprises.',
@@ -64,6 +69,7 @@ export const servicesData = [
     {
         slug: 'engineering-critical-systems',
         icon: Zap,
+        bannerImage: '/images/digital-infrastructure-bg.jpg',
         bgColor: '#1C1C1C',
         title: 'Engineering & Critical Systems',
         description: 'Engineering resilient facilities and power systems for maximum uptime and reliability.',
@@ -74,6 +80,7 @@ export const servicesData = [
     {
         slug: 'technology-advisory-integration',
         icon: Lightbulb,
+        bannerImage: '/images/cyber-shield-bg.jpg',
         bgColor: '#8B5CF6',
         title: 'Technology Advisory & Integration',
         description: 'Advising organizations on digital transformation, system optimization, and technology strategy.',

@@ -26,49 +26,64 @@ export function Services() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesData.map((service, index) => (
-            <Link key={index} href={`/services/${service.slug}`}>
-              <Card
-                className="h-full group hover:shadow-xl transition-all duration-300 hover:border-primary border-slate-200 dark:border-slate-800 cursor-pointer"
-              >
-                <CardHeader>
-                  <div
-                    className="w-20 h-20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-105 transition-all border border-slate-100 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.3)] overflow-hidden"
-                    style={{ backgroundColor: service.bgColor || '#ffffff' }}
-                  >
-                    {service.logoImage ? (
-                      <img
-                        src={service.logoImage}
-                        alt={`${service.title} logo`}
-                        className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal brightness-105 contrast-105"
-                      />
-                    ) : (
-                      <service.icon className="w-10 h-10 text-white" />
-                    )}
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start text-sm text-muted-foreground"
-                      >
-                        <ArrowRight className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="pt-4 flex items-center text-sm font-semibold text-primary group-hover:translate-x-1 transition-transform">
-                    Learn more <ArrowRight className="ml-2 w-4 h-4" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+          <Link key={index} href={`/services/${service.slug}`} className="block group perspective-1000">
+            <Card
+              className="h-full overflow-hidden border-none shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:rotate-y-6 group-hover:scale-[1.02] bg-white dark:bg-slate-800 flex flex-col"
+            >
+              {/* Banner Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={service.bannerImage || '/images/header-bg.jpg'}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+              </div>
+
+              {/* Overlapping Icon Box */}
+              <div className="relative flex justify-center -mt-10 z-10">
+                <div
+                  className="w-20 h-20 rounded-lg flex items-center justify-center shadow-xl border-4 border-white dark:border-slate-800 transition-transform duration-500 group-hover:rotate-6"
+                  style={{ backgroundColor: service.bgColor || '#ffffff' }}
+                >
+                  {service.logoImage ? (
+                    <img
+                      src={service.logoImage}
+                      alt={`${service.title} logo`}
+                      className="w-full h-full object-contain p-2 brightness-110 contrast-105"
+                    />
+                  ) : (
+                    <service.icon className="w-10 h-10 text-white" />
+                  )}
+                </div>
+              </div>
+
+              <div className="flex-grow p-8 pt-4 text-center">
+                <CardTitle className="text-2xl font-bold mb-4">{service.title}</CardTitle>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {service.description}
+                </p>
+
+                <ul className="space-y-3 mb-8 text-left max-w-[240px] mx-auto">
+                  {service.features.slice(0, 3).map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start text-sm text-muted-foreground"
+                    >
+                      <ArrowRight className="w-4 h-4 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Featured 'Read More' Footer */}
+              <div className="bg-[#F6A113] hover:bg-[#E59102] transition-colors py-4 px-8 flex items-center justify-center text-white font-bold gap-3 group/btn cursor-pointer">
+                <span>Read More</span>
+                <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
+              </div>
+            </Card>
+          </Link>
           ))}
         </div>
 
