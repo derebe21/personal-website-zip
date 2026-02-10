@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface Slide {
   image: string;
   logo?: string;
-  title: JSX.Element;
+  title: React.ReactElement;
   description: string;
 }
 
