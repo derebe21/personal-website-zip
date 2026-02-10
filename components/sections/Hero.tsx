@@ -4,10 +4,17 @@ import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+interface Slide {
+  image: string;
+  logo?: string;
+  title: JSX.Element;
+  description: string;
+}
+
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+  const slides: Slide[] = [
     {
       image: '/images/datacenter-bg.png',
       title: (
@@ -23,7 +30,7 @@ export function Hero() {
         'Empowering modern businesses with robust infrastructure, elite security, and professional electrical engineering.',
     },
     {
-      image: '/images/cyber-shield-bg.jpg',
+      image: '/images/cyber-protection-bg.jpg',
       title: (
         <>
           Cyber &
@@ -38,6 +45,7 @@ export function Hero() {
     },
     {
       image: '/images/header-bg.jpg',
+      logo: '/images/digital-infrastructure-logo.png',
       title: (
         <>
           Digital
@@ -112,6 +120,13 @@ export function Hero() {
                 style={{ position: currentSlide === index ? 'relative' : 'absolute', width: '100%' }}
               >
                 <div className="space-y-6">
+                  {slide.logo && (
+                    <img
+                      src={slide.logo}
+                      alt="Digital Infrastructure Logo"
+                      className="w-64 h-auto mx-auto mb-8 drop-shadow-2xl"
+                    />
+                  )}
                   <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.15em] text-white leading-none uppercase drop-shadow-2xl">
                     {slide.title}
                   </h1>
