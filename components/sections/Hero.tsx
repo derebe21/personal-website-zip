@@ -30,7 +30,7 @@ export function Hero() {
         'Empowering modern businesses with robust infrastructure, elite security, and professional electrical engineering.',
     },
     {
-      image: '/images/cyber-protection-bg.jpg',
+      image: '/images/cyber-shield-bg.jpg',
       title: (
         <>
           Cyber &
