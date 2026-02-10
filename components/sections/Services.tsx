@@ -29,7 +29,7 @@ export function Services() {
           {servicesData.map((service, index) => (
             <Link key={index} href={`/services/${service.slug}`} className="block group perspective-1000">
               <Card
-                className="h-full overflow-hidden border-none shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:rotate-y-6 group-hover:scale-[1.02] bg-white dark:bg-slate-800 flex flex-col"
+                className="h-full overflow-hidden border-none shadow-lg transition-all duration-700 bg-white dark:bg-slate-800 flex flex-col rotate-y-12 group-hover:rotate-y-0 group-hover:shadow-2xl group-hover:scale-[1.05]"
               >
                 {/* Banner Image */}
                 <div className="relative h-48 overflow-hidden">
