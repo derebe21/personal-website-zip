@@ -13,6 +13,7 @@ export const servicesData = [
         slug: 'digital-infrastructure',
         icon: Server,
         logoImage: '/images/digital-infrastructure-logo-new.png',
+        bgColor: '#2E3A59',
         title: 'Digital Infrastructure',
         description: 'Designing and deploying scalable, secure, and high-performance network and IT environments.',
         longDescription: 'Reliable digital infrastructure is the backbone of any modern business. We specialize in creating high-performance environments that scale with your growth, ensuring your team has the tools they need to succeed without technical bottlenecks.',
@@ -23,6 +24,7 @@ export const servicesData = [
         slug: 'cyber-risk-protection',
         icon: Shield,
         logoImage: '/images/cyber-lock-3d.png',
+        bgColor: '#22C55E',
         title: 'Cyber & Risk Protection',
         description: 'Protecting digital assets through advanced security architecture, risk management, and threat mitigation.',
         longDescription: 'In an era of increasing digital threats, our Cyber & Risk Protection services provide a comprehensive defense strategy for your enterprise. We focus on building resilient architectures that not only block attacks but also ensure rapid recovery.',
@@ -32,6 +34,7 @@ export const servicesData = [
     {
         slug: 'enterprise-platforms-applications',
         icon: Code,
+        bgColor: '#3B82F6',
         title: 'Enterprise Platforms & Applications',
         description: 'Building reliable, secure, and customized enterprise applications that support business growth.',
         longDescription: 'We build custom, secure, and scalable enterprise platforms designed to streamline your specific workflows and drive operational excellence, ensuring your software ecosystem supports your strategic goals.',
@@ -41,6 +44,7 @@ export const servicesData = [
     {
         slug: 'smart-connected-systems',
         icon: Cpu,
+        bgColor: '#FACC15',
         title: 'Smart & Connected Systems',
         description: 'Delivering IoT-driven and intelligent systems for automation, monitoring, and efficiency.',
         longDescription: 'Leverage the power of connected systems to transform your operations. Our smart solutions provide real-time data and automation that lead to smarter decisions and more efficient processes across your facilities.',
@@ -50,6 +54,7 @@ export const servicesData = [
     {
         slug: 'cloud-hybrid-enablement',
         icon: Cloud,
+        bgColor: '#38BDF8',
         title: 'Cloud & Hybrid Enablement',
         description: 'Implementing secure public, private, and hybrid cloud solutions for modern enterprises.',
         longDescription: 'Transitioning to the cloud should be seamless and secure. We help you choose and implement the right cloud strategy—public, private, or hybrid—to increase agility and reduce infrastructure overhead.',
@@ -59,6 +64,7 @@ export const servicesData = [
     {
         slug: 'engineering-critical-systems',
         icon: Zap,
+        bgColor: '#1C1C1C',
         title: 'Engineering & Critical Systems',
         description: 'Engineering resilient facilities and power systems for maximum uptime and reliability.',
         longDescription: 'Critical operations require precision engineering. We design facilities and power systems with a focus on maximum uptime, energy efficiency, and total reliability through redundant systems and robust engineering.',
@@ -68,6 +74,7 @@ export const servicesData = [
     {
         slug: 'technology-advisory-integration',
         icon: Lightbulb,
+        bgColor: '#8B5CF6',
         title: 'Technology Advisory & Integration',
         description: 'Advising organizations on digital transformation, system optimization, and technology strategy.',
         longDescription: 'Navigate the complex technology landscape with confidence. Our consultants work closely with your leadership to define strategies that align technology investments with your long-term business goals.',

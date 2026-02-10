@@ -32,15 +32,18 @@ export function Services() {
                 className="h-full group hover:shadow-xl transition-all duration-300 hover:border-primary border-slate-200 dark:border-slate-800 cursor-pointer"
               >
                 <CardHeader>
-                  <div className="w-20 h-20 rounded-xl bg-white flex items-center justify-center mb-6 group-hover:scale-105 transition-all border border-slate-100 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] overflow-hidden">
+                  <div
+                    className="w-20 h-20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-105 transition-all border border-slate-100 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.3)] overflow-hidden"
+                    style={{ backgroundColor: service.bgColor || '#ffffff' }}
+                  >
                     {service.logoImage ? (
                       <img
                         src={service.logoImage}
                         alt={`${service.title} logo`}
-                        className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                        className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal brightness-105 contrast-105"
                       />
                     ) : (
-                      <service.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
+                      <service.icon className="w-10 h-10 text-white" />
                     )}
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
