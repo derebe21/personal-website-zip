@@ -40,7 +40,15 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         <div className="lg:col-span-2 space-y-10">
                             <div className="space-y-6">
                                 <div className="inline-flex p-4 bg-primary/10 rounded-2xl">
-                                    <service.icon className="w-10 h-10 text-primary" />
+                                    {service.logoImage ? (
+                                        <img
+                                            src={service.logoImage}
+                                            alt={service.title}
+                                            className="w-10 h-10 object-contain mix-blend-multiply dark:mix-blend-normal"
+                                        />
+                                    ) : (
+                                        <service.icon className="w-10 h-10 text-primary" />
+                                    )}
                                 </div>
                                 <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
                                     {service.title}

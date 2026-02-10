@@ -37,7 +37,7 @@ export function Services() {
                       <img
                         src={service.logoImage}
                         alt={`${service.title} logo`}
-                        className="w-14 h-14 object-contain"
+                        className="w-14 h-14 object-contain mix-blend-multiply dark:mix-blend-normal"
                       />
                     ) : (
                       <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground" />

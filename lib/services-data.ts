@@ -12,6 +12,7 @@ export const servicesData = [
     {
         slug: 'digital-infrastructure',
         icon: Server,
+        logoImage: '/images/digital-infrastructure-logo-new.png',
         title: 'Digital Infrastructure',
         description: 'Designing and deploying scalable, secure, and high-performance network and IT environments.',
         longDescription: 'Reliable digital infrastructure is the backbone of any modern business. We specialize in creating high-performance environments that scale with your growth, ensuring your team has the tools they need to succeed without technical bottlenecks.',

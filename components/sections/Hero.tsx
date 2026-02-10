@@ -31,6 +31,7 @@ export function Hero() {
     },
     {
       image: '/images/cyber-shield-bg.jpg',
+      logo: '/images/cyber-risk-logo-new.png',
       title: (
         <>
           Cyber &
@@ -45,7 +46,7 @@ export function Hero() {
     },
     {
       image: '/images/digital-infrastructure-bg.jpg',
-      logo: '/images/digital-infrastructure-logo.png',
+      logo: '/images/digital-infrastructure-logo-new.png',
       title: (
         <>
           Digital
