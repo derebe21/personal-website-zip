@@ -123,3 +123,51 @@
     background-position: 0% 50%;
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes orbital-3d {
+  0% {
+    transform: perspective(1000px) rotateY(12deg) rotateX(2deg);
+  }
+
+  50% {
+    transform: perspective(1000px) rotateY(-5deg) rotateX(-2deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(12deg) rotateX(2deg);
+  }
+}
+
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 60s linear infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2.5s linear infinite;
+  }
+
+  .animate-orbital-3d {
+    animation: orbital-3d 8s ease-in-out infinite;
+  }
+}
