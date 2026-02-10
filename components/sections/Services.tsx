@@ -4,9 +4,24 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
+import { useState, useEffect, useRef } from 'react';
+
 export function Services() {
-  // Duplicate services to create a seamless infinite loop
-  const duplicatedServices = [...servicesData, ...servicesData, ...servicesData];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const totalServices = servicesData.length;
+  // Duplicate services to ensure a long enough ribbon for the interval effect
+  const multipliedServices = [...servicesData, ...servicesData, ...servicesData, ...servicesData];
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev: number) => (prev + 1) % (totalServices * 2));
+    }, 4000); // 4s total: 3s stop + 1s transition
+
+    return () => clearInterval(interval);
+  }, [isPaused, totalServices]);
 
   return (
     <section
@@ -24,18 +39,28 @@ export function Services() {
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
 
-        {/* Infinite 3D Auto-Slider Ribbon */}
-        <div className="relative mt-20 flex overflow-hidden">
+        {/* Infinite 3D Auto-Slider Ribbon with Stepping Motion */}
+        <div
+          className="relative mt-20 flex overflow-hidden"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           {/* Subtle Gradient Overlays for smooth entry/exit */}
           <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
 
-          <div className="flex animate-scroll hover:[animation-play-state:paused] gap-12 py-24 px-12">
-            {duplicatedServices.map((service, index) => (
+          <div
+            className="flex gap-12 py-24 px-12 transition-transform duration-1000 ease-in-out"
+            style={{
+              transform: `translateX(calc(-${activeIndex * (380 + 48)}px))`,
+            }}
+          >
+            {multipliedServices.map((service, index) => (
               <div key={index} className="w-[380px] md:w-[480px] flex-shrink-0">
                 <Link href={`/services/${service.slug}`} className="block group h-full">
                   <Card
-                    className="h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col animate-orbital-3d group-hover:animate-none group-hover:rotate-y-0 group-hover:scale-[1.05] group-hover:shadow-primary/20"
+                    className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-1000 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:rotate-y-0 group-hover:scale-[1.05] group-hover:shadow-primary/20 ${activeIndex % totalServices === index % totalServices ? 'animate-none scale-105 rotate-y-0 shadow-primary/10' : 'animate-orbital-3d'
+                      }`}
                   >
                     {/* Banner Image */}
                     <div className="relative h-60 overflow-hidden">
