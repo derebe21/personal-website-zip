@@ -59,6 +59,16 @@ export function Hero() {
     },
   ];
 
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    const x = (clientX / innerWidth - 0.5) * 20; // max 10deg rotate
+    const y = (clientY / innerHeight - 0.5) * -20;
+    setMousePosition({ x, y });
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -76,7 +86,8 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      onMouseMove={handleMouseMove}
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden perspective-1000"
     >
       {/* Background Images with Fade Effect */}
       {slides.map((slide, index) => (
@@ -89,6 +100,10 @@ export function Hero() {
             src={slide.image}
             alt="Hero Background"
             className="w-full h-full object-cover scale-105 animate-subtle-zoom"
+            style={{
+              transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * -0.5}px) scale(1.1)`,
+              transition: 'transform 0.2s ease-out'
+            }}
           />
           {/* Apply overlay to all slides EXCEPT the Cyber & Risk Protection slide (index 1) */}
           {index !== 1 && (
@@ -106,7 +121,13 @@ export function Hero() {
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-cyan-600/20 rounded-full blur-[120px] animate-pulse delay-700" />
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col min-h-screen pt-20">
+      <div
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col min-h-screen pt-20 transition-transform duration-200 ease-out"
+        style={{
+          transform: `rotateY(${mousePosition.x}deg) rotateX(${mousePosition.y}deg)`,
+          transformStyle: 'preserve-3d'
+        }}
+      >
         <div className="flex-1 flex flex-col items-center justify-center text-center space-y-12 py-12">
 
           {/* Content Transition Container */}
@@ -116,7 +137,11 @@ export function Hero() {
                 key={index}
                 className={`transition-all duration-1000 absolute inset-0 flex flex-col items-center justify-center ${currentSlide === index ? 'opacity-100 transform translate-y-0 relative' : 'opacity-0 transform translate-y-8 absolute pointer-events-none'
                   }`}
-                style={{ position: currentSlide === index ? 'relative' : 'absolute', width: '100%' }}
+                style={{
+                  position: currentSlide === index ? 'relative' : 'absolute',
+                  width: '100%',
+                  transform: currentSlide === index ? 'translateZ(50px)' : 'translateZ(0px)'
+                }}
               >
                 <div className="space-y-6">
                   {slide.logo && (
@@ -142,7 +167,10 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 w-full max-w-lg mx-auto">
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 w-full max-w-lg mx-auto"
+            style={{ transform: 'translateZ(100px)' }}
+          >
             <Button
               size="lg"
               onClick={scrollToContact}
