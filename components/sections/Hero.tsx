@@ -128,7 +128,7 @@ export function Hero() {
                       <img
                         src={slide.logo}
                         alt={`${slide.title} Logo`}
-                        className="w-56 sm:w-72 md:w-96 lg:w-[450px] h-auto mx-auto drop-shadow-[0_20px_50px_rgba(255,255,255,0.3)] relative z-10 mix-blend-multiply brightness-110 contrast-125 transition-all duration-500"
+                        className="w-56 sm:w-72 md:w-96 lg:w-[450px] h-full object-contain mx-auto drop-shadow-[0_0_40px_rgba(255,255,255,0.25)] relative z-10 mix-blend-multiply brightness-110 contrast-125 transition-all duration-500"
                       />
                     </div>
                   )}

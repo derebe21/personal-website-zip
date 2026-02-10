@@ -32,15 +32,15 @@ export function Services() {
                 className="h-full group hover:shadow-xl transition-all duration-300 hover:border-primary border-slate-200 dark:border-slate-800 cursor-pointer"
               >
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-lg bg-white flex items-center justify-center mb-4 group-hover:scale-110 transition-all border border-slate-100 shadow-sm">
+                  <div className="w-20 h-20 rounded-xl bg-white flex items-center justify-center mb-6 group-hover:scale-105 transition-all border border-slate-100 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] overflow-hidden">
                     {service.logoImage ? (
                       <img
                         src={service.logoImage}
                         alt={`${service.title} logo`}
-                        className="w-14 h-14 object-contain mix-blend-multiply dark:mix-blend-normal"
+                        className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal"
                       />
                     ) : (
-                      <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground" />
+                      <service.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
                     )}
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
