@@ -13,6 +13,7 @@ interface Slide {
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const slides: Slide[] = [
     {
@@ -31,6 +32,7 @@ export function Hero() {
     },
     {
       image: '/images/cyber-shield-bg.jpg',
+      logo: '/images/cyber-risk-logo-new.png',
       title: (
         <>
           Cyber &
@@ -41,10 +43,11 @@ export function Hero() {
         </>
       ),
       description:
-        'Ready to secure your business? Our experts are ready to help you implement Cyber & Risk Protection tailored to your organization\'s needs.',
+        "Ready to secure your business? Our experts are ready to help you implement Cyber & Risk Protection tailored to your organization's needs.",
     },
     {
       image: '/images/digital-infrastructure-bg.jpg',
+      logo: '/images/digital-infrastructure-logo-new.png',
       title: (
         <>
           Digital
@@ -59,25 +62,23 @@ export function Hero() {
     },
   ];
 
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
     const { innerWidth, innerHeight } = window;
-    const x = (clientX / innerWidth - 0.5) * 20; // max 10deg rotate
-    const y = (clientY / innerHeight - 0.5) * -20;
+    const x = (clientX / innerWidth - 0.5) * 30; // Increased to 30deg for more depth
+    const y = (clientY / innerHeight - 0.5) * -30;
     setMousePosition({ x, y });
   };
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 8000); // Slower interval for better readability
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById('services'); // Redirect to services for flow
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -87,108 +88,126 @@ export function Hero() {
     <section
       id="home"
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden perspective-1000"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden perspective-1000 bg-slate-950"
     >
-      {/* Background Images with Fade Effect */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'
-            }`}
-        >
-          <img
-            src={slide.image}
-            alt="Hero Background"
-            className="w-full h-full object-cover scale-105 animate-subtle-zoom"
-            style={{
-              transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * -0.5}px) scale(1.1)`,
-              transition: 'transform 0.2s ease-out'
-            }}
-          />
-          {/* Apply overlay to all slides EXCEPT the Cyber & Risk Protection slide (index 1) */}
-          {index !== 1 && (
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/40 to-slate-950/80" />
-          )}
-        </div>
-      ))}
-
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-50 contrast-150" />
-      <div className="absolute inset-0 bg-grid-white/5 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-
-      {/* Glowing Orbs */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] animate-pulse" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-cyan-600/20 rounded-full blur-[120px] animate-pulse delay-700" />
-
-      {/* Main Content */}
+      {/* Cinematic Sliding Backgrounds */}
       <div
-        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col min-h-screen pt-20 transition-transform duration-200 ease-out"
+        className="absolute inset-0 z-0 flex transition-transform duration-1000 ease-in-out"
+        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+      >
+        {slides.map((slide, index) => (
+          <div key={index} className="relative min-w-full h-full overflow-hidden">
+            <img
+              src={slide.image}
+              alt="Hero Background"
+              className="w-full h-full object-cover scale-110"
+              style={{
+                transform: `rotateY(${mousePosition.x * 0.2}deg) rotateX(${mousePosition.y * 0.2}deg) scale(1.15)`,
+                transition: 'transform 0.3s ease-out'
+              }}
+            />
+            {/* Overlay Layer */}
+            <div className={`absolute inset-0 bg-slate-950/40 via-transparent to-slate-950/60 ${index !== 1 ? 'backdrop-brightness-[0.6]' : ''}`} />
+            {/* Cinematic Noise & Grid */}
+            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-50 contrast-150 mix-blend-soft-light" />
+            <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(to_bottom,transparent,black,transparent)]" />
+          </div>
+        ))}
+      </div>
+
+      {/* Main Content Layer */}
+      <div
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col min-h-[90vh] justify-center transition-transform duration-300 ease-out"
         style={{
           transform: `rotateY(${mousePosition.x}deg) rotateX(${mousePosition.y}deg)`,
           transformStyle: 'preserve-3d'
         }}
       >
-        <div className="flex-1 flex flex-col items-center justify-center text-center space-y-12 py-12">
-
-          {/* Content Transition Container */}
-          <div className="relative w-full">
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className={`transition-all duration-1000 absolute inset-0 flex flex-col items-center justify-center ${currentSlide === index ? 'opacity-100 transform translate-y-0 relative' : 'opacity-0 transform translate-y-8 absolute pointer-events-none'
-                  }`}
-                style={{
-                  position: currentSlide === index ? 'relative' : 'absolute',
-                  width: '100%',
-                  transform: currentSlide === index ? 'translateZ(50px)' : 'translateZ(0px)'
-                }}
-              >
-                <div className="space-y-6">
-                  {slide.logo && (
-                    <div className="relative mb-12 group/logo scale-110 md:scale-125 lg:scale-135 transition-transform duration-700">
-                      <div className="absolute inset-0 bg-white/30 rounded-full blur-[80px] group-hover/logo:bg-white/40 transition-colors animate-pulse" />
-                      <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-[40px] mix-blend-screen" />
-                      <img
-                        src={slide.logo}
-                        alt={`${slide.title} Logo`}
-                        className="w-56 sm:w-72 md:w-96 lg:w-[450px] h-full object-contain mx-auto drop-shadow-[0_0_40px_rgba(255,255,255,0.25)] relative z-10 mix-blend-multiply brightness-110 contrast-125 transition-all duration-500"
-                      />
-                    </div>
-                  )}
-                  <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.15em] text-white leading-none uppercase drop-shadow-2xl">
-                    {slide.title}
-                  </h1>
+        <div className="relative h-[600px] w-full mt-12">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out flex flex-col items-center text-center ${currentSlide === index
+                  ? 'opacity-100 translate-x-0'
+                  : index < currentSlide
+                    ? 'opacity-0 -translate-x-full'
+                    : 'opacity-0 translate-x-full'
+                }`}
+              style={{
+                transformStyle: 'preserve-3d',
+                zIndex: currentSlide === index ? 20 : 10
+              }}
+            >
+              {/* Floating Logo Layer */}
+              {slide.logo && (
+                <div
+                  className="relative mb-12 group/logo transition-all duration-700"
+                  style={{ transform: 'translateZ(120px)' }}
+                >
+                  <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-[100px] animate-pulse" />
+                  <img
+                    src={slide.logo}
+                    alt={`${slide.title} Logo`}
+                    className="w-72 sm:w-80 md:w-[450px] lg:w-[500px] h-auto object-contain mx-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] relative z-10 brightness-110 contrast-125"
+                  />
                 </div>
+              )}
 
-                <p className="mt-12 text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light tracking-wide border-y border-white/10 py-4 backdrop-blur-sm">
-                  {slide.description}
-                </p>
+              {/* Title Layer */}
+              <div style={{ transform: 'translateZ(80px)' }}>
+                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                  {slide.title}
+                </h1>
               </div>
-            ))}
-          </div>
 
-          <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 w-full max-w-lg mx-auto"
-            style={{ transform: 'translateZ(100px)' }}
-          >
-            <Button
-              size="lg"
-              onClick={scrollToContact}
-              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold h-16 px-12 rounded-full shadow-2xl shadow-blue-500/40 transition-all hover:scale-105 active:scale-95 text-lg"
-            >
-              Get Started
-              <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={() => document.getElementById('servicesFocus')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/20 border font-bold h-16 px-12 rounded-full backdrop-blur-md transition-all hover:scale-105 text-lg"
-            >
-              Explore Services
-            </Button>
-          </div>
+              {/* Description Layer */}
+              <div
+                className="mt-12 max-w-3xl mx-auto"
+                style={{ transform: 'translateZ(40px)' }}
+              >
+                <div className="p-1 px-4 border-l-4 border-blue-600 bg-white/5 backdrop-blur-md rounded-r-xl">
+                  <p className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-medium tracking-wide py-4">
+                    {slide.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+
+        {/* Action Buttons with High Depth */}
+        <div
+          className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-12 w-full max-w-lg mx-auto"
+          style={{ transform: 'translateZ(150px)' }}
+        >
+          <Button
+            size="lg"
+            onClick={scrollToContact}
+            className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-black h-18 px-14 rounded-full shadow-[0_20px_40px_rgba(37,99,235,0.4)] transition-all hover:scale-105 active:scale-95 text-xl"
+          >
+            Get Started
+            <ArrowRight className="ml-3 w-7 h-7" />
+          </Button>
+          <Button
+            size="lg"
+            variant="secondary"
+            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/20 border-2 font-black h-18 px-14 rounded-full backdrop-blur-xl transition-all hover:scale-105 text-xl"
+          >
+            Explore Services
+          </Button>
+        </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-4 z-30">
+        {slides.map((_, i) => (
+          <div
+            key={i}
+            className={`h-2.5 rounded-full transition-all duration-500 ${currentSlide === i ? 'w-12 bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.8)]' : 'w-2.5 bg-white/30'
+              }`}
+          />
+        ))}
       </div>
     </section>
   );
