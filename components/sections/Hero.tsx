@@ -44,7 +44,7 @@ export function Hero() {
         'Ready to secure your business? Our experts are ready to help you implement Cyber & Risk Protection tailored to your organization\'s needs.',
     },
     {
-      image: '/images/header-bg.jpg',
+      image: '/images/digital-infrastructure-bg.jpg',
       logo: '/images/digital-infrastructure-logo.png',
       title: (
         <>
