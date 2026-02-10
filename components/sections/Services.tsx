@@ -33,7 +33,15 @@ export function Services() {
               >
                 <CardHeader>
                   <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all">
-                    <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground" />
+                    {service.logoImage ? (
+                      <img
+                        src={service.logoImage}
+                        alt={`${service.title} logo`}
+                        className="w-10 h-10 object-contain"
+                      />
+                    ) : (
+                      <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground" />
+                    )}
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
