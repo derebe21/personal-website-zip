@@ -39,15 +39,18 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         {/* Left Column: Content */}
                         <div className="lg:col-span-2 space-y-10">
                             <div className="space-y-6">
-                                <div className="inline-flex p-4 bg-primary/10 rounded-2xl">
+                                <div
+                                    className="inline-flex p-6 rounded-2xl shadow-lg border-2 border-white dark:border-slate-800"
+                                    style={{ backgroundColor: service.bgColor || '#ffffff' }}
+                                >
                                     {service.logoImage ? (
                                         <img
                                             src={service.logoImage}
                                             alt={service.title}
-                                            className="w-10 h-10 object-contain mix-blend-multiply dark:mix-blend-normal"
+                                            className="w-12 h-12 object-contain brightness-110 contrast-105"
                                         />
                                     ) : (
-                                        <service.icon className="w-10 h-10 text-primary" />
+                                        <service.icon className="w-12 h-12 text-white" />
                                     )}
                                 </div>
                                 <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
@@ -100,21 +103,15 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
                         {/* Right Column: CTA & Sidebar */}
                         <div className="space-y-8">
-                            <Card className={`p-8 rounded-3xl overflow-hidden relative group border-none shadow-2xl ${service.slug === 'cyber-risk-protection' ? 'text-white' : 'bg-primary text-primary-foreground'}`}>
-                                {service.slug === 'cyber-risk-protection' ? (
-                                    <>
-                                        <div className="absolute inset-0 z-0">
-                                            <img
-                                                src="/images/cyber-bg.jpg"
-                                                alt="Cybersecurity Background"
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/70 to-blue-900/50" />
-                                        </div>
-                                    </>
-                                ) : (
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500" />
-                                )}
+                            <Card className="p-8 rounded-3xl overflow-hidden relative group border-none shadow-2xl bg-slate-900 text-white">
+                                <div className="absolute inset-0 z-0">
+                                    <img
+                                        src={service.bannerImage || '/images/cyber-bg.jpg'}
+                                        alt={`${service.title} Background`}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/70 to-blue-900/50" />
+                                </div>
 
                                 <div className="relative z-10 space-y-6">
                                     <h3 className="text-2xl font-bold">Ready to secure your business?</h3>
