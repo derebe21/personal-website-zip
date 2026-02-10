@@ -122,12 +122,13 @@ export function Hero() {
               >
                 <div className="space-y-6">
                   {slide.logo && (
-                    <div className="relative mb-8 group/logo">
-                      <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl group-hover/logo:bg-white/30 transition-colors" />
+                    <div className="relative mb-12 group/logo scale-110 md:scale-125 lg:scale-135 transition-transform duration-700">
+                      <div className="absolute inset-0 bg-white/30 rounded-full blur-[80px] group-hover/logo:bg-white/40 transition-colors animate-pulse" />
+                      <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-[40px] mix-blend-screen" />
                       <img
                         src={slide.logo}
                         alt={`${slide.title} Logo`}
-                        className="w-48 md:w-64 h-auto mx-auto drop-shadow-2xl relative z-10 mix-blend-multiply brightness-110 contrast-110"
+                        className="w-56 sm:w-72 md:w-96 lg:w-[450px] h-auto mx-auto drop-shadow-[0_20px_50px_rgba(255,255,255,0.3)] relative z-10 mix-blend-multiply brightness-110 contrast-125 transition-all duration-500"
                       />
                     </div>
                   )}
