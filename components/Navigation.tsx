@@ -24,7 +24,7 @@ export function Navigation() {
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
 
-    { label: 'Products', href: '/products' },
+    { label: 'Technology', href: '/products' },
     { label: 'Contact Us', href: '/contact' },
   ];
 
