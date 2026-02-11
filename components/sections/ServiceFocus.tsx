@@ -1,6 +1,6 @@
 'use client';
 
-import { Server, Shield, Zap } from 'lucide-react';
+import { Server, Zap } from 'lucide-react';
 
 export function ServiceFocus() {
     return (
@@ -23,13 +23,10 @@ export function ServiceFocus() {
                     </div>
 
                     <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
-                        <div className="p-4 bg-blue-500/10 rounded-2xl group-hover:bg-blue-500/20 transition-colors">
-                            <Shield className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-                        </div>
                         <div className="text-center">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Security</h3>
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Our Vision</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                Comprehensive protection & advanced surveillance
+                                To be Africa's most trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.
                             </p>
                         </div>
                     </div>
