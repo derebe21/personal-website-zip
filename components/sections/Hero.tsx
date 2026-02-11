@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 
 interface Slide {
   image: string;
-  logo?: string;
   title: React.ReactElement;
   description: string;
 }
@@ -32,7 +31,6 @@ export function Hero() {
     },
     {
       image: '/images/cyber-shield-bg.jpg',
-      logo: '/images/cyber-risk-logo-new.png',
       title: (
         <>
           Cyber &
@@ -47,7 +45,6 @@ export function Hero() {
     },
     {
       image: '/images/digital-infrastructure-bg.jpg',
-      logo: '/images/digital-infrastructure-logo-new.png',
       title: (
         <>
           Digital
@@ -128,31 +125,16 @@ export function Hero() {
             <div
               key={index}
               className={`absolute inset-0 transition-all duration-1000 ease-in-out flex flex-col items-center text-center ${currentSlide === index
-                  ? 'opacity-100 translate-x-0'
-                  : index < currentSlide
-                    ? 'opacity-0 -translate-x-full'
-                    : 'opacity-0 translate-x-full'
+                ? 'opacity-100 translate-x-0'
+                : index < currentSlide
+                  ? 'opacity-0 -translate-x-full'
+                  : 'opacity-0 translate-x-full'
                 }`}
               style={{
                 transformStyle: 'preserve-3d',
                 zIndex: currentSlide === index ? 20 : 10
               }}
             >
-              {/* Floating Logo Layer */}
-              {slide.logo && (
-                <div
-                  className="relative mb-12 group/logo transition-all duration-700"
-                  style={{ transform: 'translateZ(120px)' }}
-                >
-                  <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-[100px] animate-pulse" />
-                  <img
-                    src={slide.logo}
-                    alt={`${slide.title} Logo`}
-                    className="w-72 sm:w-80 md:w-[450px] lg:w-[500px] h-auto object-contain mx-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] relative z-10 brightness-110 contrast-125"
-                  />
-                </div>
-              )}
-
               {/* Title Layer */}
               <div style={{ transform: 'translateZ(80px)' }}>
                 <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
