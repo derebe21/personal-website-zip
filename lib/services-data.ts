@@ -69,7 +69,7 @@ export const servicesData = [
     {
         slug: 'engineering-critical-systems',
         icon: Zap,
-        bannerImage: '/images/digital-infrastructure-bg.jpg',
+        bannerImage: '/images/engineering-critical-systems-bg.jpg',
         bgColor: '#1C1C1C',
         title: 'Engineering & Critical Systems',
         description: 'Engineering resilient facilities and power systems for maximum uptime and reliability.',
