@@ -29,7 +29,7 @@ export function Products() {
         },
         {
             name: 'Check Point',
-            logo: '/logos/checkpoint.png',
+            logo: 'https://avatars.githubusercontent.com/u/1023533?s=200&v=4',
             url: 'https://www.checkpoint.com/products/next-generation-firewall/',
             tag: 'Quantum Security',
             brief: 'Advanced threat prevention with Quantum security for networks of all sizes.'
