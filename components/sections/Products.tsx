@@ -29,14 +29,14 @@ export function Products() {
         },
         {
             name: 'Check Point',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Check_Point_Software_Technologies_logo.svg',
+            logo: '/logos/checkpoint.png',
             url: 'https://www.checkpoint.com/products/next-generation-firewall/',
             tag: 'Quantum Security',
             brief: 'Advanced threat prevention with Quantum security for networks of all sizes.'
         },
         {
             name: 'Sophos',
-            logo: 'sophos',
+            logo: '/logos/sophos.png',
             url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
             tag: 'Xstream Security',
             brief: 'Next-gen synchronized security with deep learning and endpoint integration.'
@@ -190,7 +190,7 @@ export function Products() {
                                 key={partner.name}
                                 href={partner.url}
                                 target="_blank"
-                                className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10 animate-fade-up min-h-[280px] text-center"
+                                className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10 animate-fade-up min-h-[300px] text-center"
                                 style={{ animationDelay: `${index * 150}ms` }}
                             >
                                 <div className="absolute top-6 right-6">
@@ -198,11 +198,14 @@ export function Products() {
                                         {partner.tag}
                                     </span>
                                 </div>
-                                <div className="w-24 h-24 flex items-center justify-center p-4 bg-slate-50 dark:bg-slate-800 rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6">
+                                {/* UNIFORM LOGO CONTAINER */}
+                                <div className="w-20 h-20 flex items-center justify-center p-4 bg-slate-50 dark:bg-slate-800 rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6">
                                     <img
-                                        src={partner.logo.startsWith('http') ? partner.logo : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                        src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
+                                            ? partner.logo
+                                            : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
                                         alt={partner.name}
-                                        className="w-full h-full object-contain dark:invert"
+                                        className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
                                     />
                                 </div>
                                 <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight">{partner.name}</h4>
@@ -241,7 +244,6 @@ export function Products() {
                                 </div>
 
                                 <div className="lg:w-2/3">
-                                    {/* LOGO GRID WITH STAGGERED "ONE BY ONE" FADE-IN SIDEWAYS */}
                                     <div className="flex flex-wrap gap-4">
                                         {category.partners.map((partner, pIndex) => (
                                             <Link
@@ -251,11 +253,14 @@ export function Products() {
                                                 className="group/logo relative flex flex-col items-center justify-center w-28 h-28 md:w-32 md:h-32 bg-slate-50/50 dark:bg-slate-800/30 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-white dark:hover:bg-slate-800 transition-all duration-500 animate-fade-left shadow-sm"
                                                 style={{ animationDelay: `${(catIndex * 200) + (pIndex * 100)}ms` }}
                                             >
-                                                <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center grayscale group-hover/logo:grayscale-0 transition-all duration-500 transform group-hover/logo:scale-110">
+                                                {/* UNIFORM LOGO CONTAINER FOR SMALLER CARDS */}
+                                                <div className="w-14 h-14 flex items-center justify-center grayscale group-hover/logo:grayscale-0 transition-all duration-500 transform group-hover/logo:scale-110">
                                                     <img
-                                                        src={`https://cdn.simpleicons.org/${partner.logo}/1D4ED8`}
+                                                        src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
+                                                            ? partner.logo
+                                                            : `https://cdn.simpleicons.org/${partner.logo}/1D4ED8`}
                                                         alt={partner.name}
-                                                        className="w-full h-full object-contain dark:invert"
+                                                        className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
                                                     />
                                                 </div>
                                                 <span className="mt-2 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest opacity-0 group-hover/logo:opacity-100 transition-opacity">
