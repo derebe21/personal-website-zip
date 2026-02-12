@@ -46,6 +46,38 @@ export function Products() {
             image: 'https://images.unsplash.com/photo-1510511459019-5dee995ad33b?auto=format&fit=crop&q=80&w=400',
             tag: 'Quantum Security',
             brief: 'Advanced threat prevention with Quantum security for networks of all sizes.'
+        },
+        {
+            name: 'Sophos',
+            logo: 'sophos',
+            url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
+            image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400',
+            tag: 'Xstream Security',
+            brief: 'Next-gen synchronized security with deep learning and endpoint integration.'
+        },
+        {
+            name: 'Trend Micro',
+            logo: 'trendmicro',
+            url: 'https://www.trendmicro.com/en_us/business/products/network.html',
+            image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400',
+            tag: 'Discovery & Protection',
+            brief: 'Comprehensive network protection and visibility for hybrid cloud infrastructures.'
+        },
+        {
+            name: 'CrowdStrike',
+            logo: 'crowdstrike',
+            url: 'https://www.crowdstrike.com/',
+            image: 'https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?auto=format&fit=crop&q=80&w=400',
+            tag: 'Falcon Platform',
+            brief: 'Cloud-native endpoint protection and threat intelligence platform.'
+        },
+        {
+            name: 'Darktrace',
+            logo: 'darktrace',
+            url: 'https://www.darktrace.com/',
+            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400',
+            tag: 'Self-Learning AI',
+            brief: 'Autonomous response and AI-driven security that learns from your network.'
         }
     ];
 
@@ -55,14 +87,16 @@ export function Products() {
             title: 'Enterprise Networking',
             image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=400',
             partners: [
-                { name: 'Cisco', logo: 'cisco', url: 'https://www.cisco.com/c/en/us/products/networking/index.html' },
-                { name: 'HPE Aruba', logo: 'aruba', url: 'https://www.arubanetworks.com/' },
+                { name: 'Cisco', logo: 'cisco', url: 'https://www.cisco.com/' },
+                { name: 'HPE Aruba', logo: 'hp', url: 'https://www.arubanetworks.com/' },
                 { name: 'Juniper', logo: 'junipernetworks', url: 'https://www.juniper.net/' },
                 { name: 'Huawei', logo: 'huawei', url: 'https://e.huawei.com/en/products/enterprise-networking' },
-                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/networking/index.htm' },
+                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/' },
+                { name: 'Netgear', logo: 'netgear', url: 'https://www.netgear.com/' },
                 { name: 'Ubiquiti', logo: 'ubiquiti', url: 'https://www.ui.com/' },
                 { name: 'MikroTik', logo: 'mikrotik', url: 'https://mikrotik.com/' },
-                { name: 'Arista', logo: 'arista', url: 'https://www.arista.com/' }
+                { name: 'Arista', logo: 'arista', url: 'https://www.arista.com/' },
+                { name: 'Extreme', logo: 'google-lens', url: 'https://www.extremenetworks.com/' }
             ]
         },
         {
@@ -74,6 +108,7 @@ export function Products() {
                 { name: 'Azure', logo: 'microsoftazure', url: 'https://azure.microsoft.com/' },
                 { name: 'AWS', logo: 'amazonwebservices', url: 'https://aws.amazon.com/' },
                 { name: 'Google Cloud', logo: 'googlecloud', url: 'https://cloud.google.com/' },
+                { name: 'Hyper-V', logo: 'microsoft', url: 'https://www.microsoft.com/en-us/windows-server/remote-desktop-services/hyper-v-virtualization' },
                 { name: 'Nutanix', logo: 'nutanix', url: 'https://www.nutanix.com/' },
                 { name: 'Citrix', logo: 'citrix', url: 'https://www.citrix.com/' }
             ]
@@ -83,13 +118,14 @@ export function Products() {
             title: 'Servers & Data Center',
             image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400',
             partners: [
-                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/servers/index.htm' },
-                { name: 'HPE', logo: 'hewlettpackardenterprise', url: 'https://www.hpe.com/us/en/servers.html' },
-                { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/us/en/servers-storage/' },
+                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/' },
+                { name: 'HPE', logo: 'hewlettpackardenterprise', url: 'https://www.hpe.com/' },
+                { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/' },
                 { name: 'Huawei', logo: 'huawei', url: 'https://e.huawei.com/en/products/compute' },
-                { name: 'IBM', logo: 'ibm', url: 'https://www.ibm.com/it-infrastructure' },
+                { name: 'IBM', logo: 'ibm', url: 'https://www.ibm.com/' },
                 { name: 'NetApp', logo: 'netapp', url: 'https://www.netapp.com/' },
-                { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/' }
+                { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/' },
+                { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/' }
             ]
         },
         {
@@ -97,12 +133,12 @@ export function Products() {
             title: 'Enterprise Software',
             image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400',
             partners: [
-                { name: 'Microsoft', logo: 'microsoft', url: 'https://www.microsoft.com/en-us/enterprise' },
+                { name: 'Microsoft', logo: 'microsoft', url: 'https://www.microsoft.com/' },
                 { name: 'SAP', logo: 'sap', url: 'https://www.sap.com/' },
                 { name: 'Oracle', logo: 'oracle', url: 'https://www.oracle.com/' },
                 { name: 'Salesforce', logo: 'salesforce', url: 'https://www.salesforce.com/' },
                 { name: 'Red Hat', logo: 'redhat', url: 'https://www.redhat.com/' },
-                { name: 'SUSE', logo: 'suse', url: 'https://www.suse.com/' }
+                { name: 'Linux', logo: 'linux', url: 'https://www.kernel.org/' }
             ]
         },
         {
@@ -110,10 +146,13 @@ export function Products() {
             title: 'Smart & Physical Security',
             image: 'https://images.unsplash.com/photo-1557597774-9d2739f85a76?auto=format&fit=crop&q=80&w=400',
             partners: [
-                { name: 'Hikvision', logo: 'hikvision', url: 'https://www.hikvision.com/' },
+                { name: 'Hikvision', logo: 'simpleicons', url: 'https://www.hikvision.com/' },
+                { name: 'Dahua', logo: 'shield', url: 'https://www.dahuasecurity.com/' },
                 { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/' },
                 { name: 'Axis', logo: 'axiscommunications', url: 'https://www.axis.com/' },
-                { name: 'Honeywell', logo: 'honeywell', url: 'https://www.honeywell.com/us/en/it-and-security' }
+                { name: 'Honeywell', logo: 'honeywell', url: 'https://www.honeywell.com/' },
+                { name: 'Suprema', logo: 'simpleicons', url: 'https://www.supremainc.com/' },
+                { name: 'ZKTeco', logo: 'simpleicons', url: 'https://www.zkteco.com/' }
             ]
         },
         {
@@ -147,9 +186,14 @@ export function Products() {
                             Trusted Global <br /> Technology Partners
                         </h2>
                     </div>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg font-medium italic border-l-4 border-primary pl-6">
-                        "Delivering secure, scalable, and enterprise-grade solutions using leading hardware and software technologies."
-                    </p>
+                    <div className="max-w-lg space-y-4">
+                        <p className="text-lg text-slate-600 dark:text-slate-400 font-bold uppercase tracking-wide">
+                            ITSEC Technology
+                        </p>
+                        <p className="text-lg text-slate-600 dark:text-slate-400 font-medium italic border-l-4 border-primary pl-6 leading-relaxed">
+                            "At ITSEC Technology, we deliver secure, scalable, and enterprise-grade solutions using leading hardware and software technologies."
+                        </p>
+                    </div>
                 </div>
 
                 {/* FEATURED CYBERSECURITY SECTION */}
