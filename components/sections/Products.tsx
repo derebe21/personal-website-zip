@@ -18,51 +18,102 @@ export function Products() {
         {
             icon: Shield,
             title: 'Cybersecurity',
-            brands: 'Cisco • Palo Alto Networks • Fortinet • Check Point • Sophos • Trend Micro • CrowdStrike • Darktrace',
             image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
-            description: 'Advanced threat protection and risk management architectures.'
+            description: 'Advanced threat protection and risk management architectures.',
+            partners: [
+                { name: 'Cisco', logo: 'cisco' },
+                { name: 'Palo Alto', logo: 'paloaltonetworks' },
+                { name: 'Fortinet', logo: 'fortinet' },
+                { name: 'Check Point', logo: 'checkpoint' },
+                { name: 'Sophos', logo: 'sophos' },
+                { name: 'Trend Micro', logo: 'trendmicro' },
+                { name: 'CrowdStrike', logo: 'crowdstrike' },
+                { name: 'Darktrace', logo: 'darktrace' }
+            ]
         },
         {
             icon: Globe,
             title: 'Enterprise Networking',
-            brands: 'Cisco • HPE Aruba • Juniper • Huawei • Dell • Netgear • Ubiquiti • MikroTik • Arista • Extreme',
             image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800',
-            description: 'High-performance connectivity solutions for the modern enterprise.'
+            description: 'High-performance connectivity solutions for the modern enterprise.',
+            partners: [
+                { name: 'Cisco', logo: 'cisco' },
+                { name: 'HPE Aruba', logo: 'aruba' },
+                { name: 'Juniper', logo: 'junipernetworks' },
+                { name: 'Huawei', logo: 'huawei' },
+                { name: 'Dell', logo: 'dell' },
+                { name: 'Ubiquiti', logo: 'ubiquiti' },
+                { name: 'MikroTik', logo: 'mikrotik' },
+                { name: 'Arista', logo: 'arista' }
+            ]
         },
         {
             icon: Cloud,
             title: 'Cloud & Virtualization',
-            brands: 'VMware • Microsoft Azure • AWS • Google Cloud • Hyper-V • Nutanix • Citrix',
-            image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800', // Replaced with networking style as cloud fallback
-            description: 'Scalable cloud infrastructure and seamless virtualization environments.'
+            image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800',
+            description: 'Scalable cloud infrastructure and seamless virtualization environments.',
+            partners: [
+                { name: 'VMware', logo: 'vmware' },
+                { name: 'Azure', logo: 'microsoftazure' },
+                { name: 'AWS', logo: 'amazonwebservices' },
+                { name: 'Google Cloud', logo: 'googlecloud' },
+                { name: 'Nutanix', logo: 'nutanix' },
+                { name: 'Citrix', logo: 'citrix' }
+            ]
         },
         {
             icon: Server,
             title: 'Servers & Data Center',
-            brands: 'Dell • HPE • Lenovo • Huawei • IBM • NetApp • Synology • Supermicro',
             image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800',
-            description: 'Powerful computation and storage systems for mission-critical apps.'
+            description: 'Powerful computation and storage systems for mission-critical apps.',
+            partners: [
+                { name: 'Dell', logo: 'dell' },
+                { name: 'HPE', logo: 'hewlettpackardenterprise' },
+                { name: 'Lenovo', logo: 'lenovo' },
+                { name: 'Huawei', logo: 'huawei' },
+                { name: 'IBM', logo: 'ibm' },
+                { name: 'NetApp', logo: 'netapp' },
+                { name: 'Synology', logo: 'synology' }
+            ]
         },
         {
             icon: Terminal,
             title: 'Enterprise Software',
-            brands: 'Microsoft • SAP • Oracle • Salesforce • Red Hat • Linux Enterprise',
             image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-            description: 'Operating systems, ERP, and CRM platforms for optimized growth.'
+            description: 'Operating systems, ERP, and CRM platforms for optimized growth.',
+            partners: [
+                { name: 'Microsoft', logo: 'microsoft' },
+                { name: 'SAP', logo: 'sap' },
+                { name: 'Oracle', logo: 'oracle' },
+                { name: 'Salesforce', logo: 'salesforce' },
+                { name: 'Red Hat', logo: 'redhat' },
+                { name: 'SUSE', logo: 'suse' }
+            ]
         },
         {
             icon: Video,
             title: 'Smart & Physical Security',
-            brands: 'Hikvision • Dahua • Bosch • Axis • Honeywell • Suprema • ZKTeco',
             image: 'https://images.unsplash.com/photo-1557597774-9d2739f85a76?auto=format&fit=crop&q=80&w=800',
-            description: 'Intelligent surveillance and access control for modern facilities.'
+            description: 'Intelligent surveillance and access control for modern facilities.',
+            partners: [
+                { name: 'Hikvision', logo: 'hikvision' },
+                { name: 'Bosch', logo: 'bosch' },
+                { name: 'Axis', logo: 'axiscommunications' },
+                { name: 'Honeywell', logo: 'honeywell' }
+            ]
         },
         {
             icon: Zap,
             title: 'Power & Infrastructure',
-            brands: 'APC • Vertiv • Eaton • Huawei Digital Power • Delta UPS • Panduit • CommScope',
             image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1b?auto=format&fit=crop&q=80&w=800',
-            description: 'Resilient power protection and structure cabling for maximum uptime.'
+            description: 'Resilient power protection and structure cabling for maximum uptime.',
+            partners: [
+                { name: 'APC', logo: 'schneiderelectric' },
+                { name: 'Vertiv', logo: 'vertiv' },
+                { name: 'Eaton', logo: 'eaton' },
+                { name: 'Panduit', logo: 'panduit' },
+                { name: 'CommScope', logo: 'commscope' }
+            ]
         },
     ];
 
@@ -110,10 +161,23 @@ export function Products() {
                             </CardHeader>
                             <CardContent className="flex flex-col flex-grow space-y-6">
                                 <p className="text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">
-                                    Strategic Brands
+                                    Strategic Partners
                                 </p>
-                                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-sm font-medium text-slate-700 dark:text-slate-300 leading-relaxed min-h-[100px] group-hover:border-primary/20 transition-colors">
-                                    {category.brands}
+                                <div className="grid grid-cols-4 gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 min-h-[120px] group-hover:border-primary/20 transition-colors">
+                                    {category.partners.map((partner, pIdx) => (
+                                        <div key={pIdx} className="group/logo flex flex-col items-center justify-center space-y-2">
+                                            <div className="w-8 h-8 flex items-center justify-center grayscale group-hover/logo:grayscale-0 transition-all duration-300">
+                                                <img
+                                                    src={`https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                                    alt={partner.name}
+                                                    className="w-full h-full object-contain"
+                                                />
+                                            </div>
+                                            <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 group-hover/logo:text-primary transition-colors text-center truncate w-full">
+                                                {partner.name}
+                                            </span>
+                                        </div>
+                                    ))}
                                 </div>
 
                                 <Link
