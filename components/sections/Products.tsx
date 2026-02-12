@@ -51,14 +51,14 @@ export function Products() {
         {
             name: 'CrowdStrike',
             logo: 'crowdstrike',
-            url: 'https://www.crowdstrike.com/',
+            url: 'https://www.crowdstrike.com/products/',
             tag: 'Falcon Platform',
             brief: 'Cloud-native endpoint protection and threat intelligence platform.'
         },
         {
             name: 'Darktrace',
             logo: 'darktrace',
-            url: 'https://www.darktrace.com/',
+            url: 'https://www.darktrace.com/en/products/',
             tag: 'Self-Learning AI',
             brief: 'Autonomous response and AI-driven security that learns from your network.'
         }
@@ -70,16 +70,16 @@ export function Products() {
             title: 'Enterprise Networking',
             color: 'blue',
             partners: [
-                { name: 'Cisco', logo: 'cisco', url: 'https://www.cisco.com/' },
-                { name: 'HPE Aruba', logo: 'hp', url: 'https://www.arubanetworks.com/' },
-                { name: 'Juniper', logo: 'junipernetworks', url: 'https://www.juniper.net/' },
+                { name: 'Cisco', logo: 'cisco', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
+                { name: 'HPE Aruba', logo: 'hp', url: 'https://www.arubanetworks.com/products/' },
+                { name: 'Juniper', logo: 'junipernetworks', url: 'https://www.juniper.net/us/en/products.html' },
                 { name: 'Huawei', logo: 'huawei', url: 'https://e.huawei.com/en/products/enterprise-networking' },
-                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/' },
-                { name: 'Netgear', logo: 'netgear', url: 'https://www.netgear.com/' },
+                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/networking/index.htm' },
+                { name: 'Netgear', logo: 'netgear', url: 'https://www.netgear.com/business/' },
                 { name: 'Ubiquiti', logo: 'ubiquiti', url: 'https://www.ui.com/' },
-                { name: 'MikroTik', logo: 'mikrotik', url: 'https://mikrotik.com/' },
-                { name: 'Arista', logo: 'arista', url: 'https://www.arista.com/' },
-                { name: 'Extreme', logo: 'google-lens', url: 'https://www.extremenetworks.com/' }
+                { name: 'MikroTik', logo: 'mikrotik', url: 'https://mikrotik.com/products' },
+                { name: 'Arista', logo: 'arista', url: 'https://www.arista.com/en/products' },
+                { name: 'Extreme', logo: 'extremenetworks', url: 'https://www.extremenetworks.com/products/' }
             ]
         },
         {
@@ -87,13 +87,13 @@ export function Products() {
             title: 'Cloud & Virtualization',
             color: 'cyan',
             partners: [
-                { name: 'VMware', logo: 'vmware', url: 'https://www.vmware.com/' },
-                { name: 'Azure', logo: 'microsoftazure', url: 'https://azure.microsoft.com/' },
-                { name: 'AWS', logo: 'amazonwebservices', url: 'https://aws.amazon.com/' },
-                { name: 'Google Cloud', logo: 'googlecloud', url: 'https://cloud.google.com/' },
-                { name: 'Hyper-V', logo: 'microsoft', url: 'https://www.microsoft.com/en-us/windows-server/remote-desktop-services/hyper-v-virtualization' },
-                { name: 'Nutanix', logo: 'nutanix', url: 'https://www.nutanix.com/' },
-                { name: 'Citrix', logo: 'citrix', url: 'https://www.citrix.com/' }
+                { name: 'VMware', logo: 'vmware', url: 'https://www.vmware.com/products.html' },
+                { name: 'Azure', logo: 'microsoftazure', url: 'https://azure.microsoft.com/en-us/products/' },
+                { name: 'AWS', logo: 'amazonwebservices', url: 'https://aws.amazon.com/products/' },
+                { name: 'Google Cloud', logo: 'googlecloud', url: 'https://cloud.google.com/products' },
+                { name: 'Hyper-V', logo: 'microsoft', url: 'https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/' },
+                { name: 'Nutanix', logo: 'nutanix', url: 'https://www.nutanix.com/products' },
+                { name: 'Citrix', logo: 'citrix', url: 'https://www.citrix.com/products/' }
             ]
         },
         {
@@ -101,14 +101,14 @@ export function Products() {
             title: 'Servers & Data Center',
             color: 'indigo',
             partners: [
-                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/' },
-                { name: 'HPE', logo: 'hewlettpackardenterprise', url: 'https://www.hpe.com/' },
-                { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/' },
+                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/servers/index.htm' },
+                { name: 'HPE', logo: 'hewlettpackardenterprise', url: 'https://www.hpe.com/us/en/servers.html' },
+                { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/us/en/servers-storage/' },
                 { name: 'Huawei', logo: 'huawei', url: 'https://e.huawei.com/en/products/compute' },
-                { name: 'IBM', logo: 'ibm', url: 'https://www.ibm.com/' },
-                { name: 'NetApp', logo: 'netapp', url: 'https://www.netapp.com/' },
-                { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/' },
-                { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/' }
+                { name: 'IBM', logo: 'ibm', url: 'https://www.ibm.com/it-infrastructure' },
+                { name: 'NetApp', logo: 'netapp', url: 'https://www.netapp.com/data-storage/' },
+                { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/en-us/products' },
+                { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/en/products' }
             ]
         },
         {
@@ -116,11 +116,11 @@ export function Products() {
             title: 'Enterprise Software',
             color: 'purple',
             partners: [
-                { name: 'Microsoft', logo: 'microsoft', url: 'https://www.microsoft.com/' },
-                { name: 'SAP', logo: 'sap', url: 'https://www.sap.com/' },
-                { name: 'Oracle', logo: 'oracle', url: 'https://www.oracle.com/' },
-                { name: 'Salesforce', logo: 'salesforce', url: 'https://www.salesforce.com/' },
-                { name: 'Red Hat', logo: 'redhat', url: 'https://www.redhat.com/' },
+                { name: 'Microsoft', logo: 'microsoft', url: 'https://www.microsoft.com/en-us/software-at-work' },
+                { name: 'SAP', logo: 'sap', url: 'https://www.sap.com/products.html' },
+                { name: 'Oracle', logo: 'oracle', url: 'https://www.oracle.com/cloud/products.html' },
+                { name: 'Salesforce', logo: 'salesforce', url: 'https://www.salesforce.com/products/' },
+                { name: 'Red Hat', logo: 'redhat', url: 'https://www.redhat.com/en/technologies/all-products' },
                 { name: 'Linux', logo: 'linux', url: 'https://www.kernel.org/' }
             ]
         },
@@ -129,13 +129,13 @@ export function Products() {
             title: 'Smart & Physical Security',
             color: 'emerald',
             partners: [
-                { name: 'Hikvision', logo: 'simpleicons', url: 'https://www.hikvision.com/' },
-                { name: 'Dahua', logo: 'shield', url: 'https://www.dahuasecurity.com/' },
-                { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/' },
-                { name: 'Axis', logo: 'axiscommunications', url: 'https://www.axis.com/' },
-                { name: 'Honeywell', logo: 'honeywell', url: 'https://www.honeywell.com/' },
-                { name: 'Suprema', logo: 'simpleicons', url: 'https://www.supremainc.com/' },
-                { name: 'ZKTeco', logo: 'simpleicons', url: 'https://www.zkteco.com/' }
+                { name: 'Hikvision', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Hikvision_logo.svg', url: 'https://www.hikvision.com/en/products/' },
+                { name: 'Dahua', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Dahua_Technology_logo.svg', url: 'https://www.dahuasecurity.com/products' },
+                { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/xc/en/products/' },
+                { name: 'Axis', logo: 'axiscommunications', url: 'https://www.axis.com/products-and-solutions' },
+                { name: 'Honeywell', logo: 'honeywell', url: 'https://buildings.honeywell.com/us/en/products/security' },
+                { name: 'Suprema', logo: 'https://www.supremainc.com/en/view/common/img/logo.png', url: 'https://www.supremainc.com/en/hardware/product-list.asp' },
+                { name: 'ZKTeco', logo: 'https://www.zkteco.com/static/upload/image/20210419/1618821034431526.png', url: 'https://www.zkteco.com/en/product_list/' }
             ]
         }
     ];
