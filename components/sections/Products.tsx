@@ -36,7 +36,7 @@ export function Products() {
         },
         {
             name: 'Sophos',
-            logo: '/logos/sophos.png',
+            logo: 'https://avatars.githubusercontent.com/u/102047?s=200&v=4',
             url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
             tag: 'Xstream Security',
             brief: 'Next-gen synchronized security with deep learning and endpoint integration.'
