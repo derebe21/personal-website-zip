@@ -29,7 +29,7 @@ export function Products() {
         },
         {
             name: 'Check Point',
-            logo: '/logos/checkpoint.png',
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Check-Point-2024-logo-color.svg',
             url: 'https://www.checkpoint.com/products/infinity-portfolio/',
             tag: 'Infinity Platform',
             brief: 'Unified security architecture offering preventative protection against Gen V cyber attacks.'
