@@ -30,7 +30,7 @@ export function About() {
                 <div>
                   <h3 className="text-2xl font-black mb-4 tracking-tight text-slate-900 dark:text-white uppercase italic">Our Vision</h3>
                   <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                    To be Africa's most trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.
+                    To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.
                   </p>
                 </div>
               </div>
@@ -48,7 +48,7 @@ export function About() {
                 <div>
                   <h3 className="text-2xl font-black mb-4 tracking-tight text-slate-900 dark:text-white uppercase italic">Our Mission</h3>
                   <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                    To empower organizations across Africa with secure, scalable, and innovative technology solutions that deliver measurable value through technical excellence and international best practices.
+                    To empower organizations worldwide with secure, scalable, and innovative technology solutions that deliver measurable value through technical excellence and international best practices.
                   </p>
                 </div>
               </div>
@@ -61,16 +61,11 @@ export function About() {
           <div className="space-y-8">
             <div className="prose prose-slate dark:prose-invert max-w-none">
               <p className="text-xl font-medium text-slate-700 dark:text-slate-300 leading-relaxed">
-                ITSEC Technology PLC is an African-based and Ethiopian technology
-                company dedicated to delivering secure, scalable, and future-ready
-                digital solutions.
+                ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide.
               </p>
               <div className="space-y-4 text-slate-600 dark:text-slate-400">
                 <p>
-                  Founded by internationally certified IT professionals, the company is driven by a strong commitment to quality, security, and innovation, aligned with international best practices.
-                </p>
-                <p>
-                  We work closely with organizations to design and implement reliable technology solutions that support operational efficiency, strengthen information security, and enable sustainable growth.
+                  We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.
                 </p>
               </div>
             </div>

@@ -35,9 +35,12 @@ export function Services() {
           <span className="text-sm font-semibold text-primary uppercase tracking-[0.3em] inline-block mb-2">
             Core Domains
           </span>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white">
-            Delivering end-to-end solutions
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
+            Our Services
           </h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">
+            We deliver smart, secure, and scalable technology solutions that drive innovation and support modern businesses worldwide.
+          </p>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
 
