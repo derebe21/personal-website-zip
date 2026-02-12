@@ -119,11 +119,13 @@ export function Products() {
         {
             icon: Zap,
             title: 'Power & Infrastructure',
-            image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1b?auto=format&fit=crop&q=80&w=400',
+            image: 'https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=400',
             partners: [
-                { name: 'APC', logo: 'schneiderelectric', url: 'https://www.apc.com/' },
+                { name: 'APC', logo: 'apc', url: 'https://www.apc.com/' },
                 { name: 'Vertiv', logo: 'vertiv', url: 'https://www.vertiv.com/' },
                 { name: 'Eaton', logo: 'eaton', url: 'https://www.eaton.com/' },
+                { name: 'Huawei', logo: 'huawei', url: 'https://solar.huawei.com/' },
+                { name: 'Delta UPS', logo: 'deltaelectronics', url: 'https://www.deltapowersolutions.com/' },
                 { name: 'Panduit', logo: 'panduit', url: 'https://www.panduit.com/' },
                 { name: 'CommScope', logo: 'commscope', url: 'https://www.commscope.com/' }
             ]
@@ -255,11 +257,11 @@ export function Products() {
                                             rel="noopener noreferrer"
                                             className="group/brand flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-xl transition-all duration-300"
                                         >
-                                            <div className="w-10 h-10 flex items-center justify-center grayscale group-hover/brand:grayscale-0 transition-all duration-500 transform group-hover/brand:scale-110">
+                                            <div className="w-14 h-14 flex items-center justify-center grayscale group-hover/brand:grayscale-0 transition-all duration-500 transform group-hover/brand:scale-110">
                                                 <img
-                                                    src={`https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                                    src={`https://cdn.simpleicons.org/${partner.logo}/1e293b`}
                                                     alt={partner.name}
-                                                    className="w-full h-full object-contain"
+                                                    className="w-full h-full object-contain dark:invert"
                                                 />
                                             </div>
                                             <div className="mt-3 flex items-center gap-1.5 overflow-hidden">
