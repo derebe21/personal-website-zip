@@ -29,7 +29,7 @@ export function Products() {
         },
         {
             name: 'Check Point',
-            logo: 'checkpoint',
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Check_Point_Software_Technologies_logo.svg',
             url: 'https://www.checkpoint.com/products/next-generation-firewall/',
             tag: 'Quantum Security',
             brief: 'Advanced threat prevention with Quantum security for networks of all sizes.'
@@ -181,7 +181,7 @@ export function Products() {
                             <ShieldCheck className="w-8 h-8 text-red-500" />
                         </div>
                         <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
-                            Cybersecurity Solutions
+                            Cyber Security and IT Security
                         </h3>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -200,7 +200,7 @@ export function Products() {
                                 </div>
                                 <div className="w-24 h-24 flex items-center justify-center p-4 bg-slate-50 dark:bg-slate-800 rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6">
                                     <img
-                                        src={`https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                        src={partner.logo.startsWith('http') ? partner.logo : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
                                         alt={partner.name}
                                         className="w-full h-full object-contain dark:invert"
                                     />
