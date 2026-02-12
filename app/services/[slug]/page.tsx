@@ -128,7 +128,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             </Card>
 
                             <div className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900/50 space-y-6">
-                                <h4 className="text-lg font-bold">Other Core Domains</h4>
+                                <h4 className="text-lg font-bold">Other Services</h4>
                                 <div className="space-y-3">
                                     {servicesData
                                         .filter((s) => s.slug !== service.slug)
@@ -147,7 +147,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         ))}
                                 </div>
                                 <Link href="/services" className="block text-center text-sm font-bold text-primary hover:underline">
-                                    View All Domains
+                                    View All Services
                                 </Link>
                             </div>
                         </div>

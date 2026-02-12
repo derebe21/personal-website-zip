@@ -33,7 +33,7 @@ export function Services() {
       <div className="max-w-[100vw]">
         <div className="text-center space-y-4 mb-20 px-4">
           <span className="text-sm font-semibold text-primary uppercase tracking-[0.3em] inline-block mb-2">
-            Core Domains
+            Services
           </span>
           <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
             Our Services
