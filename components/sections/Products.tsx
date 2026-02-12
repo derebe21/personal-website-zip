@@ -25,9 +25,10 @@ export function Products() {
         {
             name: 'Palo Alto',
             logo: 'paloaltonetworks',
-            url: 'https://www.paloaltonetworks.com/',
+            url: 'https://www.paloaltonetworks.com/network-security/hardware-firewall-innovations',
             image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400',
-            tag: 'Cloud Security'
+            tag: 'Cloud Security',
+            brief: 'Industry-leading Hardware Firewall innovations for robust perimeter defense.'
         },
         {
             name: 'Fortinet',
@@ -217,6 +218,11 @@ export function Products() {
                                         <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] px-2 py-0.5 bg-white/10 rounded-full">
                                             {partner.tag}
                                         </span>
+                                        {'brief' in partner && (
+                                            <p className="text-[10px] text-white/70 font-medium mt-2 leading-relaxed max-w-[180px] line-clamp-2">
+                                                {String(partner.brief)}
+                                            </p>
+                                        )}
                                     </div>
                                     <div className="pt-2 flex items-center gap-2 text-white/60 text-[11px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                                         Go to Site <ExternalLink className="w-3 h-3" />
