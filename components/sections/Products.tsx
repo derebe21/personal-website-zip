@@ -25,8 +25,8 @@ export function Products() {
         {
             name: 'Palo Alto',
             logo: 'paloaltonetworks',
-            url: 'https://www.paloaltonetworks.com/network-security/next-generation-firewall',
-            image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400',
+            url: 'https://www.paloaltonetworks.com/',
+            image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400',
             tag: 'Cloud Security'
         },
         {
