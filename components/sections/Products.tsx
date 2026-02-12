@@ -8,27 +8,72 @@ import {
     Terminal,
     Video,
     Zap,
-    ExternalLink
+    ExternalLink,
+    ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
 
 export function Products() {
-    const technologyCategories = [
+    const cybersecurityPartners = [
         {
-            icon: Shield,
-            title: 'Cybersecurity',
+            name: 'Cisco',
+            logo: 'cisco',
+            url: 'https://www.cisco.com/c/en/us/products/security/firewalls/index.html',
             image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400',
-            partners: [
-                { name: 'Cisco', logo: 'cisco', url: 'https://www.cisco.com/c/en/us/products/security/firewalls/index.html' },
-                { name: 'Palo Alto', logo: 'paloaltonetworks', url: 'https://www.paloaltonetworks.com/network-security/next-generation-firewall' },
-                { name: 'Fortinet', logo: 'fortinet', url: 'https://www.fortinet.com/products/next-generation-firewall' },
-                { name: 'Check Point', logo: 'checkpoint', url: 'https://www.checkpoint.com/products/next-generation-firewall/' },
-                { name: 'Sophos', logo: 'sophos', url: 'https://www.sophos.com/en-us/products/next-gen-firewall' },
-                { name: 'Trend Micro', logo: 'trendmicro', url: 'https://www.trendmicro.com/en_us/business/products/network.html' },
-                { name: 'CrowdStrike', logo: 'crowdstrike', url: 'https://www.crowdstrike.com/' },
-                { name: 'Darktrace', logo: 'darktrace', url: 'https://www.darktrace.com/' }
-            ]
+            tag: 'Next-Gen Firewall'
         },
+        {
+            name: 'Palo Alto',
+            logo: 'paloaltonetworks',
+            url: 'https://www.paloaltonetworks.com/network-security/next-generation-firewall',
+            image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400',
+            tag: 'Cloud Security'
+        },
+        {
+            name: 'Fortinet',
+            logo: 'fortinet',
+            url: 'https://www.fortinet.com/products/next-generation-firewall',
+            image: 'https://images.unsplash.com/photo-1551703599-6b3e8379aa8b?auto=format&fit=crop&q=80&w=400',
+            tag: 'Security Fabric'
+        },
+        {
+            name: 'Check Point',
+            logo: 'checkpoint',
+            url: 'https://www.checkpoint.com/products/next-generation-firewall/',
+            image: 'https://images.unsplash.com/photo-1510511459019-5dee995ad33b?auto=format&fit=crop&q=80&w=400',
+            tag: 'Quantum Security'
+        },
+        {
+            name: 'Sophos',
+            logo: 'sophos',
+            url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
+            image: 'https://images.unsplash.com/photo-1562813733-b31f71025d54?auto=format&fit=crop&q=80&w=400',
+            tag: 'Intercept X'
+        },
+        {
+            name: 'Trend Micro',
+            logo: 'trendmicro',
+            url: 'https://www.trendmicro.com/en_us/business/products/network.html',
+            image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400',
+            tag: 'Hybrid Cloud'
+        },
+        {
+            name: 'CrowdStrike',
+            logo: 'crowdstrike',
+            url: 'https://www.crowdstrike.com/',
+            image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400',
+            tag: 'Falcon Platform'
+        },
+        {
+            name: 'Darktrace',
+            logo: 'darktrace',
+            url: 'https://www.darktrace.com/',
+            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400',
+            tag: 'AI Security'
+        }
+    ];
+
+    const otherCategories = [
         {
             icon: Globe,
             title: 'Enterprise Networking',
@@ -129,14 +174,67 @@ export function Products() {
                     </p>
                 </div>
 
+                {/* FEATURED CYBERSECURITY SECTION */}
+                <div className="mb-32 space-y-12">
+                    <div className="flex items-center gap-6">
+                        <div className="p-4 bg-primary rounded-2xl shadow-xl shadow-primary/20">
+                            <Shield className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-4xl font-black uppercase tracking-tight text-slate-900 dark:text-white">
+                            Featured Cybersecurity
+                        </h3>
+                        <div className="h-px flex-grow bg-slate-100 dark:bg-slate-800" />
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {cybersecurityPartners.map((partner, index) => (
+                            <a
+                                key={index}
+                                href={partner.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative h-80 rounded-[2rem] overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-slate-100 dark:border-slate-800"
+                            >
+                                <img
+                                    src={partner.image}
+                                    alt={partner.name}
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent transition-opacity group-hover:opacity-90" />
+
+                                <div className="absolute inset-x-6 bottom-6 flex flex-col items-center text-center space-y-3">
+                                    <div className="w-16 h-16 p-3 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                                        <img
+                                            src={`https://cdn.simpleicons.org/${partner.logo}/1e293b`}
+                                            alt={partner.name}
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <h4 className="text-xl font-black text-white uppercase tracking-tight">
+                                            {partner.name}
+                                        </h4>
+                                        <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] px-2 py-0.5 bg-white/10 rounded-full">
+                                            {partner.tag}
+                                        </span>
+                                    </div>
+                                    <div className="pt-2 flex items-center gap-2 text-white/60 text-[11px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                                        Go to Site <ExternalLink className="w-3 h-3" />
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+
+                {/* OTHER CATEGORIES - COMPACT SECTION */}
                 <div className="space-y-16">
-                    {technologyCategories.map((category, index) => (
+                    {otherCategories.map((category, index) => (
                         <div
                             key={index}
                             className="group flex flex-col lg:flex-row gap-8 items-start border-b border-slate-100 dark:border-slate-800 pb-16 last:border-0"
                         >
-                            {/* Resized Image */}
-                            <div className="w-full lg:w-1/4 h-48 lg:h-64 rounded-3xl overflow-hidden shadow-2xl relative">
+                            <div className="w-full lg:w-1/4 h-48 lg:h-64 rounded-3xl overflow-hidden shadow-xl relative">
                                 <img
                                     src={category.image}
                                     alt={category.title}
@@ -163,16 +261,15 @@ export function Products() {
                                             rel="noopener noreferrer"
                                             className="group/brand flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-xl transition-all duration-300"
                                         >
-                                            <div className="w-12 h-12 flex items-center justify-center grayscale group-hover/brand:grayscale-0 transition-all duration-500 transform group-hover/brand:scale-110">
+                                            <div className="w-10 h-10 flex items-center justify-center grayscale group-hover/brand:grayscale-0 transition-all duration-500 transform group-hover/brand:scale-110">
                                                 <img
                                                     src={`https://cdn.simpleicons.org/${partner.logo}/4755E9`}
                                                     alt={partner.name}
                                                     className="w-full h-full object-contain"
-                                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                                 />
                                             </div>
                                             <div className="mt-3 flex items-center gap-1.5 overflow-hidden">
-                                                <span className="text-[11px] font-black text-slate-500 dark:text-slate-400 group-hover/brand:text-primary uppercase tracking-wider truncate">
+                                                <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 group-hover/brand:text-primary uppercase tracking-wider truncate">
                                                     {partner.name}
                                                 </span>
                                                 <ExternalLink className="w-2.5 h-2.5 opacity-0 group-hover/brand:opacity-100 transition-opacity text-primary" />
@@ -185,19 +282,19 @@ export function Products() {
                     ))}
                 </div>
 
-                <div className="mt-24 p-12 rounded-[3rem] bg-slate-900 dark:bg-primary text-white flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left relative overflow-hidden group">
+                <div className="mt-24 p-12 rounded-[3.5rem] bg-slate-900 dark:bg-primary text-white flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left relative overflow-hidden group">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent pointer-events-none" />
                     <div className="space-y-4 relative z-10">
-                        <h3 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter">
-                            Infrastructure Review
+                        <h3 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter leading-tight">
+                            Elevate Your <br /> Security Posture
                         </h3>
-                        <p className="text-xl text-slate-300 dark:text-white/80 font-medium">
-                            Ready to implement top-tier technology in your organization?
+                        <p className="text-xl text-slate-300 dark:text-white/80 font-medium max-w-md">
+                            Ready to implement top-tier technology in your organization? Let's build your defense.
                         </p>
                     </div>
                     <Link href="/contact" className="relative z-10 w-full lg:w-auto">
-                        <button className="w-full lg:w-auto px-12 py-6 bg-white text-primary font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-slate-100 transition-all shadow-2xl hover:scale-105 active:scale-95">
-                            Contact Experts
+                        <button className="w-full lg:w-auto px-12 py-6 bg-white text-primary font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-slate-100 transition-all shadow-2xl hover:scale-105 active:scale-95 flex items-center justify-center gap-3">
+                            Connect with Experts <ArrowRight className="w-5 h-5" />
                         </button>
                     </Link>
                 </div>
