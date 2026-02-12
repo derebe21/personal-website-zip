@@ -74,23 +74,7 @@ export function Services() {
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent" />
                     </div>
 
-                    {/* Overlapping Icon Box */}
-                    <div className="relative flex justify-center -mt-12 z-10">
-                      <div
-                        className="w-24 h-24 rounded-2xl flex items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-4 border-white dark:border-slate-800 transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110 group-hover:shadow-primary/40"
-                        style={{ backgroundColor: service.bgColor || '#ffffff' }}
-                      >
-                        {service.logoImage ? (
-                          <img
-                            src={service.logoImage}
-                            alt={`${service.title} logo`}
-                            className="w-full h-full object-contain p-3 brightness-110 contrast-105"
-                          />
-                        ) : (
-                          <service.icon className="w-12 h-12 text-white" />
-                        )}
-                      </div>
-                    </div>
+
                     <div className="flex-grow p-12 pt-8 text-center">
                       <CardTitle className="text-3xl font-black mb-6 tracking-tight">{service.title}</CardTitle>
                       <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-10 font-medium line-clamp-2">
