@@ -29,10 +29,10 @@ export function Products() {
         },
         {
             name: 'Check Point',
-            logo: 'https://avatars.githubusercontent.com/u/1023533?s=200&v=4',
-            url: 'https://www.checkpoint.com/products/next-generation-firewall/',
-            tag: 'Quantum Security',
-            brief: 'Advanced threat prevention with Quantum security for networks of all sizes.'
+            logo: '/logos/checkpoint.png',
+            url: 'https://www.checkpoint.com/products/infinity-portfolio/',
+            tag: 'Infinity Platform',
+            brief: 'Unified security architecture offering preventative protection against Gen V cyber attacks.'
         },
         {
             name: 'Sophos',
