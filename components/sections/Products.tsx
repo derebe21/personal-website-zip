@@ -10,7 +10,6 @@ export function Products() {
             name: 'Cisco',
             logo: 'cisco',
             url: 'https://www.cisco.com/c/en/us/products/security/firewalls/index.html',
-            image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400',
             tag: 'Next-Generation Firewall',
             brief: 'Industry-leading security with deep visibility and control across the network.'
         },
@@ -18,7 +17,6 @@ export function Products() {
             name: 'Palo Alto',
             logo: 'paloaltonetworks',
             url: 'https://www.paloaltonetworks.com/network-security/hardware-firewall-innovations',
-            image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=400',
             tag: 'Hardware Innovations',
             brief: 'Cutting-edge hardware innovations for robust and scalable perimeter defense.'
         },
@@ -26,7 +24,6 @@ export function Products() {
             name: 'Fortinet',
             logo: 'fortinet',
             url: 'https://www.fortinet.com/products/next-generation-firewall',
-            image: 'https://images.unsplash.com/photo-1551703599-6b3e8379aa8b?auto=format&fit=crop&q=80&w=400',
             tag: 'Security Fabric',
             brief: 'High-performance integrated security fabric for cloud and enterprise environments.'
         },
@@ -34,7 +31,6 @@ export function Products() {
             name: 'Check Point',
             logo: 'checkpoint',
             url: 'https://www.checkpoint.com/products/next-generation-firewall/',
-            image: 'https://images.unsplash.com/photo-1510511459019-5dee995ad33b?auto=format&fit=crop&q=80&w=400',
             tag: 'Quantum Security',
             brief: 'Advanced threat prevention with Quantum security for networks of all sizes.'
         },
@@ -42,7 +38,6 @@ export function Products() {
             name: 'Sophos',
             logo: 'sophos',
             url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
-            image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400',
             tag: 'Xstream Security',
             brief: 'Next-gen synchronized security with deep learning and endpoint integration.'
         },
@@ -50,7 +45,6 @@ export function Products() {
             name: 'Trend Micro',
             logo: 'trendmicro',
             url: 'https://www.trendmicro.com/en_us/business/products/network.html',
-            image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400',
             tag: 'Discovery & Protection',
             brief: 'Comprehensive network protection and visibility for hybrid cloud infrastructures.'
         },
@@ -58,7 +52,6 @@ export function Products() {
             name: 'CrowdStrike',
             logo: 'crowdstrike',
             url: 'https://www.crowdstrike.com/',
-            image: 'https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?auto=format&fit=crop&q=80&w=400',
             tag: 'Falcon Platform',
             brief: 'Cloud-native endpoint protection and threat intelligence platform.'
         },
@@ -66,7 +59,6 @@ export function Products() {
             name: 'Darktrace',
             logo: 'darktrace',
             url: 'https://www.darktrace.com/',
-            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400',
             tag: 'Self-Learning AI',
             brief: 'Autonomous response and AI-driven security that learns from your network.'
         }
@@ -192,43 +184,33 @@ export function Products() {
                             Cybersecurity Solutions
                         </h3>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {cybersecurityPartners.map((partner, index) => (
                             <Link
                                 key={partner.name}
                                 href={partner.url}
                                 target="_blank"
-                                className="group relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10 animate-fade-up"
+                                className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10 animate-fade-up min-h-[280px] text-center"
                                 style={{ animationDelay: `${index * 150}ms` }}
                             >
-                                <div className="aspect-[4/3] relative overflow-hidden">
-                                    <img
-                                        src={partner.image}
-                                        alt={partner.name}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                    <div className="absolute top-4 left-4">
-                                        <span className="px-3 py-1 bg-primary text-[10px] font-bold text-white uppercase tracking-widest rounded-full shadow-lg">
-                                            {partner.tag}
-                                        </span>
-                                    </div>
+                                <div className="absolute top-6 right-6">
+                                    <span className="px-3 py-1 bg-primary/10 text-primary text-[8px] font-black uppercase tracking-widest rounded-full">
+                                        {partner.tag}
+                                    </span>
                                 </div>
-                                <div className="p-6">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <div className="w-16 h-16 flex items-center justify-center p-3 bg-slate-50 dark:bg-slate-800 rounded-2xl group-hover:shadow-inner transition-all transform group-hover:rotate-3">
-                                            <img
-                                                src={`https://cdn.simpleicons.org/${partner.logo}/4755E9`}
-                                                alt={partner.name}
-                                                className="w-full h-full object-contain dark:invert"
-                                            />
-                                        </div>
-                                        <ArrowRight className="w-6 h-6 text-slate-300 group-hover:text-primary transition-all transform group-hover:translate-x-1" />
-                                    </div>
-                                    <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{partner.name}</h4>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-                                        {partner.brief}
-                                    </p>
+                                <div className="w-24 h-24 flex items-center justify-center p-4 bg-slate-50 dark:bg-slate-800 rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6">
+                                    <img
+                                        src={`https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                        alt={partner.name}
+                                        className="w-full h-full object-contain dark:invert"
+                                    />
+                                </div>
+                                <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight">{partner.name}</h4>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+                                    {partner.brief}
+                                </p>
+                                <div className="absolute bottom-6 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                                    <ArrowRight className="w-6 h-6 text-primary" />
                                 </div>
                             </Link>
                         ))}
