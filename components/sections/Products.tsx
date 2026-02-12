@@ -19,58 +19,33 @@ export function Products() {
             name: 'Cisco',
             logo: 'cisco',
             url: 'https://www.cisco.com/c/en/us/products/security/firewalls/index.html',
-            image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400',
-            tag: 'Next-Gen Firewall'
+            image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400',
+            tag: 'Next-Generation Firewall',
+            brief: 'Industry-leading security with deep visibility and control across the network.'
         },
         {
             name: 'Palo Alto',
             logo: 'paloaltonetworks',
             url: 'https://www.paloaltonetworks.com/network-security/hardware-firewall-innovations',
-            image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400',
-            tag: 'Cloud Security',
-            brief: 'Industry-leading Hardware Firewall innovations for robust perimeter defense.'
+            image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=400',
+            tag: 'Hardware Innovations',
+            brief: 'Cutting-edge hardware innovations for robust and scalable perimeter defense.'
         },
         {
             name: 'Fortinet',
             logo: 'fortinet',
             url: 'https://www.fortinet.com/products/next-generation-firewall',
             image: 'https://images.unsplash.com/photo-1551703599-6b3e8379aa8b?auto=format&fit=crop&q=80&w=400',
-            tag: 'Security Fabric'
+            tag: 'Security Fabric',
+            brief: 'High-performance integrated security fabric for cloud and enterprise environments.'
         },
         {
             name: 'Check Point',
             logo: 'checkpoint',
             url: 'https://www.checkpoint.com/products/next-generation-firewall/',
             image: 'https://images.unsplash.com/photo-1510511459019-5dee995ad33b?auto=format&fit=crop&q=80&w=400',
-            tag: 'Quantum Security'
-        },
-        {
-            name: 'Sophos',
-            logo: 'sophos',
-            url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
-            image: 'https://images.unsplash.com/photo-1562813733-b31f71025d54?auto=format&fit=crop&q=80&w=400',
-            tag: 'Intercept X'
-        },
-        {
-            name: 'Trend Micro',
-            logo: 'trendmicro',
-            url: 'https://www.trendmicro.com/en_us/business/products/network.html',
-            image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400',
-            tag: 'Hybrid Cloud'
-        },
-        {
-            name: 'CrowdStrike',
-            logo: 'crowdstrike',
-            url: 'https://www.crowdstrike.com/',
-            image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400',
-            tag: 'Falcon Platform'
-        },
-        {
-            name: 'Darktrace',
-            logo: 'darktrace',
-            url: 'https://www.darktrace.com/',
-            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400',
-            tag: 'AI Security'
+            tag: 'Quantum Security',
+            brief: 'Advanced threat prevention with Quantum security for networks of all sizes.'
         }
     ];
 
@@ -187,48 +162,61 @@ export function Products() {
                         <div className="h-px flex-grow bg-slate-100 dark:bg-slate-800" />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {cybersecurityPartners.map((partner, index) => (
-                            <a
+                            <div
                                 key={index}
-                                href={partner.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative h-80 rounded-[2rem] overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-slate-100 dark:border-slate-800"
+                                className="group bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] overflow-hidden border border-slate-100 dark:border-slate-800 transition-all duration-500 hover:shadow-2xl hover:border-primary/30"
                             >
-                                <img
-                                    src={partner.image}
-                                    alt={partner.name}
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent transition-opacity group-hover:opacity-90" />
-
-                                <div className="absolute inset-x-6 bottom-6 flex flex-col items-center text-center space-y-3">
-                                    <div className="w-16 h-16 p-3 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                                <div className="grid grid-cols-1 lg:grid-cols-2">
+                                    {/* Product Image */}
+                                    <div className="h-64 lg:h-auto overflow-hidden relative">
                                         <img
-                                            src={`https://cdn.simpleicons.org/${partner.logo}/1e293b`}
-                                            alt={partner.name}
-                                            className="w-full h-full object-contain"
+                                            src={partner.image}
+                                            alt={`${partner.name} Firewall`}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
+                                        <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500" />
                                     </div>
-                                    <div className="space-y-1">
-                                        <h4 className="text-xl font-black text-white uppercase tracking-tight">
-                                            {partner.name}
-                                        </h4>
-                                        <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] px-2 py-0.5 bg-white/10 rounded-full">
-                                            {partner.tag}
-                                        </span>
-                                        {'brief' in partner && (
-                                            <p className="text-[10px] text-white/70 font-medium mt-2 leading-relaxed max-w-[180px] line-clamp-2">
-                                                {String(partner.brief)}
+
+                                    {/* Content */}
+                                    <div className="p-10 flex flex-col justify-between">
+                                        <div className="space-y-6">
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-16 h-16 p-3 bg-white dark:bg-slate-800 rounded-2xl shadow-lg flex items-center justify-center">
+                                                    <img
+                                                        src={`https://cdn.simpleicons.org/${partner.logo}/1e293b`}
+                                                        alt={partner.name}
+                                                        className="w-full h-full object-contain dark:invert"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                                                        {partner.name}
+                                                    </h4>
+                                                    <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+                                                        {partner.tag}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p className="text-sm text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                                                {partner.brief}
                                             </p>
-                                        )}
-                                    </div>
-                                    <div className="pt-2 flex items-center gap-2 text-white/60 text-[11px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
-                                        Go to Site <ExternalLink className="w-3 h-3" />
+                                        </div>
+
+                                        <div className="mt-8">
+                                            <a
+                                                href={partner.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-white text-[11px] font-black uppercase tracking-widest rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 hover:scale-105 active:scale-95"
+                                            >
+                                                Go to Website <ExternalLink className="w-4 h-4" />
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         ))}
                     </div>
                 </div>
