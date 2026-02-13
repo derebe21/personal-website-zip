@@ -40,14 +40,14 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16 md:h-20">
           <Link
             href="/"
-            className="flex items-center space-x-3 group"
+            className="flex items-center space-x-2 md:space-x-3 group"
           >
             <img
               src="https://res.cloudinary.com/dlc8bgysp/image/upload/e_make_transparent/v1767612094/logo_fn47rb.png"
               alt="ITSEC TECHNOLOGY Logo"
-              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform brightness-0 invert"
+              className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-105 transition-transform brightness-0 invert"
             />
-            <span className="font-bold text-lg md:text-xl text-white">
+            <span className="font-black text-sm md:text-xl text-white tracking-widest whitespace-nowrap">
               ITSEC TECHNOLOGY
             </span>
           </Link>
@@ -70,7 +70,7 @@ export function Navigation() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-white"
+            className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -81,17 +81,18 @@ export function Navigation() {
         </div>
       </div>
 
+      {/* Mobile Menu with Backdrop */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-gray-50 border-b shadow-lg">
-          <div className="px-4 py-4 space-y-3">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-blue-600 border-t border-blue-500 shadow-2xl animate-fade-down">
+          <div className="px-6 py-8 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block w-full text-left px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link.href)
-                  ? 'text-blue-600 bg-blue-50'
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                className={`block w-full text-left px-6 py-4 text-lg font-black uppercase tracking-widest rounded-xl transition-all ${isActive(link.href)
+                  ? 'text-blue-600 bg-white shadow-xl'
+                  : 'text-blue-50 hover:text-white hover:bg-white/10'
                   }`}
               >
                 {link.label}
