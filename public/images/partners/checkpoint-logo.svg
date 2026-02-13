@@ -1,18 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
     <style>
-      .cls-1{fill:#ec407a;}
-      .cls-2{fill:#fff;}
-      .cls-3{font-size:32px;fill:#000;font-family:Arial, sans-serif;font-weight:700;}
-      .cls-4{font-size:32px;fill:#000;font-family:Arial, sans-serif;}
+      .pink-shape { fill: #EC407A; }
+      .white-node { fill: #FFFFFF; }
+      .black-dot { fill: #000000; }
     </style>
   </defs>
-  <!-- Icon: Pink rounded square with white stylized shapes -->
-  <rect class="cls-1" x="10" y="10" width="60" height="60" rx="12"/>
-  <path class="cls-2" d="M30 30 L40 40 L50 30" stroke="white" stroke-width="4" fill="none"/>
-  <path class="cls-2" d="M30 45 L40 55 L50 45" stroke="white" stroke-width="4" fill="none" opacity="0.6"/>
   
-  <!-- Text: Check Point -->
-  <text class="cls-3" x="85" y="52">Check Point</text>
-  <text class="cls-4" x="85" y="85" font-size="12" fill="#555">SOFTWARE TECHNOLOGIES LTD</text> 
+  <!-- Main Pink Shape (Rounded Circle/Square base) -->
+  <circle cx="40" cy="50" r="35" class="pink-shape" />
+  
+  <!-- Internal White Nodes (Abstract representation of the 'nodes' in the user image) -->
+  <rect x="25" y="35" width="12" height="12" class="white-node" rx="2" />
+  <circle cx="55" cy="60" r="6" class="white-node" />
+  <line x1="37" y1="41" x2="55" y2="60" stroke="white" stroke-width="4" />
+  
+  <!-- Floating Black Dots (from the 'part 2' of the logo typically seen) -->
+  <circle cx="85" cy="35" r="5" class="black-dot" />
+  <circle cx="92" cy="55" r="4" class="black-dot" />
 </svg>
