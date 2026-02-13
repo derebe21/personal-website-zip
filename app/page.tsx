@@ -3,8 +3,7 @@
 import { Hero } from '@/components/sections/Hero';
 import { ServiceFocus } from '@/components/sections/ServiceFocus';
 import { Services } from '@/components/sections/Services';
-import { EnterpriseNetworking } from '@/components/sections/EnterpriseNetworking';
-import { CloudVirtualization } from '@/components/sections/CloudVirtualization';
+import { Technology } from '@/components/sections/Technology';
 import { Products } from '@/components/sections/Products';
 import { About } from '@/components/sections/About';
 import { Process } from '@/components/sections/Process';
@@ -19,8 +18,7 @@ export default function Home() {
       <Hero />
       <ServiceFocus />
       <Services />
-      <EnterpriseNetworking />
-      <CloudVirtualization />
+      <Technology />
       <Products />
       <About />
       <Process />
