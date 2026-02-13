@@ -8,59 +8,43 @@ export function Products() {
     const cybersecurityPartners = [
         {
             name: 'Cisco',
-            logo: 'cisco',
-            url: 'https://www.cisco.com/c/en/us/products/security/firewalls/index.html',
-            tag: 'Next-Generation Firewall',
-            brief: 'Industry-leading security with deep visibility and control across the network.'
+            logo: '/images/partners/cisco-logo.svg',
+            url: 'https://www.cisco.com/c/en/us/products/security/index.html',
         },
         {
             name: 'Palo Alto',
             logo: 'paloaltonetworks',
-            url: 'https://www.paloaltonetworks.com/network-security/hardware-firewall-innovations',
-            tag: 'Hardware Innovations',
-            brief: 'Cutting-edge hardware innovations for robust and scalable perimeter defense.'
+            url: 'https://www.paloaltonetworks.com/network-security/next-generation-firewall',
         },
         {
             name: 'Fortinet',
             logo: 'fortinet',
             url: 'https://www.fortinet.com/products/next-generation-firewall',
-            tag: 'Security Fabric',
-            brief: 'High-performance integrated security fabric for cloud and enterprise environments.'
         },
         {
             name: 'Check Point',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Check-Point-2024-logo-color.svg',
-            url: 'https://www.checkpoint.com/products/infinity-portfolio/',
-            tag: 'Infinity Platform',
-            brief: 'Unified security architecture offering preventative protection against Gen V cyber attacks.'
+            logo: '/images/partners/checkpoint-logo.svg',
+            url: 'https://www.checkpoint.com/products-solutions/next-generation-firewall/',
         },
         {
             name: 'Sophos',
-            logo: 'https://avatars.githubusercontent.com/u/102047?s=200&v=4',
+            logo: '/images/partners/sophos-logo.svg',
             url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
-            tag: 'Xstream Security',
-            brief: 'Next-gen synchronized security with deep learning and endpoint integration.'
         },
         {
             name: 'Trend Micro',
             logo: 'trendmicro',
             url: 'https://www.trendmicro.com/en_us/business/products/network.html',
-            tag: 'Discovery & Protection',
-            brief: 'Comprehensive network protection and visibility for hybrid cloud infrastructures.'
         },
         {
             name: 'CrowdStrike',
-            logo: 'crowdstrike',
-            url: 'https://www.crowdstrike.com/products/',
-            tag: 'Falcon Platform',
-            brief: 'Cloud-native endpoint protection and threat intelligence platform.'
+            logo: '/images/partners/crowdstrike-logo.svg',
+            url: 'https://www.crowdstrike.com/falcon-platform/',
         },
         {
             name: 'Darktrace',
-            logo: 'darktrace',
+            logo: '/images/partners/darktrace-logo.svg',
             url: 'https://www.darktrace.com/en/products/',
-            tag: 'Self-Learning AI',
-            brief: 'Autonomous response and AI-driven security that learns from your network.'
         }
     ];
 
