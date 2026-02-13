@@ -2,63 +2,43 @@
 
 import Image from 'next/image';
 
-export function SecurityPartners() {
+export function EnterpriseSoftware() {
     const partners = [
         {
-            name: 'Fortinet',
-            logo: '/images/partners/fortinet-logo.svg',
-            tag: 'SECURITY FABRIC',
-            description: 'High performance integrated security fabric for cloud and enterprise environments.',
-            width: 130,
-        },
-        {
-            name: 'Check Point',
-            logo: '/images/partners/checkpoint-logo.svg',
-            tag: 'INFINITY PLATFORM',
-            description: 'Unified security architecture offering preventative protection against Gen V cyber attacks.',
-            width: 150,
-        },
-        {
-            name: 'Cisco',
+            name: 'Microsoft',
             logo: null,
-            tag: 'ZERO TRUST',
-            description: 'Secure everything to make anything possible with industry-leading network security solutions.',
-            width: 120,
+            tag: 'CLOUD & OS',
+            description: 'Leading provider of enterprise operating systems, cloud services, and productivity tools.',
         },
         {
-            name: 'Palo Alto Networks',
+            name: 'SAP',
             logo: null,
-            tag: 'STRATA',
-            description: 'Next-generation firewalls and cloud-native security for modern enterprise defense.',
-            width: 140,
+            tag: 'ERP',
+            description: 'Global leader in enterprise resource planning and business process management software.',
         },
         {
-            name: 'Sophos',
-            logo: '/images/partners/sophos-logo.png',
-            tag: 'SYNCHRONIZED',
-            description: 'Cybersecurity evolved. Advanced threat protection for networks and endpoints.',
-            width: 140,
-        },
-        {
-            name: 'CrowdStrike',
-            logo: '/images/partners/crowdstrike-logo.png',
-            tag: 'FALCON',
-            description: 'Cloud-native endpoint protection platform built to stop breaches.',
-            width: 160,
-        },
-        {
-            name: 'Darktrace',
-            logo: '/images/partners/darktrace-logo.png',
-            tag: 'SELF-LEARNING',
-            description: 'Autonomous cyber AI that detects and fights back against emerging threats.',
-            width: 150,
-        },
-        {
-            name: 'Trend Micro',
+            name: 'Oracle',
             logo: null,
-            tag: 'VISION ONE',
-            description: 'A unified cybersecurity platform delivering extended detection and response (XDR).',
-            width: 140,
+            tag: 'DATABASE',
+            description: 'Integrated cloud applications and platform services for enterprise-grade data management.',
+        },
+        {
+            name: 'Salesforce',
+            logo: null,
+            tag: 'CRM',
+            description: 'World-leading customer relationship management platform for modern enterprises.',
+        },
+        {
+            name: 'Red Hat',
+            logo: null,
+            tag: 'OPEN SOURCE',
+            description: 'Driving enterprise efficiency with world-class open source software and Linux solutions.',
+        },
+        {
+            name: 'Linux',
+            logo: null,
+            tag: 'OS KERNEL',
+            description: 'The foundation of enterprise computing, providing security and reliability for mission-critical systems.',
         },
     ];
 
@@ -67,15 +47,14 @@ export function SecurityPartners() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                        Trusted Security Partners
+                        Enterprise Software
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-                        Collaborating with world-leading technology providers to deliver
-                        robust and secure solutions.
+                        Partnered with world-class enterprise software providers to ensure maximum reliability.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {partners.map((partner, index) => (
                         <div
                             key={index}

@@ -3,7 +3,7 @@
 import { Hero } from '@/components/sections/Hero';
 import { ServiceFocus } from '@/components/sections/ServiceFocus';
 import { Services } from '@/components/sections/Services';
-import { SecurityPartners } from '@/components/sections/SecurityPartners';
+import { EnterpriseSoftware } from '@/components/sections/EnterpriseSoftware';
 import { Products } from '@/components/sections/Products';
 import { About } from '@/components/sections/About';
 import { Process } from '@/components/sections/Process';
@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
       <ServiceFocus />
       <Services />
-      <SecurityPartners />
+      <EnterpriseSoftware />
       <Products />
       <About />
       <Process />
