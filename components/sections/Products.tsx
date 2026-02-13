@@ -66,6 +66,30 @@ export function Products() {
 
     const otherCategories = [
         {
+            icon: Globe,
+            title: 'Enterprise Networking',
+            color: 'blue',
+            partners: [
+                { name: 'Cisco', logo: '/images/partners/cisco-logo.svg', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
+                { name: 'Huawei', logo: '/images/partners/huawei-logo.svg', url: 'https://e.huawei.com/en/products/enterprise-networking' },
+                { name: 'HPE Aruba', logo: '/images/partners/hpe-logo.svg', url: 'https://www.arubanetworks.com/products/' },
+                { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' }
+            ],
+            description: 'Partnered with world-class enterprise networking providers to ensure maximum reliability.'
+        },
+        {
+            icon: Cloud,
+            title: 'Cloud & Virtualization',
+            color: 'cyan',
+            partners: [
+                { name: 'VMware', logo: '/images/partners/vmware-logo.svg', url: 'https://www.vmware.com/products.html' },
+                { name: 'Microsoft Hyper-V', logo: '/images/partners/hyperv-logo.svg', url: 'https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/' },
+                { name: 'Oracle Cloud', logo: '/images/partners/oracle-logo.svg', url: 'https://www.oracle.com/cloud/products.html' },
+                { name: 'IBM Cloud', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
+                { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://www.redhat.com/en/technologies/all-products' }
+            ]
+        },
+        {
             icon: Server,
             title: 'Servers & Data Center',
             color: 'indigo',
@@ -73,8 +97,8 @@ export function Products() {
                 { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/servers/index.htm' },
                 { name: 'HPE', logo: 'hewlettpackardenterprise', url: 'https://www.hpe.com/us/en/servers.html' },
                 { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/us/en/servers-storage/' },
-                { name: 'Huawei', logo: 'huawei', url: 'https://e.huawei.com/en/products/compute' },
-                { name: 'IBM', logo: 'ibm', url: 'https://www.ibm.com/it-infrastructure' },
+                { name: 'Huawei', logo: '/images/partners/huawei-logo.svg', url: 'https://e.huawei.com/en/products/compute' },
+                { name: 'IBM', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
                 { name: 'NetApp', logo: 'netapp', url: 'https://www.netapp.com/data-storage/' },
                 { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/en-us/products' },
                 { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/en/products' }
@@ -179,6 +203,9 @@ export function Products() {
                                     <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
                                         {category.title}
                                     </h3>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
+                                        {category.description || `Partnered with world-class ${category.title.toLowerCase()} providers to ensure maximum reliability.`}
+                                    </p>
                                 </div>
 
                                 <div className="lg:w-2/3">
