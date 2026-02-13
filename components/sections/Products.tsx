@@ -52,7 +52,7 @@ export function Products() {
             name: 'CrowdStrike',
             logo: '/images/partners/crowdstrike-falcon.png',
             url: 'https://www.crowdstrike.com/falcon-platform/',
-            tag: 'Falcon Platform',
+            tag: '',
             brief: 'Cloud-native endpoint protection and threat intelligence platform.'
         },
         {
