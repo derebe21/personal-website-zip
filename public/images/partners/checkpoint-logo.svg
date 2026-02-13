@@ -1,6 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
-  <!-- Pink stylized checkmark/box roughly representing the icon to avoid broken image -->
-  <path fill="#EC407A" d="M10 10 h10 v20 h-20 v-10 h10 z M5 35 h20 v5 h-20 z" opacity="0.8"/>
-  <text x="35" y="20" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#000">Check</text>
-  <text x="35" y="40" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#000">Point</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+  <defs>
+    <style>
+      .cls-1{fill:#ec407a;}
+      .cls-2{fill:#fff;}
+      .cls-3{font-size:32px;fill:#000;font-family:Arial, sans-serif;font-weight:700;}
+      .cls-4{font-size:32px;fill:#000;font-family:Arial, sans-serif;}
+    </style>
+  </defs>
+  <!-- Icon: Pink rounded square with white stylized shapes -->
+  <rect class="cls-1" x="10" y="10" width="60" height="60" rx="12"/>
+  <path class="cls-2" d="M30 30 L40 40 L50 30" stroke="white" stroke-width="4" fill="none"/>
+  <path class="cls-2" d="M30 45 L40 55 L50 45" stroke="white" stroke-width="4" fill="none" opacity="0.6"/>
+  
+  <!-- Text: Check Point -->
+  <text class="cls-3" x="85" y="52">Check Point</text>
+  <text class="cls-4" x="85" y="85" font-size="12" fill="#555">SOFTWARE TECHNOLOGIES LTD</text> 
 </svg>
