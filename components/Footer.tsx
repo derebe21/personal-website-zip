@@ -11,7 +11,7 @@ export function Footer() {
     { label: 'About Us', href: '/about' },
     { label: 'Our Process', href: '/process' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Products', href: '/products' },
+    { label: 'Technology', href: '#technology' },
   ];
 
   const socialLinks = [
@@ -47,9 +47,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed max-w-md text-slate-400">
-              Delivering end-to-end technology solutions across cybersecurity,
-              infrastructure, and engineering domains to meet the complex needs
-              of modern enterprises.
+              ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth.
             </p>
             <div className="flex space-x-4 pt-2">
               {socialLinks.map((social, index) => (

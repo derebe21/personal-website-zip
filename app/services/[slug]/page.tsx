@@ -39,20 +39,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         {/* Left Column: Content */}
                         <div className="lg:col-span-2 space-y-10">
                             <div className="space-y-6">
-                                <div
-                                    className="inline-flex p-6 rounded-2xl shadow-lg border-2 border-white dark:border-slate-800"
-                                    style={{ backgroundColor: service.bgColor || '#ffffff' }}
-                                >
-                                    {service.logoImage ? (
-                                        <img
-                                            src={service.logoImage}
-                                            alt={service.title}
-                                            className="w-12 h-12 object-contain brightness-110 contrast-105"
-                                        />
-                                    ) : (
-                                        <service.icon className="w-12 h-12 text-white" />
-                                    )}
-                                </div>
                                 <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
                                     {service.title}
                                 </h1>
@@ -128,7 +114,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             </Card>
 
                             <div className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900/50 space-y-6">
-                                <h4 className="text-lg font-bold">Other Core Domains</h4>
+                                <h4 className="text-lg font-bold">Other Services</h4>
                                 <div className="space-y-3">
                                     {servicesData
                                         .filter((s) => s.slug !== service.slug)
@@ -139,15 +125,12 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                                 href={`/services/${s.slug}`}
                                                 className="flex items-center p-3 rounded-xl hover:bg-white dark:hover:bg-slate-800 transition-all group"
                                             >
-                                                <div className="p-2 bg-primary/10 rounded-lg mr-3 group-hover:bg-primary group-hover:text-white transition-colors">
-                                                    <s.icon className="w-4 h-4" />
-                                                </div>
                                                 <span className="text-sm font-medium">{s.title}</span>
                                             </Link>
                                         ))}
                                 </div>
                                 <Link href="/services" className="block text-center text-sm font-bold text-primary hover:underline">
-                                    View All Domains
+                                    View All Services
                                 </Link>
                             </div>
                         </div>

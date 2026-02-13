@@ -32,12 +32,12 @@ export function Services() {
     >
       <div className="max-w-[100vw]">
         <div className="text-center space-y-4 mb-20 px-4">
-          <span className="text-sm font-semibold text-primary uppercase tracking-[0.3em] inline-block mb-2">
-            Core Domains
-          </span>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white">
-            Delivering end-to-end solutions
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
+            Our Services
           </h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">
+            We deliver smart, secure, and scalable technology solutions that drive innovation and support modern businesses worldwide.
+          </p>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
 
@@ -74,23 +74,6 @@ export function Services() {
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent" />
                     </div>
 
-                    {/* Overlapping Icon Box */}
-                    <div className="relative flex justify-center -mt-12 z-10">
-                      <div
-                        className="w-24 h-24 rounded-2xl flex items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-4 border-white dark:border-slate-800 transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110 group-hover:shadow-primary/40"
-                        style={{ backgroundColor: service.bgColor || '#ffffff' }}
-                      >
-                        {service.logoImage ? (
-                          <img
-                            src={service.logoImage}
-                            alt={`${service.title} logo`}
-                            className="w-full h-full object-contain p-3 brightness-110 contrast-105"
-                          />
-                        ) : (
-                          <service.icon className="w-12 h-12 text-white" />
-                        )}
-                      </div>
-                    </div>
 
                     <div className="flex-grow p-12 pt-8 text-center">
                       <CardTitle className="text-3xl font-black mb-6 tracking-tight">{service.title}</CardTitle>

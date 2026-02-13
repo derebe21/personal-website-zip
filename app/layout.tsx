@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ITSEC TECHNOLOGY - Core Technology Domains',
+  title: 'ITSEC TECHNOLOGY',
   description: 'Delivering end-to-end technology solutions across cybersecurity, infrastructure, software, and engineering domains.',
 };
 

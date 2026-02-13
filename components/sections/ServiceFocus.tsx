@@ -1,6 +1,6 @@
 'use client';
 
-import { Server, Shield, Zap } from 'lucide-react';
+
 
 export function ServiceFocus() {
     return (
@@ -11,37 +11,28 @@ export function ServiceFocus() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
-                        <div className="p-4 bg-blue-500/10 rounded-2xl group-hover:bg-blue-500/20 transition-colors">
-                            <Server className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-                        </div>
                         <div className="text-center">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Infrastructure</h3>
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 uppercase italic">About Us</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                Robust IT systems & enterprise-grade networks
+                                ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.
                             </p>
                         </div>
                     </div>
 
                     <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
-                        <div className="p-4 bg-blue-500/10 rounded-2xl group-hover:bg-blue-500/20 transition-colors">
-                            <Shield className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-                        </div>
                         <div className="text-center">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Security</h3>
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 uppercase italic">Our Vision</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                Comprehensive protection & advanced surveillance
+                                To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.
                             </p>
                         </div>
                     </div>
 
                     <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
-                        <div className="p-4 bg-blue-500/10 rounded-2xl group-hover:bg-blue-500/20 transition-colors">
-                            <Zap className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-                        </div>
                         <div className="text-center">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Engineering</h3>
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 uppercase italic">Our Mission</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                Professional electrical installations & site design
+                                To empower organizations worldwide with secure, scalable, and innovative technology solutions that deliver measurable value through technical excellence and international best practices.
                             </p>
                         </div>
                     </div>
