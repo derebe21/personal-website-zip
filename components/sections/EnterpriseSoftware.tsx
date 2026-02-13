@@ -6,37 +6,37 @@ export function EnterpriseSoftware() {
     const partners = [
         {
             name: 'Microsoft',
-            logo: null,
+            logo: '/images/partners/microsoft-logo.svg',
             tag: 'CLOUD & OS',
             description: 'Leading provider of enterprise operating systems, cloud services, and productivity tools.',
         },
         {
             name: 'SAP',
-            logo: null,
+            logo: '/images/partners/sap-logo.svg',
             tag: 'ERP',
             description: 'Global leader in enterprise resource planning and business process management software.',
         },
         {
             name: 'Oracle',
-            logo: null,
+            logo: '/images/partners/oracle-logo.svg',
             tag: 'DATABASE',
             description: 'Integrated cloud applications and platform services for enterprise-grade data management.',
         },
         {
             name: 'Salesforce',
-            logo: null,
+            logo: '/images/partners/salesforce-logo.svg',
             tag: 'CRM',
             description: 'World-leading customer relationship management platform for modern enterprises.',
         },
         {
             name: 'Red Hat',
-            logo: null,
+            logo: '/images/partners/redhat-logo.svg',
             tag: 'OPEN SOURCE',
             description: 'Driving enterprise efficiency with world-class open source software and Linux solutions.',
         },
         {
             name: 'Linux',
-            logo: null,
+            logo: '/images/partners/linux-logo.svg',
             tag: 'OS KERNEL',
             description: 'The foundation of enterprise computing, providing security and reliability for mission-critical systems.',
         },
