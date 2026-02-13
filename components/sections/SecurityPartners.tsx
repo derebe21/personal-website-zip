@@ -79,44 +79,44 @@ export function SecurityPartners() {
                     {partners.map((partner, index) => (
                         <div
                             key={index}
-                            className="group relative bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-800 hover:-translate-y-1"
+                            className="group relative bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-50 dark:border-slate-800/50 hover:-translate-y-2 flex flex-col items-center"
                         >
                             {/* Tag Pill */}
-                            <div className="absolute top-0 right-0 mt-4 mr-4">
-                                <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500 bg-slate-100 dark:bg-slate-800 dark:text-slate-400 rounded-full">
+                            <div className="absolute top-6 right-8">
+                                <span className="inline-block px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-slate-900 bg-slate-100 dark:bg-slate-800 dark:text-slate-400 rounded-full shadow-sm">
                                     {partner.tag}
                                 </span>
                             </div>
 
-                            <div className="flex flex-col items-center text-center mt-4">
-                                {/* Logo / Name */}
-                                <div className="h-20 w-full flex items-center justify-center mb-6">
+                            {/* Overlapping Logo Container */}
+                            <div className="relative mb-10 group-hover:scale-110 transition-transform duration-500">
+                                <div className="w-24 h-24 bg-white dark:bg-slate-800 rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] flex items-center justify-center p-5 border border-slate-50 dark:border-slate-700">
                                     {partner.logo ? (
-                                        <div className="relative w-full h-full max-w-[140px]">
+                                        <div className="relative w-full h-full">
                                             <Image
                                                 src={partner.logo}
                                                 alt={`${partner.name} logo`}
                                                 fill
-                                                className="object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                                                className="object-contain transition-all duration-300"
                                             />
                                         </div>
                                     ) : (
-                                        <span className="text-xl font-bold text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">
-                                            {partner.name}
+                                        <span className="text-xl font-bold text-slate-900 dark:text-slate-100">
+                                            {partner.name[0]}
                                         </span>
                                     )}
                                 </div>
-
-                                {/* Title */}
-                                <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 dark:text-white mb-3">
-                                    {partner.name}
-                                </h3>
-
-                                {/* Description */}
-                                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                                    {partner.description}
-                                </p>
                             </div>
+
+                            {/* Title */}
+                            <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 dark:text-white mb-4">
+                                {partner.name}
+                            </h3>
+
+                            {/* Description */}
+                            <p className="text-base text-slate-500 dark:text-slate-400 leading-relaxed text-center font-medium">
+                                {partner.description}
+                            </p>
                         </div>
                     ))}
                 </div>
