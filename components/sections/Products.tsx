@@ -36,7 +36,7 @@ export function Products() {
         },
         {
             name: 'Sophos',
-            logo: '/images/partners/sophos-logo.svg',
+            logo: '/images/partners/sophos-falcon.png',
             url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
             tag: '',
             brief: ''
