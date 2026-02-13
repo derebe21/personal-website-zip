@@ -179,9 +179,6 @@ export function Products() {
                                     <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
                                         {category.title}
                                     </h3>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
-                                        Partnered with world-class {category.title.toLowerCase()} providers to ensure maximum reliability.
-                                    </p>
                                 </div>
 
                                 <div className="lg:w-2/3">
