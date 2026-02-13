@@ -5,46 +5,62 @@ import { Globe, Cloud, Server, Terminal, Video, Zap, ArrowRight, ShieldCheck } f
 import Link from 'next/link';
 
 export function Products() {
-    const cybersecurityPartners = [
+    const cyberSecurityPartners = [
         {
             name: 'Cisco',
             logo: '/images/partners/cisco-logo.svg',
             url: 'https://www.cisco.com/c/en/us/products/security/index.html',
+            tag: '',
+            brief: ''
         },
         {
             name: 'Palo Alto',
             logo: 'paloaltonetworks',
             url: 'https://www.paloaltonetworks.com/network-security/next-generation-firewall',
+            tag: '',
+            brief: ''
         },
         {
             name: 'Fortinet',
             logo: 'fortinet',
             url: 'https://www.fortinet.com/products/next-generation-firewall',
+            tag: '',
+            brief: ''
         },
         {
             name: 'Check Point',
             logo: '/images/partners/checkpoint-logo.svg',
             url: 'https://www.checkpoint.com/products-solutions/next-generation-firewall/',
+            tag: '',
+            brief: ''
         },
         {
             name: 'Sophos',
             logo: '/images/partners/sophos-logo.svg',
             url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
+            tag: '',
+            brief: ''
         },
         {
             name: 'Trend Micro',
             logo: 'trendmicro',
             url: 'https://www.trendmicro.com/en_us/business/products/network.html',
+            tag: '',
+            brief: ''
         },
         {
             name: 'CrowdStrike',
             logo: '/images/partners/crowdstrike-logo.svg',
             url: 'https://www.crowdstrike.com/falcon-platform/',
+            tag: '',
+            brief: ''
         },
         {
             name: 'Darktrace',
             logo: '/images/partners/darktrace-logo.svg',
             url: 'https://www.darktrace.com/en/products/',
+            tag: '',
+            brief: ''
         }
     ];
 
@@ -133,8 +149,8 @@ export function Products() {
                             Cyber Security and IT Security
                         </h3>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                        {cybersecurityPartners.map((partner, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {cyberSecurityPartners.map((partner, index) => (
                             <Link
                                 key={partner.name}
                                 href={partner.url}
@@ -143,9 +159,12 @@ export function Products() {
                                 style={{ animationDelay: `${index * 150}ms` }}
                             >
                                 <div className="absolute top-6 right-6">
-                                    <span className="px-3 py-1 bg-primary/10 text-primary text-[8px] font-black uppercase tracking-widest rounded-full">
-                                        {partner.tag}
-                                    </span>
+                                    {partner.tag && (
+                                        <div className="flex items-center space-x-2 text-primary/80 mb-4 scale-95 origin-left">
+                                            <div className="w-8 h-0.5 bg-primary/30 rounded-full" />
+                                            <span className="text-[10px] font-black uppercase tracking-[0.2em]">{partner.tag}</span>
+                                        </div>
+                                    )}
                                 </div>
                                 {/* UNIFORM LOGO CONTAINER */}
                                 <div className="w-20 h-20 flex items-center justify-center p-4 bg-slate-50 dark:bg-slate-800 rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6">
@@ -158,9 +177,11 @@ export function Products() {
                                     />
                                 </div>
                                 <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight">{partner.name}</h4>
-                                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-                                    {partner.brief}
-                                </p>
+                                {partner.brief && (
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+                                        {partner.brief}
+                                    </p>
+                                )}
                                 <div className="absolute bottom-6 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
                                     <ArrowRight className="w-6 h-6 text-primary" />
                                 </div>
