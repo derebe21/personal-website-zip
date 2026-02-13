@@ -36,7 +36,7 @@ export function Products() {
         },
         {
             name: 'Sophos',
-            logo: '/images/partners/sophos-falcon.png',
+            logo: '/images/partners/sophos-shield.jpg',
             url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
             tag: '',
             brief: ''
@@ -50,7 +50,7 @@ export function Products() {
         },
         {
             name: 'CrowdStrike',
-            logo: '/images/partners/crowdstrike-logo.svg',
+            logo: '/images/partners/crowdstrike-falcon.png',
             url: 'https://www.crowdstrike.com/falcon-platform/',
             tag: 'Falcon Platform',
             brief: 'Cloud-native endpoint protection and threat intelligence platform.'
