@@ -66,37 +66,6 @@ export function Products() {
 
     const otherCategories = [
         {
-            icon: Globe,
-            title: 'Enterprise Networking',
-            color: 'blue',
-            partners: [
-                { name: 'Cisco', logo: 'cisco', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
-                { name: 'HPE Aruba', logo: 'hp', url: 'https://www.arubanetworks.com/products/' },
-                { name: 'Juniper', logo: 'junipernetworks', url: 'https://www.juniper.net/us/en/products.html' },
-                { name: 'Huawei', logo: 'huawei', url: 'https://e.huawei.com/en/products/enterprise-networking' },
-                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/networking/index.htm' },
-                { name: 'Netgear', logo: 'netgear', url: 'https://www.netgear.com/business/' },
-                { name: 'Ubiquiti', logo: 'ubiquiti', url: 'https://www.ui.com/' },
-                { name: 'MikroTik', logo: 'mikrotik', url: 'https://mikrotik.com/products' },
-                { name: 'Arista', logo: 'arista', url: 'https://www.arista.com/en/products' },
-                { name: 'Extreme', logo: 'extremenetworks', url: 'https://www.extremenetworks.com/products/' }
-            ]
-        },
-        {
-            icon: Cloud,
-            title: 'Cloud & Virtualization',
-            color: 'cyan',
-            partners: [
-                { name: 'VMware', logo: 'vmware', url: 'https://www.vmware.com/products.html' },
-                { name: 'Azure', logo: 'microsoftazure', url: 'https://azure.microsoft.com/en-us/products/' },
-                { name: 'AWS', logo: 'amazonwebservices', url: 'https://aws.amazon.com/products/' },
-                { name: 'Google Cloud', logo: 'googlecloud', url: 'https://cloud.google.com/products' },
-                { name: 'Hyper-V', logo: 'microsoft', url: 'https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/' },
-                { name: 'Nutanix', logo: 'nutanix', url: 'https://www.nutanix.com/products' },
-                { name: 'Citrix', logo: 'citrix', url: 'https://www.citrix.com/products/' }
-            ]
-        },
-        {
             icon: Server,
             title: 'Servers & Data Center',
             color: 'indigo',
@@ -109,19 +78,6 @@ export function Products() {
                 { name: 'NetApp', logo: 'netapp', url: 'https://www.netapp.com/data-storage/' },
                 { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/en-us/products' },
                 { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/en/products' }
-            ]
-        },
-        {
-            icon: Terminal,
-            title: 'Enterprise Software',
-            color: 'purple',
-            partners: [
-                { name: 'Microsoft', logo: 'microsoft', url: 'https://www.microsoft.com/en-us/software-at-work' },
-                { name: 'SAP', logo: 'sap', url: 'https://www.sap.com/products.html' },
-                { name: 'Oracle', logo: 'oracle', url: 'https://www.oracle.com/cloud/products.html' },
-                { name: 'Salesforce', logo: 'salesforce', url: 'https://www.salesforce.com/products/' },
-                { name: 'Red Hat', logo: 'redhat', url: 'https://www.redhat.com/en/technologies/all-products' },
-                { name: 'Linux', logo: 'linux', url: 'https://www.kernel.org/' }
             ]
         },
         {
@@ -151,13 +107,13 @@ export function Products() {
                         <div className="flex items-center space-x-2">
                             <span className="w-12 h-1 bg-primary rounded-full" />
                             <span className="text-sm font-bold text-primary uppercase tracking-[0.3em]">
-                                Technology Partners
+                                Technology
                             </span>
                         </div>
                         <h2 className="text-4xl md:text-7xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none">
-                            Trusted Global <br />
+                            Our <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                Technology Partners
+                                Technology
                             </span>
                         </h2>
                     </div>
