@@ -102,29 +102,14 @@ export function Products() {
             className="py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20 animate-fade-up">
+                <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
                     <div className="space-y-4">
-                        <div className="flex items-center space-x-2">
-                            <span className="w-12 h-1 bg-primary rounded-full" />
-                            <span className="text-sm font-bold text-primary uppercase tracking-[0.3em]">
-                                Technology
-                            </span>
-                        </div>
-                        <h2 className="text-4xl md:text-7xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none">
-                            Our <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                Technology
-                            </span>
+                        <h2 className="text-5xl md:text-8xl font-black tracking-tighter text-slate-900 dark:text-white uppercase leading-none">
+                            OUR <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">TECHNOLOGY</span>
                         </h2>
                     </div>
-                    <div className="max-w-lg space-y-6">
-                        <div className="flex items-center space-x-3 text-primary">
-                            <ShieldCheck className="w-6 h-6" />
-                            <p className="text-xl font-bold uppercase tracking-widest italic">
-                                ITSEC Technology
-                            </p>
-                        </div>
-                        <p className="text-lg text-slate-600 dark:text-slate-400 font-medium italic border-l-4 border-primary pl-6 leading-relaxed bg-white/50 dark:bg-white/5 p-4 rounded-r-lg">
+                    <div className="max-w-4xl mx-auto">
+                        <p className="text-lg md:text-2xl text-slate-600 dark:text-slate-400 font-medium italic border-y border-primary/20 py-8 leading-relaxed">
                             "At ITSEC Technology, we deliver secure, scalable, and enterprise-grade solutions using leading hardware and software technologies."
                         </p>
                     </div>
