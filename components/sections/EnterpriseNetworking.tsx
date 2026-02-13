@@ -1,8 +1,7 @@
 import Image from 'next/image';
 
-export function Technology() {
+export function EnterpriseNetworking() {
     const partners = [
-        // Networking
         {
             name: 'Cisco',
             logo: '/images/partners/cisco-logo.svg',
@@ -27,52 +26,21 @@ export function Technology() {
             tag: 'AI NETWORKING',
             description: 'Secure, high-speed networking infrastructure for enterprises and data centers.',
         },
-        // Cloud & Virtualization
-        {
-            name: 'VMware',
-            logo: '/images/partners/vmware-logo.svg',
-            tag: 'VIRTUALIZATION',
-            description: 'Industry-leading virtualization and cloud infrastructure solutions for the modern enterprise.',
-        },
-        {
-            name: 'Microsoft Hyper-V',
-            logo: '/images/partners/hyperv-logo.svg',
-            tag: 'HYPERVISOR',
-            description: 'Robust virtualization platform integrated with Windows Server for hybrid cloud efficiency.',
-        },
-        {
-            name: 'Oracle Cloud',
-            logo: '/images/partners/oracle-logo.svg',
-            tag: 'OCI',
-            description: 'Comprehensive cloud platform for running databases and enterprise applications with security.',
-        },
-        {
-            name: 'IBM Cloud',
-            logo: '/images/partners/ibm-logo.svg',
-            tag: 'HYBRID CLOUD',
-            description: 'Secure, open-source-based cloud platform for building and managing modern workloads.',
-        },
-        {
-            name: 'Red Hat Virtualization',
-            logo: '/images/partners/redhat-logo.svg',
-            tag: 'OPEN VIRTUAL',
-            description: 'Enterprise-grade open-source virtualization platform built on KVM and RHEL.',
-        },
     ];
 
     return (
-        <section className="py-20 bg-slate-50 dark:bg-slate-950">
+        <section className="py-20 bg-white dark:bg-slate-900/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                        Our Technology
+                        Technology Enterprise Networking
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-                        Our Technology
+                        Technology Enterprise Networking
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {partners.map((partner, index) => (
                         <div
                             key={index}
@@ -97,7 +65,7 @@ export function Technology() {
                                 </div>
                             </div>
 
-                            <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 dark:text-white mb-4 text-center">
+                            <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 dark:text-white mb-4">
                                 {partner.name}
                             </h3>
 
