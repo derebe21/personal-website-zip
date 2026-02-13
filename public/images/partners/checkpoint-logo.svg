@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <!-- Pink stylized checkmark/box roughly representing the icon to avoid broken image -->
+  <path fill="#EC407A" d="M10 10 h10 v20 h-20 v-10 h10 z M5 35 h20 v5 h-20 z" opacity="0.8"/>
+  <text x="35" y="20" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#000">Check</text>
+  <text x="35" y="40" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#000">Point</text>
+</svg>
