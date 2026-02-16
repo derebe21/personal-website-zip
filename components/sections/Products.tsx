@@ -185,7 +185,7 @@ export function Products() {
                                         className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'} ${partner.name === 'Darktrace' ? 'mix-blend-screen' : ''}`}
                                     />
                                 </div>
-                                <h4 className="font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-3xl md:text-4xl">{partner.name}</h4>
+                                <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
                                 <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
                                     <ArrowRight className="w-6 h-6 text-primary" />
                                 </div>
