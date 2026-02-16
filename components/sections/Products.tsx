@@ -95,9 +95,9 @@ export function Products() {
             color: 'indigo',
             partners: [
                 { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/servers/index.htm' },
-                { name: 'HPE', logo: 'hewlettpackardenterprise', url: 'https://www.hpe.com/us/en/servers.html' },
+                { name: 'HPE', logo: '/images/partners/hpe-new.png', url: 'https://www.hpe.com/us/en/servers.html' },
                 { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/us/en/servers-storage/' },
-                { name: 'Huawei', logo: '/images/partners/huawei-logo.svg', url: 'https://e.huawei.com/en/products/compute' },
+                { name: 'Huawei', logo: '/images/partners/huawei-servers.png', url: 'https://e.huawei.com/en/products/compute' },
                 { name: 'IBM', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
                 { name: 'NetApp', logo: 'netapp', url: 'https://www.netapp.com/data-storage/' },
                 { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/en-us/products' },
@@ -109,10 +109,10 @@ export function Products() {
             title: 'Smart & Physical Security',
             color: 'emerald',
             partners: [
-                { name: 'Hikvision', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Hikvision_logo.svg', url: 'https://www.hikvision.com/en/products/' },
-                { name: 'Dahua', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Dahua_Technology_logo.svg', url: 'https://www.dahuasecurity.com/products' },
+                { name: 'Hikvision', logo: '/images/partners/hikvision.png', url: 'https://www.hikvision.com/en/products/' },
+                { name: 'Dahua', logo: '/images/partners/dahua.png', url: 'https://www.dahuasecurity.com/products' },
                 { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/xc/en/products/' },
-                { name: 'Axis', logo: 'axiscommunications', url: 'https://www.axis.com/products-and-solutions' },
+                { name: 'Axis', logo: '/images/partners/axis.png', url: 'https://www.axis.com/products-and-solutions' },
                 { name: 'Honeywell', logo: 'honeywell', url: 'https://buildings.honeywell.com/us/en/products/security' },
                 { name: 'Suprema', logo: 'https://www.supremainc.com/en/view/common/img/logo.png', url: 'https://www.supremainc.com/en/hardware/product-list.asp' },
                 { name: 'ZKTeco', logo: 'https://www.zkteco.com/static/upload/image/20210419/1618821034431526.png', url: 'https://www.zkteco.com/en/product_list/' }
