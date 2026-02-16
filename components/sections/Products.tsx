@@ -57,7 +57,7 @@ export function Products() {
         },
         {
             name: 'Darktrace',
-            logo: '/images/partners/darktrace-logo.svg',
+            logo: '/images/partners/darktrace-red.png',
             url: 'https://www.darktrace.com/en/products/',
             tag: '',
             brief: ''
@@ -183,6 +183,7 @@ export function Products() {
                                             : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
                                         alt={partner.name}
                                         className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                        style={partner.name === 'Darktrace' ? { filter: 'brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(6329%) hue-rotate(355deg) brightness(96%) contrast(118%)' } : {}}
                                     />
                                 </div>
                                 <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight">{partner.name}</h4>
