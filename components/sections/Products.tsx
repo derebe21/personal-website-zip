@@ -53,7 +53,7 @@ export function Products() {
             logo: '/images/partners/crowdstrike-falcon.png',
             url: 'https://www.crowdstrike.com/falcon-platform/',
             tag: '',
-            brief: 'Cloud-native endpoint protection and threat intelligence platform.'
+            brief: ''
         },
         {
             name: 'Darktrace',
@@ -185,13 +185,8 @@ export function Products() {
                                         className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'} ${partner.name === 'Darktrace' ? 'mix-blend-screen' : ''}`}
                                     />
                                 </div>
-                                <h4 className={`font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight ${partner.name === 'Darktrace' ? 'text-3xl md:text-4xl' : 'text-2xl'}`}>{partner.name}</h4>
-                                {partner.brief && (
-                                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-                                        {partner.brief}
-                                    </p>
-                                )}
-                                <div className="absolute bottom-6 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                                <h4 className="font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-3xl md:text-4xl">{partner.name}</h4>
+                                <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
                                     <ArrowRight className="w-6 h-6 text-primary" />
                                 </div>
                             </Link>
