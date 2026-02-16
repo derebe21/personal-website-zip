@@ -67,11 +67,11 @@ export function Products() {
     const otherCategories = [
         {
             icon: Globe,
-            title: 'Enterprise Networking',
+            title: '', // Name removed as requested
             color: 'blue',
             partners: [
-                { name: 'Cisco', logo: '/images/partners/cisco-logo.svg', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
-                { name: 'Huawei', logo: '/images/partners/huawei-logo.svg', url: 'https://e.huawei.com/en/products/enterprise-networking' },
+                { name: 'Cisco', logo: '/images/partners/cisco-final.png', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
+                { name: 'Huawei', logo: '/images/partners/huawei-ent.png', url: 'https://e.huawei.com/en/products/enterprise-networking' },
                 { name: 'HPE Aruba', logo: '/images/partners/hpe-logo.svg', url: 'https://www.arubanetworks.com/products/' },
                 { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' }
             ],
@@ -227,8 +227,8 @@ export function Products() {
                                                 className="group/logo relative flex flex-col items-center justify-center w-28 h-28 md:w-32 md:h-32 bg-slate-50/50 dark:bg-slate-800/30 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-white dark:hover:bg-slate-800 transition-all duration-500 animate-fade-left shadow-sm"
                                                 style={{ animationDelay: `${(catIndex * 200) + (pIndex * 100)}ms` }}
                                             >
-                                                {/* UNIFORM LOGO CONTAINER FOR SMALLER CARDS */}
-                                                <div className="w-14 h-14 flex items-center justify-center grayscale group-hover/logo:grayscale-0 transition-all duration-500 transform group-hover/logo:scale-110">
+                                                {/* UNIFORM LOGO CONTAINER FOR SMALLER CARDS - Enlarged and color preserved */}
+                                                <div className="w-20 h-20 flex items-center justify-center transition-all duration-500 transform group-hover/logo:scale-110">
                                                     <img
                                                         src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
                                                             ? partner.logo
