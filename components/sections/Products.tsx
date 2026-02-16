@@ -67,7 +67,7 @@ export function Products() {
     const otherCategories = [
         {
             icon: Globe,
-            title: '', // Name removed as requested
+            title: 'Enterprise Networking',
             color: 'blue',
             partners: [
                 { name: 'Cisco', logo: '/images/partners/cisco-final.png', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
@@ -75,7 +75,7 @@ export function Products() {
                 { name: 'HPE Aruba', logo: '/images/partners/hpe-logo.svg', url: 'https://www.arubanetworks.com/products/' },
                 { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' }
             ],
-            description: 'Partnered with world-class enterprise networking providers to ensure maximum reliability.'
+            description: ''
         },
         {
             icon: Cloud,
@@ -213,7 +213,7 @@ export function Products() {
                                         {category.title}
                                     </h3>
                                     <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
-                                        {category.description || `Partnered with world-class ${category.title.toLowerCase()} providers to ensure maximum reliability.`}
+                                        {category.description}
                                     </p>
                                 </div>
 
