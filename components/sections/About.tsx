@@ -8,9 +8,6 @@ export function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-sm font-semibold text-primary uppercase tracking-[0.3em] inline-block mb-2">
-            Best International IT Company
-          </span>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-tight">
             About Us
           </h2>
