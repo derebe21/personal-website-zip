@@ -194,63 +194,43 @@ export function Products() {
                     </div>
                 </div>
 
-                {/* OTHER CATEGORIES - ONSIDE SLIDE ANIMATION */}
-                <div className="space-y-12">
+                {/* OTHER CATEGORIES - GRID LAYOUT MATCHING CYBER SECURITY */}
+                <div className="space-y-16">
                     {otherCategories.map((category, catIndex) => (
-                        <div
-                            key={category.title}
-                            className="bg-white dark:bg-slate-900/50 rounded-[2.5rem] p-8 md:p-12 border border-slate-100 dark:border-slate-800/50 shadow-sm relative overflow-hidden group/cat"
-                        >
-                            {/* ONSIDE DECORATION */}
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2 transition-all duration-700 group-hover/cat:scale-150" />
-
-                            <div className="flex flex-col lg:flex-row lg:items-center gap-10 relative z-10">
-                                <div className="lg:w-1/3 space-y-4">
-                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center bg-slate-50 dark:bg-slate-800 group-hover/cat:scale-110 transition-transform duration-500`}>
-                                        <category.icon className="w-7 h-7 text-primary" />
-                                    </div>
-                                    <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
-                                        {category.title}
-                                    </h3>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
-                                        {category.description}
-                                    </p>
+                        <div key={category.title} className="mb-24">
+                            <div className="flex items-center space-x-4 mb-10">
+                                <div className={`p-3 bg-${category.color}-500/10 rounded-2xl`}>
+                                    <category.icon className={`w-8 h-8 text-${category.color}-500`} />
                                 </div>
-
-                                <div className="lg:w-2/3">
-                                    <div className="flex flex-wrap gap-4">
-                                        {category.partners.map((partner, pIndex) => (
-                                            <Link
-                                                key={partner.name}
-                                                href={partner.url}
-                                                target="_blank"
-                                                className="group/logo relative flex flex-col items-center justify-center w-36 h-36 md:w-40 md:h-40 bg-white dark:bg-slate-800 rounded-3xl border-2 border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-500 animate-fade-left"
-                                                style={{ animationDelay: `${(catIndex * 200) + (pIndex * 100)}ms` }}
-                                            >
-                                                {/* LOGO CONTAINER - Large and colorful */}
-                                                <div className="w-24 h-24 flex items-center justify-center transition-all duration-500 transform group-hover/logo:scale-110">
-                                                    <img
-                                                        src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
-                                                            ? partner.logo
-                                                            : `https://cdn.simpleicons.org/${partner.logo}/1D4ED8`}
-                                                        alt={partner.name}
-                                                        className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
-                                                    />
-                                                </div>
-                                                {/* PARTNER NAME - Always visible, larger, colored */}
-                                                <span className="mt-3 text-sm md:text-base font-bold text-slate-700 dark:text-slate-200 group-hover/logo:text-blue-600 dark:group-hover/logo:text-blue-400 uppercase tracking-wide transition-colors">
-                                                    {partner.name}
-                                                </span>
-                                                {/* LINK INDICATOR - Visible arrow */}
-                                                <div className="absolute bottom-2 right-2 w-6 h-6 flex items-center justify-center rounded-full bg-blue-500 dark:bg-blue-600 text-white opacity-80 group-hover/logo:opacity-100 group-hover/logo:scale-110 transition-all">
-                                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                                    </svg>
-                                                </div>
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
+                                <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                                    {category.title}
+                                </h3>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                {category.partners.map((partner, pIndex) => (
+                                    <Link
+                                        key={partner.name}
+                                        href={partner.url}
+                                        target="_blank"
+                                        className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10 animate-fade-up min-h-[300px] text-center"
+                                        style={{ animationDelay: `${(catIndex * 200) + (pIndex * 150)}ms` }}
+                                    >
+                                        {/* LOGO CONTAINER - Matching Cyber Security style */}
+                                        <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
+                                            <img
+                                                src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
+                                                    ? partner.logo
+                                                    : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                                alt={partner.name}
+                                                className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                            />
+                                        </div>
+                                        <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
+                                        <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
+                                            <ArrowRight className="w-6 h-6 text-primary" />
+                                        </div>
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                     ))}
