@@ -176,14 +176,14 @@ export function Products() {
                                     )}
                                 </div>
                                 {/* UNIFORM LOGO CONTAINER */}
-                                <div className="w-20 h-20 flex items-center justify-center p-4 bg-slate-50 dark:bg-slate-800 rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6">
+                                <div className={`w-20 h-20 flex items-center justify-center p-4 rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 ${partner.name === 'Darktrace' ? 'bg-[#D0021B]' : 'bg-slate-50 dark:bg-slate-800'}`}>
                                     <img
                                         src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
                                             ? partner.logo
                                             : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
                                         alt={partner.name}
-                                        className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
-                                        style={partner.name === 'Darktrace' ? { filter: 'brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(6329%) hue-rotate(355deg) brightness(96%) contrast(118%)' } : {}}
+                                        className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'} ${partner.name === 'Darktrace' ? 'mix-blend-screen' : ''}`}
+                                        style={{}}
                                     />
                                 </div>
                                 <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight">{partner.name}</h4>
