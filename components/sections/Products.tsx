@@ -114,7 +114,7 @@ export function Products() {
                 { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/xc/en/products/' },
                 { name: 'Axis', logo: '/images/partners/axis.png', url: 'https://www.axis.com/products-and-solutions' },
                 { name: 'Honeywell', logo: '/images/partners/honeywell.png', url: 'https://buildings.honeywell.com/us/en/products/security' },
-                { name: 'Suprema', logo: 'https://www.supremainc.com/en/view/common/img/logo.png', url: 'https://www.supremainc.com/en/hardware/product-list.asp' },
+                { name: 'Suprema', logo: '/images/partners/suprema.png', url: 'https://www.supremainc.com/en/hardware/product-list.asp' },
                 { name: 'ZKTeco', logo: '/images/partners/zkteco.png', url: 'https://www.zkteco.com/en/product_list/' }
             ]
         }
