@@ -9,7 +9,7 @@ export function About() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-sm font-semibold text-primary uppercase tracking-[0.3em] inline-block mb-2">
-            About Us
+            Best International IT Company
           </span>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
             Empowering Global Enterprises
