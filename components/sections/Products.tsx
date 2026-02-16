@@ -8,7 +8,7 @@ export function Products() {
     const cyberSecurityPartners = [
         {
             name: 'Cisco',
-            logo: '/images/partners/cisco-new.png',
+            logo: '/images/partners/cisco-final.png',
             url: 'https://www.cisco.com/c/en/us/products/security/index.html',
             tag: '',
             brief: ''
@@ -182,7 +182,7 @@ export function Products() {
                                             ? partner.logo
                                             : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
                                         alt={partner.name}
-                                        className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                        className={`w-full h-full object-contain ${partner.logo.startsWith('/') && partner.name !== 'Cisco' ? '' : 'dark:invert'}`}
                                     />
                                 </div>
                                 <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
