@@ -224,11 +224,11 @@ export function Products() {
                                                 key={partner.name}
                                                 href={partner.url}
                                                 target="_blank"
-                                                className="group/logo relative flex flex-col items-center justify-center w-28 h-28 md:w-32 md:h-32 bg-slate-50/50 dark:bg-slate-800/30 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-white dark:hover:bg-slate-800 transition-all duration-500 animate-fade-left shadow-sm"
+                                                className="group/logo relative flex flex-col items-center justify-center w-36 h-36 md:w-40 md:h-40 bg-white dark:bg-slate-800 rounded-3xl border-2 border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-500 animate-fade-left"
                                                 style={{ animationDelay: `${(catIndex * 200) + (pIndex * 100)}ms` }}
                                             >
-                                                {/* UNIFORM LOGO CONTAINER FOR SMALLER CARDS - Enlarged and color preserved */}
-                                                <div className="w-20 h-20 flex items-center justify-center transition-all duration-500 transform group-hover/logo:scale-110">
+                                                {/* LOGO CONTAINER - Large and colorful */}
+                                                <div className="w-24 h-24 flex items-center justify-center transition-all duration-500 transform group-hover/logo:scale-110">
                                                     <img
                                                         src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
                                                             ? partner.logo
@@ -237,9 +237,16 @@ export function Products() {
                                                         className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
                                                     />
                                                 </div>
-                                                <span className="mt-2 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest opacity-0 group-hover/logo:opacity-100 transition-opacity">
+                                                {/* PARTNER NAME - Always visible, larger, colored */}
+                                                <span className="mt-3 text-sm md:text-base font-bold text-slate-700 dark:text-slate-200 group-hover/logo:text-blue-600 dark:group-hover/logo:text-blue-400 uppercase tracking-wide transition-colors">
                                                     {partner.name}
                                                 </span>
+                                                {/* LINK INDICATOR - Visible arrow */}
+                                                <div className="absolute bottom-2 right-2 w-6 h-6 flex items-center justify-center rounded-full bg-blue-500 dark:bg-blue-600 text-white opacity-80 group-hover/logo:opacity-100 group-hover/logo:scale-110 transition-all">
+                                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </div>
                                             </Link>
                                         ))}
                                     </div>
