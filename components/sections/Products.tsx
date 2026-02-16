@@ -8,7 +8,7 @@ export function Products() {
     const cyberSecurityPartners = [
         {
             name: 'Cisco',
-            logo: '/images/partners/cisco-logo.svg',
+            logo: '/images/partners/cisco-new.png',
             url: 'https://www.cisco.com/c/en/us/products/security/index.html',
             tag: '',
             brief: ''
