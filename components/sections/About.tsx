@@ -9,11 +9,15 @@ export function About() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-sm font-semibold text-primary uppercase tracking-[0.3em] inline-block mb-2">
-            Best International IT Company
+            About Us
           </span>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
-            Empowering Global Enterprises
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-tight">
+            Best International <br />
+            <span className="text-primary italic text-3xl md:text-5xl">IT Company</span>
           </h2>
+          <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wide mt-4">
+            Empowering Global Enterprises
+          </h3>
           <p className="text-xl font-medium text-slate-700 dark:text-slate-300 leading-relaxed mt-6">
             ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.
           </p>
