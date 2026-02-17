@@ -123,9 +123,18 @@ export function Products() {
     return (
         <section
             id="technology"
-            className="py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
+            className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Moving Nexus Background Synergy */}
+            <div className="absolute inset-0 z-0 pointer-events-none opacity-40 dark:opacity-20">
+                <img
+                    src="/images/cyber-nexus.png"
+                    alt=""
+                    className="w-full h-full object-cover animate-subtle-zoom"
+                />
+            </div>
+
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
@@ -164,7 +173,7 @@ export function Products() {
                                 key={partner.name}
                                 href={partner.url}
                                 target="_blank"
-                                className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10 animate-fade-up min-h-[300px] text-center"
+                                className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/20 animate-fade-up min-h-[300px] text-center"
                                 style={{ animationDelay: `${index * 150}ms` }}
                             >
                                 <div className="absolute top-6 right-6">
