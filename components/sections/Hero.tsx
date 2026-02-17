@@ -105,17 +105,34 @@ export function Hero() {
               }}
             >
               {/* Title Layer */}
-              <div style={{ transform: 'translateZ(80px)' }}>
-                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+              <div style={{ transform: 'translateZ(80px)' }} className="relative">
+                {/* Decorative Cyber Nexus Image */}
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] opacity-20 pointer-events-none mix-blend-screen animate-pulse-slow">
+                  <div className="relative w-full h-full">
+                    <img
+                      src="/images/cyber-nexus.png"
+                      alt="Cyber Nexus"
+                      className="w-full h-full object-contain filter blur-[2px] scale-150"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950 opacity-60" />
+                  </div>
+                </div>
+
+                <h1 className="relative text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                   {slide.title}
                 </h1>
               </div>
 
               {/* Description Layer */}
               <div
-                className="mt-12 max-w-3xl mx-auto"
+                className="mt-12 max-w-3xl mx-auto relative"
                 style={{ transform: 'translateZ(40px)' }}
               >
+                {/* Smaller secondary nexus element */}
+                <div className="absolute -right-20 -top-20 w-40 h-40 opacity-10 blur-sm animate-spin-slow">
+                  <img src="/images/cyber-nexus.png" alt="" className="w-full h-full object-contain" />
+                </div>
+
                 <div className="p-1 px-4 border-l-4 border-blue-600 bg-white/5 backdrop-blur-md rounded-r-xl">
                   <p className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-medium tracking-wide py-4">
                     {slide.description}
