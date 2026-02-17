@@ -19,44 +19,16 @@ export function Hero() {
       image: '/images/datacenter-bg.png',
       title: (
         <>
-          Data Center
+          ITSEC
           <br />
           <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-            Facility
+            Technology
           </span>
         </>
       ),
       description:
         'Empowering modern businesses with robust infrastructure, elite security, and professional electrical engineering.',
-    },
-    {
-      image: '/images/cyber-shield-bg.jpg',
-      title: (
-        <>
-          Cyber &
-          <br />
-          <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
-            Risk Protection
-          </span>
-        </>
-      ),
-      description:
-        "Ready to secure your business? Our experts are ready to help you implement Cyber & Risk Protection tailored to your organization's needs.",
-    },
-    {
-      image: '/images/digital-infrastructure-bg.jpg',
-      title: (
-        <>
-          IT
-          <br />
-          <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-            Infrastructure
-          </span>
-        </>
-      ),
-      description:
-        'Designing and deploying resilient technology foundations. From structural cabling to advanced data center solutions, we build the backbone of your digital operations.',
-    },
+    }
   ];
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -68,10 +40,7 @@ export function Hero() {
   };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 8000); // Slower interval for better readability
-    return () => clearInterval(timer);
+    // Single slide - no interval needed
   }, [slides.length]);
 
   const scrollToContact = () => {
@@ -164,7 +133,7 @@ export function Hero() {
         >
           <Button
             size="lg"
-            onClick={scrollToContact}
+            onClick={() => window.open('https://accounts.insa.gov.et/realms/INSA/protocol/', '_blank')}
             className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-black h-18 px-14 rounded-full shadow-[0_20px_40px_rgba(37,99,235,0.4)] transition-all hover:scale-105 active:scale-95 text-xl"
           >
             Get Started
