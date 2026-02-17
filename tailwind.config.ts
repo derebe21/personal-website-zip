@@ -64,6 +64,11 @@ const config: Config = {
       'accordion-down': 'accordion-down 0.2s ease-out',
       'accordion-up': 'accordion-up 0.2s ease-out',
       'subtle-zoom': 'subtle-zoom 20s infinite alternate',
+      "fade-up": "fade-up 0.8s ease-out forwards",
+      "fade-in": "fade-in 0.6s ease-out forwards",
+      "gradient": "gradient 6s linear infinite",
+      "pulse-slow": "pulse-slow 8s ease-in-out infinite",
+      "spin-slow": "spin-slow 20s linear infinite",
     },
     keyframes: {
       'accordion-down': {
@@ -85,6 +90,26 @@ const config: Config = {
       'subtle-zoom': {
         '0%': { transform: 'scale(1)' },
         '100%': { transform: 'scale(1.1)' },
+      },
+      "fade-up": {
+        "0%": { opacity: "0", transform: "translateY(20px)" },
+        "100%": { opacity: "1", transform: "translateY(0)" },
+      },
+      "fade-in": {
+        "0%": { opacity: "0" },
+        "100%": { opacity: "1" },
+      },
+      "gradient": {
+        "0%, 100%": { "background-position": "0% 50%" },
+        "50%": { "background-position": "100% 50%" },
+      },
+      "pulse-slow": {
+        "0%, 100%": { opacity: "0.15", transform: "translate(-50%, -50%) scale(1)" },
+        "50%": { opacity: "0.3", transform: "translate(-50%, -50%) scale(1.1)" },
+      },
+      "spin-slow": {
+        "0%": { transform: "rotate(0deg)" },
+        "100%": { transform: "rotate(360deg)" },
       },
     },
   },
