@@ -72,11 +72,8 @@ export function Hero() {
                 transition: 'transform 0.3s ease-out'
               }}
             />
-            {/* Overlay Layer */}
-            <div className={`absolute inset-0 bg-slate-950/40 via-transparent to-slate-950/60 ${index !== 1 ? 'backdrop-brightness-[0.6]' : ''}`} />
-            {/* Cinematic Noise & Grid */}
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-50 contrast-150 mix-blend-soft-light" />
-            <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(to_bottom,transparent,black,transparent)]" />
+            {/* Minimal Overlay for Text Legibility */}
+            <div className="absolute inset-0 bg-slate-950/20" />
           </div>
         ))}
       </div>
