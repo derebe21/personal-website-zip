@@ -66,9 +66,9 @@ export function Hero() {
             <img
               src={slide.image}
               alt="Hero Background"
-              className="w-full h-full object-cover scale-110"
+              className="w-full h-full object-cover scale-110 animate-subtle-zoom"
               style={{
-                transform: `rotateY(${mousePosition.x * 0.2}deg) rotateX(${mousePosition.y * 0.2}deg) scale(1.15)`,
+                transform: `rotateY(${mousePosition.x * 0.2}deg) rotateX(${mousePosition.y * 0.2}deg)`,
                 transition: 'transform 0.3s ease-out'
               }}
             />
@@ -105,16 +105,23 @@ export function Hero() {
               }}
             >
               {/* Title Layer */}
-              <div style={{ transform: 'translateZ(80px)' }} className="relative">
-                {/* Decorative Cyber Nexus Image */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] opacity-20 pointer-events-none mix-blend-screen animate-pulse-slow">
-                  <div className="relative w-full h-full">
+              <div style={{ transform: 'translateZ(100px)' }} className="relative flex flex-col items-center">
+                {/* Advanced Cybersecurity Rotating Logo */}
+                <div className="relative mb-8 w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
+                  {/* Outer Orbital Ring */}
+                  <div className="absolute inset-0 border-2 border-cyan-500/30 rounded-full animate-spin-slow" style={{ animationDuration: '15s' }} />
+                  {/* Inner Orbital Ring */}
+                  <div className="absolute inset-4 border border-blue-400/20 rounded-full animate-spin-slow" style={{ animationDuration: '10s', animationDirection: 'reverse' }} />
+                  {/* Core Rotating Shield Logo */}
+                  <div className="relative w-3/4 h-3/4 transform-gpu animate-hover group">
                     <img
-                      src="/images/cyber-nexus.png"
-                      alt="Cyber Nexus"
-                      className="w-full h-full object-contain filter blur-[2px] scale-150"
+                      src="/images/secnet-logo-shield.png"
+                      alt="Cybersecurity Shield"
+                      className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(34,211,238,0.4)] animate-spin-slow"
+                      style={{ animationDuration: '25s' }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950 opacity-60" />
+                    {/* Pulsing Core Glow */}
+                    <div className="absolute inset-0 bg-cyan-400/10 blur-2xl rounded-full animate-pulse" />
                   </div>
                 </div>
 
@@ -128,10 +135,7 @@ export function Hero() {
                 className="mt-12 max-w-3xl mx-auto relative"
                 style={{ transform: 'translateZ(40px)' }}
               >
-                {/* Smaller secondary nexus element */}
-                <div className="absolute -right-20 -top-20 w-40 h-40 opacity-10 blur-sm animate-spin-slow">
-                  <img src="/images/cyber-nexus.png" alt="" className="w-full h-full object-contain" />
-                </div>
+                {/* Content Overlay */}
 
                 <div className="p-1 px-4 border-l-4 border-blue-600 bg-white/5 backdrop-blur-md rounded-r-xl">
                   <p className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-medium tracking-wide py-4">

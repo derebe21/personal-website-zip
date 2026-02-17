@@ -88,8 +88,8 @@ const config: Config = {
         },
       },
       'subtle-zoom': {
-        '0%': { transform: 'scale(1)' },
-        '100%': { transform: 'scale(1.1)' },
+        '0%': { transform: 'scale(1) translateX(0) translateY(0)' },
+        '100%': { transform: 'scale(1.1) translateX(-1%) translateY(-1%)' },
       },
       "fade-up": {
         "0%": { opacity: "0", transform: "translateY(20px)" },
