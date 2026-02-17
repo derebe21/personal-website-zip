@@ -16,7 +16,7 @@ export function Hero() {
 
   const slides: Slide[] = [
     {
-      image: '/images/insa-hero-bg.png',
+      image: '/images/cyber-nexus.png',
       title: (
         <>
           ITSEC
@@ -72,8 +72,8 @@ export function Hero() {
                 transition: 'transform 0.3s ease-out'
               }}
             />
-            {/* Minimal Overlay for Text Legibility */}
-            <div className="absolute inset-0 bg-slate-950/20" />
+            {/* Clean Background with Minimal Overlay */}
+            <div className="absolute inset-0 bg-slate-950/10" />
           </div>
         ))}
       </div>
