@@ -27,7 +27,7 @@ export function Hero() {
         </>
       ),
       description:
-        'Empowering modern businesses with robust infrastructure, elite security, and professional electrical engineering.',
+        'Empowering modern businesses with robust digital infrastructure, elite security, and professional electrical engineering.',
     }
   ];
 
@@ -56,7 +56,7 @@ export function Hero() {
       onMouseMove={handleMouseMove}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden perspective-1000 bg-slate-950"
     >
-      {/* Cinematic Sliding Backgrounds */}
+      {/* Sliding Backgrounds */}
       <div
         className="absolute inset-0 z-0 flex transition-transform duration-1000 ease-in-out"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
