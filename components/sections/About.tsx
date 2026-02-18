@@ -22,7 +22,7 @@ export function About() {
         {/* Info Cards Section */}
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {/* About Us Card */}
-          <div className="relative group lg:col-span-3 xl:col-span-1">
+          <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-primary to-blue-400 rounded-3xl blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-500" />
             <div className="relative h-full p-8 md:p-10 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl hover:border-primary/50 transition-all duration-500 shadow-sm hover:shadow-2xl">
               <div className="flex items-start gap-6">
