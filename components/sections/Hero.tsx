@@ -98,23 +98,7 @@ export function Hero() {
               {/* Title Layer */}
               <div style={{ transform: 'translateZ(100px)' }} className="relative flex flex-col items-center">
                 {/* Advanced Cybersecurity Rotating Logo */}
-                <div className="relative mb-8 w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
-                  {/* Outer Orbital Ring */}
-                  <div className="absolute inset-0 border-2 border-cyan-500/30 rounded-full animate-spin-slow" style={{ animationDuration: '15s' }} />
-                  {/* Inner Orbital Ring */}
-                  <div className="absolute inset-4 border border-blue-400/20 rounded-full animate-spin-slow" style={{ animationDuration: '10s', animationDirection: 'reverse' }} />
-                  {/* Core Rotating Shield Logo */}
-                  <div className="relative w-3/4 h-3/4 transform-gpu animate-hover group">
-                    <img
-                      src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1739823925/hero-logo_qnlgqf.png"
-                      alt="ITSEC Technology Cybersecurity Shield"
-                      className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(34,211,238,0.4)] animate-spin-slow"
-                      style={{ animationDuration: '25s' }}
-                    />
-                    {/* Pulsing Core Glow */}
-                    <div className="absolute inset-0 bg-cyan-400/10 blur-2xl rounded-full animate-pulse" />
-                  </div>
-                </div>
+
 
                 <h1 className="relative text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                   {slide.title}
