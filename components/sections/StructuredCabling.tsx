@@ -23,21 +23,9 @@ export function StructuredCabling() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header Section */}
                 <div className="max-w-4xl mx-auto text-center mb-20 animate-fade-up">
-                    <div className="inline-flex items-center space-x-2 mb-6">
-                        <span className="w-12 h-0.5 bg-primary rounded-full" />
-                        <span className="text-sm font-bold text-primary uppercase tracking-[0.3em]">Our Services</span>
-                    </div>
                     <h2 className="text-4xl md:text-7xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-8 leading-none">
                         Structured <span className="text-primary">Cabling</span>
                     </h2>
-                    <div className="relative">
-                        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium italic border-y border-slate-200 dark:border-slate-800 py-8 leading-relaxed">
-                            "At ITSEC Technology, our structured cabling solutions are designed to be reliable, flexible, and future-proof.
-                            Whether you are building from the ground up or upgrading existing infrastructure, our team ensures every connection
-                            is optimized for performance and longevity. From offices and data centers to large industrial warehouses and campuses,
-                            we deliver end-to-end cabling infrastructure that powers your business success."
-                        </p>
-                    </div>
                 </div>
 
                 {/* Main Content Grid */}
@@ -98,7 +86,7 @@ export function StructuredCabling() {
                                 for workstations, wireless access points, and IoT devices.
                             </p>
                             <ul className="space-y-4">
-                                {['Workstation Cabling & Terminations', 'Wireless Access Point (WAP) Infrastructure', 'PoE (Power over Ethernet) Solutions', 'Certified Performance Testing (Fluke)'].map((item) => (
+                                {['Cat6 / Cat6A/cat7', 'Workstation Cabling & Terminations', 'WAP Infrastructure', 'PoE Solutions', 'Certified Performance Testing (Fluke)'].map((item) => (
                                     <li key={item} className="flex items-center space-x-3 text-slate-700 dark:text-slate-300 font-medium">
                                         <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
                                         <span>{item}</span>
