@@ -138,7 +138,7 @@ export function Products() {
                 <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <span className="w-12 h-1 bg-primary rounded-full" />
+                            <span className="w-12 h-0.5 bg-primary rounded-full" />
                             <span className="text-sm font-bold text-primary uppercase tracking-[0.3em]">
                                 OUR TECHNOLOGY
                             </span>
@@ -158,48 +158,59 @@ export function Products() {
                 </div>
 
                 {/* FEATURED CYBERSECURITY SECTION - STAGGERED ANIMATION */}
-                <div className="mb-24">
-                    <div className="flex items-center space-x-4 mb-10">
-                        <div className="p-3 bg-red-500/10 rounded-2xl">
-                            <ShieldCheck className="w-8 h-8 text-red-500" />
-                        </div>
-                        <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
-                            Cyber Security and IT Security
-                        </h3>
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border border-slate-200 dark:border-slate-800">
+                    {/* Dedicated Section Background */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src="/images/cyber-shield-bg.jpg"
+                            alt=""
+                            className="w-full h-full object-cover opacity-20 dark:opacity-40 animate-pulse-slow"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-white/60 dark:from-slate-950/60 dark:via-transparent dark:to-slate-950/60" />
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {cyberSecurityPartners.map((partner, index) => (
-                            <Link
-                                key={partner.name}
-                                href={partner.url}
-                                target="_blank"
-                                className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/20 animate-fade-up min-h-[300px] text-center"
-                                style={{ animationDelay: `${index * 150}ms` }}
-                            >
-                                <div className="absolute top-6 right-6">
-                                    {partner.tag && (
-                                        <div className="flex items-center space-x-2 text-primary/80 mb-4 scale-95 origin-left">
-                                            <div className="w-8 h-0.5 bg-primary/30 rounded-full" />
-                                            <span className="text-[10px] font-black uppercase tracking-[0.2em]">{partner.tag}</span>
-                                        </div>
-                                    )}
-                                </div>
-                                {/* UNIFORM LOGO CONTAINER - Widened for Darktrace */}
-                                <div className={`${partner.name === 'Darktrace' ? 'w-48 px-2' : 'w-20 p-4'} h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800`}>
-                                    <img
-                                        src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
-                                            ? partner.logo
-                                            : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
-                                        alt={partner.name}
-                                        className={`w-full h-full object-contain ${partner.logo.startsWith('/') && partner.name !== 'Cisco' ? '' : 'dark:invert'}`}
-                                    />
-                                </div>
-                                <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
-                                <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
-                                    <ArrowRight className="w-6 h-6 text-primary" />
-                                </div>
-                            </Link>
-                        ))}
+
+                    <div className="relative z-10">
+                        <div className="flex items-center space-x-4 mb-10">
+                            <div className="p-3 bg-red-500/10 rounded-2xl">
+                                <ShieldCheck className="w-8 h-8 text-red-500" />
+                            </div>
+                            <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                                Cyber Security and IT Security
+                            </h3>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {cyberSecurityPartners.map((partner, index) => (
+                                <Link
+                                    key={partner.name}
+                                    href={partner.url}
+                                    target="_blank"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/20 animate-fade-up min-h-[300px] text-center"
+                                    style={{ animationDelay: `${index * 150}ms` }}
+                                >
+                                    <div className="absolute top-6 right-6">
+                                        {partner.tag && (
+                                            <div className="flex items-center space-x-2 text-primary/80 mb-4 scale-95 origin-left">
+                                                <div className="w-8 h-0.5 bg-primary/30 rounded-full" />
+                                                <span className="text-[10px] font-black uppercase tracking-[0.2em]">{partner.tag}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div className={`${partner.name === 'Darktrace' ? 'w-48 px-2' : 'w-20 p-4'} h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800`}>
+                                        <img
+                                            src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
+                                                ? partner.logo
+                                                : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                            alt={partner.name}
+                                            className={`w-full h-full object-contain ${partner.logo.startsWith('/') && partner.name !== 'Cisco' ? '' : 'dark:invert'}`}
+                                        />
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
+                                    <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
+                                        <ArrowRight className="w-6 h-6 text-primary" />
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
