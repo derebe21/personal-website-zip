@@ -153,7 +153,7 @@ export function Products() {
                         <img
                             src="/images/cyber-shield-bg.jpg"
                             alt=""
-                            className="w-full h-full object-cover opacity-20 dark:opacity-40 animate-pulse-slow"
+                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-white/60 dark:from-slate-950/60 dark:via-transparent dark:to-slate-950/60" />
                     </div>
@@ -173,7 +173,7 @@ export function Products() {
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/20 animate-fade-up min-h-[300px] text-center"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-red-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(239,68,68,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(239,68,68,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="absolute top-6 right-6">
@@ -221,7 +221,12 @@ export function Products() {
                                         key={partner.name}
                                         href={partner.url}
                                         target="_blank"
-                                        className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10 animate-fade-up min-h-[300px] text-center"
+                                        className={`group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 transition-all duration-700 shadow-xl hover:-translate-y-2 animate-fade-up min-h-[300px] text-center
+                                            ${category.color === 'blue' ? 'hover:border-blue-500/50 shadow-blue-500/10 hover:shadow-blue-500/30' : ''}
+                                            ${category.color === 'cyan' ? 'hover:border-cyan-500/50 shadow-cyan-500/10 hover:shadow-cyan-500/30' : ''}
+                                            ${category.color === 'indigo' ? 'hover:border-indigo-500/50 shadow-indigo-500/10 hover:shadow-indigo-500/30' : ''}
+                                            ${category.color === 'emerald' ? 'hover:border-emerald-500/50 shadow-emerald-500/10 hover:shadow-emerald-500/30' : ''}
+                                        `}
                                         style={{ animationDelay: `${(catIndex * 200) + (pIndex * 150)}ms` }}
                                     >
                                         {/* LOGO CONTAINER - Matching Cyber Security style */}
