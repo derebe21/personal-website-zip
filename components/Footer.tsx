@@ -47,7 +47,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed max-w-md text-slate-400">
-              ITSEC Technology PLC delivers secure, scalable, and innovative technology solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen technology trust, and achieve sustainable growth.
+              ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.
             </p>
             <div className="flex space-x-4 pt-2">
               {socialLinks.map((social, index) => (
