@@ -8,10 +8,10 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const companyLinks = [
-    { label: 'About Us', href: '#about' },
-    { label: 'Our Process', href: '#process' },
-    { label: 'Contact', href: '#contact' },
-    { label: 'Technology', href: '#technology' },
+    { label: 'About Us', href: '/#about' },
+    { label: 'Our Process', href: '/#process' },
+    { label: 'Contact', href: '/#contact' },
+    { label: 'Technology', href: '/#technology' },
   ];
 
   const socialLinks = [

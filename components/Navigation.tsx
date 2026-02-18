@@ -20,11 +20,11 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Technology', href: '#technology' },
-    { label: 'Contact Us', href: '#contact' },
+    { label: 'Home', href: '/#home' },
+    { label: 'About', href: '/#about' },
+    { label: 'Services', href: '/#services' },
+    { label: 'Technology', href: '/#technology' },
+    { label: 'Contact Us', href: '/#contact' },
   ];
 
   const isActive = (href: string) => pathname === href;

@@ -16,7 +16,7 @@ export function StructuredCabling() {
     ];
 
     return (
-        <section id="services" className="relative py-24 md:py-32 bg-white dark:bg-slate-950 overflow-hidden">
+        <section id="structured-cabling" className="relative py-24 md:py-32 bg-white dark:bg-slate-950 overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
