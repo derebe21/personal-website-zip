@@ -98,7 +98,7 @@ export function StructuredCabling() {
                                 <ShieldCheck className="w-6 h-6 text-emerald-500" />
                             </div>
                             <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
-                                Fiber Fusion Splicing
+                                Fiber Optic Fusion Splicing
                             </h3>
                         </div>
 
