@@ -29,37 +29,37 @@ export function StructuredCabling() {
                 </div>
 
                 {/* Main Content Grid */}
-                <div className="grid lg:grid-cols-2 gap-16 mb-24">
+                <div className="grid lg:grid-cols-3 gap-8 mb-24">
                     {/* Fiber Optic Cabling (ISP/OSP) */}
-                    <div className="space-y-8">
-                        <div className="inline-flex items-center space-x-4 mb-4">
+                    <div className="space-y-6">
+                        <div className="inline-flex items-center space-x-4 mb-2">
                             <div className="p-3 bg-primary/10 rounded-2xl">
-                                <Network className="w-8 h-8 text-primary" />
+                                <Network className="w-6 h-6 text-primary" />
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                            <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
                                 Fiber Optic Cabling (ISP/OSP)
                             </h3>
                         </div>
 
-                        <div className="grid gap-6">
-                            <div className="p-8 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
-                                <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                        <div className="space-y-4">
+                            <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group h-full">
+                                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center">
                                     <span className="w-2 h-2 bg-primary rounded-full mr-3" />
                                     Inside Plant Fiber (ISP)
                                 </h4>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                     Our highly skilled team designs and installs precision fiber optic solutions for internal building networks.
                                     From MDF to one or multiple IDFs, we deliver seamless, high-performance fiber connectivity using advanced
                                     tools and proven methodologies—at the speed of light.
                                 </p>
                             </div>
 
-                            <div className="p-8 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
-                                <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                            <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group h-full">
+                                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center">
                                     <span className="w-2 h-2 bg-primary rounded-full mr-3" />
                                     Outside Plant Fiber (OSP)
                                 </h4>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                     Building-to-building fiber installations are one of our core competencies. We provide underground and
                                     aerial fiber deployments, ensuring inter-building networks are reliable, scalable, and future-ready,
                                     supported by professional equipment and certified expertise.
@@ -69,30 +69,44 @@ export function StructuredCabling() {
                     </div>
 
                     {/* Horizontal Cabling (Copper) */}
-                    <div className="space-y-8">
-                        <div className="inline-flex items-center space-x-4 mb-4">
+                    <div className="space-y-6">
+                        <div className="inline-flex items-center space-x-4 mb-2">
                             <div className="p-3 bg-blue-500/10 rounded-2xl">
-                                <Zap className="w-8 h-8 text-blue-500" />
+                                <Zap className="w-6 h-6 text-blue-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                            <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
                                 Horizontal Cabling (Copper)
                             </h3>
                         </div>
 
-                        <div className="p-8 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all h-full">
-                            <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                                Our horizontal cabling services encompass the design, installation, and certification of high-performance copper network systems.
-                                We specialize in Category 6 (Cat6) and Category 6A (Cat6A) solutions to deliver maximum bandwidth and reliable data transmission
-                                for workstations, wireless access points, and IoT devices.
-                            </p>
+                        <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all h-full">
                             <ul className="space-y-4">
                                 {['Cat6 / Cat6A/cat7', 'Workstation Cabling & Terminations', 'WAP Infrastructure', 'PoE Solutions', 'Certified Performance Testing (Fluke)'].map((item) => (
-                                    <li key={item} className="flex items-center space-x-3 text-slate-700 dark:text-slate-300 font-medium">
+                                    <li key={item} className="flex items-center space-x-3 text-slate-700 dark:text-slate-300 font-medium text-sm">
                                         <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
                                         <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>
+                        </div>
+                    </div>
+
+                    {/* Fiber Optic Fusion Splicing */}
+                    <div className="space-y-6">
+                        <div className="inline-flex items-center space-x-4 mb-2">
+                            <div className="p-3 bg-emerald-500/10 rounded-2xl">
+                                <ShieldCheck className="w-6 h-6 text-emerald-500" />
+                            </div>
+                            <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                                Fiber Fusion Splicing
+                            </h3>
+                        </div>
+
+                        <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all h-full">
+                            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Professional fiber fusion splicing services for permanent, low-loss connections. We utilize state-of-the-art
+                                fusion splicers to ensure maximum signal integrity and network reliability for all your fiber infrastructure needs.
+                            </p>
                         </div>
                     </div>
                 </div>
