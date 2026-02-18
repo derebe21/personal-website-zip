@@ -16,7 +16,7 @@ export function Hero() {
 
   const slides: Slide[] = [
     {
-      image: '/images/cyber-nexus.png',
+      image: '/hero-datacenter-final.jpg',
       title: (
         <>
           ITSEC
@@ -66,14 +66,8 @@ export function Hero() {
             <img
               src={slide.image}
               alt="Hero Background"
-              className="w-full h-full object-cover scale-110 animate-subtle-zoom"
-              style={{
-                transform: `rotateY(${mousePosition.x * 0.2}deg) rotateX(${mousePosition.y * 0.2}deg)`,
-                transition: 'transform 0.3s ease-out'
-              }}
+              className="w-full h-full object-cover"
             />
-            {/* Clean Background with Minimal Overlay */}
-            <div className="absolute inset-0 bg-slate-950/10" />
           </div>
         ))}
       </div>
@@ -112,8 +106,8 @@ export function Hero() {
                   {/* Core Rotating Shield Logo */}
                   <div className="relative w-3/4 h-3/4 transform-gpu animate-hover group">
                     <img
-                      src="/images/secnet-logo-shield.png"
-                      alt="Cybersecurity Shield"
+                      src="https://res.cloudinary.com/dlc8bgysp/image/upload/v1739823925/hero-logo_qnlgqf.png"
+                      alt="ITSEC Technology Cybersecurity Shield"
                       className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(34,211,238,0.4)] animate-spin-slow"
                       style={{ animationDuration: '25s' }}
                     />

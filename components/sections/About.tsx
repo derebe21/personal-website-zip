@@ -4,7 +4,12 @@ import { Award, Target, Rocket, Lightbulb } from 'lucide-react';
 
 export function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+    <section id="about" className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+      {/* Premium Background Elements */}
+      <div className="absolute inset-0 z-0 opacity-30 dark:opacity-20 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.05),transparent_70%)]" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,rgba(6,182,212,0.05),transparent_50%)]" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
