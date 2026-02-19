@@ -32,21 +32,17 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'py-2 shadow-2xl border-b border-white/10'
-        : 'py-4 bg-transparent'
+        ? 'py-2 bg-blue-900/95 backdrop-blur-2xl shadow-[0_20px_50px_rgba(29,78,216,0.3)] border-b border-white/10'
+        : 'py-4 bg-blue-950/20 backdrop-blur-sm'
         }`}
     >
-      {/* Premium Blue Gradient & Nexus Background - Active when scrolled */}
-      <div className={`absolute inset-0 z-0 transition-opacity duration-700 pointer-events-none ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-600/20 to-blue-950" />
-        <div className="absolute inset-0 bg-blue-900/80 backdrop-blur-2xl" />
-        <div className="absolute inset-0 opacity-15 mix-blend-overlay">
-          <img
-            src="/images/technology-nexus-final.png"
-            className="w-full h-full object-cover"
-            alt=""
-          />
-        </div>
+      {/* Premium Nexus Overlay - Subtle */}
+      <div className={`absolute inset-0 z-0 transition-opacity duration-700 pointer-events-none ${isScrolled ? 'opacity-20' : 'opacity-5'}`}>
+        <img
+          src="/images/technology-nexus-final.png"
+          className="w-full h-full object-cover mix-blend-overlay"
+          alt=""
+        />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
