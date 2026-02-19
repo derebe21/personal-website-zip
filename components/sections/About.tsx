@@ -23,7 +23,6 @@ export function About() {
           {[
             {
               title: 'About Us',
-              subtitle: 'Empowering Global Enterprises',
               description: 'Delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
               color: 'blue',
