@@ -57,22 +57,27 @@ export function Contact() {
       id="contact"
       className="relative py-20 md:py-32 overflow-hidden"
     >
-      {/* High-Visibility Blue Nexus Identity */}
+      {/* High-Visibility World Map Background Identity */}
       <div className="absolute inset-0 z-0 bg-blue-900/5">
         <img
-          src="/images/technology-nexus-final.png"
-          alt="Contact Background"
-          className="w-full h-full object-cover opacity-60 dark:opacity-40"
+          src="https://images.unsplash.com/photo-1557853197-aefb550b6fdc?q=80&w=2072&auto=format&fit=crop"
+          alt="Global Network Background"
+          className="w-full h-full object-cover opacity-30 dark:opacity-20 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-20 px-4">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
-            Contact Us
-          </h2>
-          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
+        <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
+          <div className="space-y-4">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none">
+              CONTACT <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
+                US
+              </span>
+            </h2>
+            <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
