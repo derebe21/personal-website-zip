@@ -23,8 +23,7 @@ export function About() {
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {[
             {
-              title: 'ITSEC Technology',
-              subtitle: 'Empowering Global Enterprises',
+              title: 'Who We Are',
               description: 'ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
               color: 'blue',
