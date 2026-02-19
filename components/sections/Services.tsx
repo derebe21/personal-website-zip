@@ -126,7 +126,22 @@ export function Services() {
           </div>
         </div>
 
-        <div className="text-center mt-24">
+        {/* Pagination Bullets */}
+        <div className="flex justify-center gap-3 mt-12 pb-8">
+          {servicesData.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveIndex(idx)}
+              className={`w-3 h-3 rounded-full transition-all duration-500 ${activeIndex % totalServices === idx
+                ? 'bg-primary w-10 shadow-[0_0_15px_rgba(37,99,235,0.5)]'
+                : 'bg-slate-300 dark:bg-slate-700 hover:bg-primary/50'
+                }`}
+              aria-label={`Go to service ${idx + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
           <Link href="/#contact">
             <Button size="lg" className="h-18 px-14 rounded-full font-black text-xl shadow-2xl shadow-primary/30 hover:scale-105 transition-transform bg-primary text-white">
               Partner with Us
