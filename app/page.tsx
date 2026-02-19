@@ -4,6 +4,7 @@ import { Hero } from '@/components/sections/Hero';
 import { ServiceFocus } from '@/components/sections/ServiceFocus';
 import { Services } from '@/components/sections/Services';
 import { Products } from '@/components/sections/Products';
+import { About } from '@/components/sections/About';
 import { Contact } from '@/components/sections/Contact';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
@@ -16,6 +17,7 @@ export default function Home() {
       <ServiceFocus />
       <Services />
       <Products />
+      <About />
       <Contact />
       <Footer />
     </div>
