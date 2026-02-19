@@ -153,7 +153,7 @@ export function Products() {
                             alt=""
                             className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-slate-950/80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950" />
                     </div>
 
                     <div className="relative z-10">
@@ -161,7 +161,7 @@ export function Products() {
                             <div className="p-3 bg-red-500/10 rounded-2xl">
                                 <ShieldCheck className="w-8 h-8 text-red-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-white to-red-400 uppercase tracking-tight">
                                 Cyber Security and IT Security
                             </h3>
                         </div>
@@ -210,7 +210,7 @@ export function Products() {
                             alt=""
                             className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-slate-950/80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950" />
                     </div>
 
                     <div className="relative z-10">
@@ -218,7 +218,7 @@ export function Products() {
                             <div className="p-3 bg-blue-500/10 rounded-2xl">
                                 <Globe className="w-8 h-8 text-blue-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-blue-300 uppercase tracking-tight">
                                 Enterprise Networking
                             </h3>
                         </div>
