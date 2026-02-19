@@ -13,7 +13,7 @@ export function About() {
         {/* Header Section */}
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-4 pt-[150px]">
           <h2 className="text-[74px] font-[900] tracking-tight text-slate-900 dark:text-white uppercase leading-tight italic">
-            ITSEC Technology
+            About Us
           </h2>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
@@ -22,7 +22,7 @@ export function About() {
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {[
             {
-              title: 'ITSEC Technology',
+              title: 'About Us',
               subtitle: 'Empowering Global Enterprises',
               description: 'Delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
@@ -60,11 +60,11 @@ export function About() {
                 </div>
 
                 <div className="flex items-center gap-6 mb-8 relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 ${item.color === 'blue' ? 'bg-blue-600 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.4)]' :
+                  <div className={`w-20 h-20 rounded-3xl flex items-center justify-center shrink-0 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 ${item.color === 'blue' ? 'bg-blue-600 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.4)]' :
                     item.color === 'cyan' ? 'bg-cyan-500 shadow-[0_10px_30px_-5px_rgba(6,182,212,0.4)]' :
                       'bg-[#F6A113] shadow-[0_10px_30px_-5px_rgba(246,161,19,0.4)]'
                     }`}>
-                    <item.icon className="w-8 h-8 text-white" />
+                    <item.icon className="w-10 h-10 text-white" />
                   </div>
                   <div>
                     <Link href="/about" className="hover:text-primary transition-colors">
