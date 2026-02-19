@@ -83,17 +83,8 @@ export function Navigation() {
 
       {/* Mobile Menu with Backdrop */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-2xl border-t border-white/5 shadow-2xl animate-fade-down overflow-hidden">
-          {/* Signature Nexus Overlay */}
-          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-            <img
-              src="/images/technology-nexus-final.png"
-              alt="Nexus Overlay"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-slate-950/90" />
-          </div>
-          <div className="relative z-10 px-6 py-8 space-y-4">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-2xl border-t border-white/5 shadow-2xl animate-fade-down">
+          <div className="px-6 py-8 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
