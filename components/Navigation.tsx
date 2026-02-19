@@ -47,7 +47,7 @@ export function Navigation() {
               className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-105 transition-transform brightness-0 invert"
             />
             <span className="font-black text-sm md:text-xl text-white tracking-widest whitespace-nowrap">
-              TSEC TECHNOLOGY
+              ITSEC TECHNOLOGY
             </span>
           </Link>
 

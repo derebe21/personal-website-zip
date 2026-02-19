@@ -38,15 +38,15 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-3 group">
               <img
                 src="https://res.cloudinary.com/dlc8bgysp/image/upload/e_make_transparent/v1767612094/logo_fn47rb.png"
-                alt="TSEC TECHNOLOGY Logo"
+                alt="ITSEC TECHNOLOGY Logo"
                 className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
               />
               <span className="font-bold text-xl text-white">
-                TSEC TECHNOLOGY
+                ITSEC TECHNOLOGY
               </span>
             </Link>
             <p className="text-sm leading-relaxed max-w-md text-slate-400">
-              TSEC Technology PLC delivers secure, scalable, and innovative technology solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen technology trust, and achieve sustainable growth.
+              ITSEC Technology PLC delivers secure, scalable, and innovative technology solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen technology trust, and achieve sustainable growth.
             </p>
             <div className="flex space-x-4 pt-2">
               {socialLinks.map((social, index) => (
@@ -101,7 +101,7 @@ export function Footer() {
               Addis Ababa, Ethiopia
             </p>
             <p className="text-sm text-slate-400">
-              info@tsectechnology.com<br />
+              info@itsectechnology.com<br />
               +251 911 407 439 / 095 519 0019
             </p>
           </div>
@@ -110,7 +110,7 @@ export function Footer() {
         <div className="border-t border-white/5 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-slate-500">
-              © {currentYear} TSEC TECHNOLOGY. All rights reserved.
+              © {currentYear} ITSEC TECHNOLOGY. All rights reserved.
             </p>
             <div className="flex space-x-8 text-sm text-slate-500">
               <Link href="#" className="hover:text-white transition-colors">

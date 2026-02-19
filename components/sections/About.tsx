@@ -14,7 +14,7 @@ export function About() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-tight italic">
-            About Us
+            TSEC Technology
           </h2>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
@@ -23,7 +23,7 @@ export function About() {
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {[
             {
-              title: 'ITSEC Technology',
+              title: 'TSEC Technology',
               subtitle: 'Empowering Global Enterprises',
               description: 'ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
@@ -48,8 +48,8 @@ export function About() {
             <div key={index} className="relative group perspective-1000">
               {/* Background Glow */}
               <div className={`absolute -inset-1 bg-gradient-to-r ${item.color === 'blue' ? 'from-blue-600 to-indigo-500' :
-                  item.color === 'cyan' ? 'from-cyan-500 to-blue-500' :
-                    'from-orange-500 to-primary'
+                item.color === 'cyan' ? 'from-cyan-500 to-blue-500' :
+                  'from-orange-500 to-primary'
                 } rounded-3xl blur-2xl opacity-0 group-hover:opacity-20 transition-all duration-700`} />
 
               <div className="relative h-full p-10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl border border-slate-200/50 dark:border-slate-800/50 rounded-3xl transition-all duration-700 group-hover:-translate-y-4 group-hover:rotate-x-2 group-hover:border-primary/30 flex flex-col">
@@ -60,8 +60,8 @@ export function About() {
 
                 <div className="flex items-center gap-6 mb-8 relative z-10">
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 ${item.color === 'blue' ? 'bg-blue-600 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.4)]' :
-                      item.color === 'cyan' ? 'bg-cyan-500 shadow-[0_10px_30px_-5px_rgba(6,182,212,0.4)]' :
-                        'bg-[#F6A113] shadow-[0_10px_30px_-5px_rgba(246,161,19,0.4)]'
+                    item.color === 'cyan' ? 'bg-cyan-500 shadow-[0_10px_30px_-5px_rgba(6,182,212,0.4)]' :
+                      'bg-[#F6A113] shadow-[0_10px_30px_-5px_rgba(246,161,19,0.4)]'
                     }`}>
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
@@ -85,8 +85,8 @@ export function About() {
 
                 {/* Decorative Bottom Bar */}
                 <div className={`h-1.5 w-0 group-hover:w-full transition-all duration-1000 rounded-full mt-10 ${item.color === 'blue' ? 'bg-blue-600' :
-                    item.color === 'cyan' ? 'bg-cyan-500' :
-                      'bg-primary'
+                  item.color === 'cyan' ? 'bg-cyan-500' :
+                    'bg-primary'
                   }`} />
               </div>
             </div>
