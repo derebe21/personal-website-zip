@@ -141,14 +141,7 @@ export function Services() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Link href="/#contact">
-            <Button size="lg" className="h-18 px-14 rounded-full font-black text-xl shadow-2xl shadow-primary/30 hover:scale-105 transition-transform bg-primary text-white">
-              Partner with Us
-              <ArrowRight className="ml-4 w-7 h-7" />
-            </Button>
-          </Link>
-        </div>
+
       </div>
     </section>
   );
