@@ -57,14 +57,14 @@ export function Contact() {
       id="contact"
       className="relative py-20 md:py-32 overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Premium Nexus Background Layer */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/contact-bg-new.png"
+          src="/images/technology-nexus-final.png"
           alt="Contact Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-60 dark:opacity-40"
         />
-        <div className="absolute inset-0 bg-slate-950/40" />
+        <div className="absolute inset-0 bg-slate-50/90 dark:bg-slate-950/95" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

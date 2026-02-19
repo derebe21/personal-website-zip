@@ -28,8 +28,17 @@ export function Services() {
   return (
     <section
       id="services"
-      className="py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
+      className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
+      {/* Premium Nexus Background Layer - Subtle */}
+      <div className="absolute inset-0 z-0 opacity-20 dark:opacity-10 pointer-events-none">
+        <img
+          src="/images/technology-nexus-final.png"
+          alt="Network Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/90" />
+      </div>
       <div className="max-w-[100vw]">
         <div className="text-center space-y-4 mb-20 px-4">
           <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
