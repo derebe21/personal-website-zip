@@ -23,8 +23,7 @@ export function About() {
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {[
             {
-              title: '',
-              logo: 'https://res.cloudinary.com/dlc8bgysp/image/upload/v1767612094/logo_fn47rb.png',
+              title: 'ITSEC Technology',
               description: 'ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
               color: 'blue',
@@ -68,17 +67,9 @@ export function About() {
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    {item.logo ? (
-                      <img
-                        src={item.logo}
-                        alt="ITSEC Logo"
-                        className="h-10 object-contain dark:brightness-0 dark:invert"
-                      />
-                    ) : (
-                      <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
-                        {item.title}
-                      </h3>
-                    )}
+                    <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
+                      {item.title}
+                    </h3>
                     {'subtitle' in item && item.subtitle && (
                       <span className="text-xs font-black text-primary uppercase tracking-[0.2em] mt-2 block">
                         {item.subtitle}
