@@ -111,14 +111,8 @@ export function Products() {
             id="technology"
             className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
         >
-            {/* Moving Nexus Background Synergy */}
-            <div className="absolute inset-0 z-0 pointer-events-none opacity-40 dark:opacity-20">
-                <img
-                    src="/images/cyber-nexus.png"
-                    alt=""
-                    className="w-full h-full object-cover animate-subtle-zoom"
-                />
-            </div>
+            {/* Clean Background Base */}
+            <div className="absolute inset-0 z-0 bg-slate-50 dark:bg-slate-950" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
@@ -133,17 +127,8 @@ export function Products() {
                     </div>
                 </div>
 
-                {/* FEATURED CYBERSECURITY SECTION - STAGGERED ANIMATION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-primary/20 shadow-2xl">
-                    {/* Dedicated Section Background */}
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src="/images/cyber-shield-bg.jpg"
-                            alt=""
-                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950" />
-                    </div>
+                {/* FEATURED CYBER SECURITY SECTION */}
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-red-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
@@ -191,16 +176,7 @@ export function Products() {
                 </div>
 
                 {/* FEATURED ENTERPRISE NETWORKING SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-blue-500/20 shadow-2xl">
-                    {/* Dedicated Section Background */}
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src="/images/digital-infrastructure-bg.jpg"
-                            alt=""
-                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950" />
-                    </div>
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-blue-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
@@ -240,16 +216,7 @@ export function Products() {
                 </div>
 
                 {/* FEATURED CLOUD & VIRTUALIZATION SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-cyan-500/20 shadow-2xl">
-                    {/* Dedicated Section Background */}
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src="/images/cloud-virtualization-bg.jpg"
-                            alt=""
-                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950" />
-                    </div>
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-cyan-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
@@ -298,16 +265,9 @@ export function Products() {
                 </div>
 
                 {/* FEATURED SERVERS & DATA CENTER SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-indigo-500/20 shadow-2xl">
-                    {/* Dedicated Section Background */}
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src="/images/data-center-bg.jpg"
-                            alt=""
-                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950" />
-                    </div>
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-indigo-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
+                    {/* Background Subtle Gradient Overlay */}
+                    <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-500/5 to-transparent" />
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
@@ -347,16 +307,9 @@ export function Products() {
                 </div>
 
                 {/* FEATURED SMART & PHYSICAL SECURITY SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-emerald-500/20 shadow-2xl">
-                    {/* Dedicated Section Background */}
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src="/images/security-bg.jpg"
-                            alt=""
-                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950" />
-                    </div>
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-emerald-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
+                    {/* Background Subtle Gradient Overlay */}
+                    <div className="absolute inset-0 z-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
