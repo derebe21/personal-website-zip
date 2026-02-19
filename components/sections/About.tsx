@@ -24,7 +24,7 @@ export function About() {
             {
               title: 'ITSEC Technology',
               subtitle: 'Empowering Global Enterprises',
-              description: 'ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
+              description: 'Delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
               color: 'blue',
               number: '01'
