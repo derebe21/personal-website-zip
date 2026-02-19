@@ -31,9 +31,9 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-blue-600 backdrop-blur-sm border-b border-blue-500 shadow-lg'
-        : 'bg-blue-600/95 backdrop-blur-sm'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? 'bg-slate-950/80 backdrop-blur-xl border-b border-white/5 shadow-2xl py-2'
+        : 'bg-transparent py-4'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +83,7 @@ export function Navigation() {
 
       {/* Mobile Menu with Backdrop */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-blue-600 border-t border-blue-500 shadow-2xl animate-fade-down">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-2xl border-t border-white/5 shadow-2xl animate-fade-down">
           <div className="px-6 py-8 space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -91,14 +91,13 @@ export function Navigation() {
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-6 py-4 text-lg font-black uppercase tracking-widest rounded-xl transition-all ${isActive(link.href)
-                  ? 'text-blue-600 bg-white shadow-xl'
-                  : 'text-blue-50 hover:text-white hover:bg-white/10'
+                  ? 'text-slate-950 bg-white shadow-xl translate-x-2'
+                  : 'text-slate-300 hover:text-white hover:bg-white/5'
                   }`}
               >
                 {link.label}
               </Link>
             ))}
-
           </div>
         </div>
       )}
