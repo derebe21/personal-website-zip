@@ -143,6 +143,7 @@ export function Products() {
                                 TECHNOLOGY
                             </span>
                         </h2>
+                        <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
                     </div>
                 </div>
 
