@@ -137,23 +137,12 @@ export function Products() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
                     <div className="space-y-4">
-                        <div className="flex items-center space-x-2">
-                            <span className="w-16 h-1 bg-primary rounded-full shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
-                            <span className="text-sm font-bold text-primary uppercase tracking-[0.3em]">
-                                OUR TECHNOLOGY
-                            </span>
-                        </div>
-                        <h2 className="text-4xl md:text-7xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none">
+                        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none">
                             OUR <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
                                 TECHNOLOGY
                             </span>
                         </h2>
-                    </div>
-                    <div className="max-w-4xl mx-auto">
-                        <p className="text-lg md:text-2xl text-slate-600 dark:text-slate-400 font-medium italic border-y border-primary/20 py-8 leading-relaxed">
-                            "At ITSEC Technology, we deliver secure, scalable, and enterprise-grade solutions using leading hardware and software technologies."
-                        </p>
                     </div>
                 </div>
 
@@ -164,7 +153,7 @@ export function Products() {
                         <img
                             src="/images/cyber-shield-bg.jpg"
                             alt=""
-                            className="w-full h-full object-cover opacity-80 dark:opacity-90 animate-subtle-zoom"
+                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-slate-950/80" />
                     </div>
@@ -184,7 +173,7 @@ export function Products() {
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/20 animate-fade-up min-h-[300px] text-center"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-red-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(239,68,68,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(239,68,68,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="absolute top-6 right-6">
@@ -232,7 +221,12 @@ export function Products() {
                                         key={partner.name}
                                         href={partner.url}
                                         target="_blank"
-                                        className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10 animate-fade-up min-h-[300px] text-center"
+                                        className={`group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 transition-all duration-700 shadow-xl hover:-translate-y-2 animate-fade-up min-h-[300px] text-center
+                                            ${category.color === 'blue' ? 'hover:border-blue-500/50 shadow-blue-500/10 hover:shadow-blue-500/30' : ''}
+                                            ${category.color === 'cyan' ? 'hover:border-cyan-500/50 shadow-cyan-500/10 hover:shadow-cyan-500/30' : ''}
+                                            ${category.color === 'indigo' ? 'hover:border-indigo-500/50 shadow-indigo-500/10 hover:shadow-indigo-500/30' : ''}
+                                            ${category.color === 'emerald' ? 'hover:border-emerald-500/50 shadow-emerald-500/10 hover:shadow-emerald-500/30' : ''}
+                                        `}
                                         style={{ animationDelay: `${(catIndex * 200) + (pIndex * 150)}ms` }}
                                     >
                                         {/* LOGO CONTAINER - Matching Cyber Security style */}

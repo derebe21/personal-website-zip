@@ -3,7 +3,7 @@
 import { servicesData } from '@/lib/services-data';
 import { Card, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { useState, useEffect, useRef } from 'react';
@@ -19,7 +19,7 @@ export function Services() {
     if (isPaused) return;
 
     const interval = setInterval(() => {
-      setActiveIndex((prev: number) => (prev + 1) % (totalServices * 2));
+      setActiveIndex((prev: number) => (prev + 1) % (totalServices * 4));
     }, 4000); // 4s total: 3s stop + 1s transition
 
     return () => clearInterval(interval);
@@ -35,9 +35,6 @@ export function Services() {
           <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
             Our Services
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">
-            We deliver smart, secure, and scalable technology solutions that drive innovation and support modern businesses worldwide.
-          </p>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
 
@@ -50,6 +47,26 @@ export function Services() {
           {/* Subtle Gradient Overlays for smooth entry/exit */}
           <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
+
+          {/* Manual Navigation Arrows */}
+          <div className="absolute inset-y-0 left-8 z-30 flex items-center">
+            <button
+              onClick={() => setActiveIndex((prev) => (prev - 1 + totalServices * 4) % (totalServices * 4))}
+              className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all shadow-xl"
+              aria-label="Previous Slide"
+            >
+              <ChevronLeft className="w-8 h-8" />
+            </button>
+          </div>
+          <div className="absolute inset-y-0 right-8 z-30 flex items-center">
+            <button
+              onClick={() => setActiveIndex((prev) => (prev + 1) % (totalServices * 4))}
+              className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all shadow-xl"
+              aria-label="Next Slide"
+            >
+              <ChevronRight className="w-8 h-8" />
+            </button>
+          </div>
 
           <div
             className="flex gap-12 py-24 px-12 transition-transform duration-1000 ease-in-out"
@@ -109,14 +126,22 @@ export function Services() {
           </div>
         </div>
 
-        <div className="text-center mt-24">
-          <Link href="/contact">
-            <Button size="lg" className="h-18 px-14 rounded-full font-black text-xl shadow-2xl shadow-primary/30 hover:scale-105 transition-transform bg-primary text-white">
-              Partner with Us
-              <ArrowRight className="ml-4 w-7 h-7" />
-            </Button>
-          </Link>
+        {/* Pagination Bullets */}
+        <div className="flex justify-center gap-3 mt-12 pb-8">
+          {servicesData.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveIndex(idx)}
+              className={`w-3 h-3 rounded-full transition-all duration-500 ${activeIndex % totalServices === idx
+                ? 'bg-primary w-10 shadow-[0_0_15px_rgba(37,99,235,0.5)]'
+                : 'bg-slate-300 dark:bg-slate-700 hover:bg-primary/50'
+                }`}
+              aria-label={`Go to service ${idx + 1}`}
+            />
+          ))}
         </div>
+
+
       </div>
     </section>
   );

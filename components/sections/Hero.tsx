@@ -19,22 +19,18 @@ export function Hero() {
       image: '/images/datacenter.jpg',
       title: (
         <>
-          ITSEC
-          <br />
-          <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-            Technology
-          </span>
+          ITSEC TECHNOLOGY
         </>
       ),
       description:
-        'Empowering modern businesses with robust infrastructure, elite security, and professional electrical engineering.',
+        'Empowering modern businesses with robust digital infrastructure, elite security, and professional electrical engineering.',
     }
   ];
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
     const { innerWidth, innerHeight } = window;
-    const x = (clientX / innerWidth - 0.5) * 30;
+    const x = (clientX / innerWidth - 0.5) * 30; // Increased to 30deg for more depth
     const y = (clientY / innerHeight - 0.5) * -30;
     setMousePosition({ x, y });
   };
@@ -44,7 +40,7 @@ export function Hero() {
   }, [slides.length]);
 
   const scrollToContact = () => {
-    const element = document.getElementById('services');
+    const element = document.getElementById('services'); // Redirect to services for flow
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -56,7 +52,7 @@ export function Hero() {
       onMouseMove={handleMouseMove}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden perspective-1000 bg-slate-950"
     >
-      {/* Cinematic Sliding Backgrounds */}
+      {/* Sliding Backgrounds */}
       <div
         className="absolute inset-0 z-0 flex transition-transform duration-1000 ease-in-out"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -100,7 +96,7 @@ export function Hero() {
                 {/* Advanced Cybersecurity Rotating Logo */}
 
 
-                <h1 className="relative text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <h1 className="relative text-[74px] pt-[150px] font-[900] tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] italic">
                   {slide.title}
                 </h1>
               </div>
