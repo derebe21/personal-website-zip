@@ -23,7 +23,8 @@ export function About() {
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {[
             {
-              title: '',
+              title: 'ITSEC Technology',
+              subtitle: 'Empowering Global Enterprises',
               description: 'ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
               color: 'blue',
@@ -67,9 +68,11 @@ export function About() {
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
-                      {item.title}
-                    </h3>
+                    <Link href="/about" className="hover:text-primary transition-colors">
+                      <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
+                        {item.title}
+                      </h3>
+                    </Link>
                     {'subtitle' in item && item.subtitle && (
                       <span className="text-xs font-black text-primary uppercase tracking-[0.2em] mt-2 block">
                         {item.subtitle}
