@@ -31,14 +31,14 @@ export function About() {
               number: '01'
             },
             {
-              title: 'Our Vision',
+              title: 'Vision',
               description: 'To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.',
               icon: Target,
               color: 'cyan',
               number: '02'
             },
             {
-              title: 'Our Mission',
+              title: 'Mission',
               description: 'To empower organizations worldwide with secure, scalable, and innovative technology solutions that deliver measurable value through technical excellence and international best practices.',
               icon: Award,
               color: 'orange',
