@@ -31,10 +31,7 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'py-2 bg-blue-900/95 backdrop-blur-2xl shadow-[0_20px_50px_rgba(29,78,216,0.3)] border-b border-white/10'
-        : 'py-4 bg-blue-950/20 backdrop-blur-sm'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-3 bg-blue-900 shadow-[0_20px_50px_rgba(29,78,216,0.3)] border-b border-white/10`}
     >
       {/* Premium Nexus Overlay - Subtle */}
       <div className={`absolute inset-0 z-0 transition-opacity duration-700 pointer-events-none ${isScrolled ? 'opacity-20' : 'opacity-5'}`}>
