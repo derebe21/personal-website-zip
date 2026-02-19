@@ -71,24 +71,20 @@ export function Products() {
         { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' }
     ];
 
+    const cloudVirtualizationPartners = [
+        { name: 'VMware', logo: '/images/partners/vmware-logo.svg', url: 'https://www.vmware.com/products.html' },
+        { name: 'Proxmox', logo: 'proxmox', url: 'https://www.proxmox.com/en/proxmox-ve' },
+        { name: 'Microsoft Hyper-V', logo: '/images/partners/hyperv-logo.svg', url: 'https://virtualization/hyper-v-on-windows/' },
+        { name: 'Oracle Cloud', logo: '/images/partners/oracle-logo.svg', url: 'https://www.oracle.com/cloud/products.html' },
+        { name: 'IBM Cloud', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
+        { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://all-products' },
+        { name: 'Server Virtualization', icon: Server, isService: true, url: '/services' },
+        { name: 'Desktop Virtualization (VDI)', icon: Monitor, isService: true, url: '/services' },
+        { name: 'Cloud Virtualization', icon: Cloud, isService: true, url: '/services' },
+        { name: 'Backup & Disaster Recovery', icon: Database, isService: true, url: '/services' }
+    ];
+
     const otherCategories = [
-        {
-            icon: Cloud,
-            title: 'Cloud & Virtualization',
-            color: 'cyan',
-            partners: [
-                { name: 'VMware', logo: '/images/partners/vmware-logo.svg', url: 'https://www.vmware.com/products.html' },
-                { name: 'Proxmox', logo: 'proxmox', url: 'https://www.proxmox.com/en/proxmox-ve' },
-                { name: 'Microsoft Hyper-V', logo: '/images/partners/hyperv-logo.svg', url: 'https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/' },
-                { name: 'Oracle Cloud', logo: '/images/partners/oracle-logo.svg', url: 'https://www.oracle.com/cloud/products.html' },
-                { name: 'IBM Cloud', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
-                { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://www.redhat.com/en/technologies/all-products' },
-                { name: 'Server Virtualization', icon: Server, isService: true, url: '/services' },
-                { name: 'Desktop Virtualization (VDI)', icon: Monitor, isService: true, url: '/services' },
-                { name: 'Cloud Virtualization', icon: Cloud, isService: true, url: '/services' },
-                { name: 'Backup & Disaster Recovery', icon: Database, isService: true, url: '/services' }
-            ]
-        },
         {
             icon: Server,
             title: 'Servers & Data Center',
@@ -253,6 +249,59 @@ export function Products() {
                     </div>
                 </div>
 
+                {/* FEATURED CLOUD & VIRTUALIZATION SECTION */}
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-cyan-500/20 shadow-2xl">
+                    {/* Dedicated Section Background */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src="/images/cloud-virtualization-bg.jpg"
+                            alt=""
+                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950" />
+                    </div>
+
+                    <div className="relative z-10">
+                        <div className="flex items-center space-x-4 mb-10">
+                            <div className="p-3 bg-cyan-500/10 rounded-2xl">
+                                <Cloud className="w-8 h-8 text-cyan-500" />
+                            </div>
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-cyan-300 uppercase tracking-tight">
+                                Cloud & Virtualization
+                            </h3>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {cloudVirtualizationPartners.map((partner: any, index: number) => (
+                                <Link
+                                    key={partner.name}
+                                    href={partner.url}
+                                    target="_blank"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-cyan-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(6,182,212,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(6,182,212,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    style={{ animationDelay: `${index * 150}ms` }}
+                                >
+                                    <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
+                                        {partner.isService && partner.icon ? (
+                                            <partner.icon className="w-10 h-10 text-cyan-500" />
+                                        ) : (
+                                            <img
+                                                src={partner.logo && (partner.logo.startsWith('/') || partner.logo.startsWith('http'))
+                                                    ? partner.logo
+                                                    : `https://cdn.simpleicons.org/${partner.logo || ''}/4755E9`}
+                                                alt={partner.name}
+                                                className={`w-full h-full object-contain ${partner.logo && partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                            />
+                                        )}
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
+                                    <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
+                                        <ArrowRight className="w-6 h-6 text-primary" />
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
                 {/* OTHER CATEGORIES - GRID LAYOUT MATCHING CYBER SECURITY */}
                 <div className="space-y-16">
                     {otherCategories.map((category, catIndex) => (
@@ -282,18 +331,24 @@ export function Products() {
                                     >
                                         {/* LOGO CONTAINER - Matching Cyber Security style */}
                                         <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
-                                            {'isService' in partner && partner.isService && partner.icon ? (
-                                                <partner.icon className={`w-10 h-10 ${category.color === 'cyan' ? 'text-cyan-500' :
-                                                        category.color === 'indigo' ? 'text-indigo-500' :
-                                                            'text-emerald-500'
-                                                    }`} />
+                                            {(partner as any).isService && (partner as any).icon ? (
+                                                <div className={`w-10 h-10 ${category.color === 'cyan' ? 'text-cyan-500' :
+                                                    category.color === 'indigo' ? 'text-indigo-500' :
+                                                        'text-emerald-500'
+                                                    }`}>
+                                                    {/* Proper dynamic rendering of Lucide component */}
+                                                    {(() => {
+                                                        const IconComp = (partner as any).icon;
+                                                        return <IconComp className="w-full h-full" />;
+                                                    })()}
+                                                </div>
                                             ) : (
                                                 <img
-                                                    src={'logo' in partner && (partner.logo.startsWith('/') || partner.logo.startsWith('http'))
-                                                        ? partner.logo
-                                                        : `https://cdn.simpleicons.org/${'logo' in partner ? partner.logo : ''}/4755E9`}
+                                                    src={(partner as any).logo && ((partner as any).logo.startsWith('/') || (partner as any).logo.startsWith('http'))
+                                                        ? (partner as any).logo
+                                                        : `https://cdn.simpleicons.org/${(partner as any).logo || ''}/4755E9`}
                                                     alt={partner.name}
-                                                    className={`w-full h-full object-contain ${'logo' in partner && partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                                    className={`w-full h-full object-contain ${(partner as any).logo && (partner as any).logo.startsWith('/') ? '' : 'dark:invert'}`}
                                                 />
                                             )}
                                         </div>
