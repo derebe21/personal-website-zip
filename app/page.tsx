@@ -14,10 +14,8 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
-      <ServiceFocus />
       <Services />
       <Products />
-      <About />
       <Contact />
       <Footer />
     </div>
