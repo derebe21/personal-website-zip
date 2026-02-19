@@ -14,11 +14,8 @@ export function About() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-tight italic">
-            ITSEC Technology
+            About Us
           </h2>
-          <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest mt-4">
-            Empowering Global Enterprises
-          </h3>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
 
@@ -26,7 +23,7 @@ export function About() {
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {[
             {
-              title: 'Who We Are',
+              title: 'ITSEC Technology',
               subtitle: 'Empowering Global Enterprises',
               description: 'ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
