@@ -68,7 +68,12 @@ export function Contact() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="h-16"></div>
+        <div className="text-center space-y-4 mb-20 px-4">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
+            Contact Us
+          </h2>
+          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
