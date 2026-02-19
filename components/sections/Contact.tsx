@@ -41,8 +41,8 @@ export function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'info@dynamicsolutions.com',
-      href: 'mailto:info@dynamicsolutions.com',
+      value: 'info@itsectechnology.com',
+      href: 'mailto:info@itsectechnology.com',
     },
     {
       icon: MapPin,
