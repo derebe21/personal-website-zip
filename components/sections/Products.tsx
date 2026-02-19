@@ -135,7 +135,7 @@ export function Products() {
                             <div className="p-3 bg-red-500/10 rounded-2xl">
                                 <ShieldCheck className="w-8 h-8 text-red-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-white to-red-400 uppercase tracking-tight">
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 dark:from-red-400 dark:to-red-200 uppercase tracking-tight">
                                 Cyber Security and IT Security
                             </h3>
                         </div>
@@ -183,7 +183,7 @@ export function Products() {
                             <div className="p-3 bg-blue-500/10 rounded-2xl">
                                 <Globe className="w-8 h-8 text-blue-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-blue-300 uppercase tracking-tight">
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
                                 Enterprise Networking
                             </h3>
                         </div>
@@ -223,7 +223,7 @@ export function Products() {
                             <div className="p-3 bg-cyan-500/10 rounded-2xl">
                                 <Cloud className="w-8 h-8 text-cyan-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-cyan-300 uppercase tracking-tight">
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-700 to-cyan-500 dark:from-cyan-400 dark:to-cyan-200 uppercase tracking-tight">
                                 Cloud & Virtualization
                             </h3>
                         </div>
@@ -274,7 +274,7 @@ export function Products() {
                             <div className="p-3 bg-indigo-500/10 rounded-2xl">
                                 <Server className="w-8 h-8 text-indigo-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-white to-indigo-300 uppercase tracking-tight">
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-indigo-500 dark:from-indigo-400 dark:to-indigo-200 uppercase tracking-tight">
                                 Servers & Data Center
                             </h3>
                         </div>
@@ -316,7 +316,7 @@ export function Products() {
                             <div className="p-3 bg-emerald-500/10 rounded-2xl">
                                 <Video className="w-8 h-8 text-emerald-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-white to-emerald-300 uppercase tracking-tight">
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 to-emerald-500 dark:from-emerald-400 dark:to-emerald-200 uppercase tracking-tight">
                                 Smart & Physical Security
                             </h3>
                         </div>
