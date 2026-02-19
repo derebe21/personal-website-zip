@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Globe, Cloud, Server, Terminal, Video, Zap, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Globe, Cloud, Server, Terminal, Video, Zap, ArrowRight, ShieldCheck, Monitor, Database } from 'lucide-react';
 import Link from 'next/link';
 
 export function Products() {
@@ -82,9 +82,12 @@ export function Products() {
                 { name: 'Microsoft Hyper-V', logo: '/images/partners/hyperv-logo.svg', url: 'https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/' },
                 { name: 'Oracle Cloud', logo: '/images/partners/oracle-logo.svg', url: 'https://www.oracle.com/cloud/products.html' },
                 { name: 'IBM Cloud', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
-                { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://www.redhat.com/en/technologies/all-products' }
-            ],
-            services: ["Server Virtualization", "Desktop Virtualization (VDI)", "Cloud Virtualization", "Backup & Disaster Recovery"]
+                { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://www.redhat.com/en/technologies/all-products' },
+                { name: 'Server Virtualization', icon: Server, isService: true, url: '/services' },
+                { name: 'Desktop Virtualization (VDI)', icon: Monitor, isService: true, url: '/services' },
+                { name: 'Cloud Virtualization', icon: Cloud, isService: true, url: '/services' },
+                { name: 'Backup & Disaster Recovery', icon: Database, isService: true, url: '/services' }
+            ]
         },
         {
             icon: Server,
@@ -107,7 +110,7 @@ export function Products() {
             color: 'emerald',
             partners: [
                 { name: 'Hikvision', logo: '/images/partners/hikvision.png', url: 'https://www.hikvision.com/en/products/' },
-                { name: 'Dahua', logo: '/images/partners/dahua.png', url: 'https://www.dahuasecurity.com/products' },
+                { name: 'Dahua', logo: '/images/partners/dahua.png', url: 'https://www. dahuasecurity.com/products' },
                 { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/xc/en/products/' },
                 { name: 'Axis', logo: '/images/partners/axis.png', url: 'https://www.axis.com/products-and-solutions' },
                 { name: 'Honeywell', logo: '/images/partners/honeywell.png', url: 'https://buildings.honeywell.com/us/en/products/security' },
@@ -263,22 +266,6 @@ export function Products() {
                                 </h3>
                             </div>
 
-                            {/* SERVICES PILLS */}
-                            {'services' in category && category.services && (
-                                <div className="flex flex-wrap gap-3 mb-10 pl-16">
-                                    {category.services.map((service, sIndex) => (
-                                        <span
-                                            key={sIndex}
-                                            className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider border backdrop-blur-sm
-                                                ${category.color === 'cyan' ? 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20' : ''}
-                                            `}
-                                        >
-                                            {service}
-                                        </span>
-                                    ))}
-                                </div>
-                            )}
-
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {category.partners.map((partner, pIndex) => (
                                     <Link
@@ -295,13 +282,20 @@ export function Products() {
                                     >
                                         {/* LOGO CONTAINER - Matching Cyber Security style */}
                                         <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
-                                            <img
-                                                src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
-                                                    ? partner.logo
-                                                    : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
-                                                alt={partner.name}
-                                                className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
-                                            />
+                                            {'isService' in partner && partner.isService && partner.icon ? (
+                                                <partner.icon className={`w-10 h-10 ${category.color === 'cyan' ? 'text-cyan-500' :
+                                                        category.color === 'indigo' ? 'text-indigo-500' :
+                                                            'text-emerald-500'
+                                                    }`} />
+                                            ) : (
+                                                <img
+                                                    src={'logo' in partner && (partner.logo.startsWith('/') || partner.logo.startsWith('http'))
+                                                        ? partner.logo
+                                                        : `https://cdn.simpleicons.org/${'logo' in partner ? partner.logo : ''}/4755E9`}
+                                                    alt={partner.name}
+                                                    className={`w-full h-full object-contain ${'logo' in partner && partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                                />
+                                            )}
                                         </div>
                                         <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
                                         <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
