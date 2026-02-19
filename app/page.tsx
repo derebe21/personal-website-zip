@@ -1,10 +1,9 @@
 'use client';
 
 import { Hero } from '@/components/sections/Hero';
-import { About } from '@/components/sections/About';
+import { ServiceFocus } from '@/components/sections/ServiceFocus';
 import { Services } from '@/components/sections/Services';
-import { Products } from '@/components/sections/Products';
-import { Process } from '@/components/sections/Process';
+import { About } from '@/components/sections/About';
 import { Contact } from '@/components/sections/Contact';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
@@ -14,10 +13,9 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
-      <About />
+      <ServiceFocus />
       <Services />
-      <Products />
-      <Process />
+      <About />
       <Contact />
       <Footer />
     </div>

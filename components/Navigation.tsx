@@ -20,11 +20,10 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { label: 'Home', href: '/#home' },
-    { label: 'About', href: '/#about' },
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
     { label: 'Services', href: '/#services' },
-    { label: 'Technology', href: '/#technology' },
-    { label: 'Contact Us', href: '/#contact' },
+    { label: 'Contact Us', href: '/contact' },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -48,7 +47,7 @@ export function Navigation() {
               className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-105 transition-transform brightness-0 invert"
             />
             <span className="font-black text-sm md:text-xl text-white tracking-widest whitespace-nowrap">
-              ITSEC TECHNOLOGY
+              TSEC TECHNOLOGY
             </span>
           </Link>
 
