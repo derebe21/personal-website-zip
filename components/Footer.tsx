@@ -11,6 +11,7 @@ export function Footer() {
     { label: 'About Us', href: '/about' },
     { label: 'Our Process', href: '/process' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Technology', href: '#technology' },
   ];
 
   const socialLinks = [
