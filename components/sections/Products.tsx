@@ -111,8 +111,15 @@ export function Products() {
             id="technology"
             className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
         >
-            {/* Clean Background Base */}
-            <div className="absolute inset-0 z-0 bg-slate-50 dark:bg-slate-950" />
+            {/* Premium Nexus Background Layer */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/images/technology-nexus-final.png"
+                    alt="Technology Network Background"
+                    className="w-full h-full object-cover opacity-40 dark:opacity-30 mix-blend-overlay"
+                />
+                <div className="absolute inset-0 bg-slate-50/90 dark:bg-slate-950/95" />
+            </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
