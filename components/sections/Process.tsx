@@ -30,8 +30,17 @@ export function Process() {
   return (
     <section
       id="process"
-      className="py-20 md:py-32 bg-slate-50 dark:bg-slate-900"
+      className="relative py-20 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
+      {/* Premium Nexus Background Layer - Subtle */}
+      <div className="absolute inset-0 z-0 opacity-20 dark:opacity-10 pointer-events-none">
+        <img
+          src="/images/technology-nexus-final.png"
+          alt="Network Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/90" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">

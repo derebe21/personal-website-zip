@@ -23,8 +23,15 @@ export function Footer() {
 
   return (
     <footer className="relative bg-slate-950 text-slate-300 overflow-hidden">
-      {/* Clean Background Base */}
-      <div className="absolute inset-0 z-0 bg-slate-950" />
+      {/* Signature Nexus Background Overlay */}
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+        <img
+          src="/images/technology-nexus-final.png"
+          alt="Nexus Texture"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 z-0 bg-slate-950/90" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
