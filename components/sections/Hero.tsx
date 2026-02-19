@@ -19,11 +19,7 @@ export function Hero() {
       image: '/images/datacenter.jpg',
       title: (
         <>
-          ITSEC
-          <br />
-          <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-            Technology
-          </span>
+          ITSEC TECHNOLOGY
         </>
       ),
       description:
@@ -100,7 +96,7 @@ export function Hero() {
                 {/* Advanced Cybersecurity Rotating Logo */}
 
 
-                <h1 className="relative text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <h1 className="relative text-[74px] pt-[150px] font-[900] tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] italic">
                   {slide.title}
                 </h1>
               </div>

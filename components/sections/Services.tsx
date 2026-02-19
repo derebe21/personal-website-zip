@@ -19,7 +19,7 @@ export function Services() {
     if (isPaused) return;
 
     const interval = setInterval(() => {
-      setActiveIndex((prev: number) => (prev + 1) % (totalServices * 2));
+      setActiveIndex((prev: number) => (prev + 1) % (totalServices * 4));
     }, 4000); // 4s total: 3s stop + 1s transition
 
     return () => clearInterval(interval);
