@@ -75,29 +75,33 @@ export function FiberOpticSplicing() {
                     <p className="text-2xl md:text-3xl font-bold text-primary mb-4">
                         FIBER OPTIC FUSION SPLICING SOLUTIONS MADE SIMPLE
                     </p>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-4xl mx-auto">
+                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed">
                         Tired of fiber connectivity issues slowing down your business? Our expert fusion splicing services deliver
                         rock-solid, high-speed connections for offices, warehouses, and data centers across East Africa.
                     </p>
                 </div>
 
                 {/* Problem Statement */}
-                <div className="mb-16 p-8 bg-white dark:bg-slate-800 rounded-3xl border-l-4 border-red-500">
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                <div className="mb-16 p-8 md:p-12 bg-white dark:bg-slate-800 rounded-3xl border-l-8 border-red-500 shadow-xl">
+                    <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">
                         Is Your Business Being Held Back by Outdated Network Technology?
                     </h3>
-                    <p className="text-lg text-slate-700 dark:text-slate-300 mb-4">
-                        Slow internet again? Dropped connections during critical operations?
-                    </p>
-                    <p className="text-slate-600 dark:text-slate-400 mb-6">
-                        Poor quality fiber splices are often the hidden culprit behind network headaches that cost your business time and money.
-                        Don't let outdated connections limit your growth.
-                    </p>
-                    <p className="text-lg font-semibold text-slate-900 dark:text-white">
-                        At itSec Technology, we excel at creating seamless, permanent fiber optic connections that eliminate signal loss
-                        and ensure maximum data transmission speeds.
-                    </p>
-                    <p className="text-primary font-bold text-xl mt-4">
+                    <div className="space-y-4 mb-8">
+                        <p className="text-xl font-bold text-red-500">
+                            Slow internet again? Dropped connections during critical operations?
+                        </p>
+                        <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                            Poor quality fiber splices are often the hidden culprit behind network headaches that cost your business time and money.
+                            Don't let outdated connections limit your growth.
+                        </p>
+                    </div>
+                    <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl mb-6">
+                        <p className="text-xl font-bold text-slate-900 dark:text-white leading-relaxed">
+                            At <span className="text-primary">ITSEC Technology</span>, we excel at creating seamless, permanent fiber optic connections that eliminate signal loss
+                            and ensure maximum data transmission speeds.
+                        </p>
+                    </div>
+                    <p className="text-primary font-black text-2xl uppercase tracking-tighter animate-pulse text-center">
                         We pride ourselves on building Relationships, not just Networks!
                     </p>
                 </div>
@@ -111,8 +115,8 @@ export function FiberOpticSplicing() {
                         <button
                             onClick={() => setSelectedFacility('all')}
                             className={`px-6 py-3 rounded-full font-semibold transition-all ${selectedFacility === 'all'
-                                    ? 'bg-primary text-white shadow-lg scale-105'
-                                    : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
+                                ? 'bg-primary text-white shadow-lg scale-105'
+                                : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
                                 }`}
                         >
                             All Facilities
@@ -122,8 +126,8 @@ export function FiberOpticSplicing() {
                                 key={facility.id}
                                 onClick={() => setSelectedFacility(facility.id)}
                                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all ${selectedFacility === facility.id
-                                        ? 'bg-primary text-white shadow-lg scale-105'
-                                        : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
+                                    ? 'bg-primary text-white shadow-lg scale-105'
+                                    : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
                                     }`}
                             >
                                 <facility.icon className="w-5 h-5" />

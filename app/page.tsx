@@ -17,12 +17,12 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
+      <About />
       <ServiceFocus />
       <Services />
       <StructuredCabling />
       <FiberOpticSplicing />
       <Products />
-      <About />
       <Process />
       <Contact />
       <Footer />

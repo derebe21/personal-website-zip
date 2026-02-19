@@ -20,7 +20,7 @@ export function About() {
             Empowering Global Enterprises
           </h3>
           <p className="text-xl font-medium text-slate-700 dark:text-slate-300 leading-relaxed mt-6">
-            ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.
+            Delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.
           </p>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>

@@ -14,7 +14,7 @@ export function ServiceFocus() {
                         <div className="text-center">
                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 uppercase italic">About Us</h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.
+                                Delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.
                             </p>
                         </div>
                     </div>

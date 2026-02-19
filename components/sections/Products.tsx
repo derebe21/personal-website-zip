@@ -138,7 +138,7 @@ export function Products() {
                 <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <span className="w-12 h-0.5 bg-primary rounded-full" />
+                            <span className="w-16 h-1 bg-primary rounded-full shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
                             <span className="text-sm font-bold text-primary uppercase tracking-[0.3em]">
                                 OUR TECHNOLOGY
                             </span>
@@ -158,15 +158,15 @@ export function Products() {
                 </div>
 
                 {/* FEATURED CYBERSECURITY SECTION - STAGGERED ANIMATION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border border-slate-200 dark:border-slate-800">
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-primary/20 shadow-2xl">
                     {/* Dedicated Section Background */}
                     <div className="absolute inset-0 z-0">
                         <img
                             src="/images/cyber-shield-bg.jpg"
                             alt=""
-                            className="w-full h-full object-cover opacity-20 dark:opacity-40 animate-pulse-slow"
+                            className="w-full h-full object-cover opacity-80 dark:opacity-90 animate-subtle-zoom"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-white/60 dark:from-slate-950/60 dark:via-transparent dark:to-slate-950/60" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-slate-950/80" />
                     </div>
 
                     <div className="relative z-10">
