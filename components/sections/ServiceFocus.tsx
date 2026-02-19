@@ -6,7 +6,15 @@ import { Rocket, Target, Award } from 'lucide-react';
 export function ServiceFocus() {
     return (
         <section id="servicesFocus" className="relative py-12 lg:py-20 bg-slate-50 dark:bg-slate-950 overflow-hidden">
-            {/* Decorative background elements */}
+            {/* Premium Nexus Background Layer - Subtle */}
+            <div className="absolute inset-0 z-0 opacity-20 dark:opacity-10 pointer-events-none">
+                <img
+                    src="/images/technology-nexus-final.png"
+                    alt="Network Background"
+                    className="w-full h-full object-cover"
+                />
+            </div>
+
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
