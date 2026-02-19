@@ -135,7 +135,16 @@ export function Products() {
                 </div>
 
                 {/* FEATURED CYBER SECURITY SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-red-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-red-500/10 shadow-2xl">
+                    {/* Local Nexus Background */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Cyber Security Background"
+                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                        />
+                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                    </div>
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
@@ -183,7 +192,16 @@ export function Products() {
                 </div>
 
                 {/* FEATURED ENTERPRISE NETWORKING SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-blue-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-blue-500/10 shadow-2xl">
+                    {/* Local Nexus Background */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Networking Background"
+                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                        />
+                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                    </div>
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
@@ -223,7 +241,16 @@ export function Products() {
                 </div>
 
                 {/* FEATURED CLOUD & VIRTUALIZATION SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-cyan-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-cyan-500/10 shadow-2xl">
+                    {/* Local Nexus Background */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Cloud Background"
+                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                        />
+                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                    </div>
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
@@ -272,7 +299,16 @@ export function Products() {
                 </div>
 
                 {/* FEATURED SERVERS & DATA CENTER SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-indigo-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-indigo-500/10 shadow-2xl">
+                    {/* Local Nexus Background */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Servers Background"
+                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                        />
+                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                    </div>
                     {/* Background Subtle Gradient Overlay */}
                     <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-500/5 to-transparent" />
 
@@ -314,7 +350,16 @@ export function Products() {
                 </div>
 
                 {/* FEATURED SMART & PHYSICAL SECURITY SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-emerald-500/10 bg-white dark:bg-slate-900/50 shadow-2xl">
+                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-emerald-500/10 shadow-2xl">
+                    {/* Local Nexus Background */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Physical Security Background"
+                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                        />
+                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                    </div>
                     {/* Background Subtle Gradient Overlay */}
                     <div className="absolute inset-0 z-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
 
