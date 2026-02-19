@@ -109,7 +109,7 @@ export function Products() {
     return (
         <section
             id="technology"
-            className="relative py-24 md:py-32 bg-slate-950 overflow-hidden"
+            className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
         >
             {/* Premium Nexus Background Layer */}
             <div className="absolute inset-0 z-0">
@@ -134,16 +134,16 @@ export function Products() {
                     </div>
                 </div>
 
-                {/* Standardized Blue & Black Technology Section */}
+                {/* Standardized Blue Technology Section */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* High-Visibility Blue Nexus Identity */}
-                    <div className="absolute inset-0 z-0 bg-blue-950">
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Technology Background"
                             className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-950/80 to-blue-950/90" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
 
                     <div className="relative z-10">
@@ -161,7 +161,7 @@ export function Products() {
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-slate-900/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="absolute top-6 right-6">
@@ -194,13 +194,13 @@ export function Products() {
                 {/* FEATURED ENTERPRISE NETWORKING SECTION */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* High-Visibility Blue Nexus Identity */}
-                    <div className="absolute inset-0 z-0 bg-blue-950">
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Networking Background"
                             className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-950/80 to-blue-950/90" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
 
                     <div className="relative z-10">
@@ -218,7 +218,7 @@ export function Products() {
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-slate-900/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
@@ -243,13 +243,13 @@ export function Products() {
                 {/* FEATURED CLOUD & VIRTUALIZATION SECTION */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* High-Visibility Blue Nexus Identity */}
-                    <div className="absolute inset-0 z-0 bg-blue-950">
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Cloud Background"
                             className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-950/80 to-blue-950/90" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
 
                     <div className="relative z-10">
@@ -267,7 +267,7 @@ export function Products() {
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-slate-900/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
@@ -301,13 +301,13 @@ export function Products() {
                 {/* FEATURED SERVERS & DATA CENTER SECTION */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* High-Visibility Blue Nexus Identity */}
-                    <div className="absolute inset-0 z-0 bg-blue-950">
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Servers Background"
                             className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-950/80 to-blue-950/90" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
                     {/* Background Subtle Gradient Overlay */}
                     <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-500/5 to-transparent" />
@@ -327,7 +327,7 @@ export function Products() {
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-slate-900/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
@@ -352,13 +352,13 @@ export function Products() {
                 {/* FEATURED SMART & PHYSICAL SECURITY SECTION */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* High-Visibility Blue Nexus Identity */}
-                    <div className="absolute inset-0 z-0 bg-blue-950">
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Physical Security Background"
                             className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-950/80 to-blue-950/90" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
                     {/* Background Subtle Gradient Overlay */}
                     <div className="absolute inset-0 z-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
@@ -378,7 +378,7 @@ export function Products() {
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-slate-900/90 backdrop-blur-md border border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
