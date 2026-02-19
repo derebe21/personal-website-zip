@@ -30,14 +30,14 @@ export function Services() {
       id="services"
       className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
-      {/* Premium Nexus Background Layer - Subtle */}
-      <div className="absolute inset-0 z-0 opacity-20 dark:opacity-10 pointer-events-none">
+      {/* High-Visibility Blue Nexus Identity */}
+      <div className="absolute inset-0 z-0 bg-blue-900/5">
         <img
           src="/images/technology-nexus-final.png"
           alt="Network Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-40 dark:opacity-30"
         />
-        <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
       </div>
       <div className="max-w-[100vw]">
         <div className="text-center space-y-4 mb-20 px-4">
