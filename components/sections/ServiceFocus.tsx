@@ -25,7 +25,9 @@ export function ServiceFocus() {
 
                     <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
                         <div className="text-center">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 uppercase italic">Vision</h3>
+                            <Link href="/about" className="hover:text-primary transition-colors">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 uppercase italic">Vision</h3>
+                            </Link>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.
                             </p>
@@ -34,7 +36,9 @@ export function ServiceFocus() {
 
                     <div className="group flex flex-col items-center space-y-4 p-8 rounded-2xl bg-white dark:bg-slate-900 shadow-xl shadow-blue-500/5 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2">
                         <div className="text-center">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 uppercase italic">Mission</h3>
+                            <Link href="/about" className="hover:text-primary transition-colors">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 uppercase italic">Mission</h3>
+                            </Link>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 To empower organizations worldwide with secure, scalable, and innovative technology solutions that deliver measurable value through technical excellence and international best practices.
                             </p>
