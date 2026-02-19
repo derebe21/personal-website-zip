@@ -1,5 +1,4 @@
-'use client';
-
+import Link from 'next/link';
 import { Award, Target, Rocket, Lightbulb } from 'lucide-react';
 
 export function About() {
