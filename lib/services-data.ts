@@ -63,7 +63,16 @@ export const servicesData = [
         title: 'Cloud & Virtualization',
         description: 'Implementing secure public, private, and hybrid cloud solutions with advanced virtualization.',
         longDescription: 'Transitioning to the cloud should be seamless and secure. ITSEC Technology helps you choose and implement the right cloud strategy—public, private, or hybrid—to increase agility and reduce infrastructure overhead.',
-        features: ['Cloud Migration', 'Server Virtualization', 'Hybrid Cloud Solutions', 'Private Cloud Hosting', 'Multi-cloud Management'],
+        features: [
+            'Proxmox, VMware Virtualization Solutions',
+            'Virtual Desktop Infrastructure (VDI)',
+            'IBM Cloud & Enterprise Solutions',
+            'Cloud Migration Services',
+            'Server Virtualization',
+            'Backup & Disaster Recovery',
+            'Red Hat Enterprise Solutions',
+            'Oracle Cloud Infrastructure (OCI)'
+        ],
         benefits: ['Global accessibility', 'Operational agility', 'Reduced CAPEX', 'Seamless disaster recovery'],
     },
     {
