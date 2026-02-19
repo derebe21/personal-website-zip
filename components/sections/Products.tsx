@@ -135,15 +135,15 @@ export function Products() {
                 </div>
 
                 {/* FEATURED CYBER SECURITY SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-red-500/10 shadow-2xl">
-                    {/* Local Nexus Background */}
-                    <div className="absolute inset-0 z-0">
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-red-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Cyber Security Background"
-                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
 
                     <div className="relative z-10">
@@ -192,15 +192,15 @@ export function Products() {
                 </div>
 
                 {/* FEATURED ENTERPRISE NETWORKING SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-blue-500/10 shadow-2xl">
-                    {/* Local Nexus Background */}
-                    <div className="absolute inset-0 z-0">
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Networking Background"
-                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
 
                     <div className="relative z-10">
@@ -241,15 +241,15 @@ export function Products() {
                 </div>
 
                 {/* FEATURED CLOUD & VIRTUALIZATION SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-cyan-500/10 shadow-2xl">
-                    {/* Local Nexus Background */}
-                    <div className="absolute inset-0 z-0">
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-cyan-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Cloud Background"
-                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
 
                     <div className="relative z-10">
@@ -299,15 +299,15 @@ export function Products() {
                 </div>
 
                 {/* FEATURED SERVERS & DATA CENTER SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-indigo-500/10 shadow-2xl">
-                    {/* Local Nexus Background */}
-                    <div className="absolute inset-0 z-0">
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-indigo-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Servers Background"
-                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
                     {/* Background Subtle Gradient Overlay */}
                     <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-500/5 to-transparent" />
@@ -350,15 +350,15 @@ export function Products() {
                 </div>
 
                 {/* FEATURED SMART & PHYSICAL SECURITY SECTION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border-2 border-emerald-500/10 shadow-2xl">
-                    {/* Local Nexus Background */}
-                    <div className="absolute inset-0 z-0">
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-emerald-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="/images/technology-nexus-final.png"
                             alt="Physical Security Background"
-                            className="w-full h-full object-cover opacity-30 dark:opacity-20"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
                         />
-                        <div className="absolute inset-0 bg-white/90 dark:bg-slate-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
                     {/* Background Subtle Gradient Overlay */}
                     <div className="absolute inset-0 z-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
