@@ -32,11 +32,24 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'bg-slate-950/80 backdrop-blur-xl border-b border-white/5 shadow-2xl py-2'
-        : 'bg-transparent py-4'
+        ? 'py-2 shadow-2xl border-b border-white/10'
+        : 'py-4 bg-transparent'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Premium Blue Gradient & Nexus Background - Active when scrolled */}
+      <div className={`absolute inset-0 z-0 transition-opacity duration-700 pointer-events-none ${isScrolled ? 'opacity-100' : 'opacity-0'}`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-600/20 to-blue-950" />
+        <div className="absolute inset-0 bg-blue-900/80 backdrop-blur-2xl" />
+        <div className="absolute inset-0 opacity-15 mix-blend-overlay">
+          <img
+            src="/images/technology-nexus-final.png"
+            className="w-full h-full object-cover"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <Link
             href="/"
@@ -83,8 +96,18 @@ export function Navigation() {
 
       {/* Mobile Menu with Backdrop */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-2xl border-t border-white/5 shadow-2xl animate-fade-down">
-          <div className="px-6 py-8 space-y-4">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-blue-900/95 backdrop-blur-2xl border-t border-white/10 shadow-2xl animate-fade-down overflow-hidden">
+          {/* Signature Nexus Overlay */}
+          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <img
+              src="/images/technology-nexus-final.png"
+              alt="Nexus Overlay"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 opacity-90" />
+          </div>
+
+          <div className="relative z-10 px-6 py-8 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
