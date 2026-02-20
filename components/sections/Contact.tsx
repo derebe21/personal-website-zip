@@ -55,24 +55,19 @@ export function Contact() {
       id="contact"
       className="relative py-20 md:py-32 overflow-hidden"
     >
-      {/* Clean Tech Network Background - No Baked-in Text */}
-      <div className="absolute inset-0 z-0 bg-slate-950">
+      {/* Original High-Visibility Background */}
+      <div className="absolute inset-0 z-0 bg-blue-900/5">
         <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-          alt="Digital global network background"
-          className="w-full h-full object-cover object-center opacity-40"
+          src="/images/contact-us-bg.jpg"
+          alt="Global Network Background"
+          className="w-full h-full object-cover object-center opacity-85 dark:opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/60 via-slate-950/40 to-blue-950/50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center justify-center gap-6 pt-48 mb-20 animate-fade-up">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-cyan-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] leading-none">
-              Contact us
-            </h2>
-            <div className="w-24 md:w-32 h-1 bg-yellow-500/90 mx-auto rounded-full shadow-[0_0_10px_rgba(234,179,8,0.3)]" />
-          </div>
+        <div className="flex flex-col items-center text-center justify-center gap-6 pt-16 mb-20 animate-fade-up">
+          {/* Note: The 'Contact us' heading is built into the background image */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -82,9 +77,12 @@ export function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium">
+                        Full Name
+                      </label>
                       <Input
                         id="name"
-                        placeholder="Full Name"
+                        placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
@@ -93,10 +91,13 @@ export function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium">
+                        Email Address
+                      </label>
                       <Input
                         id="email"
                         type="email"
-                        placeholder="Email Address"
+                        placeholder="john@example.com"
                         value={formData.email}
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
@@ -107,10 +108,13 @@ export function Contact() {
                   </div>
 
                   <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-medium">
+                      Phone Number
+                    </label>
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="Phone Number"
+                      placeholder="+251 911 407 439"
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
@@ -119,9 +123,12 @@ export function Contact() {
                   </div>
 
                   <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium">
+                      Message
+                    </label>
                     <Textarea
                       id="message"
-                      placeholder="Your Message..."
+                      placeholder="Tell us about your project..."
                       rows={6}
                       value={formData.message}
                       onChange={(e) =>
@@ -160,6 +167,9 @@ export function Contact() {
                       <info.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div className="space-y-1">
+                      <p className="text-sm font-medium text-muted-foreground">
+                        {info.label}
+                      </p>
                       {info.href ? (
                         <a
                           href={info.href}
@@ -175,8 +185,6 @@ export function Contact() {
                 </CardContent>
               </Card>
             ))}
-
-
           </div>
         </div>
       </div>

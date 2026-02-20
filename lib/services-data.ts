@@ -58,7 +58,8 @@ export const servicesData = [
     {
         slug: 'cloud-virtualization',
         icon: Cloud,
-        bannerImage: '/images/header-bg.jpg',
+        logoImage: '/images/cloud-virtualization-logo-new.png',
+        bannerImage: '/images/cloud-virtualization-logo-new.png',
         bgColor: '#38BDF8',
         title: 'Cloud & Virtualization',
         description: 'Implementing secure public, private, and hybrid cloud solutions with advanced virtualization.',
@@ -89,7 +90,8 @@ export const servicesData = [
     {
         slug: 'technology-advisory-integration',
         icon: Lightbulb,
-        bannerImage: '/images/cyber-shield-bg.jpg',
+        logoImage: '/images/technology-advisory-logo-new.png',
+        bannerImage: '/images/technology-advisory-logo-new.png',
         bgColor: '#8B5CF6',
         title: 'Technology Advisory & Integration',
         description: 'Advising organizations on digital transformation, system optimization, and technology strategy.',
