@@ -62,14 +62,19 @@ export function Contact() {
         <img
           src="/images/contact-us-bg.jpg"
           alt="Global Network Background"
-          className="w-full h-full object-cover opacity-85 dark:opacity-60"
+          className="w-full h-full object-cover object-center opacity-85 dark:opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
-          {/* Note: The 'Contact us' heading is built into the background image for this section */}
+        <div className="flex flex-col items-center text-center justify-center gap-6 pt-16 mb-20 animate-fade-up">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-cyan-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] leading-none">
+              Contact us
+            </h2>
+            <div className="w-24 md:w-32 h-1 bg-yellow-500/90 mx-auto rounded-full shadow-[0_0_10px_rgba(234,179,8,0.3)]" />
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
