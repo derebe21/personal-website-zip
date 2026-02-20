@@ -31,12 +31,7 @@ export function Services() {
       className="py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
       <div className="max-w-[100vw]">
-        <div className="text-center space-y-4 mb-20 px-4">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
-            Our Services
-          </h2>
-          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
-        </div>
+
 
         {/* Infinite 3D Auto-Slider Ribbon with Stepping Motion */}
         <div
