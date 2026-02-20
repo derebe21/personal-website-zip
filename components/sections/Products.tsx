@@ -148,46 +148,68 @@ export function Products() {
                     <div className="relative z-10">
                         {/* Big Colorful Shield Logo Header */}
                         <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-                            {/* Giant Shield SVG Logo */}
-                            <div className="relative flex-shrink-0 w-36 h-40 md:w-44 md:h-48 drop-shadow-[0_0_40px_rgba(59,130,246,0.8)]">
-                                <svg viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                            {/* Giant Shield SVG Logo - matching uploaded reference */}
+                            <div className="relative flex-shrink-0 w-44 h-48 md:w-56 md:h-64 drop-shadow-[0_0_50px_rgba(59,130,246,0.9)]">
+                                <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                                     <defs>
-                                        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stopColor="#1D4ED8" />
-                                            <stop offset="50%" stopColor="#3B82F6" />
-                                            <stop offset="100%" stopColor="#06B6D4" />
+                                        {/* Outer light blue rim */}
+                                        <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stopColor="#93C5FD" />
+                                            <stop offset="100%" stopColor="#3B82F6" />
                                         </linearGradient>
-                                        <linearGradient id="shieldInner" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stopColor="#DBEAFE" stopOpacity="0.3" />
-                                            <stop offset="100%" stopColor="#0EA5E9" stopOpacity="0.1" />
+                                        {/* Dark blue inner fill */}
+                                        <linearGradient id="innerGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+                                            <stop offset="0%" stopColor="#1E3A8A" />
+                                            <stop offset="60%" stopColor="#1D4ED8" />
+                                            <stop offset="100%" stopColor="#2563EB" />
                                         </linearGradient>
-                                        <filter id="glow">
-                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                        {/* Silver shackle */}
+                                        <linearGradient id="shackleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stopColor="#D1D5DB" />
+                                            <stop offset="50%" stopColor="#9CA3AF" />
+                                            <stop offset="100%" stopColor="#6B7280" />
+                                        </linearGradient>
+                                        {/* White lock body */}
+                                        <linearGradient id="lockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stopColor="#FFFFFF" />
+                                            <stop offset="100%" stopColor="#E5E7EB" />
+                                        </linearGradient>
+                                        {/* Glow filter */}
+                                        <filter id="outerGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                            <feGaussianBlur stdDeviation="6" result="blur" />
                                             <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
                                         </filter>
+                                        <filter id="lockShadow" x="-10%" y="-10%" width="120%" height="130%">
+                                            <feDropShadow dx="2" dy="4" stdDeviation="4" floodColor="#00000033" />
+                                        </filter>
                                     </defs>
-                                    {/* Outer glow shield */}
-                                    <path d="M50 3 L95 22 L95 58 C95 82 72 102 50 112 C28 102 5 82 5 58 L5 22 Z" fill="url(#shieldGrad)" filter="url(#glow)" opacity="0.3" />
-                                    {/* Main shield */}
-                                    <path d="M50 6 L92 24 L92 58 C92 80 70 99 50 109 C30 99 8 80 8 58 L8 24 Z" fill="url(#shieldGrad)" />
-                                    {/* Inner shine */}
-                                    <path d="M50 6 L92 24 L92 58 C92 80 70 99 50 109 C30 99 8 80 8 58 L8 24 Z" fill="url(#shieldInner)" />
-                                    {/* Shield border highlight */}
-                                    <path d="M50 6 L92 24 L92 58 C92 80 70 99 50 109 C30 99 8 80 8 58 L8 24 Z" fill="none" stroke="rgba(147,210,255,0.6)" strokeWidth="1.5" />
-                                    {/* Lock body */}
-                                    <rect x="36" y="54" width="28" height="22" rx="4" fill="white" opacity="0.95" />
-                                    {/* Lock shackle */}
-                                    <path d="M42 54 L42 46 C42 40 58 40 58 46 L58 54" stroke="white" strokeWidth="5" strokeLinecap="round" fill="none" opacity="0.95" />
-                                    {/* Keyhole */}
-                                    <circle cx="50" cy="63" r="4" fill="#1D4ED8" />
-                                    <rect x="48" y="63" width="4" height="6" rx="1" fill="#1D4ED8" />
-                                    {/* Circuit dots */}
-                                    <circle cx="20" cy="40" r="2" fill="white" opacity="0.4" />
-                                    <circle cx="80" cy="40" r="2" fill="white" opacity="0.4" />
-                                    <circle cx="15" cy="60" r="1.5" fill="cyan" opacity="0.5" />
-                                    <circle cx="85" cy="60" r="1.5" fill="cyan" opacity="0.5" />
-                                    <line x1="20" y1="40" x2="20" y2="50" stroke="white" strokeWidth="0.8" opacity="0.3" />
-                                    <line x1="80" y1="40" x2="80" y2="50" stroke="white" strokeWidth="0.8" opacity="0.3" />
+
+                                    {/* Outer light blue shield rim (glow) */}
+                                    <path d="M100 8 L185 42 L185 112 C185 162 142 196 100 212 C58 196 15 162 15 112 L15 42 Z"
+                                        fill="url(#rimGrad)" filter="url(#outerGlow)" opacity="0.9" />
+
+                                    {/* Inner dark blue shield body */}
+                                    <path d="M100 20 L172 50 L172 112 C172 156 134 186 100 200 C66 186 28 156 28 112 L28 50 Z"
+                                        fill="url(#innerGrad)" />
+
+                                    {/* Thin light blue inner border line */}
+                                    <path d="M100 26 L166 54 L166 112 C166 152 130 181 100 194 C70 181 34 152 34 112 L34 54 Z"
+                                        fill="none" stroke="#93C5FD" strokeWidth="2" opacity="0.5" />
+
+                                    {/* Padlock shackle (silver arc) */}
+                                    <path d="M78 105 L78 82 C78 62 122 62 122 82 L122 105"
+                                        stroke="url(#shackleGrad)" strokeWidth="16" strokeLinecap="round" fill="none" filter="url(#lockShadow)" />
+
+                                    {/* Padlock body (white rounded rect) */}
+                                    <rect x="64" y="102" width="72" height="58" rx="10" fill="url(#lockGrad)" filter="url(#lockShadow)" />
+
+                                    {/* Keyhole circle (pink/red) */}
+                                    <circle cx="100" cy="125" r="11" fill="#E91E7A" />
+                                    {/* Keyhole slot */}
+                                    <path d="M95 131 L95 147 L105 147 L105 131" fill="#E91E7A" />
+
+                                    {/* Subtle shine on lock body */}
+                                    <rect x="68" y="106" width="28" height="8" rx="4" fill="white" opacity="0.4" />
                                 </svg>
                             </div>
                             {/* Title block */}
