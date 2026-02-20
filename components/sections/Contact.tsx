@@ -40,13 +40,11 @@ export function Contact() {
     },
     {
       icon: Mail,
-      label: 'Email',
       value: 'info@itsectechnology.com',
       href: 'mailto:info@itsectechnology.com',
     },
     {
       icon: MapPin,
-      label: 'Address',
       value: '123 Business Park, Tech District',
       href: null,
     },
@@ -68,7 +66,7 @@ export function Contact() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center justify-center gap-6 pt-16 mb-20 animate-fade-up">
+        <div className="flex flex-col items-center text-center justify-center gap-6 pt-48 mb-20 animate-fade-up">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-5xl font-black tracking-tight text-cyan-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] leading-none">
               Contact us
@@ -84,12 +82,9 @@ export function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        Full Name
-                      </label>
                       <Input
                         id="name"
-                        placeholder="John Doe"
+                        placeholder="Full Name"
                         value={formData.name}
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
@@ -98,13 +93,10 @@ export function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Email Address
-                      </label>
                       <Input
                         id="email"
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder="Email Address"
                         value={formData.email}
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
@@ -115,13 +107,10 @@ export function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium">
-                      Phone Number
-                    </label>
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="+251 911 407 439"
+                      placeholder="Phone Number"
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
@@ -130,12 +119,9 @@ export function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Message
-                    </label>
                     <Textarea
                       id="message"
-                      placeholder="Tell us about your project..."
+                      placeholder="Your Message..."
                       rows={6}
                       value={formData.message}
                       onChange={(e) =>
@@ -174,9 +160,6 @@ export function Contact() {
                       <info.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div className="space-y-1">
-                      <p className="text-sm font-medium text-muted-foreground">
-                        {info.label}
-                      </p>
                       {info.href ? (
                         <a
                           href={info.href}
