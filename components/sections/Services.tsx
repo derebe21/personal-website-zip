@@ -30,15 +30,7 @@ export function Services() {
       id="services"
       className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
-      {/* High-Visibility Blue Nexus Identity */}
-      <div className="absolute inset-0 z-0 bg-blue-900/5">
-        <img
-          src="/images/technology-nexus-final.png"
-          alt="Network Background"
-          className="w-full h-full object-cover opacity-60 dark:opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/40 via-slate-50/20 to-blue-50/30 dark:from-slate-950/60 dark:via-slate-950/40 dark:to-blue-950/50" />
-      </div>
+
       <div className="max-w-[100vw]">
         <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
           <div className="space-y-4">
