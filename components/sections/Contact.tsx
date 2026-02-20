@@ -60,9 +60,9 @@ export function Contact() {
       {/* High-Visibility World Map Background Identity */}
       <div className="absolute inset-0 z-0 bg-blue-900/5">
         <img
-          src="https://images.unsplash.com/photo-1557853197-aefb550b6fdc?q=80&w=2072&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2072&auto=format&fit=crop"
           alt="Global Network Background"
-          className="w-full h-full object-cover opacity-30 dark:opacity-20 mix-blend-overlay"
+          className="w-full h-full object-cover opacity-40 dark:opacity-30 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
       </div>
