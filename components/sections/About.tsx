@@ -4,16 +4,20 @@ import { Award, Target, Rocket, Lightbulb } from 'lucide-react';
 export function About() {
   return (
     <section id="about" className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden">
-      {/* Premium Background Elements */}
-      <div className="absolute inset-0 z-0 opacity-30 dark:opacity-20 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.05),transparent_70%)]" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,rgba(6,182,212,0.05),transparent_50%)]" />
+      {/* High-Visibility Blue Nexus Identity */}
+      <div className="absolute inset-0 z-0 bg-blue-900/5">
+        <img
+          src="/images/technology-nexus-final.png"
+          alt="Network Background"
+          className="w-full h-full object-cover opacity-40 dark:opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-4 pt-[150px]">
           <h2 className="text-[74px] font-[900] tracking-tight text-slate-900 dark:text-white uppercase leading-tight italic">
-            ITSEC Technology
+            About Us
           </h2>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
@@ -22,9 +26,8 @@ export function About() {
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {[
             {
-              title: 'ITSEC Technology',
-              subtitle: 'Empowering Global Enterprises',
-              description: 'ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
+              title: 'About Us',
+              description: 'Delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
               icon: Rocket,
               color: 'blue',
               number: '01'
@@ -60,11 +63,11 @@ export function About() {
                 </div>
 
                 <div className="flex items-center gap-6 mb-8 relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 ${item.color === 'blue' ? 'bg-blue-600 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.4)]' :
+                  <div className={`w-20 h-20 rounded-3xl flex items-center justify-center shrink-0 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 ${item.color === 'blue' ? 'bg-blue-600 shadow-[0_10px_30px_-5px_rgba(37,99,235,0.4)]' :
                     item.color === 'cyan' ? 'bg-cyan-500 shadow-[0_10px_30px_-5px_rgba(6,182,212,0.4)]' :
                       'bg-[#F6A113] shadow-[0_10px_30px_-5px_rgba(246,161,19,0.4)]'
                     }`}>
-                    <item.icon className="w-8 h-8 text-white" />
+                    <item.icon className="w-10 h-10 text-white" />
                   </div>
                   <div>
                     <Link href="/about" className="hover:text-primary transition-colors">

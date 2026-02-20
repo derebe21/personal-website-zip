@@ -23,14 +23,15 @@ export function Footer() {
 
   return (
     <footer className="relative bg-slate-950 text-slate-300 overflow-hidden">
-      {/* Background Image with optimized visibility */}
-      <div className="absolute inset-0 z-0">
+      {/* High-Visibility Blue Nexus Identity */}
+      <div className="absolute inset-0 z-0 bg-blue-900/10">
         <img
-          src="/about-bg.png"
-          alt="Footer Background"
-          className="w-full h-full object-cover opacity-50"
+          src="/images/technology-nexus-final.png"
+          alt="Nexus Texture"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-slate-950/70" />
+        <div className="absolute inset-0 bg-slate-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-950/20 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">

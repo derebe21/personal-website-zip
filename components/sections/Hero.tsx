@@ -64,6 +64,16 @@ export function Hero() {
               alt="Hero Background"
               className="w-full h-full object-cover"
             />
+            {/* High-Visibility Blue Nexus Identity */}
+            <div className="absolute inset-0 z-10 opacity-30 pointer-events-none mix-blend-screen bg-blue-900/10">
+              <img
+                src="/images/technology-nexus-final.png"
+                alt="Nexus Overlay"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute inset-0 bg-slate-950/40 z-20" />
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 via-transparent to-slate-950/60 z-15" />
           </div>
         ))}
       </div>

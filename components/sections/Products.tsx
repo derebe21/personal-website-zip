@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Globe, Cloud, Server, Terminal, Video, Zap, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Globe, Cloud, Server, Terminal, Video, Zap, ArrowRight, ShieldCheck, Monitor, Database } from 'lucide-react';
 import Link from 'next/link';
 
 export function Products() {
@@ -64,74 +64,61 @@ export function Products() {
         }
     ];
 
-    const otherCategories = [
-        {
-            icon: Globe,
-            title: 'Enterprise Networking',
-            color: 'blue',
-            partners: [
-                { name: 'Cisco', logo: '/images/partners/cisco-final.png', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
-                { name: 'Huawei', logo: '/images/partners/huawei-ent.png', url: 'https://e.huawei.com/en/products/enterprise-networking' },
-                { name: 'HPE Aruba', logo: '/images/partners/hpe-logo.svg', url: 'https://www.arubanetworks.com/products/' },
-                { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' }
-            ],
-            description: ''
-        },
-        {
-            icon: Cloud,
-            title: 'Cloud & Virtualization',
-            color: 'cyan',
-            partners: [
-                { name: 'VMware', logo: '/images/partners/vmware-logo.svg', url: 'https://www.vmware.com/products.html' },
-                { name: 'Microsoft Hyper-V', logo: '/images/partners/hyperv-logo.svg', url: 'https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/' },
-                { name: 'Oracle Cloud', logo: '/images/partners/oracle-logo.svg', url: 'https://www.oracle.com/cloud/products.html' },
-                { name: 'IBM Cloud', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
-                { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://www.redhat.com/en/technologies/all-products' }
-            ]
-        },
-        {
-            icon: Server,
-            title: 'Servers & Data Center',
-            color: 'indigo',
-            partners: [
-                { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/servers/index.htm' },
-                { name: 'HPE', logo: '/images/partners/hpe-new.png', url: 'https://www.hpe.com/us/en/servers.html' },
-                { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/us/en/servers-storage/' },
-                { name: 'Huawei', logo: '/images/partners/huawei-servers.png', url: 'https://e.huawei.com/en/products/compute' },
-                { name: 'IBM', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
-                { name: 'NetApp', logo: 'netapp', url: 'https://www.netapp.com/data-storage/' },
-                { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/en-us/products' },
-                { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/en/products' }
-            ]
-        },
-        {
-            icon: Video,
-            title: 'Smart & Physical Security',
-            color: 'emerald',
-            partners: [
-                { name: 'Hikvision', logo: '/images/partners/hikvision.png', url: 'https://www.hikvision.com/en/products/' },
-                { name: 'Dahua', logo: '/images/partners/dahua.png', url: 'https://www.dahuasecurity.com/products' },
-                { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/xc/en/products/' },
-                { name: 'Axis', logo: '/images/partners/axis.png', url: 'https://www.axis.com/products-and-solutions' },
-                { name: 'Honeywell', logo: '/images/partners/honeywell.png', url: 'https://buildings.honeywell.com/us/en/products/security' },
-                { name: 'Suprema', logo: '/images/partners/suprema.png', url: 'https://www.supremainc.com/en/hardware/product-list.asp' },
-                { name: 'ZKTeco', logo: '/images/partners/zkteco.png', url: 'https://www.zkteco.com/en/product_list/' }
-            ]
-        }
+    const enterpriseNetworkingPartners = [
+        { name: 'Cisco', logo: '/images/partners/cisco-final.png', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
+        { name: 'Huawei', logo: '/images/partners/huawei-ent.png', url: 'https://e.huawei.com/en/products/enterprise-networking' },
+        { name: 'HPE Aruba', logo: '/images/partners/hpe-logo.svg', url: 'https://www.arubanetworks.com/products/' },
+        { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' }
     ];
+
+    const cloudVirtualizationPartners = [
+        { name: 'VMware', logo: '/images/partners/vmware-logo.svg', url: 'https://www.vmware.com/products.html' },
+        { name: 'Proxmox', logo: 'proxmox', url: 'https://www.proxmox.com/en/proxmox-ve' },
+        { name: 'Microsoft Hyper-V', logo: '/images/partners/hyperv-logo.svg', url: 'https://virtualization/hyper-v-on-windows/' },
+        { name: 'Oracle Cloud', logo: '/images/partners/oracle-logo.svg', url: 'https://www.oracle.com/cloud/products.html' },
+        { name: 'IBM Cloud', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
+        { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://all-products' },
+        { name: 'Server Virtualization', icon: Server, isService: true, url: '/services' },
+        { name: 'Desktop Virtualization (VDI)', icon: Monitor, isService: true, url: '/services' },
+        { name: 'Cloud Virtualization', icon: Cloud, isService: true, url: '/services' },
+        { name: 'Backup & Disaster Recovery', icon: Database, isService: true, url: '/services' }
+    ];
+
+    const serversDataCenterPartners = [
+        { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/servers/index.htm' },
+        { name: 'HPE', logo: '/images/partners/hpe-new.png', url: 'https://www.hpe.com/us/en/servers.html' },
+        { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/us/en/servers-storage/' },
+        { name: 'Huawei', logo: '/images/partners/huawei-servers.png', url: 'https://e.huawei.com/en/products/compute' },
+        { name: 'IBM', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
+        { name: 'NetApp', logo: 'netapp', url: 'https://www.netapp.com/data-storage/' },
+        { name: 'Synology', logo: 'synology', url: 'https://www.synology.com/en-us/products' },
+        { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/en/products' }
+    ];
+
+    const smartSecurityPartners = [
+        { name: 'Hikvision', logo: '/images/partners/hikvision.png', url: 'https://www.hikvision.com/en/products/' },
+        { name: 'Dahua', logo: '/images/partners/dahua.png', url: 'https://www. dahuasecurity.com/products' },
+        { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/xc/en/products/' },
+        { name: 'Axis', logo: '/images/partners/axis.png', url: 'https://www.axis.com/products-and-solutions' },
+        { name: 'Honeywell', logo: '/images/partners/honeywell.png', url: 'https://buildings.honeywell.com/us/en/products/security' },
+        { name: 'Suprema', logo: '/images/partners/suprema.png', url: 'https://www.supremainc.com/en/hardware/product-list.asp' },
+        { name: 'ZKTeco', logo: '/images/partners/zkteco.png', url: 'https://www.zkteco.com/en/product_list/' }
+    ];
+
 
     return (
         <section
             id="technology"
             className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
         >
-            {/* Moving Nexus Background Synergy */}
-            <div className="absolute inset-0 z-0 pointer-events-none opacity-40 dark:opacity-20">
+            {/* Premium Nexus Background Layer */}
+            <div className="absolute inset-0 z-0">
                 <img
-                    src="/images/cyber-nexus.png"
-                    alt=""
-                    className="w-full h-full object-cover animate-subtle-zoom"
+                    src="/images/technology-nexus-final.png"
+                    alt="Technology Network Background"
+                    className="w-full h-full object-cover opacity-40 dark:opacity-30 mix-blend-overlay"
                 />
+                <div className="absolute inset-0 bg-slate-50/90 dark:bg-slate-950/95" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,37 +130,37 @@ export function Products() {
                                 TECHNOLOGY
                             </span>
                         </h2>
+                        <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
                     </div>
                 </div>
 
-                {/* FEATURED CYBERSECURITY SECTION - STAGGERED ANIMATION */}
-                <div className="mb-24 relative p-12 rounded-[3.5rem] overflow-hidden border border-slate-200 dark:border-slate-800">
-                    {/* Dedicated Section Background */}
-                    <div className="absolute inset-0 z-0">
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+                    {/* User-Provided Nexus Background Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/10">
                         <img
-                            src="/images/cyber-shield-bg.jpg"
-                            alt=""
-                            className="w-full h-full object-cover opacity-60 dark:opacity-80 animate-pulse-slow"
+                            src="/images/cyber-security-nexus-new.jpg"
+                            alt="Cyber Security Background"
+                            className="w-full h-full object-cover opacity-50 dark:opacity-40"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-white/60 dark:from-slate-950/60 dark:via-transparent dark:to-slate-950/60" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-blue-50/80 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
 
                     <div className="relative z-10">
                         <div className="flex items-center space-x-4 mb-10">
-                            <div className="p-3 bg-red-500/10 rounded-2xl">
-                                <ShieldCheck className="w-8 h-8 text-red-500" />
+                            <div className="p-3 bg-blue-500/10 rounded-2xl">
+                                <ShieldCheck className="w-8 h-8 text-blue-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
                                 Cyber Security and IT Security
                             </h3>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {cyberSecurityPartners.map((partner, index) => (
+                            {cyberSecurityPartners.map((partner: any, index: number) => (
                                 <Link
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-red-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(239,68,68,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(239,68,68,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="absolute top-6 right-6">
@@ -186,11 +173,11 @@ export function Products() {
                                     </div>
                                     <div className={`${partner.name === 'Darktrace' ? 'w-48 px-2' : 'w-20 p-4'} h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800`}>
                                         <img
-                                            src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
-                                                ? partner.logo
-                                                : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                            src={(partner as any).logo && ((partner as any).logo.startsWith('/') || (partner as any).logo.startsWith('http'))
+                                                ? (partner as any).logo
+                                                : `https://cdn.simpleicons.org/${(partner as any).logo || ''}/4755E9`}
                                             alt={partner.name}
-                                            className={`w-full h-full object-contain ${partner.logo.startsWith('/') && partner.name !== 'Cisco' ? '' : 'dark:invert'}`}
+                                            className={`w-full h-full object-contain ${(partner as any).logo && (partner as any).logo.startsWith('/') && partner.name !== 'Cisco' ? '' : 'dark:invert'}`}
                                         />
                                     </div>
                                     <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
@@ -203,52 +190,215 @@ export function Products() {
                     </div>
                 </div>
 
-                {/* OTHER CATEGORIES - GRID LAYOUT MATCHING CYBER SECURITY */}
-                <div className="space-y-16">
-                    {otherCategories.map((category, catIndex) => (
-                        <div key={category.title} className="mb-24">
-                            <div className="flex items-center space-x-4 mb-10">
-                                <div className={`p-3 bg-${category.color}-500/10 rounded-2xl`}>
-                                    <category.icon className={`w-8 h-8 text-${category.color}-500`} />
-                                </div>
-                                <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
-                                    {category.title}
-                                </h3>
+                {/* FEATURED ENTERPRISE NETWORKING SECTION */}
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Networking Background"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+                    </div>
+
+                    <div className="relative z-10">
+                        <div className="flex items-center space-x-4 mb-10">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl">
+                                <Globe className="w-8 h-8 text-blue-500" />
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                                {category.partners.map((partner, pIndex) => (
-                                    <Link
-                                        key={partner.name}
-                                        href={partner.url}
-                                        target="_blank"
-                                        className={`group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 transition-all duration-700 shadow-xl hover:-translate-y-2 animate-fade-up min-h-[300px] text-center
-                                            ${category.color === 'blue' ? 'hover:border-blue-500/50 shadow-blue-500/10 hover:shadow-blue-500/30' : ''}
-                                            ${category.color === 'cyan' ? 'hover:border-cyan-500/50 shadow-cyan-500/10 hover:shadow-cyan-500/30' : ''}
-                                            ${category.color === 'indigo' ? 'hover:border-indigo-500/50 shadow-indigo-500/10 hover:shadow-indigo-500/30' : ''}
-                                            ${category.color === 'emerald' ? 'hover:border-emerald-500/50 shadow-emerald-500/10 hover:shadow-emerald-500/30' : ''}
-                                        `}
-                                        style={{ animationDelay: `${(catIndex * 200) + (pIndex * 150)}ms` }}
-                                    >
-                                        {/* LOGO CONTAINER - Matching Cyber Security style */}
-                                        <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
-                                            <img
-                                                src={partner.logo.startsWith('/') || partner.logo.startsWith('http')
-                                                    ? partner.logo
-                                                    : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
-                                                alt={partner.name}
-                                                className={`w-full h-full object-contain ${partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
-                                            />
-                                        </div>
-                                        <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
-                                        <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
-                                            <ArrowRight className="w-6 h-6 text-primary" />
-                                        </div>
-                                    </Link>
-                                ))}
-                            </div>
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                Enterprise Networking
+                            </h3>
                         </div>
-                    ))}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {enterpriseNetworkingPartners.map((partner: any, index: number) => (
+                                <Link
+                                    key={partner.name}
+                                    href={partner.url}
+                                    target="_blank"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    style={{ animationDelay: `${index * 150}ms` }}
+                                >
+                                    <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
+                                        <img
+                                            src={(partner as any).logo && ((partner as any).logo.startsWith('/') || (partner as any).logo.startsWith('http'))
+                                                ? (partner as any).logo
+                                                : `https://cdn.simpleicons.org/${(partner as any).logo || ''}/4755E9`}
+                                            alt={partner.name}
+                                            className={`w-full h-full object-contain ${(partner as any).name === 'Cisco' ? '' : 'dark:invert'}`}
+                                        />
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
+                                    <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
+                                        <ArrowRight className="w-6 h-6 text-primary" />
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
                 </div>
+
+                {/* FEATURED CLOUD & VIRTUALIZATION SECTION */}
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Cloud Background"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+                    </div>
+
+                    <div className="relative z-10">
+                        <div className="flex items-center space-x-4 mb-10">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl">
+                                <Cloud className="w-8 h-8 text-blue-500" />
+                            </div>
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                Cloud & Virtualization
+                            </h3>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {cloudVirtualizationPartners.map((partner: any, index: number) => (
+                                <Link
+                                    key={partner.name}
+                                    href={partner.url}
+                                    target="_blank"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    style={{ animationDelay: `${index * 150}ms` }}
+                                >
+                                    <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
+                                        {partner.isService && partner.icon ? (
+                                            <div className="w-10 h-10 text-blue-500">
+                                                {(() => {
+                                                    const IconComp = partner.icon;
+                                                    return <IconComp className="w-full h-full" />;
+                                                })()}
+                                            </div>
+                                        ) : (
+                                            <img
+                                                src={partner.logo && (partner.logo.startsWith('/') || partner.logo.startsWith('http'))
+                                                    ? partner.logo
+                                                    : `https://cdn.simpleicons.org/${partner.logo || ''}/4755E9`}
+                                                alt={partner.name}
+                                                className={`w-full h-full object-contain ${partner.logo && partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                            />
+                                        )}
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
+                                    <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
+                                        <ArrowRight className="w-6 h-6 text-primary" />
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* FEATURED SERVERS & DATA CENTER SECTION */}
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Servers Background"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+                    </div>
+                    {/* Background Subtle Gradient Overlay */}
+                    <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-500/5 to-transparent" />
+
+                    <div className="relative z-10">
+                        <div className="flex items-center space-x-4 mb-10">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl">
+                                <Server className="w-8 h-8 text-blue-500" />
+                            </div>
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                Servers & Data Center
+                            </h3>
+                        </div>
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
+                            {serversDataCenterPartners.map((partner: any, index: number) => (
+                                <Link
+                                    key={partner.name}
+                                    href={partner.url}
+                                    target="_blank"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    style={{ animationDelay: `${index * 150}ms` }}
+                                >
+                                    <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
+                                        <img
+                                            src={partner.logo && (partner.logo.startsWith('/') || partner.logo.startsWith('http'))
+                                                ? partner.logo
+                                                : `https://cdn.simpleicons.org/${partner.logo || ''}/4755E9`}
+                                            alt={partner.name}
+                                            className={`w-full h-full object-contain ${partner.logo && partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                        />
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
+                                    <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
+                                        <ArrowRight className="w-6 h-6 text-primary" />
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* FEATURED SMART & PHYSICAL SECURITY SECTION */}
+                <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+                    {/* High-Visibility Blue Nexus Identity */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
+                        <img
+                            src="/images/technology-nexus-final.png"
+                            alt="Physical Security Background"
+                            className="w-full h-full object-cover opacity-40 dark:opacity-30"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+                    </div>
+                    {/* Background Subtle Gradient Overlay */}
+                    <div className="absolute inset-0 z-0 bg-gradient-to-br from-emerald-500/5 to-transparent" />
+
+                    <div className="relative z-10">
+                        <div className="flex items-center space-x-4 mb-10">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl">
+                                <Video className="w-8 h-8 text-blue-500" />
+                            </div>
+                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                Smart & Physical Security
+                            </h3>
+                        </div>
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
+                            {smartSecurityPartners.map((partner: any, index: number) => (
+                                <Link
+                                    key={partner.name}
+                                    href={partner.url}
+                                    target="_blank"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
+                                    style={{ animationDelay: `${index * 150}ms` }}
+                                >
+                                    <div className="w-20 p-4 h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800">
+                                        <img
+                                            src={partner.logo && (partner.logo.startsWith('/') || partner.logo.startsWith('http'))
+                                                ? partner.logo
+                                                : `https://cdn.simpleicons.org/${partner.logo || ''}/4755E9`}
+                                            alt={partner.name}
+                                            className={`w-full h-full object-contain ${partner.logo && partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                        />
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-xl md:text-2xl">{partner.name}</h4>
+                                    <div className="absolute bottom-6 opacity-100 transition-all transform translate-y-0">
+                                        <ArrowRight className="w-6 h-6 text-primary" />
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     );

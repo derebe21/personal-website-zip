@@ -31,12 +31,18 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-blue-600 backdrop-blur-sm border-b border-blue-500 shadow-lg'
-        : 'bg-blue-600/95 backdrop-blur-sm'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-3 bg-blue-900 shadow-[0_20px_50px_rgba(29,78,216,0.3)] border-b border-white/10`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Premium Nexus Overlay - Subtle */}
+      <div className={`absolute inset-0 z-0 transition-opacity duration-700 pointer-events-none ${isScrolled ? 'opacity-20' : 'opacity-5'}`}>
+        <img
+          src="/images/technology-nexus-final.png"
+          className="w-full h-full object-cover mix-blend-overlay"
+          alt=""
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <Link
             href="/"
@@ -83,22 +89,31 @@ export function Navigation() {
 
       {/* Mobile Menu with Backdrop */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-blue-600 border-t border-blue-500 shadow-2xl animate-fade-down">
-          <div className="px-6 py-8 space-y-4">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-blue-900/95 backdrop-blur-2xl border-t border-white/10 shadow-2xl animate-fade-down overflow-hidden">
+          {/* Signature Nexus Overlay */}
+          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <img
+              src="/images/technology-nexus-final.png"
+              alt="Nexus Overlay"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 opacity-90" />
+          </div>
+
+          <div className="relative z-10 px-6 py-8 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-6 py-4 text-lg font-black uppercase tracking-widest rounded-xl transition-all ${isActive(link.href)
-                  ? 'text-blue-600 bg-white shadow-xl'
-                  : 'text-blue-50 hover:text-white hover:bg-white/10'
+                  ? 'text-slate-950 bg-white shadow-xl translate-x-2'
+                  : 'text-slate-300 hover:text-white hover:bg-white/5'
                   }`}
               >
                 {link.label}
               </Link>
             ))}
-
           </div>
         </div>
       )}
