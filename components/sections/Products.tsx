@@ -146,13 +146,60 @@ export function Products() {
                     </div>
 
                     <div className="relative z-10">
-                        <div className="flex items-center space-x-4 mb-10">
-                            <div className="p-3 bg-blue-500/10 rounded-2xl">
-                                <ShieldCheck className="w-8 h-8 text-blue-500" />
+                        {/* Big Colorful Shield Logo Header */}
+                        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+                            {/* Giant Shield SVG Logo */}
+                            <div className="relative flex-shrink-0 w-36 h-40 md:w-44 md:h-48 drop-shadow-[0_0_40px_rgba(59,130,246,0.8)]">
+                                <svg viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                                    <defs>
+                                        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stopColor="#1D4ED8" />
+                                            <stop offset="50%" stopColor="#3B82F6" />
+                                            <stop offset="100%" stopColor="#06B6D4" />
+                                        </linearGradient>
+                                        <linearGradient id="shieldInner" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stopColor="#DBEAFE" stopOpacity="0.3" />
+                                            <stop offset="100%" stopColor="#0EA5E9" stopOpacity="0.1" />
+                                        </linearGradient>
+                                        <filter id="glow">
+                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                                        </filter>
+                                    </defs>
+                                    {/* Outer glow shield */}
+                                    <path d="M50 3 L95 22 L95 58 C95 82 72 102 50 112 C28 102 5 82 5 58 L5 22 Z" fill="url(#shieldGrad)" filter="url(#glow)" opacity="0.3" />
+                                    {/* Main shield */}
+                                    <path d="M50 6 L92 24 L92 58 C92 80 70 99 50 109 C30 99 8 80 8 58 L8 24 Z" fill="url(#shieldGrad)" />
+                                    {/* Inner shine */}
+                                    <path d="M50 6 L92 24 L92 58 C92 80 70 99 50 109 C30 99 8 80 8 58 L8 24 Z" fill="url(#shieldInner)" />
+                                    {/* Shield border highlight */}
+                                    <path d="M50 6 L92 24 L92 58 C92 80 70 99 50 109 C30 99 8 80 8 58 L8 24 Z" fill="none" stroke="rgba(147,210,255,0.6)" strokeWidth="1.5" />
+                                    {/* Lock body */}
+                                    <rect x="36" y="54" width="28" height="22" rx="4" fill="white" opacity="0.95" />
+                                    {/* Lock shackle */}
+                                    <path d="M42 54 L42 46 C42 40 58 40 58 46 L58 54" stroke="white" strokeWidth="5" strokeLinecap="round" fill="none" opacity="0.95" />
+                                    {/* Keyhole */}
+                                    <circle cx="50" cy="63" r="4" fill="#1D4ED8" />
+                                    <rect x="48" y="63" width="4" height="6" rx="1" fill="#1D4ED8" />
+                                    {/* Circuit dots */}
+                                    <circle cx="20" cy="40" r="2" fill="white" opacity="0.4" />
+                                    <circle cx="80" cy="40" r="2" fill="white" opacity="0.4" />
+                                    <circle cx="15" cy="60" r="1.5" fill="cyan" opacity="0.5" />
+                                    <circle cx="85" cy="60" r="1.5" fill="cyan" opacity="0.5" />
+                                    <line x1="20" y1="40" x2="20" y2="50" stroke="white" strokeWidth="0.8" opacity="0.3" />
+                                    <line x1="80" y1="40" x2="80" y2="50" stroke="white" strokeWidth="0.8" opacity="0.3" />
+                                </svg>
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Cyber Security and IT Security
-                            </h3>
+                            {/* Title block */}
+                            <div>
+                                <div className="flex items-center gap-3 mb-3">
+                                    <div className="w-2 h-10 rounded-full bg-gradient-to-b from-blue-400 to-cyan-400" />
+                                    <h3 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 dark:from-blue-300 dark:via-blue-400 dark:to-cyan-300 uppercase tracking-tight leading-none">
+                                        Cyber Security<br />& IT Security
+                                    </h3>
+                                </div>
+                                <p className="text-slate-600 dark:text-slate-300 font-medium text-lg ml-5">Advanced protection for your digital assets</p>
+                            </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {cyberSecurityPartners.map((partner: any, index: number) => (
