@@ -70,10 +70,10 @@ export function Contact() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
           <div className="space-y-6">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-cyan-300 drop-shadow-[0_0_25px_rgba(34,211,238,0.6)] leading-none">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-cyan-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] leading-none">
               Contact us
             </h2>
-            <div className="w-64 md:w-96 h-1.5 bg-yellow-500/90 mx-auto rounded-full shadow-[0_0_15px_rgba(234,179,8,0.3)]" />
+            <div className="w-24 md:w-40 h-1 bg-yellow-500/90 mx-auto rounded-full shadow-[0_0_10px_rgba(234,179,8,0.3)]" />
           </div>
         </div>
 
