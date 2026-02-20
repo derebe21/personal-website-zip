@@ -69,12 +69,7 @@ export function Contact() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-cyan-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] leading-none">
-              Contact us
-            </h2>
-            <div className="w-24 md:w-40 h-1 bg-yellow-500/90 mx-auto rounded-full shadow-[0_0_10px_rgba(234,179,8,0.3)]" />
-          </div>
+          {/* Note: The 'Contact us' heading is built into the background image for this section */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
