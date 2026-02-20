@@ -40,6 +40,17 @@ export function Services() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
       </div>
       <div className="max-w-[100vw]">
+        <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
+          <div className="space-y-4">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none px-4">
+              OUR <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
+                SERVICES
+              </span>
+            </h2>
+            <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
+          </div>
+        </div>
 
 
         {/* Infinite 3D Auto-Slider Ribbon with Stepping Motion */}

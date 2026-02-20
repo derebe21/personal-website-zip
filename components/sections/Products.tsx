@@ -138,7 +138,7 @@ export function Products() {
                     {/* User-Provided Nexus Background Identity */}
                     <div className="absolute inset-0 z-0 bg-blue-900/10">
                         <img
-                            src="/images/cyber-security-nexus-new.jpg"
+                            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
                             alt="Cyber Security Background"
                             className="w-full h-full object-cover opacity-50 dark:opacity-40"
                         />
