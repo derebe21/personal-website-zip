@@ -69,15 +69,7 @@ export function Contact() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none px-4">
-              CONTACT <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                US
-              </span>
-            </h2>
-            <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
-          </div>
+          {/* Section heading is managed via the background image text */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
