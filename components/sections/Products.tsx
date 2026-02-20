@@ -140,9 +140,9 @@ export function Products() {
                         <img
                             src="/images/cyber-shield-bg.jpg"
                             alt="Cyber Security Background"
-                            className="w-full h-full object-cover opacity-50 dark:opacity-40"
+                            className="w-full h-full object-cover opacity-85 dark:opacity-70"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-blue-50/80 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
                     </div>
 
                     <div className="relative z-10">
