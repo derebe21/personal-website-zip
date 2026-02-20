@@ -240,7 +240,10 @@ export function Products() {
                                             </div>
                                         )}
                                     </div>
-                                    <div className={`${partner.name === 'Darktrace' ? 'w-48 px-2' : 'w-20 p-4'} h-20 flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800`}>
+                                    <div className={`${partner.name === 'Darktrace' ? 'w-48 px-2 h-20' :
+                                            partner.name === 'Cisco' ? 'w-56 h-28 px-4' :
+                                                'w-20 h-20 p-4'
+                                        } flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-105 mb-6 bg-slate-50 dark:bg-slate-800`}>
                                         <img
                                             src={(partner as any).logo && ((partner as any).logo.startsWith('/') || (partner as any).logo.startsWith('http'))
                                                 ? (partner as any).logo
