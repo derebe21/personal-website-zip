@@ -55,14 +55,14 @@ export function Contact() {
       id="contact"
       className="relative py-20 md:py-32 overflow-hidden"
     >
-      {/* High-Visibility World Map Background Identity */}
-      <div className="absolute inset-0 z-0 bg-blue-900/5">
+      {/* Clean Tech Network Background - No Baked-in Text */}
+      <div className="absolute inset-0 z-0 bg-slate-950">
         <img
-          src="/images/contact-us-bg.jpg"
-          alt="Global Network Background"
-          className="w-full h-full object-cover object-center opacity-85 dark:opacity-60"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+          alt="Digital global network background"
+          className="w-full h-full object-cover object-center opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/60 via-slate-950/40 to-blue-950/50" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
