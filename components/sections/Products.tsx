@@ -229,7 +229,7 @@ export function Products() {
                                     key={partner.name}
                                     href={partner.url}
                                     target="_blank"
-                                    className={`group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up text-center ${partner.name === 'Cisco' ? 'col-span-1 md:col-span-2 min-h-[320px]' : 'min-h-[300px]'}`}
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[300px] text-center"
                                     style={{ animationDelay: `${index * 150}ms` }}
                                 >
                                     <div className="absolute top-6 right-6">
@@ -241,9 +241,8 @@ export function Products() {
                                         )}
                                     </div>
                                     <div className={`${partner.name === 'Darktrace' ? 'w-48 px-2 h-20' :
-                                        partner.name === 'Cisco' ? 'w-72 h-36 px-6' :
-                                            'w-20 h-20 p-4'
-                                        } flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-105 mb-6 bg-slate-50 dark:bg-slate-800`}>
+                                            'w-24 h-24 p-4'
+                                        } flex items-center justify-center rounded-3xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-6 bg-slate-50 dark:bg-slate-800`}>
                                         <img
                                             src={(partner as any).logo && ((partner as any).logo.startsWith('/') || (partner as any).logo.startsWith('http'))
                                                 ? (partner as any).logo

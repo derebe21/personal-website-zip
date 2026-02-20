@@ -35,9 +35,9 @@ export function Services() {
         <img
           src="/images/technology-nexus-final.png"
           alt="Network Background"
-          className="w-full h-full object-cover opacity-40 dark:opacity-30"
+          className="w-full h-full object-cover opacity-60 dark:opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/40 via-slate-50/20 to-blue-50/30 dark:from-slate-950/60 dark:via-slate-950/40 dark:to-blue-950/50" />
       </div>
       <div className="max-w-[100vw]">
         <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
