@@ -13,7 +13,7 @@ export const servicesData = [
         slug: 'digital-infrastructure',
         icon: Server,
         logoImage: '',
-        bannerImage: '/images/services/global-infrastructure.jpg',
+        bannerImage: '/images/digital-infrastructure-bg.jpg',
         bgColor: '#2E3A59',
         title: 'Digital Infrastructure',
         description: 'Designing and deploying scalable, secure, and high-performance network and IT environments.',
