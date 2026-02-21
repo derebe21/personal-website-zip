@@ -109,11 +109,9 @@ export function Services() {
                             </div>
                           )}
 
-                          {service.slug !== 'digital-infrastructure' && (
-                            <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${(isCloud || service.slug === 'digital-infrastructure') ? 'text-white' : ''}`}>
-                              {service.title}
-                            </CardTitle>
-                          )}
+                          <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${(isCloud || service.slug === 'digital-infrastructure') ? 'text-white' : ''}`}>
+                            {service.title}
+                          </CardTitle>
 
                           {/* Scrollable Features Section */}
                           <div className="flex-grow overflow-y-auto custom-scrollbar max-h-[200px] mb-8 pr-2">
