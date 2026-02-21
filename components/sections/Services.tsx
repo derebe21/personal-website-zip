@@ -102,7 +102,7 @@ export function Services() {
                     >
                       {/* Card Content Area */}
                       <div className="relative flex-grow flex flex-col min-h-[500px]">
-                        {isCloud && (
+                        {(isCloud || service.slug === 'digital-infrastructure') && (
                           <div className="absolute inset-0 z-0">
                             <img
                               src={service.bannerImage}
@@ -115,17 +115,19 @@ export function Services() {
 
                         <div className="relative z-10 flex flex-col h-full p-10 pt-12 text-center">
                           {/* Logo Area */}
-                          <div className="mb-8 flex justify-center">
-                            <div className={`w-24 h-24 rounded-3xl p-4 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 ${isCloud ? 'bg-white/10' : 'bg-primary/5'}`}>
-                              <img
-                                src={service.logoImage || ''}
-                                alt={`${service.title} Logo`}
-                                className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]"
-                              />
+                          {service.logoImage && (
+                            <div className="mb-8 flex justify-center">
+                              <div className={`w-24 h-24 rounded-3xl p-4 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 ${isCloud ? 'bg-white/10' : 'bg-primary/5'}`}>
+                                <img
+                                  src={service.logoImage}
+                                  alt={`${service.title} Logo`}
+                                  className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]"
+                                />
+                              </div>
                             </div>
-                          </div>
+                          )}
 
-                          <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${isCloud ? 'text-white' : ''}`}>
+                          <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${(isCloud || service.slug === 'digital-infrastructure') ? 'text-white' : ''}`}>
                             {service.title}
                           </CardTitle>
 
