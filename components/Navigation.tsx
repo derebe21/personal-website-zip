@@ -21,7 +21,7 @@ export function Navigation() {
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/about' },
+    { label: 'About Us', href: '/#about' },
     { label: 'Services', href: '/services' },
     { label: 'Technology', href: '/#technology' },
     { label: 'Contact Us', href: '/contact' },

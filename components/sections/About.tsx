@@ -15,7 +15,7 @@ export function About() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center max-w-5xl mx-auto mb-16 space-y-4 pt-[150px]">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-4">
           <h2 className="text-[74px] font-[900] tracking-tight text-slate-900 dark:text-white uppercase leading-tight italic">
             About Us
           </h2>
