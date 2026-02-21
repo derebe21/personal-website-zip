@@ -30,6 +30,30 @@ export function Services() {
       id="services"
       className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
+      {/* Restored Elite Header Area */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-4">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          <span>Elite Core Sectors</span>
+        </div>
+
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 tracking-tighter uppercase italic">
+          OUR <span className="text-primary">SERVICES</span>
+        </h2>
+
+        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed font-medium">
+          Elevating enterprises through world-class digital infrastructure, elite security architecture, and intelligent systems engineering.
+        </p>
+
+        {/* Header Background Nexus Overlay */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-full opacity-10 pointer-events-none z-[-1]">
+          <img src="/images/technology-nexus-final.png" alt="" className="w-full h-full object-contain mix-blend-screen" />
+        </div>
+      </div>
+
       <div className="max-w-[100vw]">
         {/* Infinite 3D Auto-Slider Ribbon */}
         <div

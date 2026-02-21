@@ -12,8 +12,8 @@ export const servicesData = [
     {
         slug: 'digital-infrastructure',
         icon: Server,
-        logoImage: '/images/digital-infrastructure-logo-new.png',
-        bannerImage: '/images/digital-infrastructure-bg.jpg',
+        logoImage: '/images/services/global-infrastructure.jpg',
+        bannerImage: '/images/services/global-infrastructure.jpg',
         bgColor: '#2E3A59',
         title: 'Digital Infrastructure',
         description: 'Designing and deploying scalable, secure, and high-performance network and IT environments.',
@@ -24,8 +24,8 @@ export const servicesData = [
     {
         slug: 'cyber-risk-protection',
         icon: Shield,
-        logoImage: '/images/cyber-lock-3d.png',
-        bannerImage: '/images/cyber-shield-bg.jpg',
+        logoImage: '/images/services/global-infrastructure.jpg',
+        bannerImage: '/images/services/global-infrastructure.jpg',
         bgColor: '#22C55E',
         title: 'Cyber & Risk Protection',
         description: 'Protecting digital assets through advanced security architecture, risk management, and threat mitigation.',
@@ -36,8 +36,8 @@ export const servicesData = [
     {
         slug: 'enterprise-platforms-applications',
         icon: Code,
-        logoImage: '/images/Enterprice.png',
-        bannerImage: '/images/Enterprice.png',
+        logoImage: '/images/services/global-infrastructure.jpg',
+        bannerImage: '/images/services/global-infrastructure.jpg',
         bgColor: '#3B82F6',
         title: 'Enterprise Platforms & Applications',
         description: 'Building reliable, secure, and customized enterprise applications that support business growth.',
@@ -48,8 +48,8 @@ export const servicesData = [
     {
         slug: 'smart-connected-systems',
         icon: Cpu,
-        logoImage: '/images/smart-systems-logo-new.png', // Planned path
-        bannerImage: '/images/datacenter-bg.png',
+        logoImage: '/images/services/global-infrastructure.jpg',
+        bannerImage: '/images/services/global-infrastructure.jpg',
         bgColor: '#FACC15',
         title: 'Smart & Connected Systems',
         description: 'Delivering IoT-driven and intelligent systems for automation, monitoring, and efficiency.',
@@ -81,8 +81,8 @@ export const servicesData = [
     {
         slug: 'engineering-critical-systems',
         icon: Zap,
-        logoImage: '/images/critical-systems-logo-new.png', // Planned path
-        bannerImage: '/images/engineering-critical-systems-bg.jpg',
+        logoImage: '/images/services/global-infrastructure.jpg',
+        bannerImage: '/images/services/global-infrastructure.jpg',
         bgColor: '#1C1C1C',
         title: 'Engineering & Critical Systems',
         description: 'Engineering resilient facilities and power systems for maximum uptime and reliability.',
@@ -93,8 +93,8 @@ export const servicesData = [
     {
         slug: 'technology-advisory-integration',
         icon: Lightbulb,
-        logoImage: '/images/technology-advisory-logo-new.png',
-        bannerImage: '/images/technology-advisory-logo-new.png',
+        logoImage: '/images/services/global-infrastructure.jpg',
+        bannerImage: '/images/services/global-infrastructure.jpg',
         bgColor: '#8B5CF6',
         title: 'Technology Advisory & Integration',
         description: 'Advising organizations on digital transformation, system optimization, and technology strategy.',
