@@ -82,10 +82,15 @@ export function Services() {
                       }`}
                   >
                     {/* Service Name at Top */}
-                    <div className="px-6 pt-6 pb-4 text-center">
+                    <div className="px-6 pt-6 pb-2 text-center">
                       <CardTitle className="text-xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
                         {service.title}
                       </CardTitle>
+                      {service.description && (
+                        <p className="mt-2 text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed line-clamp-2">
+                          {service.description}
+                        </p>
+                      )}
                     </div>
 
                     {/* Full Image Below Name */}
@@ -94,8 +99,8 @@ export function Services() {
                         src={service.bannerImage}
                         alt={service.title}
                         className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${service.slug === 'enterprise-platforms-applications'
-                            ? 'object-contain p-2 scale-110'
-                            : 'object-cover'
+                          ? 'object-contain p-2 scale-110'
+                          : 'object-cover'
                           }`}
                         style={{ minHeight: '300px', maxHeight: '380px' }}
                       />

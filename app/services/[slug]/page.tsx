@@ -75,12 +75,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
                                     </div>
 
-                                    <div className="prose prose-slate dark:prose-invert max-w-none">
-                                        <h2 className="text-2xl font-bold mb-4">Overview</h2>
-                                        <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-                                            {service.longDescription}
-                                        </p>
-                                    </div>
+                                    {service.longDescription && service.longDescription !== service.description && (
+                                        <div className="prose prose-slate dark:prose-invert max-w-none">
+                                            <h2 className="text-2xl font-bold mb-4">Overview</h2>
+                                            <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                                                {service.longDescription}
+                                            </p>
+                                        </div>
+                                    )}
 
                                     <div className="space-y-6">
                                         <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Our Smart Solutions</h2>
@@ -101,7 +103,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                             ))}
                                         </Accordion>
                                     </div>
-
                                 </div>
                             ) : (
                                 <div className="space-y-12">
@@ -116,12 +117,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         )}
                                     </div>
 
-                                    <div className="prose prose-slate dark:prose-invert max-w-none">
-                                        <h2 className="text-2xl font-bold mb-4">Overview</h2>
-                                        <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-                                            {service.longDescription}
-                                        </p>
-                                    </div>
+                                    {service.longDescription && service.longDescription !== service.description && (
+                                        <div className="prose prose-slate dark:prose-invert max-w-none">
+                                            <h2 className="text-2xl font-bold mb-4">Overview</h2>
+                                            <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                                                {service.longDescription}
+                                            </p>
+                                        </div>
+                                    )}
 
                                     <div className="grid sm:grid-cols-2 gap-8">
                                         <Card className="bg-slate-50 dark:bg-slate-900/50 border-none shadow-none p-6">
