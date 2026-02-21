@@ -77,8 +77,8 @@ export function Services() {
                 <Link href={`/services/${service.slug}`} className="block group h-full">
                   <Card
                     className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-700 bg-white dark:bg-slate-900 flex flex-col group-hover:scale-[1.04] group-hover:shadow-primary/20 ${activeIndex % totalServices === index % totalServices
-                        ? 'scale-105 shadow-primary/10'
-                        : ''
+                      ? 'scale-105 shadow-primary/10'
+                      : ''
                       }`}
                   >
                     {/* Service Name at Top */}
@@ -93,7 +93,10 @@ export function Services() {
                       <img
                         src={service.bannerImage}
                         alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${service.slug === 'enterprise-platforms-applications'
+                            ? 'object-contain p-4'
+                            : 'object-cover'
+                          }`}
                         style={{ minHeight: '260px', maxHeight: '320px' }}
                       />
                     </div>
@@ -118,8 +121,8 @@ export function Services() {
               key={idx}
               onClick={() => setActiveIndex(idx)}
               className={`w-3 h-3 rounded-full transition-all duration-500 ${activeIndex % totalServices === idx
-                  ? 'bg-primary w-10 shadow-[0_0_15px_rgba(37,99,235,0.5)]'
-                  : 'bg-slate-300 dark:bg-slate-700 hover:bg-primary/50'
+                ? 'bg-primary w-10 shadow-[0_0_15px_rgba(37,99,235,0.5)]'
+                : 'bg-slate-300 dark:bg-slate-700 hover:bg-primary/50'
                 }`}
               aria-label={`Go to service ${idx + 1}`}
             />

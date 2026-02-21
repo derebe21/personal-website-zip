@@ -49,7 +49,7 @@ export const servicesData = [
         slug: 'enterprise-platforms-applications',
         icon: Code,
         logoImage: '',
-        bannerImage: '/images/enterprise-platforms-bg.jpg',
+        bannerImage: '/images/enterprise-apps-logo.png',
         bgColor: '#3B82F6',
         title: 'Enterprise Applications',
         description: '',
