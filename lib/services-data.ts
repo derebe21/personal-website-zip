@@ -52,9 +52,9 @@ export const servicesData = [
         bannerImage: '/images/enterprise-apps-logo.png',
         bgColor: '#3B82F6',
         title: 'Enterprise Applications',
-        description: 'ERP, collaboration, databases, and business-critical platforms for operational efficiency and secure service delivery.',
-        longDescription: 'ERP, collaboration, databases, and business-critical platforms for operational efficiency and secure service delivery.',
-        features: [],
+        description: 'Enterprise-grade application suites and business platforms for operational efficiency and secure service delivery.',
+        longDescription: 'Enterprise-grade application suites and business platforms for operational efficiency and secure service delivery.',
+        features: ['Enterprise Resource Planning (ERP)', 'Collaboration & Communication', 'Enterprise Databases', 'Business-Critical Platforms'],
         benefits: ['Tailored functionality', 'Higher efficiency', 'Seamless integration', 'Long-term flexibility'],
     },
     {
