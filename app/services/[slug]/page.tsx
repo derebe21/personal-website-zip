@@ -111,8 +111,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                             {service.title}
                                         </h1>
                                         {service.description && (
-                                            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light italic">
-                                                "{service.description}"
+                                            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                                                {service.description}
                                             </p>
                                         )}
                                     </div>
