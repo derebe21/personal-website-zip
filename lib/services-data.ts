@@ -60,8 +60,8 @@ export const servicesData = [
     {
         slug: 'cloud-virtualization',
         icon: Cloud,
-        logoImage: '/images/cloud-virtualization-logo-new.png',
-        bannerImage: '/images/cloud-virtualization-logo-new.png',
+        logoImage: '/images/cloud-virtualization-main.jpg',
+        bannerImage: '/images/cloud-virtualization-main.jpg',
         bgColor: '#38BDF8',
         title: 'Cloud & Virtualization',
         description: 'Implementing secure public, private, and hybrid cloud solutions with advanced virtualization.',
