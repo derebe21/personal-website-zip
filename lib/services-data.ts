@@ -18,7 +18,7 @@ export const servicesData = [
         title: 'Digital Infrastructure',
         description: '',
         longDescription: 'Reliable digital infrastructure is the backbone of any modern business. We specialize in creating high-performance environments that scale with your growth, ensuring your team has the tools they need to succeed without technical bottlenecks.',
-        features: ['Scalable networks', 'Secure hardware', 'High-performance setup', 'Network monitoring', 'Server virtualization'],
+        features: [],
         benefits: ['Improved productivity', 'Reduced downtime', 'Easy scalability', 'Cost-efficient operations'],
     },
     {
