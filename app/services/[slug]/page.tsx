@@ -152,7 +152,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             <Card className="p-8 rounded-3xl relative overflow-hidden group border-none shadow-2xl bg-white dark:bg-slate-900">
                                 <div className="absolute inset-0 z-0">
                                     <img
-                                        src="/images/sidebar-cta-bg.jpg"
+                                        src={service.sidebarImage || service.bannerImage || '/images/sidebar-cta-bg.jpg'}
                                         alt="Secure your business"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />

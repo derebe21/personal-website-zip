@@ -62,6 +62,7 @@ export const servicesData = [
         icon: Cpu,
         logoImage: '',
         bannerImage: '/images/smart-systems-detail.jpg',
+        sidebarImage: '/images/sidebar-cta-bg.jpg',
         bgColor: '#FACC15',
         title: 'Smart Systems',
         description: '',
