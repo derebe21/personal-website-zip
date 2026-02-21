@@ -149,19 +149,18 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
                         {/* Right Column: CTA & Sidebar */}
                         <div className="space-y-8">
-                            <Card className="p-8 rounded-3xl relative overflow-hidden group border-none shadow-2xl bg-slate-900 text-white">
+                            <Card className="p-8 rounded-3xl relative overflow-hidden group border-none shadow-2xl bg-white dark:bg-slate-900">
                                 <div className="absolute inset-0 z-0">
                                     <img
                                         src="/images/sidebar-cta-bg.jpg"
                                         alt="Secure your business"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/70 to-blue-900/40" />
                                 </div>
 
                                 <div className="relative z-10 space-y-6 text-center lg:text-left">
-                                    <h3 className="text-2xl font-bold leading-tight drop-shadow-lg">Ready to secure your business?</h3>
-                                    <p className="text-slate-200 text-lg leading-relaxed font-light drop-shadow-md">
+                                    <h3 className="text-2xl font-bold leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Ready to secure your business?</h3>
+                                    <p className="text-white text-lg leading-relaxed font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                                         Our experts are ready to help you implement {service.title} tailored to your organization’s needs.
                                     </p>
                                     <Link href="/contact" className="block">
