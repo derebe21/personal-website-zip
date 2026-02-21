@@ -66,7 +66,7 @@ export const servicesData = [
         title: 'Smart Systems',
         description: '',
         longDescription: 'Leverage the power of connected systems to transform your operations.',
-        features: [],
+        features: ['Building Automation', 'Smart Lighting', 'Energy Management', 'Intelligent Security', 'Network Optimization'],
         benefits: ['Real-time insights', 'Automated efficiency', 'Predictive maintenance', 'Energy savings'],
     },
     {

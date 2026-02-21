@@ -5,6 +5,12 @@ import { notFound } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 import Link from 'next/link';
 
 export function generateStaticParams() {
@@ -65,6 +71,26 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                             className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
+                                    </div>
+
+                                    <div className="space-y-6">
+                                        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Our Smart Solutions</h2>
+                                        <Accordion type="single" collapsible className="w-full space-y-4">
+                                            {service.features.map((feature, i) => (
+                                                <AccordionItem
+                                                    key={i}
+                                                    value={`item-${i}`}
+                                                    className="border rounded-2xl px-6 bg-white dark:bg-slate-900 shadow-sm border-slate-200 dark:border-slate-800"
+                                                >
+                                                    <AccordionTrigger className="text-lg font-bold hover:no-underline py-6">
+                                                        {feature}
+                                                    </AccordionTrigger>
+                                                    <AccordionContent className="text-slate-600 dark:text-slate-400 pb-6">
+                                                        Advanced, scalable {feature.toLowerCase()} tailored for your specific business requirements and operational excellence.
+                                                    </AccordionContent>
+                                                </AccordionItem>
+                                            ))}
+                                        </Accordion>
                                     </div>
 
                                     <div className="bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-8 md:p-12 space-y-8 border border-white/5">
