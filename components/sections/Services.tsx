@@ -3,7 +3,7 @@
 import { servicesData } from '@/lib/services-data';
 import { Card, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { useState, useEffect, useRef } from 'react';
