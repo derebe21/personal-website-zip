@@ -93,20 +93,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         </Accordion>
                                     </div>
 
-                                    <div className="bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-8 md:p-12 space-y-8 border border-white/5">
-                                        <div className="space-y-4">
-                                            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Ready to secure your business?</h2>
-                                            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
-                                                Our experts are ready to help you implement Smart Systems tailored to your organization's needs.
-                                            </p>
-                                        </div>
-                                        <Link href="/contact">
-                                            <Button size="lg" className="h-14 px-10 text-lg font-bold shadow-xl hover:scale-105 transition-transform">
-                                                Get a Free Quote
-                                                <ArrowRight className="ml-2 w-5 h-5" />
-                                            </Button>
-                                        </Link>
-                                    </div>
                                 </div>
                             ) : (
                                 <>
