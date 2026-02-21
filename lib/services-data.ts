@@ -36,6 +36,7 @@ export const servicesData = [
     {
         slug: 'enterprise-platforms-applications',
         icon: Code,
+        logoImage: '/images/Enterprice.png',
         bannerImage: '/images/Enterprice.png',
         bgColor: '#3B82F6',
         title: 'Enterprise Platforms & Applications',
@@ -47,6 +48,7 @@ export const servicesData = [
     {
         slug: 'smart-connected-systems',
         icon: Cpu,
+        logoImage: '/images/smart-systems-logo-new.png', // Planned path
         bannerImage: '/images/datacenter-bg.png',
         bgColor: '#FACC15',
         title: 'Smart & Connected Systems',
@@ -79,6 +81,7 @@ export const servicesData = [
     {
         slug: 'engineering-critical-systems',
         icon: Zap,
+        logoImage: '/images/critical-systems-logo-new.png', // Planned path
         bannerImage: '/images/engineering-critical-systems-bg.jpg',
         bgColor: '#1C1C1C',
         title: 'Engineering & Critical Systems',

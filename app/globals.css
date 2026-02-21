@@ -170,4 +170,17 @@
   .animate-orbital-3d {
     animation: orbital-3d 8s ease-in-out infinite;
   }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }

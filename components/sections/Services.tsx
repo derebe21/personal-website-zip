@@ -3,7 +3,7 @@
 import { servicesData } from '@/lib/services-data';
 import { Card, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { useState, useEffect, useRef } from 'react';
@@ -19,7 +19,7 @@ export function Services() {
     if (isPaused) return;
 
     const interval = setInterval(() => {
-      setActiveIndex((prev: number) => (prev + 1) % (totalServices * 4));
+      setActiveIndex((prev) => (prev + 1) % (totalServices * 2));
     }, 4000); // 4s total: 3s stop + 1s transition
 
     return () => clearInterval(interval);
@@ -28,22 +28,18 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
+      className="py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
-
       <div className="max-w-[100vw]">
-        <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none px-4">
-              OUR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                SERVICES
-              </span>
-            </h2>
-            <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
-          </div>
+        <div className="text-center space-y-4 mb-20 px-4">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic">
+            Our Services
+          </h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">
+            We deliver smart, secure, and scalable technology solutions that drive innovation and support modern businesses worldwide.
+          </p>
+          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
         </div>
-
 
         {/* Infinite 3D Auto-Slider Ribbon with Stepping Motion */}
         <div
@@ -54,26 +50,6 @@ export function Services() {
           {/* Subtle Gradient Overlays for smooth entry/exit */}
           <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
-
-          {/* Manual Navigation Arrows */}
-          <div className="absolute inset-y-0 left-8 z-30 flex items-center">
-            <button
-              onClick={() => setActiveIndex((prev) => (prev - 1 + totalServices * 4) % (totalServices * 4))}
-              className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all shadow-xl"
-              aria-label="Previous Slide"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </button>
-          </div>
-          <div className="absolute inset-y-0 right-8 z-30 flex items-center">
-            <button
-              onClick={() => setActiveIndex((prev) => (prev + 1) % (totalServices * 4))}
-              className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all shadow-xl"
-              aria-label="Next Slide"
-            >
-              <ChevronRight className="w-8 h-8" />
-            </button>
-          </div>
 
           <div
             className="flex gap-12 py-24 px-12 transition-transform duration-1000 ease-in-out"
@@ -95,17 +71,28 @@ export function Services() {
                         alt={service.title}
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+
+                      {/* Floating Logo Asset */}
+                      {service.logoImage && (
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-32 h-32 transition-all duration-700 group-hover:scale-125 group-hover:rotate-6 drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                          <img
+                            src={service.logoImage}
+                            alt={`${service.title} Logo`}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      )}
                     </div>
 
 
-                    <div className="flex-grow p-12 pt-8 text-center">
-                      <CardTitle className="text-3xl font-black mb-6 tracking-tight">{service.title}</CardTitle>
-                      <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-10 font-medium line-clamp-2">
+                    <div className="flex-grow p-12 pt-8 text-center relative">
+                      <CardTitle className="text-3xl font-black mb-6 tracking-tight relative z-10">{service.title}</CardTitle>
+                      <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-10 font-medium line-clamp-2 relative z-10">
                         {service.description}
                       </p>
 
-                      <ul className="space-y-5 mb-6 text-left max-w-[280px] mx-auto">
+                      <ul className="space-y-5 mb-6 text-left max-w-[280px] mx-auto relative z-10">
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li
                             key={idx}
@@ -133,24 +120,15 @@ export function Services() {
           </div>
         </div>
 
-        {/* Pagination Bullets */}
-        <div className="flex justify-center gap-3 mt-12 pb-8">
-          {servicesData.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveIndex(idx)}
-              className={`w-3 h-3 rounded-full transition-all duration-500 ${activeIndex % totalServices === idx
-                ? 'bg-primary w-10 shadow-[0_0_15px_rgba(37,99,235,0.5)]'
-                : 'bg-slate-300 dark:bg-slate-700 hover:bg-primary/50'
-                }`}
-              aria-label={`Go to service ${idx + 1}`}
-            />
-          ))}
+        <div className="text-center mt-24">
+          <Link href="/#contact">
+            <Button size="lg" className="h-18 px-14 rounded-full font-black text-xl shadow-2xl shadow-primary/30 hover:scale-105 transition-transform bg-primary text-white">
+              Partner with Us
+              <ArrowRight className="ml-4 w-7 h-7" />
+            </Button>
+          </Link>
         </div>
-
-
       </div>
     </section>
   );
 }
-
