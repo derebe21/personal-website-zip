@@ -61,7 +61,7 @@ export const servicesData = [
         slug: 'smart-connected-systems',
         icon: Cpu,
         logoImage: '',
-        bannerImage: '/images/datacenter-bg.png',
+        bannerImage: '/images/smart-systems-detail.jpg',
         bgColor: '#FACC15',
         title: 'Smart Systems',
         description: '',
