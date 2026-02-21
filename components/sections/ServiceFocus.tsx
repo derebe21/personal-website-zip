@@ -6,7 +6,7 @@ export function ServiceFocus() {
     const focusItems = [
         {
             title: 'About Us',
-            description: 'ITSEC Technology PLC delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth.',
+            description: 'Optimizing operations, strengthening digital trust, and achieving sustainable growth for organizations worldwide.',
             icon: Rocket,
             color: 'blue',
             number: '01'
@@ -20,7 +20,7 @@ export function ServiceFocus() {
         },
         {
             title: 'Our Mission',
-            description: 'To empower organizations worldwide with secure, scalable, and innovative technology solutions that deliver measurable value through technical excellence and international best practices.',
+            description: 'To empower organizations worldwide with secure and innovative technology solutions that deliver measurable value through technical excellence.',
             icon: Award,
             color: 'orange',
             number: '03'

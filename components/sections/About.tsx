@@ -27,7 +27,7 @@ export function About() {
           {[
             {
               title: 'About Us',
-              description: 'Delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
+              description: 'Optimizing operations, strengthening digital trust, and achieving sustainable growth through tailored digital leadership.',
               icon: Rocket,
               color: 'blue',
               number: '01'
@@ -43,7 +43,7 @@ export function About() {
             {
               title: 'Mission',
               subtitle: '',
-              description: 'To empower organizations worldwide with secure, scalable, and innovative technology solutions that deliver measurable value through technical excellence and international best practices.',
+              description: 'Delivering measurable value through technical excellence and international best practices for global organizations.',
               icon: Award,
               color: 'orange',
               number: '03'
