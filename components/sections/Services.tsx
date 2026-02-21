@@ -82,12 +82,12 @@ export function Services() {
                       }`}
                   >
                     {/* Service Name at Top */}
-                    <div className="px-6 pt-6 pb-2 text-center">
+                    <div className="px-6 pt-6 pb-4 text-center">
                       <CardTitle className="text-xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
                         {service.title}
                       </CardTitle>
                       {service.description && (
-                        <p className="mt-2 text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed line-clamp-2">
+                        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed line-clamp-2 px-2">
                           {service.description}
                         </p>
                       )}

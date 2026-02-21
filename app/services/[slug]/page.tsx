@@ -53,7 +53,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left Column: Content */}
                         <div className="lg:col-span-2 space-y-10">
-                            {service.slug === 'smart-connected-systems' ? (
+                            {service.slug === 'smart-systems' ? (
                                 <div className="space-y-12">
                                     <div className="space-y-6">
                                         <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
