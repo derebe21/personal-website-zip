@@ -59,9 +59,11 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
                                             {service.title}
                                         </h1>
-                                        <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
-                                            Empowering your enterprise with intelligent, interconnected solutions.
-                                        </p>
+                                        {service.description && (
+                                            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                                                {service.description}
+                                            </p>
+                                        )}
                                     </div>
 
                                     <div className="relative group overflow-hidden rounded-3xl shadow-2xl">
@@ -71,6 +73,13 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                             className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
+                                    </div>
+
+                                    <div className="prose prose-slate dark:prose-invert max-w-none">
+                                        <h2 className="text-2xl font-bold mb-4">Overview</h2>
+                                        <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                                            {service.longDescription}
+                                        </p>
                                     </div>
 
                                     <div className="space-y-6">
@@ -95,14 +104,16 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
                                 </div>
                             ) : (
-                                <>
+                                <div className="space-y-12">
                                     <div className="space-y-6">
                                         <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
                                             {service.title}
                                         </h1>
-                                        <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light italic">
-                                            "{service.description}"
-                                        </p>
+                                        {service.description && (
+                                            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light italic">
+                                                "{service.description}"
+                                            </p>
+                                        )}
                                     </div>
 
                                     <div className="prose prose-slate dark:prose-invert max-w-none">
@@ -143,7 +154,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                             </ul>
                                         </Card>
                                     </div>
-                                </>
+                                </div>
                             )}
                         </div>
 
