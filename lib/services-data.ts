@@ -85,7 +85,7 @@ export const servicesData = [
         slug: 'data-centers',
         icon: Server,
         logoImage: '',
-        bannerImage: '/images/datacenter.jpg',
+        bannerImage: '/images/data-center-new.png',
         bgColor: '#1E293B',
         title: 'Data Centers',
         description: '',
