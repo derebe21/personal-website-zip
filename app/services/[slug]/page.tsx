@@ -149,14 +149,23 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
                         {/* Right Column: CTA & Sidebar */}
                         <div className="space-y-8">
-                            <Card className="p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl bg-slate-50 dark:bg-slate-900 overflow-hidden">
-                                <div className="space-y-6 text-center lg:text-left">
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white leading-tight">Ready to secure your business?</h3>
-                                    <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
+                            <Card className="p-8 rounded-3xl relative overflow-hidden group border-none shadow-2xl bg-slate-900 text-white">
+                                <div className="absolute inset-0 z-0">
+                                    <img
+                                        src="/images/sidebar-cta-bg.jpg"
+                                        alt="Secure your business"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/70 to-blue-900/40" />
+                                </div>
+
+                                <div className="relative z-10 space-y-6 text-center lg:text-left">
+                                    <h3 className="text-2xl font-bold leading-tight drop-shadow-lg">Ready to secure your business?</h3>
+                                    <p className="text-slate-200 text-lg leading-relaxed font-light drop-shadow-md">
                                         Our experts are ready to help you implement {service.title} tailored to your organization’s needs.
                                     </p>
                                     <Link href="/contact" className="block">
-                                        <Button size="lg" className="w-full h-14 text-lg font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-all">
+                                        <Button size="lg" className="w-full h-14 text-lg font-bold shadow-2xl hover:scale-105 transition-all bg-white text-slate-900 hover:bg-white/90">
                                             Get a Free Quote
                                             <ArrowRight className="ml-2 w-5 h-5" />
                                         </Button>
