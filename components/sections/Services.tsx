@@ -89,15 +89,15 @@ export function Services() {
                     </div>
 
                     {/* Full Image Below Name */}
-                    <div className="flex-grow relative overflow-hidden">
+                    <div className="flex-grow relative overflow-hidden flex items-center justify-center bg-slate-50/50 dark:bg-slate-900/50">
                       <img
                         src={service.bannerImage}
                         alt={service.title}
                         className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${service.slug === 'enterprise-platforms-applications'
-                            ? 'object-contain p-4'
+                            ? 'object-contain p-2 scale-110'
                             : 'object-cover'
                           }`}
-                        style={{ minHeight: '260px', maxHeight: '320px' }}
+                        style={{ minHeight: '300px', maxHeight: '380px' }}
                       />
                     </div>
 
