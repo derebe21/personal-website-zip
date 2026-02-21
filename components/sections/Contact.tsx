@@ -35,16 +35,19 @@ export function Contact() {
     const contactInfo = [
         {
             icon: Phone,
+            label: 'Phone',
             value: '+251 911 407 439 / 095 519 0019',
             href: 'tel:+251911407439',
         },
         {
             icon: Mail,
+            label: 'Email',
             value: 'info@itsectechnology.com',
             href: 'mailto:info@itsectechnology.com',
         },
         {
             icon: MapPin,
+            label: 'Address',
             value: '123 Business Park, Tech District',
             href: null,
         },
