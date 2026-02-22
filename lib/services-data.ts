@@ -101,9 +101,9 @@ export const servicesData = [
         bannerImage: '/images/engineering-critical-systems-bg.jpg',
         bgColor: '#0F172A',
         title: 'Engineering & Electrical',
-        description: 'Electrical and low-current mission-critical infrastructure for ICT and operational environments.',
-        longDescription: 'Electrical and low-current mission-critical infrastructure for ICT and operational environments.',
-        features: ['Electrical & Power Systems', 'Low-Current Infrastructure', 'Mission-Critical Engineering', 'Safety & Operational Support'],
+        description: 'Electrical and low-current business-critical infrastructure for ICT and operational environments.',
+        longDescription: 'Electrical and low-current business-critical infrastructure for ICT and operational environments.',
+        features: ['Electrical & Power Systems', 'Low-Current Infrastructure', 'Business-Critical Engineering', 'Safety & Operational Support'],
         benefits: ['Reliable power systems', 'Expert engineering', 'Safety compliance', 'Operational resilience'],
     },
 ];

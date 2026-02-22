@@ -60,11 +60,9 @@ export function About() {
                     <item.icon className="w-10 h-10 text-white" />
                   </div>
                   <div>
-                    <Link href="/about" className="hover:text-primary transition-colors">
-                      <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
-                        {item.title}
-                      </h3>
-                    </Link>
+                    <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
+                      {item.title}
+                    </h3>
                     {'subtitle' in item && item.subtitle && (
                       <span className="text-xs font-black text-primary uppercase tracking-[0.2em] mt-2 block">
                         {item.subtitle}
