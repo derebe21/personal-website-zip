@@ -77,11 +77,7 @@ export function Products() {
         { name: 'Microsoft Hyper-V', logo: '/images/partners/hyperv-logo.svg', url: 'https://virtualization/hyper-v-on-windows/' },
         { name: 'Oracle Cloud', logo: '/images/partners/oracle-logo.svg', url: 'https://www.oracle.com/cloud/products.html' },
         { name: 'IBM Cloud', logo: '/images/partners/ibm-logo.svg', url: 'https://www.ibm.com/it-infrastructure' },
-        { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://all-products' },
-        { name: 'Server Virtualization', icon: Server, isService: true, url: '/services' },
-        { name: 'Desktop Virtualization (VDI)', icon: Monitor, isService: true, url: '/services' },
-        { name: 'Cloud Virtualization', icon: Cloud, isService: true, url: '/services' },
-        { name: 'Backup & Disaster Recovery', icon: Database, isService: true, url: '/services' }
+        { name: 'Red Hat Virtualization', logo: '/images/partners/redhat-logo.svg', url: 'https://all-products' }
     ];
 
     const dataCenterPartners = [
@@ -308,7 +304,7 @@ export function Products() {
                                 <Cloud className="w-8 h-8 text-blue-500" />
                             </div>
                             <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Cloud & Virtualization
+                                Cloud & Virtualization Services
                             </h3>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -363,7 +359,7 @@ export function Products() {
                                 <Server className="w-8 h-8 text-blue-500" />
                             </div>
                             <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Data Center
+                                Data Center Solutions
                             </h3>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
@@ -412,7 +408,7 @@ export function Products() {
                                 <Video className="w-8 h-8 text-blue-500" />
                             </div>
                             <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Integrated Security
+                                Integrated Security Systems
                             </h3>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
