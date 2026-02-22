@@ -29,6 +29,15 @@ export function Services() {
       id="services"
       className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
+      {/* Dynamic Nexus Background Background */}
+      <div className="absolute inset-0 z-0 opacity-10 dark:opacity-20 pointer-events-none">
+        <img
+          src="/images/nexus-bg-services.jpg"
+          alt=""
+          className="w-full h-full object-cover grayscale brightness-50"
+        />
+      </div>
+
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
         <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
           OUR <span className="text-primary">SERVICES</span>
