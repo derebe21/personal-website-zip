@@ -99,7 +99,7 @@ export function Services() {
                       <img
                         src={service.bannerImage}
                         alt={service.title}
-                        className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${service.slug === 'enterprise-platforms-applications'
+                        className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${service.slug === 'enterprise-applications'
                           ? 'object-contain p-2 scale-110'
                           : 'object-cover'
                           }`}
