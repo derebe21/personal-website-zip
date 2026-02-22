@@ -29,10 +29,11 @@ export function Services() {
       id="services"
       className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
           OUR <span className="text-primary">SERVICES</span>
         </h2>
+        <div className="w-24 h-1.5 bg-primary mx-auto rounded-full" />
       </div>
 
       <div className="max-w-[100vw]">
