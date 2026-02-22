@@ -28,14 +28,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
     return (
         <div className="relative min-h-screen bg-background text-slate-900 dark:text-slate-100 transition-colors duration-300 overflow-hidden">
-            {/* Signature Nexus Background Overlay */}
-            <div className="fixed inset-0 z-0 opacity-10 pointer-events-none">
-                <img
-                    src="/images/technology-nexus-final.png"
-                    alt="Nexus Texture"
-                    className="w-full h-full object-cover"
-                />
-            </div>
+            {/* Signature Background Overlay Removed */}
 
             <Navigation />
 

@@ -32,13 +32,7 @@ export function Process() {
       id="process"
       className="relative py-20 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
-      {/* High-Visibility Blue Nexus Identity */}
       <div className="absolute inset-0 z-0 bg-blue-900/5">
-        <img
-          src="/images/technology-nexus-final.png"
-          alt="Network Background"
-          className="w-full h-full object-cover opacity-40 dark:opacity-30"
-        />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
