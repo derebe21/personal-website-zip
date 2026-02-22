@@ -63,11 +63,6 @@ export function About() {
                     <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
                       {item.title}
                     </h3>
-                    {'subtitle' in item && item.subtitle && (
-                      <span className="text-xs font-black text-primary uppercase tracking-[0.2em] mt-2 block">
-                        {item.subtitle}
-                      </span>
-                    )}
                   </div>
                 </div>
 
