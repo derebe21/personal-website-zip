@@ -15,28 +15,32 @@ export function About() {
           <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
             <span className="text-primary">ABOUT US</span>
           </h2>
-          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-bold leading-relaxed mb-10">
-            Optimizing operations, strengthening digital trust, and achieving sustainable growth for organizations worldwide.
-          </p>
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full" />
         </div>
 
         {/* Info Cards Section */}
-        <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto mb-20">
+        <div className="grid lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20">
           {[
+            {
+              title: 'About Us',
+              description: 'Optimizing operations, strengthening digital trust, and achieving sustainable growth for organizations worldwide.',
+              icon: Rocket,
+              color: 'blue',
+              number: '01'
+            },
             {
               title: 'Our Vision',
               description: 'To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.',
               icon: Target,
               color: 'cyan',
-              number: '01'
+              number: '02'
             },
             {
               title: 'Our Mission',
               description: 'To empower organizations worldwide with secure and innovative technology solutions that deliver measurable value through technical excellence.',
               icon: Award,
               color: 'orange',
-              number: '02'
+              number: '03'
             }
           ].map((item, index) => (
             <div key={index} className="relative group perspective-1000">
