@@ -117,16 +117,11 @@ export function Products() {
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
-                    <div className="space-y-4">
-                        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none">
-                            OUR <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                TECHNOLOGY
-                            </span>
-                        </h2>
-                        <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
-                    </div>
+                <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
+                        OUR <span className="text-primary">TECHNOLOGY</span>
+                    </h2>
+                    <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full" />
                 </div>
 
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
