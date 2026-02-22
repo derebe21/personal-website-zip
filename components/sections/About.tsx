@@ -9,13 +9,13 @@ export function About() {
 
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center max-w-5xl mx-auto mb-16 space-y-4">
-          <h2 className="text-[74px] font-[900] tracking-tight text-slate-900 dark:text-white uppercase leading-tight italic">
-            About Us
+        <div className="text-center max-w-5xl mx-auto mb-16">
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic">
+            OUR <span className="text-primary">ABOUT US</span>
           </h2>
-          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
+          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
         </div>
 
         {/* Info Cards Section */}
