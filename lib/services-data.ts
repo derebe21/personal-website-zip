@@ -73,7 +73,7 @@ export const servicesData = [
         slug: 'cloud-virtualization',
         icon: Cloud,
         logoImage: '',
-        bannerImage: '/images/cloud and vertualization.jpg',
+        bannerImage: '/images/cloud-virtualization-bg.png',
         bgColor: '#38BDF8',
         title: 'Cloud & Virtualization',
         description: 'Scalable cloud and virtualization solutions for modernized infrastructure and business continuity.',
