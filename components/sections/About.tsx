@@ -15,7 +15,7 @@ export function About() {
           <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
             <span className="text-primary">ABOUT US</span>
           </h2>
-          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full" />
         </div>
 
         {/* Info Cards Section */}
