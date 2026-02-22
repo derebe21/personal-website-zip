@@ -8,7 +8,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const companyLinks = [
-    { label: 'About Us', href: '/about' },
+    { label: 'About Us', href: '/#about' },
     { label: 'Our Process', href: '/process' },
     { label: 'Contact', href: '/contact' },
     { label: 'Technology', href: '#technology' },
@@ -25,11 +25,7 @@ export function Footer() {
     <footer className="relative bg-slate-950 text-slate-300 overflow-hidden">
       {/* High-Visibility Blue Nexus Identity */}
       <div className="absolute inset-0 z-0 bg-blue-900/10">
-        <img
-          src="/images/technology-nexus-final.png"
-          alt="Nexus Texture"
-          className="w-full h-full object-cover opacity-20"
-        />
+
         <div className="absolute inset-0 bg-slate-950/90" />
         <div className="absolute inset-0 bg-gradient-to-t from-blue-950/20 to-transparent" />
       </div>
