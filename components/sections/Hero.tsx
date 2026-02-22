@@ -16,7 +16,7 @@ export function Hero() {
 
   const slides: Slide[] = [
     {
-      image: '/images/data-center-new.png',
+      image: '/images/data-center-main.jpg',
       title: (
         <>
           ITSEC TECHNOLOGY

@@ -25,7 +25,7 @@ export const servicesData = [
         slug: 'data-centers',
         icon: Server,
         logoImage: '',
-        bannerImage: '/images/data-center-clean.jpg',
+        bannerImage: '/images/data-center-main.jpg',
         bgColor: '#1E293B',
         title: 'Data Centers',
         description: 'Comprehensive data center solutions supporting facilities, IT systems, and high-availability operations.',
