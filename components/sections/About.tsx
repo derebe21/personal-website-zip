@@ -11,36 +11,32 @@ export function About() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center max-w-5xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic">
+        <div className="text-center max-w-4xl mx-auto mb-20 px-4">
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
             <span className="text-primary">ABOUT US</span>
           </h2>
-          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-bold leading-relaxed mb-10">
+            Optimizing operations, strengthening digital trust, and achieving sustainable growth for organizations worldwide.
+          </p>
+          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full" />
         </div>
 
         {/* Info Cards Section */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto mb-20">
           {[
-            {
-              title: 'About Us',
-              description: 'Optimizing operations, strengthening digital trust, and achieving sustainable growth for organizations worldwide.',
-              icon: Rocket,
-              color: 'blue',
-              number: '01'
-            },
             {
               title: 'Our Vision',
               description: 'To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.',
               icon: Target,
               color: 'cyan',
-              number: '02'
+              number: '01'
             },
             {
               title: 'Our Mission',
               description: 'To empower organizations worldwide with secure and innovative technology solutions that deliver measurable value through technical excellence.',
               icon: Award,
               color: 'orange',
-              number: '03'
+              number: '02'
             }
           ].map((item, index) => (
             <div key={index} className="relative group perspective-1000">
