@@ -23,23 +23,21 @@ export function About() {
           {[
             {
               title: 'About Us',
-              description: 'Optimizing operations, strengthening digital trust, and achieving sustainable growth through tailored digital leadership.',
+              description: 'Optimizing operations, strengthening digital trust, and achieving sustainable growth for organizations worldwide.',
               icon: Rocket,
               color: 'blue',
               number: '01'
             },
             {
-              title: 'Vision',
-              subtitle: '',
+              title: 'Our Vision',
               description: 'To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.',
               icon: Target,
               color: 'cyan',
               number: '02'
             },
             {
-              title: 'Mission',
-              subtitle: '',
-              description: 'Delivering measurable value through technical excellence and international best practices for global organizations.',
+              title: 'Our Mission',
+              description: 'To empower organizations worldwide with secure and innovative technology solutions that deliver measurable value through technical excellence.',
               icon: Award,
               color: 'orange',
               number: '03'
