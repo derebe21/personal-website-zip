@@ -28,10 +28,10 @@ export function Footer() {
         <img
           src="/images/footer-world-map.jpg"
           alt="Global Presence Map"
-          className="w-full h-full object-cover opacity-20 dark:opacity-40 filter brightness-50"
+          className="w-full h-full object-cover opacity-40 dark:opacity-60"
         />
-        <div className="absolute inset-0 bg-slate-950/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-slate-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
