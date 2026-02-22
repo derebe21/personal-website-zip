@@ -64,7 +64,7 @@ export function Products() {
         }
     ];
 
-    const enterpriseNetworkingPartners = [
+    const digitalInfrastructurePartners = [
         { name: 'Cisco', logo: '/images/partners/cisco-final.png', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
         { name: 'Huawei', logo: '/images/partners/huawei-ent.png', url: 'https://e.huawei.com/en/products/enterprise-networking' },
         { name: 'HPE Aruba', logo: '/images/partners/hpe-logo.svg', url: 'https://www.arubanetworks.com/products/' },
@@ -84,7 +84,7 @@ export function Products() {
         { name: 'Backup & Disaster Recovery', icon: Database, isService: true, url: '/services' }
     ];
 
-    const serversDataCenterPartners = [
+    const dataCenterPartners = [
         { name: 'Dell', logo: 'dell', url: 'https://www.dell.com/en-us/dt/servers/index.htm' },
         { name: 'HPE', logo: '/images/partners/hpe-new.png', url: 'https://www.hpe.com/us/en/servers.html' },
         { name: 'Lenovo', logo: 'lenovo', url: 'https://www.lenovo.com/us/en/servers-storage/' },
@@ -95,7 +95,7 @@ export function Products() {
         { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/en/products' }
     ];
 
-    const smartSecurityPartners = [
+    const integratedSecurityPartners = [
         { name: 'Hikvision', logo: '/images/partners/hikvision.png', url: 'https://www.hikvision.com/en/products/' },
         { name: 'Dahua', logo: '/images/partners/dahua.png', url: 'https://www. dahuasecurity.com/products' },
         { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/xc/en/products/' },
@@ -264,11 +264,11 @@ export function Products() {
                                 <Globe className="w-8 h-8 text-blue-500" />
                             </div>
                             <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Enterprise Networking
+                                Digital Infrastructure
                             </h3>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {enterpriseNetworkingPartners.map((partner: any, index: number) => (
+                            {digitalInfrastructurePartners.map((partner: any, index: number) => (
                                 <Link
                                     key={partner.name}
                                     href={partner.url}
@@ -363,11 +363,11 @@ export function Products() {
                                 <Server className="w-8 h-8 text-blue-500" />
                             </div>
                             <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Servers & Data Center
+                                Data Center
                             </h3>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-                            {serversDataCenterPartners.map((partner: any, index: number) => (
+                            {dataCenterPartners.map((partner: any, index: number) => (
                                 <Link
                                     key={partner.name}
                                     href={partner.url}
@@ -409,11 +409,11 @@ export function Products() {
                                 <Video className="w-8 h-8 text-blue-500" />
                             </div>
                             <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Smart & Physical Security
+                                Integrated Security
                             </h3>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-                            {smartSecurityPartners.map((partner: any, index: number) => (
+                            {integratedSecurityPartners.map((partner: any, index: number) => (
                                 <Link
                                     key={partner.name}
                                     href={partner.url}
