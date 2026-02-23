@@ -272,13 +272,13 @@ export function Products() {
                 {/* FEATURED DIGITAL INFRASTRUCTURE SECTION */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* High-Visibility Blue Nexus Identity */}
-                    <div className="absolute inset-0 z-0 bg-blue-900/10">
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
-                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+                            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
                             alt="Digital Infrastructure Background"
-                            className="w-full h-full object-cover opacity-30 dark:opacity-20 mix-blend-overlay"
+                            className="w-full h-full object-cover opacity-60 dark:opacity-40"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-blue-50/60 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-blue-950/70" />
                     </div>
 
                     <div className="relative z-10">
