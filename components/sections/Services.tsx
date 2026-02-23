@@ -11,7 +11,7 @@ import { useState, useEffect, useRef } from 'react';
 export function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const totalServices = servicesData.length;
+  const totalServices = servicesData.length || 1;
   // Duplicate services to ensure a long enough ribbon for the interval effect
   const multipliedServices = [...servicesData, ...servicesData, ...servicesData, ...servicesData];
 
@@ -19,7 +19,7 @@ export function Services() {
     if (isPaused) return;
 
     const interval = setInterval(() => {
-      setActiveIndex((prev: number) => (prev + 1) % (totalServices * 4));
+      setActiveIndex((prev: number) => totalServices > 0 ? (prev + 1) % (totalServices * 4) : 0);
     }, 4000); // 4s total: 3s stop + 1s transition
 
     return () => clearInterval(interval);
@@ -48,6 +48,9 @@ export function Services() {
                 SERVICES
               </span>
             </h2>
+            <p className="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest text-sm">
+              All services are available on mobile and Android
+            </p>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
           </div>
         </div>

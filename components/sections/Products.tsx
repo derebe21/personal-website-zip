@@ -61,14 +61,23 @@ export function Products() {
             url: 'https://www.darktrace.com/en/products/',
             tag: '',
             brief: ''
+        },
+        {
+            name: 'Imperva',
+            logo: 'imperva',
+            url: 'https://www.imperva.com/products/',
+            tag: '',
+            brief: ''
         }
     ];
 
-    const enterpriseNetworkingPartners = [
+    const digitalInfrastructurePartners = [
         { name: 'Cisco', logo: '/images/partners/cisco-final.png', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
         { name: 'Huawei', logo: '/images/partners/huawei-ent.png', url: 'https://e.huawei.com/en/products/enterprise-networking' },
         { name: 'HPE Aruba', logo: '/images/partners/hpe-logo.svg', url: 'https://www.arubanetworks.com/products/' },
-        { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' }
+        { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' },
+        { name: 'Ericsson', logo: 'ericsson', url: 'https://www.ericsson.com/en/portfolio' },
+        { name: 'F5 Networks', logo: 'f5', url: 'https://www.f5.com/products' }
     ];
 
     const cloudVirtualizationPartners = [
@@ -187,6 +196,17 @@ export function Products() {
                                 </Link>
                             ))}
                         </div>
+
+                        {/* Security Solutions CTA */}
+                        <div className="mt-16 text-center animate-fade-up">
+                            <Link
+                                href="/services/cyber-risk-protection"
+                                className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold transition-all hover:scale-105 group"
+                            >
+                                <span className="text-lg">Click to view our Security Devices and Security Software solutions.</span>
+                                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -208,11 +228,11 @@ export function Products() {
                                 <Globe className="w-8 h-8 text-blue-500" />
                             </div>
                             <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Enterprise Networking
+                                Digital Infrastructure
                             </h3>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {enterpriseNetworkingPartners.map((partner: any, index: number) => (
+                            {digitalInfrastructurePartners.map((partner: any, index: number) => (
                                 <Link
                                     key={partner.name}
                                     href={partner.url}
