@@ -320,6 +320,11 @@ export function Products() {
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* High-Visibility Blue Nexus Identity */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
+                        <img
+                            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                            alt="Cloud Background"
+                            className="w-full h-full object-cover opacity-30 dark:opacity-20 mix-blend-overlay"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
 
@@ -373,6 +378,11 @@ export function Products() {
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* High-Visibility Blue Nexus Identity */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
+                        <img
+                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2070&auto=format&fit=crop"
+                            alt="Data Center Background"
+                            className="w-full h-full object-cover opacity-30 dark:opacity-20 mix-blend-overlay"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
                     </div>
                     {/* Background Subtle Gradient Overlay */}
