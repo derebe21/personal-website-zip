@@ -339,9 +339,9 @@ export function Products() {
                         <img
                             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
                             alt="Cloud Background"
-                            className="w-full h-full object-cover opacity-30 dark:opacity-20 mix-blend-overlay"
+                            className="w-full h-full object-cover opacity-60 dark:opacity-40"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-blue-50/60 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-blue-950/70" />
                     </div>
 
                     <div className="relative z-10">
@@ -409,14 +409,12 @@ export function Products() {
                     {/* High-Visibility Blue Nexus Identity */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
-                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2070&auto=format&fit=crop"
+                            src="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=2070&auto=format&fit=crop"
                             alt="Data Center Background"
-                            className="w-full h-full object-cover opacity-30 dark:opacity-20 mix-blend-overlay"
+                            className="w-full h-full object-cover opacity-60 dark:opacity-40"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-blue-50/60 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-blue-950/70" />
                     </div>
-                    {/* Background Subtle Gradient Overlay */}
-                    <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-500/5 to-transparent" />
 
                     <div className="relative z-10">
                         <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
@@ -473,13 +471,13 @@ export function Products() {
                 {/* FEATURED SMART & PHYSICAL SECURITY SECTION */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
                     {/* Integrated Security Nexus Background */}
-                    <div className="absolute inset-0 z-0 bg-blue-900/10">
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
                             src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop"
                             alt="Integrated Security Background"
-                            className="w-full h-full object-cover opacity-40 dark:opacity-30 mix-blend-overlay"
+                            className="w-full h-full object-cover opacity-60 dark:opacity-40"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-blue-50/60 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-blue-950/70" />
                     </div>
 
                     <div className="relative z-10">
