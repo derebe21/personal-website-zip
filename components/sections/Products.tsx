@@ -106,6 +106,8 @@ export function Products() {
         { name: 'Bosch', logo: 'bosch', url: 'https://www.boschsecurity.com/xc/en/products/' },
         { name: 'Axis', logo: '/images/partners/axis.png', url: 'https://www.axis.com/products-and-solutions' },
         { name: 'Honeywell', logo: '/images/partners/honeywell.png', url: 'https://buildings.honeywell.com/us/en/products/security' },
+        { name: 'Milestone', logo: 'milestone', url: 'https://www.milestonesys.com/solutions/platform/video-management-software/' },
+        { name: 'Genetec', logo: 'genetec', url: 'https://www.genetec.com/solutions/all-products' },
         { name: 'Suprema', logo: '/images/partners/suprema.png', url: 'https://www.supremainc.com/en/hardware/product-list.asp' },
         { name: 'ZKTeco', logo: '/images/partners/zkteco.png', url: 'https://www.zkteco.com/en/product_list/' }
     ];
@@ -280,13 +282,16 @@ export function Products() {
                     </div>
 
                     <div className="relative z-10">
-                        <div className="flex items-center space-x-4 mb-10">
+                        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
                             <div className="p-3 bg-blue-500/10 rounded-2xl">
                                 <Globe className="w-8 h-8 text-blue-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Digital Infrastructure
-                            </h3>
+                            <div>
+                                <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                    Digital Infrastructure
+                                </h3>
+                                <p className="text-slate-600 dark:text-slate-300 font-medium text-lg">Robust networking and hardware foundations</p>
+                            </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {digitalInfrastructurePartners.map((partner: any, index: number) => (
@@ -313,6 +318,17 @@ export function Products() {
                                 </Link>
                             ))}
                         </div>
+
+                        {/* Digital Infrastructure CTA */}
+                        <div className="mt-16 text-center animate-fade-up">
+                            <Link
+                                href="/services/digital-infrastructure"
+                                className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold transition-all hover:scale-105 group"
+                            >
+                                <span className="text-lg">View our Network and Hardware Infrastructure solutions.</span>
+                                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -329,13 +345,16 @@ export function Products() {
                     </div>
 
                     <div className="relative z-10">
-                        <div className="flex items-center space-x-4 mb-10">
+                        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
                             <div className="p-3 bg-blue-500/10 rounded-2xl">
                                 <Cloud className="w-8 h-8 text-blue-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Cloud & Virtualization Services
-                            </h3>
+                            <div>
+                                <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                    Cloud & Virtualization Services
+                                </h3>
+                                <p className="text-slate-600 dark:text-slate-300 font-medium text-lg">Scalable cloud power and seamless virtualization</p>
+                            </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {cloudVirtualizationPartners.map((partner: any, index: number) => (
@@ -371,6 +390,17 @@ export function Products() {
                                 </Link>
                             ))}
                         </div>
+
+                        {/* Cloud & Virtualization CTA */}
+                        <div className="mt-16 text-center animate-fade-up">
+                            <Link
+                                href="/services/cloud-virtualization"
+                                className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold transition-all hover:scale-105 group"
+                            >
+                                <span className="text-lg">Explore our Cloud and Virtualization services.</span>
+                                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -389,14 +419,18 @@ export function Products() {
                     <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-500/5 to-transparent" />
 
                     <div className="relative z-10">
-                        <div className="flex items-center space-x-4 mb-10">
+                        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
                             <div className="p-3 bg-blue-500/10 rounded-2xl">
                                 <Server className="w-8 h-8 text-blue-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Data Center Solutions
-                            </h3>
+                            <div>
+                                <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                    Data Center Solutions
+                                </h3>
+                                <p className="text-slate-600 dark:text-slate-300 font-medium text-lg">High-performance servers and resilient IT facilities</p>
+                            </div>
                         </div>
+
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
                             {dataCenterPartners.map((partner: any, index: number) => (
                                 <Link
@@ -422,6 +456,17 @@ export function Products() {
                                 </Link>
                             ))}
                         </div>
+
+                        {/* Data Center CTA */}
+                        <div className="mt-16 text-center animate-fade-up">
+                            <Link
+                                href="/services/data-center"
+                                className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold transition-all hover:scale-105 group"
+                            >
+                                <span className="text-lg">View our Servers and Data Center infrastructure solutions.</span>
+                                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -438,13 +483,16 @@ export function Products() {
                     </div>
 
                     <div className="relative z-10">
-                        <div className="flex items-center space-x-4 mb-10">
+                        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
                             <div className="p-3 bg-blue-500/10 rounded-2xl">
                                 <Video className="w-8 h-8 text-blue-500" />
                             </div>
-                            <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
-                                Integrated Security Systems
-                            </h3>
+                            <div>
+                                <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                    Integrated Security Systems
+                                </h3>
+                                <p className="text-slate-600 dark:text-slate-300 font-medium text-lg">Smart surveillance and physical security solutions</p>
+                            </div>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
                             {integratedSecurityPartners.map((partner: any, index: number) => (
@@ -470,6 +518,17 @@ export function Products() {
                                     </div>
                                 </Link>
                             ))}
+                        </div>
+
+                        {/* Integrated Security CTA */}
+                        <div className="mt-16 text-center animate-fade-up">
+                            <Link
+                                href="/services/integrated-security"
+                                className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold transition-all hover:scale-105 group"
+                            >
+                                <span className="text-lg">View our Integrated Security and Smart Automation solutions.</span>
+                                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                            </Link>
                         </div>
                     </div>
                 </div>
