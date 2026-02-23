@@ -35,6 +35,7 @@ export function Contact() {
   const contactInfo = [
     {
       icon: Phone,
+      label: 'Phone',
       value: '+251 911 407 439 / 095 519 0019',
       href: 'tel:+251911407439',
     },
@@ -57,27 +58,22 @@ export function Contact() {
       id="contact"
       className="relative py-20 md:py-32 overflow-hidden"
     >
-      {/* High-Visibility World Map Background Identity */}
+      {/* Original High-Visibility Background */}
       <div className="absolute inset-0 z-0 bg-blue-900/5">
         <img
-          src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2072&auto=format&fit=crop"
+          src="/images/contact-us-map.png"
           alt="Global Network Background"
-          className="w-full h-full object-cover opacity-40 dark:opacity-30 mix-blend-overlay"
+          className="w-full h-full object-cover object-center opacity-85 dark:opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center justify-center gap-6 mb-20 animate-fade-up">
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none">
-              CONTACT <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                US
-              </span>
-            </h2>
-            <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8" />
-          </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center pt-16">
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
+            CONTACT <span className="text-primary">US</span>
+          </h2>
+          <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full" />
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -195,8 +191,6 @@ export function Contact() {
                 </CardContent>
               </Card>
             ))}
-
-
           </div>
         </div>
       </div>

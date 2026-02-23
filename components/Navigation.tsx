@@ -34,13 +34,7 @@ export function Navigation() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-3 bg-blue-900 shadow-[0_20px_50px_rgba(29,78,216,0.3)] border-b border-white/10`}
     >
       {/* Premium Nexus Overlay - Subtle */}
-      <div className={`absolute inset-0 z-0 transition-opacity duration-700 pointer-events-none ${isScrolled ? 'opacity-20' : 'opacity-5'}`}>
-        <img
-          src="/images/technology-nexus-final.png"
-          className="w-full h-full object-cover mix-blend-overlay"
-          alt=""
-        />
-      </div>
+
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
@@ -90,13 +84,7 @@ export function Navigation() {
       {/* Mobile Menu with Backdrop */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-blue-900/95 backdrop-blur-2xl border-t border-white/10 shadow-2xl animate-fade-down overflow-hidden">
-          {/* Signature Nexus Overlay */}
           <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-            <img
-              src="/images/technology-nexus-final.png"
-              alt="Nexus Overlay"
-              className="w-full h-full object-cover"
-            />
             <div className="absolute inset-0 bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 opacity-90" />
           </div>
 

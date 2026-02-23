@@ -6,44 +6,38 @@ export function About() {
     <section id="about" className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden">
       {/* High-Visibility Blue Nexus Identity */}
       <div className="absolute inset-0 z-0 bg-blue-900/5">
-        <img
-          src="/images/technology-nexus-final.png"
-          alt="Network Background"
-          className="w-full h-full object-cover opacity-40 dark:opacity-30"
-        />
+
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-slate-50/80 to-blue-50/90 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-blue-950/95" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center max-w-5xl mx-auto mb-16 space-y-4 pt-[150px]">
-          <h2 className="text-[74px] font-[900] tracking-tight text-slate-900 dark:text-white uppercase leading-tight italic">
-            About Us
+        <div className="text-center max-w-4xl mx-auto mb-20 px-4">
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
+            <span className="text-primary">ABOUT US</span>
           </h2>
-          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-6" />
+          <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full" />
         </div>
 
         {/* Info Cards Section */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20">
           {[
             {
               title: 'About Us',
-              description: 'Delivers secure, scalable, and innovative digital solutions that empower enterprises worldwide. We help organizations optimize operations, strengthen digital trust, and achieve sustainable growth in the global digital economy.',
+              description: 'Optimizing operations, strengthening digital trust, and achieving sustainable growth for organizations worldwide.',
               icon: Rocket,
               color: 'blue',
               number: '01'
             },
             {
-              title: 'Vision',
-              subtitle: '',
+              title: 'Our Vision',
               description: 'To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.',
               icon: Target,
               color: 'cyan',
               number: '02'
             },
             {
-              title: 'Mission',
-              subtitle: '',
-              description: 'To empower organizations worldwide with secure, scalable, and innovative technology solutions that deliver measurable value through technical excellence and international best practices.',
+              title: 'Our Mission',
+              description: 'To empower organizations worldwide with secure and innovative technology solutions that deliver measurable value through technical excellence.',
               icon: Award,
               color: 'orange',
               number: '03'
@@ -70,16 +64,9 @@ export function About() {
                     <item.icon className="w-10 h-10 text-white" />
                   </div>
                   <div>
-                    <Link href="/about" className="hover:text-primary transition-colors">
-                      <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
-                        {item.title}
-                      </h3>
-                    </Link>
-                    {'subtitle' in item && item.subtitle && (
-                      <span className="text-xs font-black text-primary uppercase tracking-[0.2em] mt-2 block">
-                        {item.subtitle}
-                      </span>
-                    )}
+                    <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase italic leading-none">
+                      {item.title}
+                    </h3>
                   </div>
                 </div>
 

@@ -23,15 +23,15 @@ export function Footer() {
 
   return (
     <footer className="relative bg-slate-950 text-slate-300 overflow-hidden">
-      {/* High-Visibility Blue Nexus Identity */}
-      <div className="absolute inset-0 z-0 bg-blue-900/10">
+      {/* Global Connectivity World Map Background */}
+      <div className="absolute inset-0 z-0">
         <img
-          src="/images/technology-nexus-final.png"
-          alt="Nexus Texture"
-          className="w-full h-full object-cover opacity-20"
+          src="/images/footer-world-map.jpg"
+          alt="Global Presence Map"
+          className="w-full h-full object-cover opacity-80 dark:opacity-100"
         />
-        <div className="absolute inset-0 bg-slate-950/90" />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-950/20 to-transparent" />
+        <div className="absolute inset-0 bg-slate-950/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-100" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -67,7 +67,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Services</h3>
             <ul className="space-y-3">
-              {servicesData.slice(0, 5).map((service, index) => (
+              {servicesData.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link
                     href={`/services/${service.slug}`}

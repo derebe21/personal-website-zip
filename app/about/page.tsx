@@ -4,12 +4,12 @@ import { About } from '@/components/sections/About';
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-background">
+        <main className="min-h-screen bg-background">
             <Navigation />
-            <main>
+            <div className="pt-20">
                 <About />
-            </main>
+            </div>
             <Footer />
-        </div>
+        </main>
     );
 }
