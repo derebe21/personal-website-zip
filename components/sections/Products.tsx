@@ -336,7 +336,7 @@ export function Products() {
                     {/* High-Visibility Blue Nexus Identity */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
-                            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                            src="/images/cloud-virtualization-tech-bg.jpg"
                             alt="Cloud Background"
                             className="w-full h-full object-cover opacity-60 dark:opacity-40"
                         />
@@ -408,7 +408,7 @@ export function Products() {
                     {/* Data Center Plexus Background */}
                     <div className="absolute inset-0 z-0 bg-blue-900/10">
                         <img
-                            src="/images/datacenter-plexus-bg.jpg"
+                            src="/images/datacenter-tech-new-bg.jpg"
                             alt="Data Center Background"
                             className="w-full h-full object-cover opacity-80 dark:opacity-65"
                         />
@@ -472,7 +472,7 @@ export function Products() {
                     {/* Integrated Security Nexus Background */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
-                            src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2070&auto=format&fit=crop"
+                            src="/images/integrated-security-tech-bg.jpg"
                             alt="Integrated Security Background"
                             className="w-full h-full object-cover opacity-60 dark:opacity-40"
                         />
