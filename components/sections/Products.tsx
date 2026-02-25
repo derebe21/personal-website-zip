@@ -408,7 +408,7 @@ export function Products() {
                     {/* Data Center Plexus Background */}
                     <div className="absolute inset-0 z-0 bg-blue-900/10">
                         <img
-                            src="/images/datacenter-tech-new-bg.jpg"
+                            src="/images/datacenter-server-racks-bg.jpg"
                             alt="Data Center Background"
                             className="w-full h-full object-cover opacity-80 dark:opacity-65"
                         />
@@ -472,7 +472,7 @@ export function Products() {
                     {/* Integrated Security Nexus Background */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
-                            src="/images/integrated-security-tech-bg.jpg"
+                            src="/images/integrated-security-shield-bg.jpg"
                             alt="Integrated Security Background"
                             className="w-full h-full object-cover opacity-85 dark:opacity-70"
                         />
