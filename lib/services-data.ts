@@ -37,7 +37,7 @@ export const servicesData = [
         slug: 'integrated-security',
         icon: Shield,
         logoImage: '',
-        bannerImage: '/images/integrated-security-shield-bg.jpg',
+        bannerImage: '/images/integrated-security-surveillance-bg.jpg',
         bgColor: '#22C55E',
         title: 'Integrated Security Systems',
         description: 'End-to-end security and risk management solutions for comprehensive data and physical protection.',

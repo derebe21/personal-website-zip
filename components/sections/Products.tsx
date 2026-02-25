@@ -472,7 +472,7 @@ export function Products() {
                     {/* Integrated Security Nexus Background */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
-                            src="/images/integrated-security-shield-bg.jpg"
+                            src="/images/integrated-security-surveillance-bg.jpg"
                             alt="Integrated Security Background"
                             className="w-full h-full object-cover opacity-85 dark:opacity-70"
                         />
