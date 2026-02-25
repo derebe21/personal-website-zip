@@ -338,9 +338,9 @@ export function Products() {
                         <img
                             src="/images/cloud-virtualization-tech-bg.jpg"
                             alt="Cloud Background"
-                            className="w-full h-full object-cover opacity-60 dark:opacity-40"
+                            className="w-full h-full object-cover opacity-85 dark:opacity-70"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-blue-50/60 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-blue-950/70" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
                     </div>
 
                     <div className="relative z-10">
@@ -474,9 +474,9 @@ export function Products() {
                         <img
                             src="/images/integrated-security-tech-bg.jpg"
                             alt="Integrated Security Background"
-                            className="w-full h-full object-cover opacity-60 dark:opacity-40"
+                            className="w-full h-full object-cover opacity-85 dark:opacity-70"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-blue-50/60 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-blue-950/70" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
                     </div>
 
                     <div className="relative z-10">
