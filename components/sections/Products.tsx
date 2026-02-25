@@ -135,7 +135,7 @@ export function Products() {
                     {/* User-Provided Nexus Background Identity */}
                     <div className="absolute inset-0 z-0 bg-blue-900/10">
                         <img
-                            src="/images/cyber-shield-bg.jpg"
+                            src="/images/cyber-security-world-bg.jpg"
                             alt="Cyber Security Background"
                             className="w-full h-full object-cover opacity-85 dark:opacity-70"
                         />
@@ -217,7 +217,6 @@ export function Products() {
                                         Cyber Security<br />& IT Security
                                     </h3>
                                 </div>
-                                <p className="text-slate-600 dark:text-slate-300 font-medium text-lg ml-5">Advanced protection for your digital assets</p>
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -271,6 +270,7 @@ export function Products() {
 
                 {/* FEATURED DIGITAL INFRASTRUCTURE SECTION */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+<<<<<<< HEAD
                     {/* High-Visibility Blue Nexus Identity */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
@@ -279,6 +279,16 @@ export function Products() {
                             className="w-full h-full object-cover opacity-60 dark:opacity-40"
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-blue-50/60 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-blue-950/70" />
+=======
+                    {/* Digital Infrastructure Background */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/10">
+                        <img
+                            src="/images/digital-infra-neon-bg.jpg"
+                            alt="Digital Infrastructure Background"
+                            className="w-full h-full object-cover opacity-75 dark:opacity-60"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-white/30 to-blue-50/40 dark:from-slate-950/75 dark:via-slate-950/60 dark:to-blue-950/70" />
+>>>>>>> 67a8dbd (Update backgrounds and remove subtitles for Services and Technology sections)
                     </div>
 
                     <div className="relative z-10">
@@ -406,6 +416,7 @@ export function Products() {
 
                 {/* FEATURED SERVERS & DATA CENTER SECTION */}
                 <div className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+<<<<<<< HEAD
                     {/* High-Visibility Blue Nexus Identity */}
                     <div className="absolute inset-0 z-0 bg-blue-900/5">
                         <img
@@ -414,6 +425,16 @@ export function Products() {
                             className="w-full h-full object-cover opacity-60 dark:opacity-40"
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-blue-50/60 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-blue-950/70" />
+=======
+                    {/* Data Center Plexus Background */}
+                    <div className="absolute inset-0 z-0 bg-blue-900/10">
+                        <img
+                            src="/images/datacenter-plexus-bg.jpg"
+                            alt="Data Center Background"
+                            className="w-full h-full object-cover opacity-80 dark:opacity-65"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/45 via-white/25 to-blue-50/35 dark:from-slate-950/75 dark:via-slate-950/60 dark:to-blue-950/70" />
+>>>>>>> 67a8dbd (Update backgrounds and remove subtitles for Services and Technology sections)
                     </div>
 
                     <div className="relative z-10">
