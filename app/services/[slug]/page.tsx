@@ -167,7 +167,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
                                     {/* Service Logo Asset */}
                                     {service.logoImage && (
-                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-48 h-48 drop-shadow-[0_20px_40_rgba(0,0,0,0.5)]">
+                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-48 h-48 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
                                             <img
                                                 src={service.logoImage}
                                                 alt={`${service.title} Logo`}
