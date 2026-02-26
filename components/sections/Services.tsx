@@ -163,25 +163,5 @@ export function Services() {
         </div>
       </div>
     </section>
-
-          </div>
-        </div>
-
-        {/* Pagination Bullets */}
-        <div className="flex justify-center gap-3 mt-12 pb-8">
-          {servicesData.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveIndex(idx)}
-              className={`w-3 h-3 rounded-full transition-all duration-500 ${activeIndex % totalServices === idx
-                ? 'bg-primary w-10 shadow-[0_0_15px_rgba(37,99,235,0.5)]'
-                : 'bg-slate-300 dark:bg-slate-700 hover:bg-primary/50'
-                }`}
-              aria-label={`Go to service ${idx + 1}`}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
