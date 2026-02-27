@@ -45,7 +45,7 @@ export const servicesData: Service[] = [
         benefits: [],
     },
     {
-        slug: 'data-center',
+        slug: 'data-center-solutions',
         icon: Server,
         logoImage: '',
         sidebarImage: '',
@@ -81,7 +81,7 @@ export const servicesData: Service[] = [
         benefits: [],
     },
     {
-        slug: 'enterprise-applications',
+        slug: 'enterprise-platforms',
         icon: Code,
         logoImage: '/images/enterprise-apps-final.png',
         sidebarImage: '',
@@ -155,7 +155,7 @@ export const servicesData: Service[] = [
         benefits: [],
     },
     {
-        slug: 'engineering-critical-systems',
+        slug: 'engineering-critical',
         icon: Zap,
         logoImage: '/images/critical-systems-logo-new.png',
         sidebarImage: '',
