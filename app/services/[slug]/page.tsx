@@ -198,7 +198,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         .map((s) => (
                                             <Link
                                                 key={s.slug}
-                                                href={`/services/${s.slug}`}
+                                                href={`/services/${s.slug}.html`}
                                                 className="flex items-center p-3 rounded-xl hover:bg-white dark:hover:bg-slate-800 transition-all group"
                                             >
                                                 <span className="text-sm font-medium">{s.title}</span>

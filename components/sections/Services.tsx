@@ -77,7 +77,7 @@ export function Services() {
               const isCloud = service.slug === 'cloud-virtualization';
               return (
                 <div key={index} className="w-[380px] md:w-[480px] flex-shrink-0">
-                  <Link href={`/services/${service.slug}`} className="block group h-full">
+                  <Link href={`/services/${service.slug}.html`} className="block group h-full">
                     <Card
                       className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-1000 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:rotate-y-0 group-hover:scale-[1.05] group-hover:shadow-primary/20 ${activeIndex % totalServices === index % totalServices ? 'animate-none scale-105 rotate-y-0 shadow-primary/10' : 'animate-orbital-3d'
                         }`}
