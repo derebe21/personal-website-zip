@@ -30,9 +30,10 @@ export function Services() {
       className="relative py-24 md:py-32 bg-slate-50 dark:bg-slate-950 overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic">
+        <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
           OUR <span className="text-primary">SERVICES</span>
         </h2>
+        <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full" />
       </div>
 
       <div className="max-w-[100vw]">
@@ -83,16 +84,20 @@ export function Services() {
                     >
                       {/* Card Content Area */}
                       <div className="relative flex-grow flex flex-col min-h-[500px]">
-                        {(isCloud || service.slug === 'digital-infrastructure') && (
-                          <div className="absolute inset-0 z-0">
-                            <img
-                              src={service.bannerImage}
-                              alt={service.title}
-                              className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/60 to-slate-900/90" />
-                          </div>
-                        )}
+                        {(isCloud ||
+                          service.slug === 'digital-infrastructure' ||
+                          service.slug === 'cybersecurity' ||
+                          service.slug === 'unified-communications' ||
+                          service.slug === 'integrated-security') && (
+                            <div className="absolute inset-0 z-0">
+                              <img
+                                src={service.bannerImage}
+                                alt={service.title}
+                                className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-110"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/60 to-slate-900/90" />
+                            </div>
+                          )}
 
                         <div className="relative z-10 flex flex-col h-full p-10 pt-12 text-center">
                           {/* Logo Area */}
@@ -108,36 +113,31 @@ export function Services() {
                             </div>
                           )}
 
-                          <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${(isCloud || service.slug === 'digital-infrastructure') ? 'text-white' : ''}`}>
+                          <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${(isCloud ||
+                            service.slug === 'digital-infrastructure' ||
+                            service.slug === 'cybersecurity' ||
+                            service.slug === 'unified-communications' ||
+                            service.slug === 'integrated-security') ? 'text-white' : ''}`}>
                             {service.title}
                           </CardTitle>
 
-                          {/* Scrollable Features Section */}
+                          {/* Service Description Section */}
                           <div className="flex-grow overflow-y-auto custom-scrollbar max-h-[200px] mb-8 pr-2">
-                            <ul className="space-y-4 text-left">
-                              {service.features.map((feature, idx) => (
-                                <li
-                                  key={idx}
-                                  className="flex items-start text-sm group/item"
-                                >
-                                  <div className={`w-5 h-5 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 transition-colors ${isCloud ? 'bg-white/20 group-hover/item:bg-white' : 'bg-primary/10 group-hover/item:bg-primary'}`}>
-                                    <ArrowRight className={`w-3 h-3 transition-colors ${isCloud ? 'text-white group-hover/item:text-slate-900' : 'text-primary group-hover/item:text-white'}`} />
-                                  </div>
-                                  <span className={`font-bold transition-colors ${isCloud ? 'text-slate-200 group-hover/item:text-white' : 'text-slate-600 dark:text-slate-400'}`}>
-                                    {feature}
-                                  </span>
-                                </li>
-                              ))}
-                            </ul>
+                            <p className={`text-lg transition-colors ${(isCloud ||
+                              service.slug === 'digital-infrastructure' ||
+                              service.slug === 'cybersecurity' ||
+                              service.slug === 'unified-communications' ||
+                              service.slug === 'integrated-security') ? 'text-slate-200' : 'text-slate-600 dark:text-slate-400'} font-medium`}>
+                              {service.description || service.longDescription?.substring(0, 150) + (service.longDescription?.length > 150 ? '...' : '')}
+                            </p>
                           </div>
                         </div>
                       </div>
 
-                      {/* Featured 'Read More' Footer */}
+                      {/* Featured Footer */}
                       <div className="relative overflow-hidden bg-[#F6A113] hover:bg-[#E59102] transition-colors py-6 px-10 flex items-center justify-center text-white font-black uppercase tracking-[0.2em] gap-4 group/btn cursor-pointer">
                         <div className="absolute inset-0 w-full h-full -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent z-0" />
-                        <span className="relative z-10 text-sm">Explores Domain</span>
-                        <ArrowRight className="w-6 h-6 relative z-10 transition-transform group-hover/btn:translate-x-3" />
+                        <ArrowRight className="w-8 h-8 relative z-10 transition-transform group-hover/btn:translate-x-3" />
                       </div>
                     </Card>
                   </Link>
