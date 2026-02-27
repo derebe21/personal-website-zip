@@ -1,4 +1,5 @@
 import {
+    LucideIcon,
     Server,
     Shield,
     Code,
@@ -10,7 +11,21 @@ import {
     MessageSquare,
 } from 'lucide-react';
 
-export const servicesData = [
+export interface Service {
+    slug: string;
+    icon: LucideIcon;
+    logoImage: string;
+    sidebarImage: string;
+    bannerImage: string;
+    bgColor: string;
+    title: string;
+    description: string;
+    longDescription: string;
+    features: string[];
+    benefits: string[];
+}
+
+export const servicesData: Service[] = [
     {
         slug: 'digital-infrastructure',
         icon: Server,

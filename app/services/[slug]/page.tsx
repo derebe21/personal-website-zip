@@ -1,4 +1,4 @@
-import { servicesData } from '@/lib/services-data';
+import { servicesData, type Service } from '@/lib/services-data';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { notFound } from 'next/navigation';

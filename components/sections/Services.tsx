@@ -84,50 +84,26 @@ export function Services() {
                     >
                       {/* Card Content Area */}
                       <div className="relative flex-grow flex flex-col min-h-[500px]">
-                        {(isCloud ||
-                          service.slug === 'digital-infrastructure' ||
-                          service.slug === 'cybersecurity' ||
-                          service.slug === 'unified-communications' ||
-                          service.slug === 'integrated-security') && (
-                            <div className="absolute inset-0 z-0">
-                              <img
-                                src={service.bannerImage}
-                                alt={service.title}
-                                className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-110"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/60 to-slate-900/90" />
-                            </div>
-                          )}
+                        {service.bannerImage && (
+                          <div className="absolute inset-0 z-0">
+                            <img
+                              src={service.bannerImage}
+                              alt={service.title}
+                              className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/60 to-slate-900/90" />
+                          </div>
+                        )}
 
-                        <div className="relative z-10 flex flex-col h-full p-10 pt-12 text-center">
-                          {/* Logo Area */}
-                          {service.logoImage && (
-                            <div className="mb-8 flex justify-center">
-                              <div className={`w-24 h-24 rounded-3xl p-4 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 ${isCloud ? 'bg-white/10' : 'bg-primary/5'}`}>
-                                <img
-                                  src={service.logoImage}
-                                  alt={`${service.title} Logo`}
-                                  className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]"
-                                />
-                              </div>
-                            </div>
-                          )}
+                        <div className="relative z-10 flex flex-col h-full p-10 pt-24 text-center">
 
-                          <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${(isCloud ||
-                            service.slug === 'digital-infrastructure' ||
-                            service.slug === 'cybersecurity' ||
-                            service.slug === 'unified-communications' ||
-                            service.slug === 'integrated-security') ? 'text-white' : ''}`}>
+                          <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${service.bannerImage ? 'text-white' : ''}`}>
                             {service.title}
                           </CardTitle>
 
                           {/* Service Description Section */}
                           <div className="flex-grow overflow-y-auto custom-scrollbar max-h-[200px] mb-8 pr-2">
-                            <p className={`text-lg transition-colors ${(isCloud ||
-                              service.slug === 'digital-infrastructure' ||
-                              service.slug === 'cybersecurity' ||
-                              service.slug === 'unified-communications' ||
-                              service.slug === 'integrated-security') ? 'text-slate-200' : 'text-slate-600 dark:text-slate-400'} font-medium`}>
+                            <p className={`text-lg transition-colors ${service.bannerImage ? 'text-slate-200' : 'text-slate-600 dark:text-slate-400'} font-medium`}>
                               {service.description || service.longDescription?.substring(0, 150) + (service.longDescription?.length > 150 ? '...' : '')}
                             </p>
                           </div>
