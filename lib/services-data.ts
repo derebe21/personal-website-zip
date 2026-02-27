@@ -70,7 +70,7 @@ export const servicesData: Service[] = [
         icon: Code,
         logoImage: '/images/enterprise-apps-final.png',
         sidebarImage: '',
-        bannerImage: '/images/custom-enterprise.png',
+        bannerImage: '/images/custom-enterprise-v2.jpg',
         bgColor: '#3B82F6',
         title: 'Enterprise Platforms & Applications',
         description: 'Enterprise-grade application suites and business platforms for operational efficiency and secure service delivery.',
