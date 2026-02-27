@@ -83,37 +83,29 @@ export function Services() {
                         }`}
                     >
                       {/* Card Content Area */}
-                      <div className="relative flex-grow flex flex-col min-h-[500px]">
+                      <div className="relative flex-grow flex flex-col min-h-[460px]">
                         {service.bannerImage && (
-                          <div className="absolute inset-0 z-0">
+                          <div className="absolute inset-0 z-0 overflow-hidden">
                             <img
                               src={service.bannerImage}
                               alt={service.title}
-                              className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-110"
+                              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/60 to-slate-900/90" />
+                            <div className="absolute inset-0 bg-slate-900/60 transition-colors duration-700 group-hover:bg-slate-900/40" />
                           </div>
                         )}
 
-                        <div className="relative z-10 flex flex-col h-full p-10 pt-24 text-center">
-
-                          <CardTitle className={`text-2xl font-black mb-6 tracking-tight ${service.bannerImage ? 'text-white' : ''}`}>
+                        <div className="relative z-10 flex flex-col h-full items-center justify-center p-6 text-center">
+                          <CardTitle className="text-3xl md:text-4xl font-black tracking-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] m-auto py-12 px-2 shadow-black z-20">
                             {service.title}
                           </CardTitle>
-
-                          {/* Service Description Section */}
-                          <div className="flex-grow overflow-y-auto custom-scrollbar max-h-[200px] mb-8 pr-2">
-                            <p className={`text-lg transition-colors ${service.bannerImage ? 'text-slate-200' : 'text-slate-600 dark:text-slate-400'} font-medium`}>
-                              {service.description || service.longDescription?.substring(0, 150) + (service.longDescription?.length > 150 ? '...' : '')}
-                            </p>
-                          </div>
                         </div>
                       </div>
 
-                      {/* Featured Footer */}
-                      <div className="relative overflow-hidden bg-[#F6A113] hover:bg-[#E59102] transition-colors py-6 px-10 flex items-center justify-center text-white font-black uppercase tracking-[0.2em] gap-4 group/btn cursor-pointer">
-                        <div className="absolute inset-0 w-full h-full -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent z-0" />
-                        <ArrowRight className="w-8 h-8 relative z-10 transition-transform group-hover/btn:translate-x-3" />
+                      {/* Explore Domain Button */}
+                      <div className="relative overflow-hidden bg-primary group-hover:bg-primary/90 transition-all py-6 px-8 flex items-center justify-center text-white font-black uppercase tracking-widest text-[17px] gap-3 group/btn cursor-pointer">
+                        <span className="relative z-10">Explore Domain</span>
+                        <ArrowRight className="w-6 h-6 relative z-10 transition-transform group-hover/btn:translate-x-2" />
                       </div>
                     </Card>
                   </Link>

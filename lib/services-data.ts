@@ -34,10 +34,15 @@ export const servicesData: Service[] = [
         bannerImage: '/images/digital-infrastructure-final.png',
         bgColor: '#2E3A59',
         title: 'Digital Infrastructure',
-        description: 'Reliable digital infrastructure specializing in high-performance, scalable environments.',
-        longDescription: 'Reliable digital infrastructure is the backbone of any modern business. We specialize in creating high-performance environments that scale with your growth, ensuring your team has the tools they need to succeed without technical bottlenecks.',
-        features: ['Network Infrastructure', 'Security Architecture', 'Scalable ICT Design', 'Managed Operations'],
-        benefits: ['Improved productivity', 'Reduced downtime', 'Easy scalability', 'Cost-efficient operations'],
+        description: 'Robust and scalable foundational network and ICT design to support enterprise growth and security.',
+        longDescription: 'We design and manage resilient digital foundations that ensure performance, scalability, and enterprise-grade security.',
+        features: [
+            'Network Infrastructure: Advanced enterprise networking solutions for secure and high-speed connectivity.',
+            'Security Architecture: Multi-layered protection systems integrated into infrastructure to safeguard assets and maintain operational reliability.',
+            'Scalable ICT Design: Future-ready IT infrastructure designed to support business growth and evolving technology requirements.',
+            'Managed Operations: 24/7 monitoring, optimization, and operational support to maximize uptime and efficiency.'
+        ],
+        benefits: [],
     },
     {
         slug: 'data-center',
@@ -47,10 +52,15 @@ export const servicesData: Service[] = [
         bannerImage: '/images/data-center-final.png',
         bgColor: '#1E293B',
         title: 'Data Center Solutions',
-        description: 'Comprehensive data center solutions supporting facilities, IT systems, and high-availability operations.',
-        longDescription: 'Comprehensive data center solutions supporting facilities, IT systems, and high-availability operations.',
-        features: ['Facilities Management', 'IT Systems & Integration', 'Power & Cooling Solutions', 'Monitoring & HA Operations'],
-        benefits: ['High availability', 'Advanced security', 'Energy efficiency', 'Operational resilience'],
+        description: 'Comprehensive data center design, power, cooling, and management for maximum uptime and efficiency.',
+        longDescription: 'High-availability data center environments engineered for efficiency, reliability, and sustainability.',
+        features: [
+            'Facilities Management: Comprehensive oversight of all data center facilities and operations.',
+            'IT Systems & Integration: Seamless integration of enterprise IT systems to ensure performance and compatibility.',
+            'Power & Cooling Solutions: Energy-efficient electrical and thermal systems designed for optimal data center operation.',
+            'Monitoring & HA Operations: Real-time monitoring and high-availability management to ensure uninterrupted operations.'
+        ],
+        benefits: [],
     },
     {
         slug: 'integrated-security',
@@ -60,10 +70,15 @@ export const servicesData: Service[] = [
         bannerImage: '/images/custom-cctv.jpg',
         bgColor: '#22C55E',
         title: 'Integrated Security Systems',
-        description: 'End-to-end security and risk management solutions for comprehensive data and physical protection.',
-        longDescription: 'End-to-end security and risk management solutions for comprehensive data and physical protection.',
-        features: ['Cybersecurity & IT Security', 'CCTV & Surveillance', 'Access Control Systems', 'Threat Monitoring & Compliance'],
-        benefits: ['Enhanced data protection', 'Regulatory compliance', 'Business continuity', 'Customer trust'],
+        description: 'Multi-layered cybersecurity and physical security solutions protecting digital assets and facilities.',
+        longDescription: 'Integrated physical and IT security frameworks for complete enterprise protection.',
+        features: [
+            'CCTV & Surveillance: Intelligent monitoring systems with video analytics to protect assets and personnel.',
+            'Access Control Systems: Secure identity and access management across facilities and IT systems.',
+            'Integrated IT Security Monitoring: Continuous monitoring and alerts for IT system integrity and operational security.',
+            'Threat Monitoring & Compliance: Proactive detection of risks and alignment with regulatory requirements.'
+        ],
+        benefits: [],
     },
     {
         slug: 'enterprise-applications',
@@ -73,10 +88,15 @@ export const servicesData: Service[] = [
         bannerImage: '/images/custom-enterprise-v2.jpg',
         bgColor: '#3B82F6',
         title: 'Enterprise Platforms & Applications',
-        description: 'Enterprise-grade application suites and business platforms for operational efficiency and secure service delivery.',
-        longDescription: 'Enterprise-grade application suites and business platforms for operational efficiency and secure service delivery.',
-        features: ['Enterprise Resource Planning (ERP)', 'Collaboration & Communication', 'Enterprise Databases', 'Business-Critical Platforms'],
-        benefits: ['Tailored functionality', 'Higher efficiency', 'Seamless integration', 'Long-term flexibility'],
+        description: 'Business-critical ERP, collaboration, databases, and platforms designed for operational excellence.',
+        longDescription: 'Mission-critical enterprise systems designed to optimize business operations and collaboration.',
+        features: [
+            'Enterprise Resource Planning (ERP): Integrated platforms to streamline business processes and data management.',
+            'Collaboration & Communication: Secure communication and collaboration tools for teams and departments.',
+            'Enterprise Databases: High-performance database solutions for structured data management.',
+            'Business-Critical Platforms: Reliable applications ensuring operational continuity and efficiency.'
+        ],
+        benefits: [],
     },
     {
         slug: 'technology-advisory',
@@ -86,10 +106,16 @@ export const servicesData: Service[] = [
         bannerImage: '/images/technology-advisory-final.jpg',
         bgColor: '#8B5CF6',
         title: 'Technology Advisory & Integration',
-        description: 'Professional ICT consulting and system design services to align technology with strategic goals.',
-        longDescription: 'Professional ICT consulting and system design services to align technology with strategic goals.',
-        features: ['Digital transformation', 'Strategy consulting', 'System optimization', 'IT roadmap development', 'ROI analysis'],
-        benefits: ['Strategic alignment', 'Informed decision-making', 'Optimized investments', 'Competitive advantage'],
+        description: 'Strategic consulting for digital transformation, IT roadmap, and technology optimization.',
+        longDescription: 'Strategic consulting and implementation to drive digital transformation and IT optimization.',
+        features: [
+            'Digital Transformation: Modernization of legacy systems and processes into digital ecosystems.',
+            'Strategy Consulting: Aligning business goals with technology solutions for long-term growth.',
+            'System Optimization: Enhancing IT performance, efficiency, and operational effectiveness.',
+            'IT Roadmap Development: Structured planning for future technology investments and upgrades.',
+            'ROI Analysis: Evaluation of technology investment performance and business value.'
+        ],
+        benefits: [],
     },
     {
         slug: 'cloud-virtualization',
@@ -99,10 +125,15 @@ export const servicesData: Service[] = [
         bannerImage: '/images/custom-cloud.jpg',
         bgColor: '#38BDF8',
         title: 'Cloud & Virtualization Services',
-        description: 'Scalable cloud and virtualization solutions for modernized infrastructure and business continuity.',
-        longDescription: 'Scalable cloud and virtualization solutions for modernized infrastructure and business continuity.',
-        features: ['Public, Private & Hybrid Cloud', 'Server & Desktop Virtualization', 'Backup & Disaster Recovery', 'Business Continuity Solutions'],
-        benefits: ['Global accessibility', 'Operational agility', 'Reduced CAPEX', 'Seamless disaster recovery'],
+        description: 'Flexible cloud deployments and virtualization to enhance scalability, backup, and continuity.',
+        longDescription: 'Scalable and secure cloud and virtualized environments for enterprise growth.',
+        features: [
+            'Public, Private & Hybrid Cloud: Flexible deployment options tailored to organizational needs.',
+            'Server & Desktop Virtualization: Virtual environments for optimized computing resources and flexibility.',
+            'Backup & Disaster Recovery: Robust data protection and recovery systems to ensure business continuity.',
+            'Business Continuity Solutions: Infrastructure and planning to maintain operations during disruptions.'
+        ],
+        benefits: [],
     },
     {
         slug: 'smart-systems',
@@ -112,10 +143,16 @@ export const servicesData: Service[] = [
         bannerImage: '/images/smart-systems-final.png',
         bgColor: '#FACC15',
         title: 'Smart Systems & Automation',
-        description: 'Intelligent, IoT-enabled, and connected systems for automation, monitoring, and digital transformation.',
-        longDescription: 'Intelligent, IoT-enabled, and connected systems for automation, monitoring, and digital transformation.',
-        features: ['Building Automation', 'Smart Lighting', 'Energy Management', 'Intelligent Security', 'Network Optimization'],
-        benefits: ['Real-time insights', 'Automated efficiency', 'Predictive maintenance', 'Energy savings'],
+        description: 'IoT-enabled building automation, energy management, intelligent security, and network optimization.',
+        longDescription: 'IoT-enabled intelligent systems for automation, monitoring, and efficiency.',
+        features: [
+            'Building Automation: Centralized control systems integrating HVAC, lighting, and facility management.',
+            'Smart Lighting: Energy-efficient automated lighting tailored for operational excellence.',
+            'Energy Management: Real-time monitoring and optimization of power consumption.',
+            'Intelligent Security: AI-driven surveillance and alert systems for enhanced protection.',
+            'Network Optimization: Performance tuning to maintain secure, reliable connectivity across systems.'
+        ],
+        benefits: [],
     },
     {
         slug: 'engineering-critical-systems',
@@ -125,10 +162,17 @@ export const servicesData: Service[] = [
         bannerImage: '/images/engineering-electrical-final.jpg',
         bgColor: '#1C1C1C',
         title: 'Engineering & Critical Systems',
-        description: 'Precision engineering for critical operations, focusing on maximum uptime, energy efficiency, and total reliability.',
-        longDescription: 'Critical operations require precision engineering. We design facilities and power systems with a focus on maximum uptime, energy efficiency, and total reliability through redundant systems and robust engineering.',
-        features: ['Facility engineering', 'Power optimization', 'Cooling systems', 'Redundancy planning', 'Environmental controls'],
-        benefits: ['Maximum uptime', 'Energy efficiency', 'Equipment longevity', 'Future-proof design'],
+        description: 'Engineering solutions including facility design, power optimization, cooling, and environmental controls.',
+        longDescription: 'Mission-critical power and infrastructure solutions for operational reliability.',
+        features: [
+            'Power Optimization: Efficient electrical systems designed for stable and reliable power delivery.',
+            'Redundancy Planning: Fail-safe architecture with backup systems to minimize downtime.',
+            'Cooling Systems: Advanced HVAC and thermal management for sensitive equipment.',
+            'Environmental Controls: Precision monitoring of temperature, humidity, and airflow for operational safety.',
+            'Facility Engineering Support: Expert installation, configuration, and integration of critical systems.',
+            'Monitoring & Performance Enhancement: Continuous oversight and optimization of infrastructure performance.'
+        ],
+        benefits: [],
     },
     {
         slug: 'cybersecurity',
@@ -138,10 +182,15 @@ export const servicesData: Service[] = [
         bannerImage: '/images/custom-cybersecurity.png',
         bgColor: '#0F172A',
         title: 'Cybersecurity',
-        description: 'Advanced threat protection and managed security services to safeguard your digital assets.',
-        longDescription: 'Advanced threat protection, security auditing, and managed security services to safeguard your digital assets in an evolving threat landscape.',
-        features: ['Threat Intelligence', 'Vulnerability Assessment', 'Incident Response', 'Managed Security (MSSP)'],
-        benefits: ['Data protection', 'Regulatory compliance', 'Reduced risk', 'Business continuity'],
+        description: 'Comprehensive digital security solutions to safeguard systems, networks, and data against emerging threats.',
+        longDescription: 'Comprehensive digital security solutions to protect enterprise systems, networks, and data.',
+        features: [
+            'Network Security: Firewalls, intrusion detection, and prevention systems to safeguard enterprise networks.',
+            'Endpoint Protection: Security solutions for desktops, laptops, servers, and mobile devices.',
+            'Threat Detection & Response: Real-time monitoring, analysis, and rapid response to cyber threats.',
+            'Security Policy Compliance: Assessment and enforcement of IT security policies and regulatory standards.'
+        ],
+        benefits: [],
     },
     {
         slug: 'unified-communications',
@@ -151,9 +200,14 @@ export const servicesData: Service[] = [
         bannerImage: '/images/unified-communications-new.png',
         bgColor: '#1E293B',
         title: 'Unified Communications',
-        description: 'Seamless integration of voice, video, and collaboration tools to enhance business connectivity.',
+        description: 'Integrated communication solutions combining voice, video, messaging, and collaboration platforms.',
         longDescription: 'Seamless integration of voice, video, messaging, and collaboration tools to enhance business connectivity and team productivity.',
-        features: ['IP Telephony', 'Video Conferencing', 'Team Collaboration', 'Contact Center Solutions'],
-        benefits: ['Enhanced collaboration', 'Cost savings', 'Flexible working', 'Improved customer experience'],
+        features: [
+            'IP Telephony: Advanced voice communication systems for reliable and clear enterprise routing.',
+            'Video Conferencing: High-definition virtual meeting platforms to bridge remote teams seamlessly.',
+            'Team Collaboration: Unified workspaces designed to foster efficient group workflows and file sharing.',
+            'Contact Center Solutions: Omnichannel customer support technology to streamline service interactions.'
+        ],
+        benefits: [],
     },
 ];

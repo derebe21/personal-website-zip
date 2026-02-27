@@ -80,20 +80,24 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     <div className="space-y-6">
                                         <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Our Smart Solutions</h2>
                                         <Accordion type="single" collapsible className="w-full space-y-4">
-                                            {service.features.map((feature, i) => (
-                                                <AccordionItem
-                                                    key={i}
-                                                    value={`item-${i}`}
-                                                    className="border rounded-2xl px-6 bg-white dark:bg-slate-900 shadow-sm border-slate-200 dark:border-slate-800"
-                                                >
-                                                    <AccordionTrigger className="text-lg font-bold hover:no-underline py-6">
-                                                        {feature}
-                                                    </AccordionTrigger>
-                                                    <AccordionContent className="text-slate-600 dark:text-slate-400 pb-6">
-                                                        Advanced, scalable {feature.toLowerCase()} tailored for your specific business requirements and operational excellence.
-                                                    </AccordionContent>
-                                                </AccordionItem>
-                                            ))}
+                                            {service.features.map((featureObj, i) => {
+                                                const [featTitle, ...rest] = featureObj.split(':');
+                                                const featDesc = rest.join(':');
+                                                return (
+                                                    <AccordionItem
+                                                        key={i}
+                                                        value={`item-${i}`}
+                                                        className="border rounded-2xl px-6 bg-white dark:bg-slate-900 shadow-sm border-slate-200 dark:border-slate-800"
+                                                    >
+                                                        <AccordionTrigger className="text-lg font-bold hover:no-underline py-6">
+                                                            {featTitle?.trim() || featureObj}
+                                                        </AccordionTrigger>
+                                                        <AccordionContent className="text-lg text-slate-600 dark:text-slate-400 pb-6 leading-relaxed">
+                                                            {featDesc?.trim() || `Advanced, scalable ${featTitle?.toLowerCase()} tailored for your specific business requirements and operational excellence.`}
+                                                        </AccordionContent>
+                                                    </AccordionItem>
+                                                )
+                                            })}
                                         </Accordion>
                                     </div>
                                 </div>
@@ -119,36 +123,30 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         </div>
                                     )}
 
-                                    <div className="grid sm:grid-cols-2 gap-8">
-                                        <Card className="bg-slate-50 dark:bg-slate-900/50 border-none shadow-none p-6">
-                                            <h3 className="text-xl font-bold mb-4 flex items-center">
-                                                <CheckCircle2 className="w-6 h-6 text-primary mr-2" />
-                                                Key Features
-                                            </h3>
-                                            <ul className="space-y-3">
-                                                {service.features.map((feature, i) => (
-                                                    <li key={i} className="flex items-start text-slate-600 dark:text-slate-400">
-                                                        <ArrowRight className="w-4 h-4 text-primary mr-2 mt-1 flex-shrink-0" />
-                                                        {feature}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </Card>
-
-                                        <Card className="bg-blue-500/5 border border-blue-500/10 p-6">
-                                            <h3 className="text-xl font-bold mb-4 flex items-center text-blue-600 dark:text-blue-400">
-                                                <CheckCircle2 className="w-6 h-6 mr-2" />
-                                                Core Benefits
-                                            </h3>
-                                            <ul className="space-y-3">
-                                                {service.benefits.map((benefit, i) => (
-                                                    <li key={i} className="flex items-start text-slate-600 dark:text-slate-400 font-medium">
-                                                        <ArrowRight className="w-4 h-4 text-primary mr-2 mt-1 flex-shrink-0" />
-                                                        {benefit}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </Card>
+                                    <div className="space-y-4">
+                                        <h3 className="text-2xl font-bold flex items-center text-slate-900 dark:text-white mb-6">
+                                            <CheckCircle2 className="w-8 h-8 text-primary mr-3" />
+                                            Capabilities & Solutions
+                                        </h3>
+                                        <div className="grid sm:grid-cols-1 gap-4">
+                                            {service.features.map((featureObj, i) => {
+                                                const [featTitle, ...rest] = featureObj.split(':');
+                                                const featDesc = rest.join(':');
+                                                return (
+                                                    <Card key={i} className="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 shadow-sm p-6 hover:shadow-md transition-shadow">
+                                                        <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2 flex items-center">
+                                                            <ArrowRight className="w-5 h-5 text-primary mr-2" />
+                                                            {featTitle?.trim() || featureObj}
+                                                        </h4>
+                                                        {featDesc && (
+                                                            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed ml-7">
+                                                                {featDesc.trim()}
+                                                            </p>
+                                                        )}
+                                                    </Card>
+                                                );
+                                            })}
+                                        </div>
                                     </div>
                                 </div>
                             )}
