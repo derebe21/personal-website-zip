@@ -1,91 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-interface Slide {
-  image: string;
-  title: React.ReactElement;
-  description: string;
-}
-
 export function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const slides: Slide[] = [
-    {
-      image: '/images/data-center-main.jpg',
-      title: (
-        <>
-          ITSEC TECHNOLOGY
-        </>
-      ),
-      description:
-        'Empowering modern businesses with robust digital infrastructure, elite security, and professional electrical engineering.',
-    },
-    {
-      image: '/images/custom-cybersecurity.png',
-      title: (
-        <>
-          CYBERSECURITY & SOC
-        </>
-      ),
-      description:
-        'Built and deployed SOC with IDS/IPS and SIEM to monitor, detect, and respond to security incidents in real-time.',
-    },
-    {
-      image: '/images/digital-infrastructure-final.png',
-      title: (
-        <>
-          DIGITAL INFRASTRUCTURE
-        </>
-      ),
-      description:
-        'Design and installation of end-to-end ICT infrastructure for maximum efficiency, security, and enterprise reliability.',
-    },
-    {
-      image: '/images/engineering-electrical-final.jpg',
-      title: (
-        <>
-          FIRE & SAFETY SYSTEMS
-        </>
-      ),
-      description:
-        'Advanced fire detection and automated suppression systems to protect people, assets, and critical infrastructure.',
-    },
-    {
-      image: '/images/unified-communications-new.png',
-      title: (
-        <>
-          UNIFIED COMMUNICATIONS
-        </>
-      ),
-      description:
-        'Seamlessly integrating voice, video, and collaboration platforms for modern enterprise connectivity.',
-    },
-    {
-      image: '/images/custom-enterprise-v2.jpg',
-      title: (
-        <>
-          ENTERPRISE SOFTWARE
-        </>
-      ),
-      description:
-        'Modern, scalable, and business-integrated applications including ERP, CRM, and custom software solutions.',
-    },
-    {
-      image: '/images/custom-cloud.jpg',
-      title: (
-        <>
-          CLOUD SOLUTIONS
-        </>
-      ),
-      description:
-        'Building resilient, cloud-ready infrastructures for enterprise-grade flexibility and seamless workload migration.',
-    }
-  ];
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
@@ -95,43 +15,23 @@ export function Hero() {
     setMousePosition({ x, y });
   };
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const scrollToContact = () => {
-    const element = document.getElementById('services'); // Redirect to services for flow
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section
       id="home"
       onMouseMove={handleMouseMove}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden perspective-1000 bg-slate-950"
     >
-      {/* Sliding Backgrounds */}
-      <div
-        className="absolute inset-0 z-0 flex transition-transform duration-1000 ease-in-out"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className="relative min-w-full h-full overflow-hidden">
-            <img
-              src={slide.image}
-              alt="Hero Background"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute inset-0 bg-slate-950/40 z-20" />
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 via-transparent to-slate-950/60 z-15" />
-          </div>
-        ))}
+      {/* Static Background */}
+      <div className="absolute inset-0 z-0 flex">
+        <div className="relative min-w-full h-full overflow-hidden">
+          <img
+            src="/images/data-center-main.jpg"
+            alt="ITSEC Technology Data Center"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-950/40 z-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 via-transparent to-slate-950/60 z-15" />
+        </div>
       </div>
 
       {/* Main Content Layer */}
@@ -142,46 +42,33 @@ export function Hero() {
           transformStyle: 'preserve-3d'
         }}
       >
-        <div className="relative h-[600px] w-full mt-12">
-          {slides.map((slide, index) => (
+        <div className="relative h-[600px] w-full mt-12 flex flex-col justify-center">
+          <div
+            className="absolute inset-0 flex flex-col items-center text-center opacity-100"
+            style={{
+              transformStyle: 'preserve-3d',
+              zIndex: 20
+            }}
+          >
+            {/* Title Layer */}
+            <div style={{ transform: 'translateZ(100px)' }} className="relative flex flex-col items-center">
+              <h1 className="relative text-[74px] pt-[150px] font-[900] tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] italic">
+                ITSEC TECHNOLOGY
+              </h1>
+            </div>
+
+            {/* Description Layer */}
             <div
-              key={index}
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out flex flex-col items-center text-center ${currentSlide === index
-                ? 'opacity-100 translate-x-0'
-                : index < currentSlide
-                  ? 'opacity-0 -translate-x-full'
-                  : 'opacity-0 translate-x-full'
-                }`}
-              style={{
-                transformStyle: 'preserve-3d',
-                zIndex: currentSlide === index ? 20 : 10
-              }}
+              className="mt-12 max-w-3xl mx-auto relative"
+              style={{ transform: 'translateZ(40px)' }}
             >
-              {/* Title Layer */}
-              <div style={{ transform: 'translateZ(100px)' }} className="relative flex flex-col items-center">
-                {/* Advanced Cybersecurity Rotating Logo */}
-
-
-                <h1 className="relative text-[74px] pt-[150px] font-[900] tracking-[0.1em] text-white leading-none uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] italic">
-                  {slide.title}
-                </h1>
-              </div>
-
-              {/* Description Layer */}
-              <div
-                className="mt-12 max-w-3xl mx-auto relative"
-                style={{ transform: 'translateZ(40px)' }}
-              >
-                {/* Content Overlay */}
-
-                <div className="p-1 px-4 border-l-4 border-blue-600 bg-white/5 backdrop-blur-md rounded-r-xl">
-                  <p className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-medium tracking-wide py-4">
-                    {slide.description}
-                  </p>
-                </div>
+              <div className="p-1 px-4 border-l-4 border-blue-600 bg-white/5 backdrop-blur-md rounded-r-xl">
+                <p className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-medium tracking-wide py-4">
+                  Empowering modern businesses with robust digital infrastructure, elite security, and professional electrical engineering.
+                </p>
               </div>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Action Buttons with High Depth */}
@@ -200,23 +87,12 @@ export function Hero() {
           <Button
             size="lg"
             variant="secondary"
-            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/20 border-2 font-black h-18 px-14 rounded-full backdrop-blur-xl transition-all hover:scale-105 text-xl"
           >
             Explore Services
           </Button>
         </div>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-4 z-30">
-        {slides.map((_, i) => (
-          <div
-            key={i}
-            className={`h-2.5 rounded-full transition-all duration-500 ${currentSlide === i ? 'w-12 bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.8)]' : 'w-2.5 bg-white/30'
-              }`}
-          />
-        ))}
       </div>
     </section>
   );
