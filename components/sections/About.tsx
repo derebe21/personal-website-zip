@@ -23,21 +23,21 @@ export function About() {
           {[
             {
               title: 'About Us',
-              description: 'Optimizing operations, strengthening digital trust, and achieving sustainable growth through tailored digital leadership for organizations worldwide.',
+              description: 'We design, deploy, and install end-to-end ICT infrastructure that enables organizations to operate with maximum efficiency, security, and reliability. Our expertise ensures business continuity and digital transformation.',
               icon: Rocket,
               color: 'blue',
               number: '01'
             },
             {
               title: 'Vision',
-              description: 'To be a globally trusted technology partner, enabling secure, innovative, and sustainable digital transformation that drives growth, efficiency, and long-term organizational excellence.',
+              description: 'To deliver secure, scalable, and high-performance technology infrastructures that ensure long-term digital transformation and regulatory compliance for modern enterprises.',
               icon: Target,
               color: 'cyan',
               number: '02'
             },
             {
               title: 'Mission',
-              description: 'To empower organizations worldwide with secure and innovative technology solutions that deliver measurable value through technical excellence and international best practices.',
+              description: 'To empower organizations with reliable, future-ready technology infrastructures through technical excellence in networking, data centers, security, and smart building solutions.',
               icon: Award,
               color: 'orange',
               number: '03'

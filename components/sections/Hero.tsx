@@ -24,6 +24,36 @@ export function Hero() {
       ),
       description:
         'Empowering modern businesses with robust digital infrastructure, elite security, and professional electrical engineering.',
+    },
+    {
+      image: '/images/custom-cybersecurity.png',
+      title: (
+        <>
+          CYBERSECURITY & SOC
+        </>
+      ),
+      description:
+        'Built and deployed SOC with IDS/IPS and SIEM to monitor, detect, and respond to security incidents in real-time.',
+    },
+    {
+      image: '/images/digital-infrastructure-final.png',
+      title: (
+        <>
+          DIGITAL INFRASTRUCTURE
+        </>
+      ),
+      description:
+        'Design and installation of end-to-end ICT infrastructure for maximum efficiency, security, and enterprise reliability.',
+    },
+    {
+      image: '/images/engineering-electrical-final.jpg',
+      title: (
+        <>
+          FIRE & SAFETY SYSTEMS
+        </>
+      ),
+      description:
+        'Advanced fire detection and automated suppression systems to protect people, assets, and critical infrastructure.',
     }
   ];
 
@@ -36,7 +66,10 @@ export function Hero() {
   };
 
   useEffect(() => {
-    // Single slide - no interval needed
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
   }, [slides.length]);
 
   const scrollToContact = () => {
