@@ -99,7 +99,7 @@ export function Footer() {
           <div className="space-y-6">
             <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Location</h3>
             <p className="text-sm leading-relaxed text-slate-400">
-              123 Business Park, Tech District<br />
+              Bole Road, Business District<br />
               Addis Ababa, Ethiopia
             </p>
             <p className="text-sm text-slate-400">

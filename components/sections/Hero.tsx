@@ -64,6 +64,26 @@ export function Hero() {
       ),
       description:
         'Seamlessly integrating voice, video, and collaboration platforms for modern enterprise connectivity.',
+    },
+    {
+      image: '/images/custom-enterprise-v2.jpg',
+      title: (
+        <>
+          ENTERPRISE SOFTWARE
+        </>
+      ),
+      description:
+        'Modern, scalable, and business-integrated applications including ERP, CRM, and custom software solutions.',
+    },
+    {
+      image: '/images/custom-cloud.jpg',
+      title: (
+        <>
+          CLOUD SOLUTIONS
+        </>
+      ),
+      description:
+        'Building resilient, cloud-ready infrastructures for enterprise-grade flexibility and seamless workload migration.',
     }
   ];
 
