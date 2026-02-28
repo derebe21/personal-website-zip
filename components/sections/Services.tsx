@@ -5,11 +5,29 @@ import { Card, CardTitle } from '@/components/ui/card';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
-import { useState, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 export function Services() {
-  // Multiply the array lengths enough to fill the screen width with clones for the infinite loop illusion
-  const multipliedServices = [...servicesData, ...servicesData, ...servicesData, ...servicesData];
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, clientWidth } = scrollContainerRef.current;
+      const index = Math.round(scrollLeft / clientWidth);
+      setActiveIndex(index);
+    }
+  };
+
+  const scrollTo = (index: number) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = index * scrollContainerRef.current.clientWidth;
+      scrollContainerRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <section
@@ -32,14 +50,16 @@ export function Services() {
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
 
-          {/* Continuous Scrolling Container */}
+          {/* Native Scrolling Container */}
           <div
-            className="flex gap-12 py-24 px-12 animate-scroll group-hover/slider:[animation-play-state:paused] w-max"
+            ref={scrollContainerRef}
+            onScroll={handleScroll}
+            className="flex gap-12 py-12 px-12 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+            style={{ scrollBehavior: 'smooth', msOverflowStyle: 'none', scrollbarWidth: 'none' }}
           >
-            {multipliedServices.map((service, index) => {
-              const isCloud = service.slug === 'cloud-virtualization';
+            {servicesData.map((service, index) => {
               return (
-                <div key={index} className="w-[380px] md:w-[480px] flex-shrink-0">
+                <div key={index} className="w-[85vw] md:w-[60vw] lg:w-[480px] flex-shrink-0 snap-center">
                   <Link href={`/services/${service.slug}.html`} className="block group h-full">
                     <Card
                       className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(37,99,235,0.2)]`}
@@ -58,25 +78,25 @@ export function Services() {
                       )}
 
                       {/* Text Content Area - Positioned strictly below the image */}
-                      <div className="flex-grow flex flex-col p-8 bg-white dark:bg-slate-900/90 z-10 min-h-[220px]">
-                        <CardTitle className="text-2xl font-black tracking-tight text-slate-900 dark:text-white mb-6 text-center">
+                      <div className="flex-grow flex flex-col p-8 bg-white dark:bg-slate-900/90 z-10 min-h-[260px]">
+                        <CardTitle className="text-2xl font-black tracking-tight text-slate-900 dark:text-white mb-6 text-center line-clamp-2">
                           {service.title}
                         </CardTitle>
 
-                        <ul className="space-y-3">
+                        <ul className="space-y-4 flex-grow flex flex-col justify-center">
                           {service.features.slice(0, 3).map((feature, fIndex) => (
-                            <li key={fIndex} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                              <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                              <span className="leading-tight text-left italic font-medium">{feature.split(':')[0]}</span>
+                            <li key={fIndex} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                              <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 flex-shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
+                              <span className="leading-relaxed text-left font-medium">{feature.split(':')[0]}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
                       {/* Explore Domain Button */}
-                      <div className="relative overflow-hidden bg-primary group-hover:bg-primary/90 transition-all py-6 px-8 flex items-center justify-center text-white font-black uppercase tracking-widest text-[17px] gap-3 group/btn cursor-pointer">
-                        <span className="relative z-10">Explore Domain</span>
-                        <ArrowRight className="w-6 h-6 relative z-10 transition-transform group-hover/btn:translate-x-2" />
+                      <div className="relative overflow-hidden bg-gradient-to-r from-blue-700 to-blue-500 group-hover:from-blue-600 group-hover:to-blue-400 transition-all py-5 px-8 flex items-center justify-center text-white font-black uppercase tracking-widest text-[16px] gap-3 group/btn cursor-pointer">
+                        <span className="relative z-10">Explore Service</span>
+                        <ArrowRight className="w-5 h-5 relative z-10 transition-transform group-hover/btn:translate-x-2" />
                       </div>
                     </Card>
                   </Link>
@@ -87,16 +107,21 @@ export function Services() {
         </div>
 
         {/* Pagination Bullets for visual feedback */}
-        <div className="flex justify-center gap-3 mt-12">
+        <div className="flex justify-center gap-3 mt-12 flex-wrap px-4">
           {servicesData.map((_, i) => (
-            <div
+            <button
               key={i}
-              className={`h-1.5 rounded-full transition-all duration-500 ${i === 0 ? 'w-8 bg-primary' : 'w-2 bg-slate-300 dark:bg-slate-800'
+              onClick={() => scrollTo(i)}
+              className={`h-2.5 rounded-full transition-all duration-500 cursor-pointer ${i === activeIndex
+                  ? 'w-10 bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)]'
+                  : 'w-2.5 bg-slate-300 dark:bg-slate-700 hover:bg-blue-400/50'
                 }`}
+              aria-label={`Scroll to ${servicesData[i].title}`}
             />
           ))}
         </div>
       </div>
+
     </section>
   );
 }

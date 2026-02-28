@@ -196,7 +196,7 @@ export const servicesData: Service[] = [
         sidebarImage: '',
         bannerImage: '/images/engineering-electrical-final.jpg',
         bgColor: '#1C1C1C',
-        title: 'Engineering & Critical Systems',
+        title: 'Critical Power & Infrastructure Systems',
         description: 'Engineering solutions including facility design, power optimization, cooling, and environmental controls.',
         longDescription: 'Mission-critical power and infrastructure solutions for operational reliability.',
         features: [
@@ -208,23 +208,5 @@ export const servicesData: Service[] = [
             'Monitoring & Performance Enhancement: Continuous oversight and optimization of infrastructure performance.'
         ],
         benefits: [],
-    },
-    {
-        slug: 'fire-detection-suppression',
-        icon: Flame,
-        logoImage: '',
-        sidebarImage: '',
-        bannerImage: '/images/engineering-electrical-final.jpg', // Placeholder for now
-        bgColor: '#EF4444',
-        title: 'Fire Detection & Suppression',
-        description: 'Advanced safety solutions to protect people, assets, and critical infrastructure.',
-        longDescription: 'Early warning and automated response systems designed for rapid detection and suppression of fire risks.',
-        features: [
-            'Fire Detection Systems: Early warning using smoke, heat, and flame sensors for rapid alert.',
-            'Fire Suppression Systems: Automated suppression using gas, water mist, or sprinklers.',
-            'Integration with Building Systems: Coordinated response with building automation and alarms.',
-            'Asset Protection: Solutions tailored to safeguard critical infrastructure and personnel.'
-        ],
-        benefits: [],
-    },
+    }
 ];
