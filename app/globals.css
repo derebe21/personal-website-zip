@@ -160,7 +160,7 @@
 
 @layer utilities {
   .animate-scroll {
-    animation: scroll 60s linear infinite;
+    animation: scroll 150s linear infinite;
   }
 
   .animate-shimmer {
