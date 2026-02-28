@@ -37,10 +37,10 @@ export function Services() {
                     <Card
                       className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(37,99,235,0.2)]`}
                     >
-                      {/* Uniform Image Area - Data Center Image */}
+                      {/* Image Area */}
                       <div className="relative h-64 w-full overflow-hidden flex-shrink-0">
                         <img
-                          src="/images/data-center-final.png"
+                          src={service.bannerImage}
                           alt={service.title}
                           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                         />
