@@ -58,10 +58,19 @@ export function Services() {
                       )}
 
                       {/* Text Content Area - Positioned strictly below the image */}
-                      <div className="flex-grow flex flex-col items-center justify-center p-8 text-center bg-white dark:bg-slate-900/90 z-10 min-h-[140px]">
-                        <CardTitle className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+                      <div className="flex-grow flex flex-col p-8 bg-white dark:bg-slate-900/90 z-10 min-h-[220px]">
+                        <CardTitle className="text-2xl font-black tracking-tight text-slate-900 dark:text-white mb-6 text-center">
                           {service.title}
                         </CardTitle>
+
+                        <ul className="space-y-3">
+                          {service.features.slice(0, 3).map((feature, fIndex) => (
+                            <li key={fIndex} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                              <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                              <span className="leading-tight text-left italic font-medium">{feature.split(':')[0]}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
 
                       {/* Explore Domain Button */}
@@ -77,7 +86,16 @@ export function Services() {
           </div>
         </div>
 
-        {/* Removed redundant pagination bullets for continuous scroll */}
+        {/* Pagination Bullets for visual feedback */}
+        <div className="flex justify-center gap-3 mt-12">
+          {servicesData.map((_, i) => (
+            <div
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-500 ${i === 0 ? 'w-8 bg-primary' : 'w-2 bg-slate-300 dark:bg-slate-800'
+                }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
