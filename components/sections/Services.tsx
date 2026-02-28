@@ -82,27 +82,27 @@ export function Services() {
                       className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-1000 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:rotate-y-0 group-hover:scale-[1.05] group-hover:shadow-primary/20 ${activeIndex % totalServices === index % totalServices ? 'animate-none scale-105 rotate-y-0 shadow-primary/10' : 'animate-orbital-3d'
                         }`}
                     >
-                      {/* Card Content Area */}
-                      <div className="relative flex-grow flex flex-col min-h-[460px]">
-                        {service.bannerImage && (
-                          <div className="absolute inset-0 z-0 overflow-hidden">
-                            <img
-                              src={service.bannerImage}
-                              alt={service.title}
-                              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                            />
-                            {/* Dark overlay with bottom-heavy gradient for text readability below the image center */}
-                            <div className="absolute inset-0 bg-slate-950/50 transition-colors duration-700 group-hover:bg-slate-950/30" />
-                            <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent pointer-events-none" />
-                          </div>
-                        )}
-
-                        {/* Title text positioned below the image center */}
-                        <div className="relative z-10 flex flex-col h-full items-center justify-end p-8 pb-10 text-center">
-                          <CardTitle className="text-3xl md:text-3xl font-black tracking-tight text-white drop-shadow-[0_4px_8px_rgba(0,0,0,1)] z-20 leading-tight">
-                            {service.title}
-                          </CardTitle>
+                      {/* Image Area - No text inside image */}
+                      {service.bannerImage && (
+                        <div className="relative h-64 w-full overflow-hidden flex-shrink-0">
+                          <img
+                            src={service.bannerImage}
+                            alt={service.title}
+                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                          />
+                          {/* Dark overlay for technology theme aesthetic */}
+                          <div className="absolute inset-0 bg-slate-950/30 transition-colors duration-700 group-hover:bg-slate-950/10" />
                         </div>
+                      )}
+
+                      {/* Text Content Area - Positioned strictly below the image */}
+                      <div className="flex-grow flex flex-col items-center justify-center p-8 text-center bg-white dark:bg-slate-900/90 z-10">
+                        <CardTitle className="text-2xl font-black tracking-tight text-slate-900 dark:text-white mb-4">
+                          {service.title}
+                        </CardTitle>
+                        <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed line-clamp-4">
+                          {service.description}
+                        </p>
                       </div>
 
                       {/* Explore Domain Button */}
