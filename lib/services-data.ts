@@ -157,7 +157,7 @@ export const servicesData: Service[] = [
     {
         slug: 'engineering-critical',
         icon: Zap,
-        logoImage: '/images/critical-systems-logo-new.png',
+        logoImage: '/images/engineering-electrical-final.jpg',
         sidebarImage: '',
         bannerImage: '/images/engineering-electrical-final.jpg',
         bgColor: '#1C1C1C',
