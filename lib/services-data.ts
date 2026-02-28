@@ -28,6 +28,42 @@ export interface Service {
 
 export const servicesData: Service[] = [
     {
+        slug: 'cybersecurity',
+        icon: ShieldCheck,
+        logoImage: '/images/cyber-risk-logo-new.png',
+        sidebarImage: '',
+        bannerImage: '/images/custom-cybersecurity.png',
+        bgColor: '#0F172A',
+        title: 'Cybersecurity',
+        description: 'Comprehensive digital security solutions to protect enterprise systems, networks, and data.',
+        longDescription: 'Professional-grade security operations and policy enforcement to safeguard your digital assets.',
+        features: [
+            'SOC with IDS/IPS and SIEM: Dedicated facility for real-time monitoring, threat detection, and response.',
+            'Network Access Control (NAC): Policy enforcement to ensure only authorized users and compliant devices connect.',
+            'Security Assessments: Auditing, penetration testing, and AI-driven threat analysis for proactive defense.',
+            'Endpoint & Network Protection: Comprehensive security layering for users, servers, and infrastructure.'
+        ],
+        benefits: [],
+    },
+    {
+        slug: 'unified-communications',
+        icon: MessageSquare,
+        logoImage: '/images/unified-communications-new.png',
+        sidebarImage: '',
+        bannerImage: '/images/unified-communications-new.png',
+        bgColor: '#1E293B',
+        title: 'Unified Communications',
+        description: 'Integrated communication solutions combining voice, video, messaging, and collaboration platforms.',
+        longDescription: 'IP-based VoIP, video conferencing, and collaboration platforms for seamless communication and connection.',
+        features: [
+            'Voice, Video & Messaging Platforms: Seamless enterprise-grade communication tools for collaboration.',
+            'Collaboration Tools: Secure platforms for team interaction, project management, and document sharing.',
+            'Scalable Communication Networks: Reliable and expandable networks supporting voice, video, and data traffic.',
+            'Infrastructure Integration: Seamless connection of communication systems with existing enterprise IT environments.'
+        ],
+        benefits: [],
+    },
+    {
         slug: 'digital-infrastructure',
         icon: Server,
         logoImage: '',
@@ -170,42 +206,6 @@ export const servicesData: Service[] = [
             'Environmental Controls: Precision monitoring of temperature, humidity, and airflow for operational safety.',
             'Facility Engineering Support: Expert installation, configuration, and integration of critical systems.',
             'Monitoring & Performance Enhancement: Continuous oversight and optimization of infrastructure performance.'
-        ],
-        benefits: [],
-    },
-    {
-        slug: 'cybersecurity',
-        icon: ShieldCheck,
-        logoImage: '/images/cyber-risk-logo-new.png',
-        sidebarImage: '',
-        bannerImage: '/images/custom-cybersecurity.png',
-        bgColor: '#0F172A',
-        title: 'Cybersecurity',
-        description: 'Comprehensive digital security solutions to protect enterprise systems, networks, and data.',
-        longDescription: 'Professional-grade security operations and policy enforcement to safeguard your digital assets.',
-        features: [
-            'SOC with IDS/IPS and SIEM: Dedicated facility for real-time monitoring, threat detection, and response.',
-            'Network Access Control (NAC): Policy enforcement to ensure only authorized users and compliant devices connect.',
-            'Security Assessments: Auditing, penetration testing, and AI-driven threat analysis for proactive defense.',
-            'Endpoint & Network Protection: Comprehensive security layering for users, servers, and infrastructure.'
-        ],
-        benefits: [],
-    },
-    {
-        slug: 'unified-communications',
-        icon: MessageSquare,
-        logoImage: '/images/unified-communications-new.png',
-        sidebarImage: '',
-        bannerImage: '/images/unified-communications-new.png',
-        bgColor: '#1E293B',
-        title: 'Unified Communications',
-        description: 'Integrated communication solutions combining voice, video, messaging, and collaboration platforms.',
-        longDescription: 'IP-based VoIP, video conferencing, and collaboration platforms for seamless communication and connection.',
-        features: [
-            'Voice, Video & Messaging Platforms: Seamless enterprise-grade communication tools for collaboration.',
-            'Collaboration Tools: Secure platforms for team interaction, project management, and document sharing.',
-            'Scalable Communication Networks: Reliable and expandable networks supporting voice, video, and data traffic.',
-            'Infrastructure Integration: Seamless connection of communication systems with existing enterprise IT environments.'
         ],
         benefits: [],
     },

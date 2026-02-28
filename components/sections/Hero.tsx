@@ -54,6 +54,16 @@ export function Hero() {
       ),
       description:
         'Advanced fire detection and automated suppression systems to protect people, assets, and critical infrastructure.',
+    },
+    {
+      image: '/images/unified-communications-new.png',
+      title: (
+        <>
+          UNIFIED COMMUNICATIONS
+        </>
+      ),
+      description:
+        'Seamlessly integrating voice, video, and collaboration platforms for modern enterprise connectivity.',
     }
   ];
 
