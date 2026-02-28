@@ -58,13 +58,10 @@ export function Services() {
                       )}
 
                       {/* Text Content Area - Positioned strictly below the image */}
-                      <div className="flex-grow flex flex-col items-center justify-center p-8 text-center bg-white dark:bg-slate-900/90 z-10">
-                        <CardTitle className="text-2xl font-black tracking-tight text-slate-900 dark:text-white mb-4">
+                      <div className="flex-grow flex flex-col items-center justify-center p-8 text-center bg-white dark:bg-slate-900/90 z-10 min-h-[140px]">
+                        <CardTitle className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
                           {service.title}
                         </CardTitle>
-                        <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed line-clamp-4">
-                          {service.description}
-                        </p>
                       </div>
 
                       {/* Explore Domain Button */}

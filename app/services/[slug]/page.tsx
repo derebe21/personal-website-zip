@@ -102,32 +102,19 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </div>
                                 </div>
                             ) : (
-                                <div className="space-y-12">
+                                <div className="space-y-10">
                                     <div className="space-y-6">
-                                        <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
+                                        <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight text-slate-900 dark:text-white">
                                             {service.title}
                                         </h1>
-                                        {service.description && (
-                                            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
-                                                {service.description}
+                                        {service.longDescription && (
+                                            <p className="text-xl leading-relaxed text-slate-600 dark:text-slate-400 font-medium">
+                                                {service.longDescription}
                                             </p>
                                         )}
                                     </div>
 
-                                    {service.longDescription && service.longDescription !== service.description && (
-                                        <div className="prose prose-slate dark:prose-invert max-w-none">
-                                            <h2 className="text-2xl font-bold mb-4">Overview</h2>
-                                            <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-                                                {service.longDescription}
-                                            </p>
-                                        </div>
-                                    )}
-
-                                    <div className="space-y-4">
-                                        <h3 className="text-2xl font-bold flex items-center text-slate-900 dark:text-white mb-6">
-                                            <CheckCircle2 className="w-8 h-8 text-primary mr-3" />
-                                            Capabilities & Solutions
-                                        </h3>
+                                    <div className="space-y-4 pt-4 border-t border-slate-200 dark:border-slate-800">
                                         <div className="grid sm:grid-cols-1 gap-4">
                                             {service.features.map((featureObj, i) => {
                                                 const [featTitle, ...rest] = featureObj.split(':');
