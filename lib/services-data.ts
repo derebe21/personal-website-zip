@@ -182,7 +182,7 @@ export const servicesData: Service[] = [
         bannerImage: '/images/custom-cybersecurity.png',
         bgColor: '#0F172A',
         title: 'Cybersecurity',
-        description: 'Comprehensive digital security solutions to safeguard systems, networks, and data against emerging threats.',
+        description: 'Comprehensive digital security solutions to protect enterprise systems, networks, and data.',
         longDescription: 'Comprehensive digital security solutions to protect enterprise systems, networks, and data.',
         features: [
             'Network Security: Firewalls, intrusion detection, and prevention systems to safeguard enterprise networks.',
