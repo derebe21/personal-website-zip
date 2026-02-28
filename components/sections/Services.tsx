@@ -157,8 +157,8 @@ export function Services({ variant = 'grid' }: ServicesProps) {
                 key={i}
                 onClick={() => scrollTo(i)}
                 className={`h-2.5 rounded-full transition-all duration-500 cursor-pointer ${i === activeIndex
-                    ? 'w-10 bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)]'
-                    : 'w-2.5 bg-slate-300 dark:bg-slate-700 hover:bg-blue-400/50'
+                  ? 'w-10 bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)]'
+                  : 'w-2.5 bg-slate-300 dark:bg-slate-700 hover:bg-blue-400/50'
                   }`}
                 aria-label={`Scroll to ${servicesData[i].title}`}
               />
