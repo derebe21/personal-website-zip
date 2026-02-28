@@ -8,21 +8,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export function Services() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const totalServices = servicesData.length;
-  // Duplicate services for ribbon effect
+  // Multiply the array lengths enough to fill the screen width with clones for the infinite loop illusion
   const multipliedServices = [...servicesData, ...servicesData, ...servicesData, ...servicesData];
-
-  useEffect(() => {
-    if (isPaused) return;
-
-    const interval = setInterval(() => {
-      setActiveIndex((prev: number) => (prev + 1) % (totalServices * 4));
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [isPaused, totalServices]);
 
   return (
     <section
@@ -39,39 +26,15 @@ export function Services() {
       <div className="max-w-[100vw]">
         {/* Infinite 3D Auto-Slider Ribbon */}
         <div
-          className="relative flex overflow-hidden"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          className="relative flex overflow-hidden group/slider"
         >
           {/* Subtle Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-20 pointer-events-none" />
 
-          {/* Manual Navigation Arrows */}
-          <div className="absolute inset-y-0 left-8 z-30 flex items-center">
-            <button
-              onClick={() => setActiveIndex((prev) => (prev - 1 + totalServices * 4) % (totalServices * 4))}
-              className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all shadow-xl"
-              aria-label="Previous Slide"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </button>
-          </div>
-          <div className="absolute inset-y-0 right-8 z-30 flex items-center">
-            <button
-              onClick={() => setActiveIndex((prev) => (prev + 1) % (totalServices * 4))}
-              className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all shadow-xl"
-              aria-label="Next Slide"
-            >
-              <ChevronRight className="w-8 h-8" />
-            </button>
-          </div>
-
+          {/* Continuous Scrolling Container */}
           <div
-            className="flex gap-12 py-24 px-12 transition-transform duration-1000 ease-in-out"
-            style={{
-              transform: `translateX(calc(-${activeIndex * (380 + 48)}px))`,
-            }}
+            className="flex gap-12 py-24 px-12 animate-scroll group-hover/slider:[animation-play-state:paused] w-max"
           >
             {multipliedServices.map((service, index) => {
               const isCloud = service.slug === 'cloud-virtualization';
@@ -79,8 +42,7 @@ export function Services() {
                 <div key={index} className="w-[380px] md:w-[480px] flex-shrink-0">
                   <Link href={`/services/${service.slug}.html`} className="block group h-full">
                     <Card
-                      className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-1000 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:rotate-y-0 group-hover:scale-[1.05] group-hover:shadow-primary/20 ${activeIndex % totalServices === index % totalServices ? 'animate-none scale-105 rotate-y-0 shadow-primary/10' : 'animate-orbital-3d'
-                        }`}
+                      className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(37,99,235,0.2)]`}
                     >
                       {/* Image Area - No text inside image */}
                       {service.bannerImage && (
@@ -118,20 +80,7 @@ export function Services() {
           </div>
         </div>
 
-        {/* Pagination Bullets */}
-        <div className="flex justify-center gap-3 mt-12 pb-8">
-          {servicesData.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveIndex(idx)}
-              className={`w-3 h-3 rounded-full transition-all duration-500 ${activeIndex % totalServices === idx
-                ? 'bg-primary w-10 shadow-[0_0_15px_rgba(37,99,235,0.5)]'
-                : 'bg-slate-300 dark:bg-slate-700 hover:bg-primary/50'
-                }`}
-              aria-label={`Go to service ${idx + 1}`}
-            />
-          ))}
-        </div>
+        {/* Removed redundant pagination bullets for continuous scroll */}
       </div>
     </section>
   );
