@@ -100,6 +100,15 @@ export function Products() {
         { name: 'Supermicro', logo: 'supermicro', url: 'https://www.supermicro.com/en/products' }
     ];
 
+    const unifiedCommunicationsPartners = [
+        { name: 'Cisco Webex', logo: '/images/partners/cisco-logo.svg', url: 'https://www.webex.com/' },
+        { name: 'Microsoft Teams', logo: 'microsoftteams', url: 'https://www.microsoft.com/en-us/microsoft-teams/group-chat-software' },
+        { name: 'Zoom', logo: 'zoom', url: 'https://zoom.us/' },
+        { name: 'Avaya', logo: 'avaya', url: 'https://www.avaya.com/en/' },
+        { name: 'Poly', logo: 'poly', url: 'https://www.poly.com/us/en' },
+        { name: 'Yealink', logo: 'yealink', url: 'https://www.yealink.com/en' }
+    ];
+
     const integratedSecurityPartners = [
         { name: 'Hikvision', logo: '/images/partners/hikvision.png', url: 'https://www.hikvision.com/en/products/' },
         { name: 'Dahua', logo: '/images/partners/dahua.png', url: 'https://www. dahuasecurity.com/products' },
@@ -517,6 +526,65 @@ export function Products() {
                         <div className="mt-16 text-center animate-fade-up">
                             <Link
                                 href="/services/unified-communications"
+                                className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold transition-all hover:scale-105 group"
+                            >
+                                <span className="text-lg">View our Voice and Collaboration solutions.</span>
+                                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                {/* FEATURED UNIFIED COMMUNICATIONS SECTION */}
+                <div id="unified-communications-partners" className="mb-24 relative p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-blue-500/10 shadow-2xl">
+                    <div className="absolute inset-0 z-0 bg-blue-900/5">
+                        <img
+                            src="/images/unified-communications-new.png"
+                            alt="Unified Communications Background"
+                            className="w-full h-full object-cover opacity-85 dark:opacity-70"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
+                    </div>
+
+                    <div className="relative z-10">
+                        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+                            <div className="p-3 bg-blue-500/10 rounded-2xl">
+                                <Monitor className="w-8 h-8 text-blue-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 dark:from-blue-400 dark:to-blue-200 uppercase tracking-tight">
+                                    Unified Communications
+                                </h3>
+                                <p className="text-slate-600 dark:text-slate-300 font-medium text-lg">Voice, video, and collaboration for the modern enterprise</p>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {unifiedCommunicationsPartners.map((partner: any, index: number) => (
+                                <Link
+                                    key={partner.name}
+                                    href={partner.url}
+                                    target="_blank"
+                                    className="group relative flex flex-col items-center justify-center p-8 rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all duration-700 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.4)] hover:-translate-y-2 animate-fade-up min-h-[220px] text-center"
+                                    style={{ animationDelay: `${index * 150}ms` }}
+                                >
+                                    <div className="w-16 p-3 h-16 flex items-center justify-center rounded-2xl group-hover:shadow-inner transition-all transform group-hover:scale-110 mb-4 bg-slate-50 dark:bg-slate-800">
+                                        <img
+                                            src={partner.logo && (partner.logo.startsWith('/') || partner.logo.startsWith('http'))
+                                                ? partner.logo
+                                                : `https://cdn.simpleicons.org/${partner.logo || ''}/4755E9`}
+                                            alt={partner.name}
+                                            className={`w-full h-full object-contain ${partner.logo && partner.logo.startsWith('/') ? '' : 'dark:invert'}`}
+                                        />
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-tight text-lg md:text-xl">{partner.name}</h4>
+                                </Link>
+                            ))}
+                        </div>
+
+                        {/* UC CTA */}
+                        <div className="mt-16 text-center animate-fade-up">
+                            <Link
+                                href="/services/unified-communications.html"
                                 className="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 font-bold transition-all hover:scale-105 group"
                             >
                                 <span className="text-lg">View our Voice and Collaboration solutions.</span>
