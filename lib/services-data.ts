@@ -201,12 +201,12 @@ export const servicesData: Service[] = [
         bgColor: '#1E293B',
         title: 'Unified Communications',
         description: 'Integrated communication solutions combining voice, video, messaging, and collaboration platforms.',
-        longDescription: 'Seamless integration of voice, video, messaging, and collaboration tools to enhance business connectivity and team productivity.',
+        longDescription: 'Integrated communication solutions to connect people and systems securely and efficiently.',
         features: [
-            'IP Telephony: Advanced voice communication systems for reliable and clear enterprise routing.',
-            'Video Conferencing: High-definition virtual meeting platforms to bridge remote teams seamlessly.',
-            'Team Collaboration: Unified workspaces designed to foster efficient group workflows and file sharing.',
-            'Contact Center Solutions: Omnichannel customer support technology to streamline service interactions.'
+            'Voice, Video & Messaging Platforms: Seamless enterprise-grade communication tools for collaboration.',
+            'Collaboration Tools: Secure platforms for team interaction, project management, and document sharing.',
+            'Scalable Communication Networks: Reliable and expandable networks supporting voice, video, and data traffic.',
+            'Integration with IT Infrastructure: Seamless connection of communication systems with existing enterprise IT environments.'
         ],
         benefits: [],
     },

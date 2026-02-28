@@ -91,12 +91,15 @@ export function Services() {
                               alt={service.title}
                               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-slate-900/60 transition-colors duration-700 group-hover:bg-slate-900/40" />
+                            {/* Dark overlay with bottom-heavy gradient for text readability below the image center */}
+                            <div className="absolute inset-0 bg-slate-950/50 transition-colors duration-700 group-hover:bg-slate-950/30" />
+                            <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent pointer-events-none" />
                           </div>
                         )}
 
-                        <div className="relative z-10 flex flex-col h-full items-center justify-center p-6 text-center">
-                          <CardTitle className="text-3xl md:text-4xl font-black tracking-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] m-auto py-12 px-2 shadow-black z-20">
+                        {/* Title text positioned below the image center */}
+                        <div className="relative z-10 flex flex-col h-full items-center justify-end p-8 pb-10 text-center">
+                          <CardTitle className="text-3xl md:text-3xl font-black tracking-tight text-white drop-shadow-[0_4px_8px_rgba(0,0,0,1)] z-20 leading-tight">
                             {service.title}
                           </CardTitle>
                         </div>
