@@ -9,6 +9,7 @@ import {
     Lightbulb,
     ShieldCheck,
     MessageSquare,
+    Flame,
 } from 'lucide-react';
 
 export interface Service {
@@ -35,12 +36,12 @@ export const servicesData: Service[] = [
         bgColor: '#2E3A59',
         title: 'Digital Infrastructure',
         description: 'Robust and scalable foundational network and ICT design to support enterprise growth and security.',
-        longDescription: 'We design and manage resilient digital foundations that ensure performance, scalability, and enterprise-grade security.',
+        longDescription: 'End-to-end ICT infrastructure design and deployment for maximum efficiency, security, and reliability.',
         features: [
-            'Network Infrastructure: Advanced enterprise networking solutions for secure and high-speed connectivity.',
-            'Security Architecture: Multi-layered protection systems integrated into infrastructure to safeguard assets and maintain operational reliability.',
-            'Scalable ICT Design: Future-ready IT infrastructure designed to support business growth and evolving technology requirements.',
-            'Managed Operations: 24/7 monitoring, optimization, and operational support to maximize uptime and efficiency.'
+            'Enterprise Networking: LAN/WAN, wireless mobility, VPNs, firewalls, and IDS/IPS for optimized connectivity.',
+            'Structured Cabling: High-performance UTP, fiber, and copper cabling with integrated rack management.',
+            'High Availability: Redundancy, load balancing, and real-time monitoring to ensure zero-disruption operations.',
+            'Digital Transformation: Scalable ICT foundations built for enterprise-grade growth and regulatory compliance.'
         ],
         benefits: [],
     },
@@ -53,12 +54,12 @@ export const servicesData: Service[] = [
         bgColor: '#1E293B',
         title: 'Data Center Solutions',
         description: 'Comprehensive data center design, power, cooling, and management for maximum uptime and efficiency.',
-        longDescription: 'High-availability data center environments engineered for efficiency, reliability, and sustainability.',
+        longDescription: 'Installation and configuration of high-availability data center facilities and virtualization platforms.',
         features: [
-            'Facilities Management: Comprehensive oversight of all data center facilities and operations.',
-            'IT Systems & Integration: Seamless integration of enterprise IT systems to ensure performance and compatibility.',
-            'Power & Cooling Solutions: Energy-efficient electrical and thermal systems designed for optimal data center operation.',
-            'Monitoring & HA Operations: Real-time monitoring and high-availability management to ensure uninterrupted operations.'
+            'Server & Storage Solutions: Performance-optimized server deployment and scalable enterprise storage.',
+            'Virtualization Platforms: Advanced cloud-ready virtualization for maximized resource utilization.',
+            'Power & Cooling: Redundant power systems and precision cooling for equipment integrity.',
+            'Disaster Recovery: Business continuity planning and automated failover for critical facility operations.'
         ],
         benefits: [],
     },
@@ -71,12 +72,12 @@ export const servicesData: Service[] = [
         bgColor: '#22C55E',
         title: 'Integrated Security Systems',
         description: 'Multi-layered cybersecurity and physical security solutions protecting digital assets and facilities.',
-        longDescription: 'Integrated physical and IT security frameworks for complete enterprise protection.',
+        longDescription: 'Comprehensive deployment of physical security frameworks integrated with digital identity management.',
         features: [
-            'CCTV & Surveillance: Intelligent monitoring systems with video analytics to protect assets and personnel.',
-            'Access Control Systems: Secure identity and access management across facilities and IT systems.',
-            'Integrated IT Security Monitoring: Continuous monitoring and alerts for IT system integrity and operational security.',
-            'Threat Monitoring & Compliance: Proactive detection of risks and alignment with regulatory requirements.'
+            'IP Surveillance (CCTV): High-definition PTZ and fixed cameras with centralized intelligent recording.',
+            'One Card System: Unified solution for identity, access, attendance, and visitor management using smart cards.',
+            'Video Analytics & AI: Proactive monitoring with automated object recognition and security alerts.',
+            'Access Control: Hardware-software integration for managed facility entry and real-time reporting.'
         ],
         benefits: [],
     },
@@ -89,12 +90,12 @@ export const servicesData: Service[] = [
         bgColor: '#3B82F6',
         title: 'Enterprise Platforms & Applications',
         description: 'Business-critical ERP, collaboration, databases, and platforms designed for operational excellence.',
-        longDescription: 'Mission-critical enterprise systems designed to optimize business operations and collaboration.',
+        longDescription: 'Deployment and integration of modern, scalable, and business-alined enterprise applications.',
         features: [
-            'Enterprise Resource Planning (ERP): Integrated platforms to streamline business processes and data management.',
-            'Collaboration & Communication: Secure communication and collaboration tools for teams and departments.',
-            'Enterprise Databases: High-performance database solutions for structured data management.',
-            'Business-Critical Platforms: Reliable applications ensuring operational continuity and efficiency.'
+            'ERP & CRM Solutions: Deployment of integrated business process and customer management platforms.',
+            'Custom Software Development: Tailored applications designed for unique organizational requirements.',
+            'System Integration: Seamless connection of enterprise software with ICT and business infrastructure.',
+            'Mobile & Web Applications: Secure, scalable, and user-friendly cross-platform application development.'
         ],
         benefits: [],
     },
@@ -107,13 +108,12 @@ export const servicesData: Service[] = [
         bgColor: '#8B5CF6',
         title: 'Technology Advisory & Integration',
         description: 'Strategic consulting for digital transformation, IT roadmap, and technology optimization.',
-        longDescription: 'Strategic consulting and implementation to drive digital transformation and IT optimization.',
+        longDescription: 'Guidance in aligning ICT investments with business objectives while providing hands-on deployment support.',
         features: [
-            'Digital Transformation: Modernization of legacy systems and processes into digital ecosystems.',
-            'Strategy Consulting: Aligning business goals with technology solutions for long-term growth.',
-            'System Optimization: Enhancing IT performance, efficiency, and operational effectiveness.',
-            'IT Roadmap Development: Structured planning for future technology investments and upgrades.',
-            'ROI Analysis: Evaluation of technology investment performance and business value.'
+            'Digital Transformation: Strategic roadmaps for technology-driven growth and modernization.',
+            'Managed ICT Deployment: Full-cycle deployment and maintenance of enterprise IT systems.',
+            'ICT Strategy Consulting: Aligning technology solutions with long-term organizational goals.',
+            'Support & Maintenance: 24/7 technical assistance with specialized SLA-based service contracts.'
         ],
         benefits: [],
     },
@@ -126,12 +126,12 @@ export const servicesData: Service[] = [
         bgColor: '#38BDF8',
         title: 'Cloud & Virtualization Services',
         description: 'Flexible cloud deployments and virtualization to enhance scalability, backup, and continuity.',
-        longDescription: 'Scalable and secure cloud and virtualized environments for enterprise growth.',
+        longDescription: 'Building cloud-ready infrastructures to deliver enterprise-grade flexibility, scalability, and resilience.',
         features: [
-            'Public, Private & Hybrid Cloud: Flexible deployment options tailored to organizational needs.',
-            'Server & Desktop Virtualization: Virtual environments for optimized computing resources and flexibility.',
-            'Backup & Disaster Recovery: Robust data protection and recovery systems to ensure business continuity.',
-            'Business Continuity Solutions: Infrastructure and planning to maintain operations during disruptions.'
+            'Public, Private & Hybrid Cloud: Tailored cloud deployment solutions to meet organizational needs.',
+            'Cloud Migration: Secure migration of workloads with continuous optimization for performance.',
+            'Virtualization Platforms: High-density server and desktop virtualization for resource efficiency.',
+            'Disaster Recovery & Backup: Robust data protection systems ensuring seamless business continuity.'
         ],
         benefits: [],
     },
@@ -144,13 +144,12 @@ export const servicesData: Service[] = [
         bgColor: '#FACC15',
         title: 'Smart Systems & Automation',
         description: 'IoT-enabled building automation, energy management, intelligent security, and network optimization.',
-        longDescription: 'IoT-enabled intelligent systems for automation, monitoring, and efficiency.',
+        longDescription: 'Intelligent, automated, and connected facilities for modern, efficient enterprise operations.',
         features: [
-            'Building Automation: Centralized control systems integrating HVAC, lighting, and facility management.',
-            'Smart Lighting: Energy-efficient automated lighting tailored for operational excellence.',
-            'Energy Management: Real-time monitoring and optimization of power consumption.',
-            'Intelligent Security: AI-driven surveillance and alert systems for enhanced protection.',
-            'Network Optimization: Performance tuning to maintain secure, reliable connectivity across systems.'
+            'Building Automation: Integration and optimization of lighting, HVAC, and energy monitoring.',
+            'IoT Integration: Real-time analytics and intelligent device management for smart facilities.',
+            'Energy Management: Automated controls designed for operational efficiency and sustainability.',
+            'Intelligent Security: AI-driven surveillance and automated facility response systems.'
         ],
         benefits: [],
     },
@@ -183,12 +182,12 @@ export const servicesData: Service[] = [
         bgColor: '#0F172A',
         title: 'Cybersecurity',
         description: 'Comprehensive digital security solutions to protect enterprise systems, networks, and data.',
-        longDescription: 'Comprehensive digital security solutions to protect enterprise systems, networks, and data.',
+        longDescription: 'Professional-grade security operations and policy enforcement to safeguard your digital assets.',
         features: [
-            'Network Security: Firewalls, intrusion detection, and prevention systems to safeguard enterprise networks.',
-            'Endpoint Protection: Security solutions for desktops, laptops, servers, and mobile devices.',
-            'Threat Detection & Response: Real-time monitoring, analysis, and rapid response to cyber threats.',
-            'Security Policy Compliance: Assessment and enforcement of IT security policies and regulatory standards.'
+            'SOC with IDS/IPS and SIEM: Dedicated facility for real-time monitoring, threat detection, and response.',
+            'Network Access Control (NAC): Policy enforcement to ensure only authorized users and compliant devices connect.',
+            'Security Assessments: Auditing, penetration testing, and AI-driven threat analysis for proactive defense.',
+            'Endpoint & Network Protection: Comprehensive security layering for users, servers, and infrastructure.'
         ],
         benefits: [],
     },
@@ -201,12 +200,30 @@ export const servicesData: Service[] = [
         bgColor: '#1E293B',
         title: 'Unified Communications',
         description: 'Integrated communication solutions combining voice, video, messaging, and collaboration platforms.',
-        longDescription: 'Integrated communication solutions to connect people and systems securely and efficiently.',
+        longDescription: 'IP-based VoIP, video conferencing, and collaboration platforms for seamless communication and connection.',
         features: [
             'Voice, Video & Messaging Platforms: Seamless enterprise-grade communication tools for collaboration.',
             'Collaboration Tools: Secure platforms for team interaction, project management, and document sharing.',
             'Scalable Communication Networks: Reliable and expandable networks supporting voice, video, and data traffic.',
-            'Integration with IT Infrastructure: Seamless connection of communication systems with existing enterprise IT environments.'
+            'Infrastructure Integration: Seamless connection of communication systems with existing enterprise IT environments.'
+        ],
+        benefits: [],
+    },
+    {
+        slug: 'fire-detection-suppression',
+        icon: Flame,
+        logoImage: '',
+        sidebarImage: '',
+        bannerImage: '/images/engineering-electrical-final.jpg', // Placeholder for now
+        bgColor: '#EF4444',
+        title: 'Fire Detection & Suppression',
+        description: 'Advanced safety solutions to protect people, assets, and critical infrastructure.',
+        longDescription: 'Early warning and automated response systems designed for rapid detection and suppression of fire risks.',
+        features: [
+            'Fire Detection Systems: Early warning using smoke, heat, and flame sensors for rapid alert.',
+            'Fire Suppression Systems: Automated suppression using gas, water mist, or sprinklers.',
+            'Integration with Building Systems: Coordinated response with building automation and alarms.',
+            'Asset Protection: Solutions tailored to safeguard critical infrastructure and personnel.'
         ],
         benefits: [],
     },

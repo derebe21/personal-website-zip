@@ -8,7 +8,7 @@ export function Products() {
     const cyberSecurityPartners = [
         {
             name: 'Cisco',
-            logo: '/images/partners/cisco-final.png',
+            logo: '/images/partners/cisco-logo.svg',
             url: 'https://www.cisco.com/c/en/us/products/security/index.html',
             tag: '',
             brief: ''
@@ -36,7 +36,7 @@ export function Products() {
         },
         {
             name: 'Sophos',
-            logo: '/images/partners/sophos-shield.jpg',
+            logo: '/images/partners/sophos-logo.svg',
             url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
             tag: '',
             brief: ''
@@ -50,14 +50,14 @@ export function Products() {
         },
         {
             name: 'CrowdStrike',
-            logo: '/images/partners/crowdstrike-falcon.png',
+            logo: '/images/partners/crowdstrike-logo.svg',
             url: 'https://www.crowdstrike.com/falcon-platform/',
             tag: '',
             brief: ''
         },
         {
             name: 'Darktrace',
-            logo: '/images/partners/darktrace-red.png',
+            logo: '/images/partners/darktrace-logo.svg',
             url: 'https://www.darktrace.com/en/products/',
             tag: '',
             brief: ''
@@ -72,8 +72,8 @@ export function Products() {
     ];
 
     const digitalInfrastructurePartners = [
-        { name: 'Cisco', logo: '/images/partners/cisco-final.png', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
-        { name: 'Huawei', logo: '/images/partners/huawei-ent.png', url: 'https://e.huawei.com/en/products/enterprise-networking' },
+        { name: 'Cisco', logo: '/images/partners/cisco-logo.svg', url: 'https://www.cisco.com/c/en/us/solutions/enterprise-networks/index.html' },
+        { name: 'Huawei', logo: '/images/partners/huawei-logo.svg', url: 'https://e.huawei.com/en/products/enterprise-networking' },
         { name: 'HPE Aruba', logo: '/images/partners/hpe-logo.svg', url: 'https://www.arubanetworks.com/products/' },
         { name: 'Juniper Networks', logo: '/images/partners/juniper-logo.svg', url: 'https://www.juniper.net/us/en/products.html' },
         { name: 'Ericsson', logo: 'ericsson', url: 'https://www.ericsson.com/en/portfolio' },
