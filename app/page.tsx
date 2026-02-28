@@ -14,7 +14,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
-      <Services />
+      <Services variant="grid" />
 
       <Products />
       <Contact />

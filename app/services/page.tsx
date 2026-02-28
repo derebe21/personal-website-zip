@@ -7,7 +7,7 @@ export default function ServicesPage() {
         <div className="min-h-screen bg-background">
             <Navigation />
             <main className="pt-20">
-                <Services />
+                <Services variant="scroll" />
             </main>
             <Footer />
         </div>
