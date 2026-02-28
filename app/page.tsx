@@ -1,7 +1,6 @@
 'use client';
 
 import { Hero } from '@/components/sections/Hero';
-import { Services } from '@/components/sections/Services';
 import { Products } from '@/components/sections/Products';
 import { About } from '@/components/sections/About';
 import { Contact } from '@/components/sections/Contact';
@@ -14,8 +13,6 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
-      <Services variant="scroll" />
-
       <Products />
       <Contact />
       <Footer />

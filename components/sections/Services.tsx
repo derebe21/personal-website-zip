@@ -5,7 +5,7 @@ import { Card, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface ServicesProps {
   variant?: 'grid' | 'scroll';
@@ -30,8 +30,25 @@ export function Services({ variant = 'grid' }: ServicesProps) {
         left: scrollAmount,
         behavior: 'smooth',
       });
+      setActiveIndex(index);
     }
   };
+
+  // Auto-rotation logic
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (variant !== 'scroll' || isHovered) return;
+
+    const interval = setInterval(() => {
+      if (scrollContainerRef.current) {
+        const nextIndex = (activeIndex + 1) % servicesData.length;
+        scrollTo(nextIndex);
+      }
+    }, 4000); // Auto-rotate every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [variant, isHovered, activeIndex]);
 
   return (
     <section
@@ -97,6 +114,8 @@ export function Services({ variant = 'grid' }: ServicesProps) {
             <div
               ref={scrollContainerRef}
               onScroll={handleScroll}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
               className="flex gap-12 py-12 px-12 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
               style={{ scrollBehavior: 'smooth', msOverflowStyle: 'none', scrollbarWidth: 'none' }}
             >
