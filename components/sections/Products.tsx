@@ -9,49 +9,49 @@ export function Products() {
         {
             name: 'Cisco',
             logo: '/images/partners/cisco-logo.svg',
-            url: 'https://www.cisco.com/c/en/us/products/security/index.html',
+            url: 'https://www.cisco.com/site/us/en/products/security/index.html',
             description: 'Network security, firewalls, intrusion prevention, and secure access solutions.'
         },
         {
             name: 'Palo Alto Networks',
             logo: 'paloaltonetworks',
-            url: 'https://www.paloaltonetworks.com/network-security/next-generation-firewall',
+            url: 'https://www.paloaltonetworks.com/network-security',
             description: 'Next-generation firewalls, advanced threat prevention, and cloud security.'
         },
         {
             name: 'Fortinet',
             logo: 'fortinet',
-            url: 'https://www.fortinet.com/products/next-generation-firewall',
+            url: 'https://www.fortinet.com/products',
             description: 'High-performance firewalls, secure SD-WAN, and integrated security platforms.'
         },
         {
             name: 'Check Point',
             logo: '/images/partners/checkpoint-logo.svg',
-            url: 'https://www.checkpoint.com/products-solutions/next-generation-firewall/',
+            url: 'https://www.checkpoint.com/quantum/next-generation-firewall/',
             description: 'Enterprise firewall, threat intelligence, and advanced cyber defense.'
         },
         {
             name: 'Sophos',
             logo: '/images/partners/sophos-logo.svg',
-            url: 'https://www.sophos.com/en-us/products/next-gen-firewall',
+            url: 'https://www.sophos.com/en-us/products',
             description: 'Endpoint protection, firewall security, and centralized security management.'
         },
         {
             name: 'Trend Micro',
             logo: 'trendmicro',
-            url: 'https://www.trendmicro.com/en_us/business/products/network.html',
+            url: 'https://www.trendmicro.com/en_us/business/products.html',
             description: 'Endpoint, server, and cloud workload security with advanced malware protection.'
         },
         {
             name: 'CrowdStrike',
             logo: '/images/partners/crowdstrike-logo.svg',
-            url: 'https://www.crowdstrike.com/falcon-platform/',
+            url: 'https://www.crowdstrike.com/platform/',
             description: 'AI-powered endpoint detection and response (EDR) and threat intelligence.'
         },
         {
             name: 'Darktrace',
             logo: '/images/partners/darktrace-logo.svg',
-            url: 'https://www.darktrace.com/en/products/',
+            url: 'https://darktrace.com/products',
             description: 'AI-driven threat detection, network visibility, and autonomous response.'
         },
         {
