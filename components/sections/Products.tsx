@@ -116,13 +116,7 @@ export function Products() {
                     <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-6">
                         OUR <span className="text-primary">TECHNOLOGY</span>
                     </h2>
-                    <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full mb-6" />
-                    <p className="text-lg text-slate-600 dark:text-slate-400 mb-2 max-w-2xl mx-auto">
-                        Clean, minimal presentation using official branding logos only.
-                    </p>
-                    <p className="text-base text-slate-500 dark:text-slate-500 max-w-2xl mx-auto">
-                        All background images removed for a modern and consistent design.
-                    </p>
+                    <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full" />
                 </div>
 
                 {/* Cyber Security Section - Minimal */}
