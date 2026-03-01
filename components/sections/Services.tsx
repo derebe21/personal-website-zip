@@ -59,7 +59,10 @@ export function Services({ variant = 'grid' }: ServicesProps) {
         <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-6">
           OUR <span className="text-primary">SERVICES</span>
         </h2>
-        <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full" />
+        <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full mb-6" />
+        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          Services are carefully built and optimized for smooth, seamless scrolling and high performance.
+        </p>
       </div>
 
       <div className="max-w-[100vw]">
