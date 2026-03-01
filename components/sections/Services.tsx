@@ -77,7 +77,7 @@ export function Services({ variant = 'grid' }: ServicesProps) {
               {servicesData.map((service, index) => {
                 return (
                   <div key={index} className="w-full">
-                    <Link href={`/services/${service.slug}.html`} className="block group h-full">
+                    <Link href={`/services/${service.slug}`} className="block group h-full">
                       <Card
                         className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(37,99,235,0.2)]`}
                       >
@@ -122,7 +122,7 @@ export function Services({ variant = 'grid' }: ServicesProps) {
               {servicesData.map((service, index) => {
                 return (
                   <div key={index} className="w-[85vw] md:w-[60vw] lg:w-[480px] flex-shrink-0 snap-center">
-                    <Link href={`/services/${service.slug}.html`} className="block group h-full">
+                    <Link href={`/services/${service.slug}`} className="block group h-full">
                       <Card
                         className={`h-full overflow-hidden border border-white/20 dark:border-slate-800/50 shadow-2xl transition-all duration-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex flex-col group-hover:-translate-y-4 group-hover:shadow-[0_20px_40px_rgba(37,99,235,0.2)]`}
                       >

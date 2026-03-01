@@ -66,7 +66,7 @@ export const servicesData: Service[] = [
     {
         slug: 'digital-infrastructure',
         icon: Server,
-        logoImage: '',
+        logoImage: '/images/digital-infrastructure-logo-new.png',
         sidebarImage: '',
         bannerImage: '/images/digital-infrastructure-final.png',
         bgColor: '#2E3A59',
@@ -120,7 +120,7 @@ export const servicesData: Service[] = [
     {
         slug: 'enterprise-platforms',
         icon: Code,
-        logoImage: '/images/enterprise-apps-final.png',
+        logoImage: '/images/enterprise-apps-logo.png',
         sidebarImage: '',
         bannerImage: '/images/custom-enterprise-v2.jpg',
         bgColor: '#3B82F6',
