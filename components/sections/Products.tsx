@@ -8,55 +8,64 @@ export function Products() {
     const cyberSecurityPartners = [
         {
             name: 'Cisco',
-            logo: '/images/partners/cisco-logo.svg',
+            color: '1BA0D7',
+            simpleIcon: 'cisco',
             url: 'https://www.cisco.com/site/us/en/products/security/index.html',
             description: 'Network security, firewalls, intrusion prevention, and secure access solutions.'
         },
         {
             name: 'Palo Alto Networks',
-            logo: 'paloaltonetworks',
+            color: 'FA582D',
+            simpleIcon: 'paloaltonetworks',
             url: 'https://www.paloaltonetworks.com/network-security',
             description: 'Next-generation firewalls, advanced threat prevention, and cloud security.'
         },
         {
             name: 'Fortinet',
-            logo: 'fortinet',
+            color: 'EE3124',
+            simpleIcon: 'fortinet',
             url: 'https://www.fortinet.com/products',
             description: 'High-performance firewalls, secure SD-WAN, and integrated security platforms.'
         },
         {
             name: 'Check Point',
-            logo: '/images/partners/checkpoint-logo.svg',
+            color: 'CC0000',
+            simpleIcon: 'checkpoint',
             url: 'https://www.checkpoint.com/quantum/next-generation-firewall/',
             description: 'Enterprise firewall, threat intelligence, and advanced cyber defense.'
         },
         {
             name: 'Sophos',
-            logo: '/images/partners/sophos-logo.svg',
+            color: '0071CE',
+            simpleIcon: 'sophos',
             url: 'https://www.sophos.com/en-us/products',
             description: 'Endpoint protection, firewall security, and centralized security management.'
         },
         {
             name: 'Trend Micro',
-            logo: 'trendmicro',
+            color: 'D71920',
+            simpleIcon: 'trendmicro',
             url: 'https://www.trendmicro.com/en_us/business/products.html',
             description: 'Endpoint, server, and cloud workload security with advanced malware protection.'
         },
         {
             name: 'CrowdStrike',
-            logo: '/images/partners/crowdstrike-logo.svg',
+            color: 'FF0000',
+            simpleIcon: 'crowdstrike',
             url: 'https://www.crowdstrike.com/platform/',
             description: 'AI-powered endpoint detection and response (EDR) and threat intelligence.'
         },
         {
             name: 'Darktrace',
-            logo: '/images/partners/darktrace-logo.svg',
+            color: '9013FE',
+            simpleIcon: 'darktrace',
             url: 'https://darktrace.com/products',
             description: 'AI-driven threat detection, network visibility, and autonomous response.'
         },
         {
             name: 'Imperva',
-            logo: 'imperva',
+            color: 'E30613',
+            simpleIcon: 'imperva',
             url: 'https://www.imperva.com/products/',
             description: 'Web application firewall (WAF), database security, and DDoS protection.'
         }
@@ -133,13 +142,13 @@ export function Products() {
                                 key={partner.name}
                                 href={partner.url}
                                 target="_blank"
-                                className="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 transition-all duration-300 hover:shadow-xl flex flex-col items-center text-center"
+                                className="group p-8 rounded-3xl bg-white dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl flex flex-col items-center text-center hover:-translate-y-1"
                             >
-                                <div className="w-24 h-24 mb-6 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110">
+                                <div className="w-36 h-36 mb-6 flex items-center justify-center transition-all duration-300 transform group-hover:scale-110">
                                     <img
-                                        src={partner.logo.startsWith('/') ? partner.logo : `https://cdn.simpleicons.org/${partner.logo}/4755E9`}
+                                        src={`https://cdn.simpleicons.org/${partner.simpleIcon}/${partner.color}`}
                                         alt={partner.name}
-                                        className={`w-full h-full object-contain ${partner.name === 'Cisco' ? '' : 'dark:invert dark:group-hover:invert-0'}`}
+                                        className="w-full h-full object-contain"
                                     />
                                 </div>
                                 <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{partner.name}</h4>
