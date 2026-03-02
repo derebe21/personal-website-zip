@@ -68,14 +68,7 @@ export function Contact() {
         <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-white/20 to-blue-50/30 dark:from-slate-950/70 dark:via-slate-950/50 dark:to-blue-950/60" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center pt-16">
-          <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase italic mb-8">
-            CONTACT <span className="text-primary">US</span>
-          </h2>
-          <div className="w-24 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full" />
-        </div>
-
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Card>

@@ -24,6 +24,7 @@ export interface Service {
     longDescription: string;
     features: string[];
     benefits: string[];
+    partners?: { name: string; logo: string; url: string; color?: string; description: string }[];
 }
 
 export const servicesData: Service[] = [
@@ -62,6 +63,12 @@ export const servicesData: Service[] = [
             'Infrastructure Integration: Seamless connection of communication systems with existing enterprise IT environments.'
         ],
         benefits: [],
+        partners: [
+            { name: 'Cisco', logo: '/images/ciscoo.png', url: 'https://www.cisco.com/c/en/us/solutions/collaboration/index.html', color: '1BA0D7', description: 'Comprehensive collaboration, IP telephony, and video conferencing.' },
+            { name: 'Dinstar', logo: '/images/partners/dinstar_new_v2.png', url: 'https://www.dinstar.com/', description: 'IP unified communications and VoIP gateway solutions.' },
+            { name: 'VaxVoIP', logo: '/images/partners/vaxvoip_new_v2.png', url: 'https://www.vaxvoip.com/', description: 'Specialized SIP-based voice and video communication technologies.' },
+            { name: 'Grandstream', logo: '/images/partners/grandstream_new_v2.png', url: 'http://www.grandstream.com/', description: 'High-quality IP voice, video, data, and mobility solutions.' }
+        ]
     },
     {
         slug: 'digital-infrastructure',
