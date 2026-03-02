@@ -316,12 +316,12 @@ export function Products() {
                     </div>
                 </div>
 
-                {/* Unified Communications Technologies */}
+                {/* Unified Communications */}
                 <div className="mt-24">
                     <div className="flex items-center gap-4 mb-12">
                         <div className="w-1.5 h-10 bg-blue-600 rounded-full" />
                         <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
-                            Unified Communications Technologies
+                            Unified Communications
                         </h3>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

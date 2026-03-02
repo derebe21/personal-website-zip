@@ -15,10 +15,10 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', 'label': 'Instagram' },
+    { icon: Facebook, href: 'https://facebook.com/ITSECTECHNOLOGY', label: 'Facebook' },
+    { icon: Twitter, href: 'https://x.com/ITSECTECHNOLOGY', label: 'X (Twitter)' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/itsectechnology', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://instagram.com/ITSECTECHNOLOGY', label: 'Instagram' },
   ];
 
   return (
@@ -56,6 +56,8 @@ export function Footer() {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   <social.icon className="w-5 h-5" />
@@ -97,15 +99,44 @@ export function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Location</h3>
-            <p className="text-sm leading-relaxed text-slate-400">
-              Bole Road, Business District<br />
-              Addis Ababa, Ethiopia
-            </p>
-            <p className="text-sm text-slate-400">
-              info@itsectechnology.com<br />
-              +251 911 407 439 / 095 519 0019
-            </p>
+            <h3 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Contact</h3>
+            <div className="space-y-3">
+              <a
+                href="https://maps.google.com/?q=Kirkos+Church+Addis+Ababa+Ethiopia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm leading-relaxed text-slate-400 hover:text-white transition-colors block"
+              >
+                📍 Kirkos Church<br />
+                Addis Ababa, Ethiopia
+              </a>
+              <a
+                href="mailto:info@itsectechnology.com"
+                className="text-sm text-slate-400 hover:text-white transition-colors block"
+              >
+                ✉️ info@itsectechnology.com
+              </a>
+              <a
+                href="tel:+251911407439"
+                className="text-sm text-slate-400 hover:text-white transition-colors block"
+              >
+                📞 +251 911 407 439
+              </a>
+              <a
+                href="tel:+251955190019"
+                className="text-sm text-slate-400 hover:text-white transition-colors block"
+              >
+                📞 095 519 0019
+              </a>
+              <a
+                href="https://wa.me/251911407439"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-green-400 hover:text-green-300 transition-colors block font-medium"
+              >
+                💬 WhatsApp Us
+              </a>
+            </div>
           </div>
         </div>
 

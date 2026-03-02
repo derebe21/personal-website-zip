@@ -48,8 +48,8 @@ export function Contact() {
     {
       icon: MapPin,
       label: 'Address',
-      value: '123 Business Park, Tech District',
-      href: null,
+      value: 'Kirkos Church, Addis Ababa, Ethiopia',
+      href: 'https://maps.google.com/?q=Kirkos+Church+Addis+Ababa+Ethiopia',
     },
   ];
 
@@ -192,6 +192,20 @@ export function Contact() {
               </Card>
             ))}
           </div>
+        </div>
+
+        {/* Google Maps Embed */}
+        <div className="mt-12 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
+          <iframe
+            title="ITSEC Technology Office Location - Kirkos Church, Addis Ababa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.9329!2d38.7537!3d9.0105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sKirkos%2C+Addis+Ababa%2C+Ethiopia!5e0!3m2!1sen!2set!4v1!"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>
